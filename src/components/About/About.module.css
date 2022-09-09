@@ -1,0 +1,39 @@
+.about__container {
+  height: 50vh;
+  background-color: black;
+  color: black;
+  padding: 2rem 5rem;
+}
+
+.about__container h2 {
+  color: white;
+  font-size: 3.5rem;
+}
+
+.about__info {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 4rem;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5rem;
+  text-align: left;
+  line-height: 24px;
+  font-size: 1rem;
+}
+
+.about__footer {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__footer__location {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.about__footer__location img {
+  width: 0.9rem;
+  padding-top: 0.3rem;
+}

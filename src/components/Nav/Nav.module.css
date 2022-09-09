@@ -1,102 +1,60 @@
 .navbar {
   height: 100%;
-  background-color: gray;
-
+  background-color: black;
   color: white;
-  padding: 2.2rem 3rem 0.8rem 3rem;
+  padding: 2rem 2rem 1.8rem 2rem;
+  display: flex;
+  align-items: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 700;
 }
 
 .logo {
-  display: none;
+  color: white;
+  text-decoration: none;
+  font-size: 4.5rem;
+
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    #000 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
+  -webkit-mask-size: 200%;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  to {
+    -webkit-mask-position: -50%;
+  }
 }
 
 .nav__links {
-  display: none;
-}
-
-.nav__links__mobile {
-  position: absolute;
-  display: block;
+  display: flex;
   list-style: none;
-  background-color: #141414;
-  left: 0;
-  top: 75px;
-  transition: all 0.5s ease-out;
-  width: 100%;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  padding-top: 2.5rem;
 }
 
-.about,
-.services,
+.nav__item,
 .contact__us {
+  font-size: 1.125rem;
+  text-decoration: none;
   color: white;
-  text-align: center;
-  padding: 32px;
-  width: 100%;
-  transition: all 0.5s ease;
+  letter-spacing: 1px;
 }
 
-.mobile__menu__icon {
-  display: block;
-  position: absolute;
-  font-size: 30px;
-  color: white;
-  border: none;
-  outline: none;
-  top: 15px;
-  right: 25px;
+.contact__us {
+  border: 2px solid white;
+  padding: 1.2rem 2.4rem;
+  border-radius: 5px;
+  background-color: transparent;
 }
 
-@media only screen and (min-width: 768px) {
-  .navbar {
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    display: block;
-  }
-
-  .logo {
-    font-size: 4.5rem;
-    /* font-family: goudy-bookletter-1911, serif;
-        font-weight: 400;
-        font-style: normal; */
-  }
-
-  .nav__links {
-    display: flex;
-    gap: 4rem;
-    list-style: none;
-
-    justify-content: flex-end;
-    align-items: center;
-    width: 75%;
-  }
-  .nav__links__mobile {
-    display: none;
-  }
-
-  .about,
-  .services,
-  .contact__us {
-    text-decoration: none;
-    color: white;
-    font-size: 1.125rem;
-    letter-spacing: 2px;
-    font-weight: 700;
-  }
-
-  .contact__us {
-    border: 2.2px solid white;
-    border-radius: 3px;
-    padding: 1rem 2rem;
-  }
-
-  .mobile__menu__icon {
-    display: none;
-  }
-}
