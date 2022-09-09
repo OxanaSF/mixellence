@@ -1,0 +1,102 @@
+.navbar {
+  height: 100%;
+  background-color: gray;
+
+  color: white;
+  padding: 2.2rem 3rem 0.8rem 3rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+.logo {
+  display: none;
+}
+
+.nav__links {
+  display: none;
+}
+
+.nav__links__mobile {
+  position: absolute;
+  display: block;
+  list-style: none;
+  background-color: #141414;
+  left: 0;
+  top: 75px;
+  transition: all 0.5s ease-out;
+  width: 100%;
+}
+
+.about,
+.services,
+.contact__us {
+  color: white;
+  text-align: center;
+  padding: 32px;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.mobile__menu__icon {
+  display: block;
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  border: none;
+  outline: none;
+  top: 15px;
+  right: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: block;
+  }
+
+  .logo {
+    font-size: 4.5rem;
+    /* font-family: goudy-bookletter-1911, serif;
+        font-weight: 400;
+        font-style: normal; */
+  }
+
+  .nav__links {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+
+    justify-content: flex-end;
+    align-items: center;
+    width: 75%;
+  }
+  .nav__links__mobile {
+    display: none;
+  }
+
+  .about,
+  .services,
+  .contact__us {
+    text-decoration: none;
+    color: white;
+    font-size: 1.125rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+
+  .contact__us {
+    border: 2.2px solid white;
+    border-radius: 3px;
+    padding: 1rem 2rem;
+  }
+
+  .mobile__menu__icon {
+    display: none;
+  }
+}

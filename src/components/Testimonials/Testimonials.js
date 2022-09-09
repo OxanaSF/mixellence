@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './Testimonials.module.css'
+import classes from './Testimonials.module.css'
 
 const Testimonials = () => {
   return (
