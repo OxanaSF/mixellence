@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './Hero.module.css'
+import classes from './Hero.module.css'
 
 const Hero = () => {
   return (

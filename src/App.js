@@ -6,7 +6,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import Footer from './components/Footer/Footer';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <main className="App">

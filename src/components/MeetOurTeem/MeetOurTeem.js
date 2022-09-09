@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import styles from './MeetOurTeem.module.css'
+import classes from './MeetOurTeem.module.css'
 
 const MeetOurTeem = () => {
   return (

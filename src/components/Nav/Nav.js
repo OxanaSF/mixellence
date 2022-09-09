@@ -1,10 +1,12 @@
 import React from 'react'
 
-import styles from './Nav.module.css'
+import classes from './Nav.module.css'
 
 const Nav = () => {
   return (
-    <nav>Nav</nav>
+    <div>
+      <div className=''></div>
+    </div>
   )
 }
 
