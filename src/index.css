@@ -8,7 +8,7 @@ body {
   scroll-behavior: smooth;
 }
 
-h1 {
-  font-family: 'Tinos', serif;
-  font-size: 6rem;
+h2 {
+  color: white;
+  font-size: 3.5rem;
 }
