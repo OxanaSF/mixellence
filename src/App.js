@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Header from './components/Header/Header';
+import Nav from './components/Nav/Nav';
 import MainDisplay from './pages/MainDisplay';
 import AdminDashboard from './pages/AdminDashboard';
 import Footer from './components/Footer/Footer';
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <main className="App">
-        <Header />
+        <Nav />
 
         <Routes>
           <Route path="/" element={<MainDisplay />} />

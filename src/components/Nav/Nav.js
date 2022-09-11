@@ -1,38 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HashLink as MiddleLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 import classes from './Nav.module.css';
 
 const Nav = () => {
-
-
+  const [nav, setNav] = useState(false);
   return (
-    <nav className={classes.navbar}>
-      <h1>
-        <Link to="/" className={classes.logo}>
-          Mixellence
-        </Link>
-      </h1>
+    <header className={classes.navbar}>
+      <Link to="/">
+        <h1 className={classes.logo}>Mixellence</h1>
+        {/* <h1 className={classes.neonText}>Mixellence</h1> */}
+      </Link>
 
-      <ul className={classes.nav__links}>
-        <li>
-          <Link to="#about-us" className={classes.nav__item}>
-            About us
-          </Link>
-        </li>
-        <li>
-          <a href="#services" className={classes.nav__item}>
-            Services
-          </a>
-        </li>
-        <li>
-          <button className={classes.contact__us}>
-            Contact Us
-          </button>
-        </li>
-      </ul>
-    </nav>
+      <nav>
+        <ul
+          className={
+            nav ? [classes.menu, classes.active].join(' ') : [classes.menu]
+          }
+        >
+          <li>
+            <MiddleLink  to="/#about">About us</MiddleLink>
+          </li>
+          <li>
+            <MiddleLink  to="/#services">Services</MiddleLink>
+          </li>
+          <li>
+            <button className={classes.contact__us}>Contact Us</button>
+          </li>
+        </ul>
+      </nav>
+      <div onClick={() => setNav(!nav)} className={classes.mobile_btn}>
+        {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={20} />}
+      </div>
+    </header>
   );
 };
 

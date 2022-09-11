@@ -1,18 +1,48 @@
 .navbar {
-  height: 100%;
+  width: 100%;
+  height: 11rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
   background-color: black;
-  color: white;
-  padding: 2rem 2rem 1.8rem 2rem;
+}
+
+.menu {
   display: flex;
   align-items: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: 700;
+  gap: 7rem;
+}
+
+.menu li {
+  padding-top: 2.5rem;
+}
+
+.navbar a {
+  font-size: 1.125rem;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.contact__us {
+  color: white;
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+  border: 2px solid white;
+  padding: 1.2rem 2.4rem;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.mobile_btn {
+  display: none;
 }
 
 .logo {
   color: white;
-  text-decoration: none;
   font-size: 4.5rem;
+  padding-left: 3rem;
+  padding-top: 1.5rem;
 
   -webkit-mask-image: linear-gradient(
     -75deg,
@@ -33,28 +63,68 @@
   }
 }
 
-.nav__links {
-  display: flex;
-  list-style: none;
-  width: 50%;
-  justify-content: space-around;
-  align-items: center;
-  margin-left: auto;
-  padding-top: 2.5rem;
+.neonText {
+  font-size: 4.5rem;
+  color: #fff;
+  /* text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 5px #fff,
+      0 0 21px #fff; */
+
+  text-shadow: 0px 4px 35px rgba(255, 255, 255, 0.6);
 }
 
-.nav__item,
-.contact__us {
-  font-size: 1.125rem;
-  text-decoration: none;
-  color: white;
-  letter-spacing: 1px;
-}
+@media screen and (max-width: 720px) {
+  .navbar {
+    height: 5rem;
+  }
 
-.contact__us {
-  border: 2px solid white;
-  padding: 1.2rem 2.4rem;
-  border-radius: 5px;
-  background-color: transparent;
-}
+  .logo {
+    padding-top: 0;
+    padding-left: 0.3rem;
+  }
 
+  .mobile_btn {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    color: white;
+  }
+
+  .menu {
+    display: block;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #8b8b8b;
+    z-index: 10;
+    transition: left 1s;
+
+  }
+
+  .active {
+    left: 0;
+  }
+
+  .navbar a {
+    font-size: 1.125rem;
+    color: white;
+    font-family: 'Montserrat';
+  }
+
+  .logo, .neonText {
+    font-size: 1.5rem;
+  }
+
+  .contact__us {
+
+    font-size: 1.125rem;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+}
