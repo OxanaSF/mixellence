@@ -5,7 +5,7 @@ import classes from './Services.module.css';
 
 const Services = () => {
   return (
-    <section className={classes.services__container}>
+    <section className={classes.services__container} id='services'>
       <h2>Services</h2>
 
       <div className={classes.services__main}>
@@ -24,7 +24,7 @@ const Services = () => {
                   <div
                     className={`${classes.service__item__body} ${classes.service__item__body__tear1}`}
                   >
-                    <p>{service.par1}</p>
+                    <p className={classes.par1}>{service.par1}</p>
                     <p>{service.par2}</p>
                   </div>
                 </div>
@@ -33,13 +33,13 @@ const Services = () => {
           )
         )}
 
-        <div>
+        {/* <div> */}
           <img
             className={classes.animation}
             src={`${process.env.PUBLIC_URL}/images/glass.svg`}
             alt=""
           />
-        </div>
+        {/* </div> */}
 
         {SERVICES_DATA.filter((item) => item.id === 'service2').map(
           (service) => (
@@ -55,7 +55,7 @@ const Services = () => {
                 <div
                   className={`${classes.service__item__body} ${classes.service__item__body__tear2}`}
                 >
-                  <p>{service.par1}</p>
+                  <p className={classes.par1}>{service.par1}</p>
                   <p>{service.par2}</p>
                 </div>
               </div>

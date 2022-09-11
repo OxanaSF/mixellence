@@ -1,12 +1,11 @@
 .about__container {
-  height: 47vh;
+  min-height: 47vh;
   background-color: black;
   color: black;
   padding: 2rem 5rem 0 5rem;
 }
 
 .about__info {
-  font-family: 'Montserrat', sans-serif;
   margin-top: 4rem;
   border-radius: 0.625rem;
   background-color: white;
@@ -14,6 +13,10 @@
   text-align: left;
   line-height: 1.5rem;
   font-size: 1rem;
+}
+
+.about__info .par1 {
+  padding-bottom: 2rem;
 }
 
 .about__footer {
@@ -31,4 +34,15 @@
 .about__footer__location img {
   width: 0.9rem;
   padding-top: 0.3rem;
+}
+
+
+@media screen and (max-width: 720px) {
+  .about__container {
+    padding: 1rem;
+  }
+
+  .about__info {
+    padding: 2rem;
+  }
 }

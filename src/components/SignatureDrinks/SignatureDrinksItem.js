@@ -1,6 +1,6 @@
 import React from 'react'
 
-import classes from './SignatureDrinksItem.module.css'
+// import classes from './SignatureDrinksItem.module.css'
 
 const SignatureDrinksItem = () => {
   return (
