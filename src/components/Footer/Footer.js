@@ -1,12 +1,32 @@
-import React from 'react'
+import React from 'react';
+import { HashLink as MiddleLink } from 'react-router-hash-link';
 
-
-// import classes from './Footer.module.css'
+import classes from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer>Footer</footer>
-  )
-}
+    <footer className={classes.footer}>
+      <div>
+        <ul className={classes.content}>
+          <li>
+            <MiddleLink to="/#services">Services</MiddleLink>
+          </li>
+          <li>
+            <MiddleLink to="/#gallery">Gallery</MiddleLink>
+          </li>
+          <li>
+            <MiddleLink to="/#testimonials">Testimonials</MiddleLink>
+          </li>
+        </ul>
+        <button className={classes.bookConsultation}>
+          Book a Consultation
+        </button>
+      </div>
+      <div className={classes.copyright}>
+        &copy; MIXELLENCE {new Date().getFullYear()}
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

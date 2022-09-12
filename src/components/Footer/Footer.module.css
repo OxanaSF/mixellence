@@ -1,0 +1,30 @@
+.footer {
+  margin: 10rem 0 5rem 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content a {
+  font-size: 1.125rem;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bookConsultation {
+  font-size: 1.125rem;
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 2rem;
+}
+
+.copyright {
+  margin-top: 5rem;
+  font-size: 0.875rem;
+}
