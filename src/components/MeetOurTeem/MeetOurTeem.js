@@ -1,15 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-import TeamList from './TeamList'
-import classes from './MeetOurTeem.module.css'
+import Slider from './Slider';
 
 const MeetOurTeem = () => {
   return (
-    <section className={classes.meet__our__team__container}>
+    <section className="container mt-5 carousel">
       <h2>Meet Out Team</h2>
-      <TeamList />
+      <Slider />
     </section>
-  )
-}
+  );
+};
 
-export default MeetOurTeem
+export default MeetOurTeem;
