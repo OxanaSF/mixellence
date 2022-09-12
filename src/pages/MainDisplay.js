@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Nav from '../components/Nav/Nav';
 import Hero from '../components/Hero/Hero';
 import AboutUs from '../components/About/About';
 import Services from '../components/Services/Services';
@@ -7,10 +8,12 @@ import MeetOurTeem from '../components/MeetOurTeem/MeetOurTeem';
 import SignatureDrinks from '../components/SignatureDrinks/SignatureDrinks';
 import Gallery from '../components/Gallery/Gallery';
 import Testimonials from '../components/Testimonials/Testimonials';
+import Footer from '../components/Footer/Footer';
 
 const MainDisplay = () => {
   return (
     <main>
+      <Nav />
       <Hero />
       <AboutUs />
       <Services />
@@ -18,6 +21,7 @@ const MainDisplay = () => {
       <SignatureDrinks />
       <Gallery />
       <Testimonials />
+      <Footer />
     </main>
   );
 };
