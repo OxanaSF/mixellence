@@ -1,8 +1,7 @@
 .about__container {
-  min-height: 47vh;
-  background-color: black;
+  min-height: 38vh;
   color: black;
-  padding: 2rem 5rem 0 5rem;
+  padding: 2rem 10rem 0 10rem;
 }
 
 .about__info {
@@ -35,7 +34,6 @@
   width: 0.9rem;
   padding-top: 0.3rem;
 }
-
 
 @media screen and (max-width: 720px) {
   .about__container {
