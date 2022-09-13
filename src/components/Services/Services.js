@@ -36,7 +36,7 @@ const Services = () => {
         {/* <div> */}
           <img
             className={classes.animation}
-            src={`${process.env.PUBLIC_URL}/images/glass.svg`}
+            src={`${process.env.PUBLIC_URL}/images/glass.gif`}
             alt=""
           />
         {/* </div> */}
