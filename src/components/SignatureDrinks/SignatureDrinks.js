@@ -4,8 +4,13 @@ import React from 'react'
 
 const SignatureDrinks = () => {
   return (
-    <section>SignatureDrinks</section>
+    <section>
+      SignatureDrinks
+      Mojitos, Palomas, Margarittas
+    </section>
+    
+    
   )
 }
-
+git 
 export default SignatureDrinks

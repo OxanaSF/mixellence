@@ -33,11 +33,21 @@ const Services = () => {
           )
         )}
 
+<<<<<<< HEAD
+        {/* <div> */}
+          <img
+            className={classes.animation}
+            src={`${process.env.PUBLIC_URL}/images/glass.gif`}
+            alt=""
+          />
+        {/* </div> */}
+=======
         <img
           className={classes.animation}
           src={`${process.env.PUBLIC_URL}/images/ezgif.com-gif-maker.gif`}
           alt="glass is filled with drink"
         />
+>>>>>> 8f66b1ac645d219265c5958191f4d22699993a99
 
         {SERVICES_DATA.filter((item) => item.id === 'service2').map(
           (service) => (
