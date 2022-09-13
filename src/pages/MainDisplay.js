@@ -2,6 +2,7 @@ import React from 'react';
 
 import Nav from '../components/Nav/Nav';
 import Hero from '../components/Hero/Hero';
+import BottomNav from '../components/BottomNav/BottomNav';
 import AboutUs from '../components/About/About';
 import Services from '../components/Services/Services';
 import MeetOurTeem from '../components/MeetOurTeem/MeetOurTeem';
@@ -15,6 +16,7 @@ const MainDisplay = () => {
     <main>
       <Nav />
       <Hero />
+      <BottomNav />
       <AboutUs />
       <Services />
       <MeetOurTeem />
