@@ -22,8 +22,7 @@ const About = () => {
           </p>
 
           <footer className={classes.about__footer}>
-            <div>Native owned business</div>
-            <div className={classes.about__footer__location}>
+          <div className={classes.about__footer__location}>
               <div>
                 <img
                   src={`${process.env.PUBLIC_URL}/images/pin.png`}
@@ -32,6 +31,11 @@ const About = () => {
               </div>
               <div>Monterey Bay, California</div>
             </div>
+            
+            <div>Native owned business</div>
+
+           
+
           </footer>
         </div>
       </div>
