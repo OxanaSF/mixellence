@@ -6,6 +6,7 @@ const About = () => {
   return (
     <section className={classes.about__container} id="about">
       <h2>About Us</h2>
+
       <div>
         <div className={classes.about__info}>
           <p className={classes.par1}>
@@ -22,7 +23,6 @@ const About = () => {
           </p>
 
           <footer className={classes.about__footer}>
-            <div>Native owned business</div>
             <div className={classes.about__footer__location}>
               <div>
                 <img
@@ -32,9 +32,17 @@ const About = () => {
               </div>
               <div>Monterey Bay, California</div>
             </div>
+
+            <div>Native owned business</div>
           </footer>
         </div>
       </div>
+
+      <img
+        className={classes.barImg}
+        src={`${process.env.PUBLIC_URL}/images/bar.png`}
+        alt="bar"
+      />
     </section>
   );
 };

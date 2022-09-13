@@ -1,0 +1,150 @@
+.slick-slide > div {
+  margin: 5rem 2rem;
+  /* background: green; */
+}
+
+.slick-slider {
+  /* background: pink; */
+  height: 50rem;
+  overflow-y: hidden;
+}
+
+.test {
+  width: 100%;
+  margin: 5rem auto;
+  /* background: yellow; */
+  /* margin-bottom: 10rem; */
+  height: 50rem;
+}
+
+.slick-list {
+  margin: 0 -10px;
+  /* background: red; */
+  width: 80%;
+  margin: auto;
+}
+
+.card {
+  /* border: 1px solid #fff; */
+  background: black;
+  /* background: yellowgreen; */
+  height: 600px;
+  color: #fff;
+  cursor: pointer;
+  display: flex !important;
+  flex-direction: column;
+ align-items: center;
+ gap: 4rem;
+
+  
+}
+
+.card-top h1 {
+  font-size: 0.9rem;
+  margin: 20px;
+}
+
+.card-top {
+  width: 15.625rem;
+  height: 15.625rem;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  /* margin-left: 21%; */
+}
+
+.card-top > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 50%; */
+}
+
+.card-bottom {
+  /* margin: 10px 20px; */
+    width: 258px;
+    height: 237px;
+    line-height: 1.75rem;
+    line-height: 28px;
+}
+
+.card-bottom-name {
+    font-size: 18;
+    font-weight: 600;
+}
+
+.card-bottom-drink,
+.card-bottom-address
+ {
+    font-size: 18;
+    font-weight: 400;
+}
+
+.card-bottom-quote {
+    font-size: 16;
+    font-weight: 400;
+    margin-top: 2rem;
+}
+
+.category {
+  position: relative;
+}
+.category::before {
+  content: '';
+  background: rgb(255, 61, 61);
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.slick-prev,
+.slick-next {
+    top: 26%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  color: black;
+  border-radius: 50%;
+}
+
+button .slick-arrow::before {
+  color: red;
+  background: red;
+}
+
+.slick-prev {
+  left: 50px;
+}
+.slick-next {
+  right: 50px;
+}
+
+.slick-dots {
+  background: white;
+  width: 16%;
+  margin: 4rem auto;
+  left: 42%;
+  padding: 1px !important;
+  border-radius: 25rem !important;
+  overflow-y: hidden;
+}
+.slick-dots ul {
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-dots li button {
+  /* background: red; */
+}
+
+.slick-dots li button::before {
+  font-size: 1rem;
+  /* top: -2px; */
+  padding: 0;
+  /* background: yellow; */
+  /* color: blueviolet; */
+}

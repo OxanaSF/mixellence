@@ -5,7 +5,7 @@ import classes from './Services.module.css';
 
 const Services = () => {
   return (
-    <section className={classes.services__container} id='services'>
+    <section className={classes.services__container} id="services">
       <h2>Services</h2>
 
       <div className={classes.services__main}>
@@ -33,13 +33,11 @@ const Services = () => {
           )
         )}
 
-        {/* <div> */}
-          <img
-            className={classes.animation}
-            src={`${process.env.PUBLIC_URL}/images/glass.gif`}
-            alt=""
-          />
-        {/* </div> */}
+        <img
+          className={classes.animation}
+          src={`${process.env.PUBLIC_URL}/images/ezgif.com-gif-maker.gif`}
+          alt="glass is filled with drink"
+        />
 
         {SERVICES_DATA.filter((item) => item.id === 'service2').map(
           (service) => (
