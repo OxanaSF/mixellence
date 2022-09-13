@@ -21,7 +21,6 @@
   background-color: #424242;
   display: flex;
   flex-direction: column;
-  /* gap: 0.8rem; */
   align-items: center;
   justify-content: center;
   letter-spacing: 1px;
@@ -83,13 +82,21 @@
   width: 30rem;
 }
 
-
 @media screen and (max-width: 720px) {
   .services__main {
     display: block;
   }
 
   .services__main img {
+    width: 20rem;
+    height: 25rem;
+  }
+
+  .service__item__header__tear1,
+  .service__item__header__tear2,
+  .service__item__body__tear1,
+  .service__item__body__tear2 {
     width: 100%;
+    border-radius: 0;
   }
 }

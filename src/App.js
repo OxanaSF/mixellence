@@ -8,6 +8,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <main className="App">
+        
         <Routes>
           <Route path="/" element={<MainDisplay />} />
 

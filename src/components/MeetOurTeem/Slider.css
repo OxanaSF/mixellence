@@ -1,13 +1,8 @@
 .slider-container {
-  padding: 5rem 8rem 15rem 10rem;
-  width: auto;
+  padding: 8rem 5rem 15rem 5rem;
+  margin-bottom: 10rem;
   background-color: white;
-  margin-top: 4rem;
-}
-
-.slider {
-  background-color: white;
-  display: flex;
+  overflow-x: hidden;
 }
 
 .card-image {
@@ -27,49 +22,123 @@
 
 .card-wrapper {
   width: 100%;
-  padding-left: 25%;
+  padding-left: 29%;
 }
 
-.card-wrapper:active,
+/* .card-wrapper:active,
 .card-wrapper:hover,
 .card-wrapper:focus {
   outline: none;
   border: none;
-}
+} */
 
 .card {
-  width: 15.625rem;
+  /* width: 15.625rem;
   height: 15.625rem;
   border-radius: 50%;
   border: 2px solid #ffffff;
-  cursor: pointer;
+  cursor: pointer; */
   /* position: relative; */
 }
 
-.carousel .slick-prev,
+/* .carousel .slick-prev,
 .carousel .slick-next {
   width: 50px;
   height: 50px;
   border: 2px solid black;
   background-color: #fff;
   color: white;
+} */
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: #fff;
+  color: white;
 }
 
-.carousel .slick-prev:before,
+/* .carousel .slick-prev:before,
 .carousel .slick-next:before {
+  color: #000;
+} */
+
+.slick-prev:before,
+.slick-next:before {
   color: #000;
 }
 
 .carousel .slick-next {
-  right: -60px;
+  right: 1px;
   top: 180px;
 }
 
 .carousel .slick-prev {
-  left: -60px;
+  left: 1px;
   top: 180px;
+}
+
+.slick-slider {
+  height: 25rem;
+  overflow-y: hidden;
 }
 
 .container h2 {
   margin-bottom: 6rem;
+}
+
+.slick-dots {
+  bottom: -10px;
+}
+
+.slick-dots li button::before {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.slick-dots li {
+  width: 15px;
+}
+
+@media screen and (max-width: 720px) {
+  .slider-container {
+    max-width: 100%;
+  }
+  .slick-dots li {
+    width: 15px;
+  }
+
+  .slick-dots li button::before {
+    color: red;
+    font-size: 0.6rem;
+  }
+
+  .slick-slider {
+    width: 100%;
+    height: 17rem;
+  }
+  .slider-container {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  .card-image {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .carousel .slick-next {
+    right: 1px;
+    top: 120px;
+  }
+
+  .carousel .slick-prev {
+    left: 1px;
+    top: 120px;
+  }
+
+  .slick-dots {
+    bottom: -10px;
+  }
 }
