@@ -64,11 +64,10 @@ function Test() {
             </div>
 
             <div className="card-bottom">
-              <h3>{item.name}</h3>
-              <h3>{item.drink}</h3>
-              <h3>{item.city}</h3>
-              <p>{item.quote}</p>
-              {/* <span className="category">{item.category}</span> */}
+              <h3 className='card-bottom-name'>{item.name}</h3>
+              <h3 className='card-bottom-drink'>{item.drink}</h3>
+              <h3 className='card-bottom-address'>{item.city}</h3>
+              <p className='card-bottom-quote'>{item.quote}</p>
             </div>
           </div>
         ))}

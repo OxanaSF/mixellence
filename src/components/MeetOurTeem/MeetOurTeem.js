@@ -6,7 +6,6 @@ import Test from './Test';
 
 const MeetOurTeem = () => {
   return (
-    // <section className="container mt-5 carousel">
     <section>
       <h2>Meet Out Team</h2>
       <Test />
