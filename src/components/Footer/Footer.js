@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashLink as MiddleLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 import classes from './Footer.module.css';
 
@@ -23,7 +24,7 @@ const Footer = () => {
         </button>
       </div>
       <div className={classes.copyright}>
-        &copy; MIXELLENCE {new Date().getFullYear()}
+        <Link to="admin-dashboard">&copy; MIXELLENCE {new Date().getFullYear()}</Link>
       </div>
     </footer>
   );
