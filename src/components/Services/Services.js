@@ -16,7 +16,7 @@ const Services = () => {
                 <header
                   className={`${classes.service__item__header} ${classes.service__item__header__tear1} `}
                 >
-src/components/MeetOurTeem/MeetOurTeem.js                  <h3>{service.title}</h3>
+<h3>{service.title}</h3>
                   <p>{service.description}</p>
                 </header>
 
