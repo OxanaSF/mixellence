@@ -7,24 +7,24 @@ import classes from './Footer.module.css';
 const Footer = () => {
   return (
     <footer className={classes.footer}>
-      <div>
-        <ul className={classes.content}>
-          <li>
-            <MiddleLink to="/#services">Services</MiddleLink>
-          </li>
-          <li>
-            <MiddleLink to="/#gallery">Gallery</MiddleLink>
-          </li>
-          <li>
-            <MiddleLink to="/#testimonials">Testimonials</MiddleLink>
-          </li>
-        </ul>
-        <button className={classes.bookConsultation}>
-          Book a Consultation
-        </button>
+      <div className={classes.footer_content}>
+        <div className={classes.footer_content__line}>
+          <MiddleLink to="/#services">Services</MiddleLink>
+          <MiddleLink to="/#testimonials">Testimonials</MiddleLink>
+        </div>
+
+        <div className={classes.footer_content__line}>
+          <MiddleLink to="/#gallery">Signature Drinks</MiddleLink>
+          <button className={classes.bookConsultation}>
+            Book a Consultation
+          </button>
+        </div>
       </div>
+
       <div className={classes.copyright}>
-        <Link to="admin-dashboard">&copy; MIXELLENCE {new Date().getFullYear()}</Link>
+        <Link to="admin-dashboard">
+          &copy; MIXELLENCE {new Date().getFullYear()}
+        </Link>
       </div>
     </footer>
   );
