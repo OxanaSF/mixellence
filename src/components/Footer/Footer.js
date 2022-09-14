@@ -9,12 +9,12 @@ const Footer = () => {
     <footer className={classes.footer}>
       <div className={classes.footer_content}>
         <div className={classes.footer_content__line}>
-          <MiddleLink to="/#services">Services</MiddleLink>
-          <MiddleLink to="/#testimonials">Testimonials</MiddleLink>
+          <MiddleLink className={classes.services} to="/#services">Services</MiddleLink>
+          <MiddleLink className={classes.testimonials} to="/#testimonials">Testimonials</MiddleLink>
         </div>
 
         <div className={classes.footer_content__line}>
-          <MiddleLink to="/#gallery">Signature Drinks</MiddleLink>
+          <MiddleLink className={classes.signatureDrinks} to="/#gallery">Signature Drinks</MiddleLink>
           <button className={classes.bookConsultation}>
             Book a Consultation
           </button>

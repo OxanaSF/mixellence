@@ -21,10 +21,10 @@ const Nav = () => {
           }
         >
           <li>
-            <MiddleLink  to="/#about">About us</MiddleLink>
+            <MiddleLink to="/#about">About us</MiddleLink>
           </li>
           <li>
-            <MiddleLink  to="/#services">Services</MiddleLink>
+            <MiddleLink to="/#services">Services</MiddleLink>
           </li>
           <li>
             <button className={classes.contact__us}>Contact Us</button>
@@ -32,7 +32,7 @@ const Nav = () => {
         </ul>
       </nav>
       <div onClick={() => setNav(!nav)} className={classes.mobile_btn}>
-        {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={20} />}
+        {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={35} />}
       </div>
     </header>
   );

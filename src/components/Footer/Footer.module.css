@@ -9,15 +9,14 @@
 }
 
 .footer_content a {
-  font-size: 1.125rem;
   color: white;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .footer_content__line {
   display: flex;
   justify-content: space-between;
   padding: 0 3.5rem;
+  font-size: 1.125rem;
 }
 
 .bookConsultation {
@@ -36,4 +35,31 @@
 .copyright a {
   color: white;
   font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 720px) {
+  .footer_content {
+    gap: 0;
+  }
+
+  .footer_content__line {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .services,
+  .testimonials,
+  .signatureDrinks,
+  .bookConsultation {
+    font-size: 16px;
+    padding-bottom: 2rem;
+  }
+
+  .bookConsultation {
+    padding-bottom: 6rem;
+  }
+  .copyright {
+    font-size: 14px;
+    padding-bottom: 3rem;
+  }
 }

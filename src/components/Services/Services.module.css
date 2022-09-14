@@ -25,16 +25,15 @@
   justify-content: center;
   letter-spacing: 1px;
   color: white;
+  transition: all 0.5s ease;
 }
 
 .service__item__header__tear1 {
   border-radius: 0px 10px 0px 0px;
-  width: 33rem;
 }
 
 .service__item__header__tear2 {
   border-radius: 10px 0px 0px 0px;
-  width: 33rem;
 }
 
 .service__item__header__tear1 h3,
@@ -82,13 +81,61 @@
   width: 30rem;
 }
 
+
 @media screen and (max-width: 720px) {
   .services__main {
-    display: block;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  .services__main > div {
+    box-sizing: border-box;
+    width: 49.5%;
+  }
+
+  .service__item__header {
+    background: #212121;
+    height: 7rem;
+    padding: 0;
+    line-height: 1.9;
+    transition: all 0.5s ease;
+  }
+
+  .service__item__header:hover {
+    background-color: #5e337d;
+  }
+
+  .service__item__header__tear1 h3,
+  .service__item__header__tear2 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    overflow-y: hidden;
+  }
+
+  .service__item__header__tear1 p,
+  .service__item__header__tear2 p {
+    font-size: 14px;
+  }
+
+  .services__main :nth-child(1) {
+    order: 1;
+    /* width: 1fr; */
+  }
+
+  .services__main :nth-child(2) {
+    order: 3;
+    width: 80%;
+    height: 70%;
+  }
+  .services__main :nth-child(3) {
+    order: 2;
+    /* width: 1fr; */
   }
 
   .services__main img {
     width: 20rem;
+    margin: 0 auto;
     height: 25rem;
   }
 
@@ -97,6 +144,17 @@
   .service__item__body__tear1,
   .service__item__body__tear2 {
     width: 100%;
-    border-radius: 0;
+  }
+
+  .service__item__header__tear1 {
+    border-radius: 0px 10px 10px 0px;
+  }
+  .service__item__header__tear2 {
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .service__item__body__tear1,
+  .service__item__body__tear2 {
+    display: none;
   }
 }

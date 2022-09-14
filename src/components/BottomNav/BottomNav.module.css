@@ -2,14 +2,63 @@
   margin-top: 5rem;
   background: white;
   color: black;
-  height: 58px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 4rem;
   position: fixed;
-  top: 50rem;
-  right: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
   z-index: 2000;
+}
+
+.instagram_icon {
+  width: 35px;
+  height: 35px;
+}
+
+.bottomNav__bookConsultation {
+  width: 265px;
+  height: 50px;
+  background: black;
+  color: white;
+  font-size: 18px;
+  padding: 10px 25px;
+  border-radius: 5px;
+  letter-spacing: 1.5px;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+}
+
+.bottomNav__bookConsultation:hover {
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid black;
+  color: black;
+  background: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 720px) {
+  .bottomNav_container {
+    height: 85px;
+    flex-direction: row-reverse;
+    padding: 0 2rem;
+  }
+
+  .bottomNav__bookConsultation {
+    font-size: 14px;
+    padding: 0;
+    width: 215px;
+    height: 45px;
+    margin-left: 3.2rem;
+  }
+
+  .instagram_icon {
+    width: 25px;
+    height: 25px;
+  }
 }
