@@ -1,4 +1,4 @@
-.SignatureDrinksItem-container {
+.SignatureDrinksItem__container {
     box-sizing: border-box;
     color: #4d2c57;
     height: fit-content;
@@ -7,12 +7,12 @@
     width: 100%;
   }
   
-  .SignatureDrinksItem-title {
+  .SignatureDrinksItem__title {
     font-size: 48px;
     font-weight: 500;
   }
   
-  .SignatureDrinksItem-image-container {
+  .SignatureDrinksItem__container {
     display: flex;
     gap: 24px;
     justify-content: center;
@@ -20,12 +20,12 @@
     width: 100%;
   }
   
-  .SignatureDrinksItem-image {
+  .SignatureDrinksItem__Img {
     height: 345px;
     width: 367px;
   }
   
-  .SignatureDrinksItem-link {
+  .SignatureDrinksItem__Link {
     font-size: 24px;
   }
   
