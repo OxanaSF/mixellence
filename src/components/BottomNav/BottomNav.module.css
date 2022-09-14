@@ -30,6 +30,7 @@
   letter-spacing: 1.5px;
   font-family: 'Montserrat', sans-serif;
   border: none;
+  box-shadow: 0 5px 3px -0px lightgray;
 }
 
 .bottomNav__bookConsultation:hover {
@@ -40,6 +41,7 @@
   background: white;
   cursor: pointer;
   transition: all 0.5s ease;
+   
 }
 
 @media screen and (max-width: 720px) {
