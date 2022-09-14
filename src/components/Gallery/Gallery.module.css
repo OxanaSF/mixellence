@@ -1,26 +1,30 @@
 .gallery {
-  outline: 2px solid purple;
   position: relative;
   width: 100vw;
   height: 64vh;
-  /* background-color: rgba(255, 0, 0, 0.155); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.bgImg { /* Styles which all images in the collage will share*/
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .pic1 {
+  background-image: url('/public/images/galleryImg/1.gif');
   position: absolute;
   top: 0px;
   left: 0px;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   height: 44%;
   width: 36%;
 }
 
 .pic2 {
-  outline: 2px solid green;
+  background-image: url('/public/images/galleryImg/2.gif');
+  /* outline: 2px solid green; */
   position: absolute;
   width: 19%;
   height: 56%;
@@ -28,7 +32,8 @@
   top: 44%;
 }
 .pic3 {
-  outline: 2px solid orange;
+  background-image: url('/public/images/galleryImg/3.gif');
+  /* outline: 2px solid orange; */
   position: absolute;
   width: 17%;
   height: 56%;
@@ -36,13 +41,16 @@
   top: 44%;
 }
 .pic4 {
-  outline: 2px solid orchid;
+  background-image: url('/public/images/galleryImg/4.gif');
+  background-position: 50% 65%;
+  /* outline: 2px solid orchid; */
   position: absolute;
   width: 28%;
   height: 100%;
 }
 .pic5 {
-  outline: 2px solid turquoise;
+  background-image: url('/public/images/galleryImg/5.gif');
+  /* outline: 2px solid turquoise; */
   position: absolute;
   width: 36%;
   height: 274px;
@@ -50,7 +58,9 @@
   right: 0px;
 }
 .pic6 {
-  outline: 2px solid darkgrey;
+  background-image: url('/public/images/galleryImg/6.gif');
+  background-position: 50% 70%;
+  /* outline: 2px solid darkgrey; */
   position: absolute;
   width: 19%;
   height: 55%;
@@ -58,7 +68,8 @@
   top: 45%;
 }
 .pic7 {
-  outline: 2px solid green;
+  background-image: url('/public/images/galleryImg/7.gif');
+  /* outline: 2px solid green; */
   position: absolute;
   width: 17%;
   height: 56%;
@@ -66,23 +77,6 @@
   top: 44%;
 }
 
-
-.row {
-  /* z-index: -1; */
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  /* overflow: hidden; */
-}
-.column {
-  flex: 25%;
-  max-width: 25%;
-  /* height: 100%; */
-  /* outline: 2px solid green; */
-}
-
-.column img {
-}
 
 .overlay {
   /* backdrop-filter: blur(15px); */
