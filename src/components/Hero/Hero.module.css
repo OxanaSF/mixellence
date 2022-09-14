@@ -80,6 +80,7 @@
   background: #5d337d;
   border: 2px solid #fafafa;
   border-radius: 5px;
+  cursor: pointer;
   color: #fff;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
@@ -91,6 +92,6 @@
 }
 
 .overlay button:hover {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   background: #5d337d00;
 }

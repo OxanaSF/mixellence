@@ -1,10 +1,16 @@
 import React from 'react'
 
-// import classes from './Modal.module.css'
+import classes from './Modal.module.css'
 
-const Modal = () => {
+const Modal = (props) => {
+
+  const modal = props.modal;
+  const setModal = props.setModal;
+
   return (
-    <section>Modal</section>
+    <section onClick={() => setModal(!modal)} className={classes.modal}>
+      Modal
+    </section>
   )
 }
 
