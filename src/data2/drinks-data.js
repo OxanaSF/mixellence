@@ -4,7 +4,7 @@ export const DRINKS_DATA = [
         drinkName: 'Margarita',
         description: 'Made with the finest ingridents & our secret sauce',
         linkImg:
-        `${process.env.PUBLIC_URL}/images/drinkImg/margarita.png`,
+        `${process.env.PUBLIC_URL}/images/drinksImg/margarita.png`,
 
     },
     {
