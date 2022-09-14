@@ -1,12 +1,71 @@
 .gallery {
   outline: 2px solid purple;
+  position: relative;
   width: 100vw;
+  height: 64vh;
   /* background-color: rgba(255, 0, 0, 0.155); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.pic1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  outline: 2px solid red;
+  height: 44%;
+  width: 36%;
+}
+
+.pic2 {
+  outline: 2px solid green;
+  position: absolute;
+  width: 19%;
+  height: 56%;
+  left: 0px;
+  top: 44%;
+}
+.pic3 {
+  outline: 2px solid orange;
+  position: absolute;
+  width: 17%;
+  height: 56%;
+  left: 19%;
+  top: 44%;
+}
+.pic4 {
+  outline: 2px solid orchid;
+  position: absolute;
+  width: 28%;
+  height: 100%;
+}
+.pic5 {
+  outline: 2px solid turquoise;
+  position: absolute;
+  width: 36%;
+  height: 274px;
+  top: 0px;
+  right: 0px;
+}
+.pic6 {
+  outline: 2px solid darkgrey;
+  position: absolute;
+  width: 19%;
+  height: 55%;
+  right: 17%;
+  top: 45%;
+}
+.pic7 {
+  outline: 2px solid green;
+  position: absolute;
+  width: 17%;
+  height: 56%;
+  right: 0px;
+  top: 44%;
+}
+
 
 .row {
   /* z-index: -1; */
@@ -23,7 +82,6 @@
 }
 
 .column img {
-  
 }
 
 .overlay {
