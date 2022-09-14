@@ -8,13 +8,36 @@ import './MeetOurTeemSlider.css';
 import { BARTENDERS } from '../../data/bartenders';
 
 function MeetOurTeemSlider() {
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: 'none', background: 'red' }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: 'none', background: 'green' }}
+        onClick={onClick}
+      />
+    );
+  }
+
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     initialSlide: 0,
+
     appendDots: (dots) => (
       <div
         style={{
@@ -49,13 +72,15 @@ function MeetOurTeemSlider() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />,
         },
       },
     ],
   };
 
   return (
-    <div className="test">
+    <div className="slider-container">
       <Slider {...settings}>
         {BARTENDERS.map((item) => (
           <BartenderCard

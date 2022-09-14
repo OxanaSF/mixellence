@@ -1,14 +1,14 @@
 import React from 'react';
 
 
-import Test from './MeetOurTeemSlider';
+import MeetOurTeemSlider from './MeetOurTeemSlider';
 
 
 const MeetOurTeem = () => {
   return (
     <section>
       <h2>Meet Out Team</h2>
-      <Test />
+      <MeetOurTeemSlider />
     </section>
   );
 };
