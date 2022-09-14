@@ -74,6 +74,8 @@
   .navbar {
     height: 8.2rem;
     justify-content: center;
+    /* position: fixed;
+    margin-bottom: 5rem; */
   }
 
   .logo {
@@ -89,24 +91,25 @@
     cursor: pointer;
     z-index: 10;
     color: white;
+    position: fixed;
   }
 
   .menu {
     display: block;
     position: fixed;
-    left: -100%;
-    top: 0;
+    left: 0;
+    top: -100%;
     bottom: 0;
     right: 0;
     width: 100%;
     height: 100vh;
     background-color: #8b8b8b;
     z-index: 10;
-    transition: left 1s;
+    transition: top 1s;
   }
 
   .active {
-    left: 0;
+    top: 0;
   }
 
   .navbar a {

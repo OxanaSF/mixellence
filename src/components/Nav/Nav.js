@@ -21,13 +21,13 @@ const Nav = () => {
           }
         >
           <li>
-            <MiddleLink to="/#about">About us</MiddleLink>
+            <MiddleLink onClick={() => setNav(!nav)}   to="/#about">About us</MiddleLink>
           </li>
           <li>
-            <MiddleLink to="/#services">Services</MiddleLink>
+            <MiddleLink onClick={() => setNav(!nav)}  to="/#services">Services</MiddleLink>
           </li>
           <li>
-            <button className={classes.contact__us}>Contact Us</button>
+            <button onClick={() => setNav(!nav)}  className={classes.contact__us}>Contact Us</button>
           </li>
         </ul>
       </nav>
