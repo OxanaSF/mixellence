@@ -1,5 +1,5 @@
 import React from "react";
-import { DRINK_DATA2 } from '../../data-2/drink-data2';
+import { DRINK_DATA2 } from '../../data2/drinks-data2';
 import classes from './SignatureDrinks.module.css';
 
 function SignatureDrinks() {
