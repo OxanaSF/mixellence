@@ -3,10 +3,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import './Test.css';
+import './MeetOurTeemSlider.css';
 import { BARTENDERS } from '../../data/bartenders';
 
-function Test() {
+function MeetOurTeemSlider() {
   const settings = {
     dots: true,
     infinite: false,
@@ -57,7 +57,7 @@ function Test() {
     <div className="test">
       <Slider {...settings}>
         {BARTENDERS.map((item) => (
-          <div className="card">
+          <div className="card" onInvalid={item.id}>
             
             <div className="card-top">
               <img src={item.linkImg} alt={item.name} />
@@ -76,4 +76,4 @@ function Test() {
   );
 }
 
-export default Test;
+export default MeetOurTeemSlider;
