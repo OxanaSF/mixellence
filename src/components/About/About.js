@@ -17,7 +17,7 @@ const About = () => {
             & materials needed to serve your guests.
           </p>
 
-          <p>
+          <p className={classes.par2}>
             For quotes and special request please book a consultation or call us
             at (555) 555-5555
           </p>
