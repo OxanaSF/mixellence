@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MeetOurTeemSlider.css';
 
 const Card = ({ id, linkImg, name, drink, city, quote }) => {
+  const [display, setDisplay] = useState(false)
+
+
   return (
     <div className="card" onInvalid={id}>
       <div className="card-top">

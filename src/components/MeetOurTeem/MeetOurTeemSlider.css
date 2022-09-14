@@ -28,15 +28,14 @@
   /* border: 1px solid #fff; */
   background: black;
   /* background: yellowgreen; */
-  height: 600px;
+  height: 670px;
   color: #fff;
   cursor: pointer;
   display: flex !important;
   flex-direction: column;
- align-items: center;
- gap: 4rem;
-
-  
+  align-items: center;
+  gap: 4rem;
+  transition: all 0.6s ease;
 }
 
 .card-top h1 {
@@ -45,6 +44,16 @@
 }
 
 .card-top {
+  width: 21.875rem;
+  height: 21.875rem;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  /* margin-left: 21%; */
+  transition: all 0.5s ease;
+}
+
+.card-top:hover {
   width: 15.625rem;
   height: 15.625rem;
   border-radius: 50%;
@@ -61,29 +70,33 @@
 }
 
 .card-bottom {
-  /* margin: 10px 20px; */
-    width: 258px;
-    height: 237px;
-    line-height: 1.75rem;
-    line-height: 28px;
+  width: 258px;
+  height: 237px;
+  line-height: 1.75rem;
+  line-height: 28px;
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.card-top:hover ~ .card-bottom {
+  display: block;
 }
 
 .card-bottom-name {
-    font-size: 18;
-    font-weight: 600;
+  font-size: 18;
+  font-weight: 600;
 }
 
 .card-bottom-drink,
-.card-bottom-address
- {
-    font-size: 18;
-    font-weight: 400;
+.card-bottom-address {
+  font-size: 18;
+  font-weight: 400;
 }
 
 .card-bottom-quote {
-    font-size: 16;
-    font-weight: 400;
-    margin-top: 2rem;
+  font-size: 16;
+  font-weight: 400;
+  margin-top: 2rem;
 }
 
 .category {
@@ -101,7 +114,7 @@
 
 .slick-prev,
 .slick-next {
-    top: 26%;
+  top: 26%;
   width: 40px;
   height: 40px;
   border: 2px solid white;
