@@ -91,6 +91,6 @@
 }
 
 .overlay button:hover {
-  transition: all ease-out;
+  transition: all 0.5s ease-in-out;
   background: #5d337d00;
 }
