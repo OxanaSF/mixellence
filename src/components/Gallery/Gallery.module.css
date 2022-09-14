@@ -1,34 +1,80 @@
 .gallery {
-  height: 614px;
-  /* background-color: rgba(255, 0, 0, 0.155); */
+  position: relative;
+  width: 100vw;
+  height: 64vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.row {
-  z-index: -1;
-  display: flex;
-  flex-wrap: wrap;
-  /* height: 100%; */
-  outline: 2px solid purple;
-  width: 100%;
-  /* overflow: hidden; */
+.bgImg { /* Styles which all images in the collage will share*/
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.column {
-  flex: 25%;
-  max-width: 25%;
-  height: 100%;
+.pic1 {
+  background-image: url('/public/images/galleryImg/1.gif');
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* outline: 2px solid red; */
+  height: 44%;
+  width: 36%;
+}
+
+.pic2 {
+  background-image: url('/public/images/galleryImg/2.gif');
   /* outline: 2px solid green; */
+  position: absolute;
+  width: 19%;
+  height: 56%;
+  left: 0px;
+  top: 44%;
 }
-
-.image{
-  
+.pic3 {
+  background-image: url('/public/images/galleryImg/3.gif');
+  /* outline: 2px solid orange; */
+  position: absolute;
+  width: 17%;
+  height: 56%;
+  left: 19%;
+  top: 44%;
 }
-
-.image2{
-  /* width: 50%; */
+.pic4 {
+  background-image: url('/public/images/galleryImg/4.gif');
+  background-position: 50% 65%;
+  /* outline: 2px solid orchid; */
+  position: absolute;
+  width: 28%;
+  height: 100%;
+}
+.pic5 {
+  background-image: url('/public/images/galleryImg/5.gif');
+  /* outline: 2px solid turquoise; */
+  position: absolute;
+  width: 36%;
+  height: 274px;
+  top: 0px;
+  right: 0px;
+}
+.pic6 {
+  background-image: url('/public/images/galleryImg/6.gif');
+  background-position: 50% 70%;
+  /* outline: 2px solid darkgrey; */
+  position: absolute;
+  width: 19%;
+  height: 55%;
+  right: 17%;
+  top: 45%;
+}
+.pic7 {
+  background-image: url('/public/images/galleryImg/7.gif');
+  /* outline: 2px solid green; */
+  position: absolute;
+  width: 17%;
+  height: 56%;
+  right: 0px;
+  top: 44%;
 }
 
 
