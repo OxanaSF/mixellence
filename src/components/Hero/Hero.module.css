@@ -14,17 +14,16 @@
 .column {
   flex: 25%;
   max-width: 25%;
-  height: 100%;
   /* outline: 2px solid green; */
 }
 .column img {
   vertical-align: middle;
-  width: 100%;
+  /* width: 100%; */
   /* outline: 2px solid red; */
 }
 
 .image1 {
-  height: 43%;
+  /* height: 43%; */
   width: 100%;
 }
 
@@ -36,7 +35,6 @@
   justify-content: center;
   height: 550px;
   backdrop-filter: blur(4px);
-  z-index: 100;
   background-color: rgba(0, 0, 0, 0.772);
   position: absolute;
   width: 75vw;

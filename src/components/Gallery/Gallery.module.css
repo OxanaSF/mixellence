@@ -1,5 +1,6 @@
 .gallery {
-  height: 614px;
+  outline: 2px solid purple;
+  width: 100vw;
   /* background-color: rgba(255, 0, 0, 0.155); */
   display: flex;
   flex-direction: column;
@@ -8,29 +9,22 @@
 }
 
 .row {
-  z-index: -1;
+  /* z-index: -1; */
   display: flex;
   flex-wrap: wrap;
-  /* height: 100%; */
-  outline: 2px solid purple;
   width: 100%;
   /* overflow: hidden; */
 }
 .column {
   flex: 25%;
   max-width: 25%;
-  height: 100%;
+  /* height: 100%; */
   /* outline: 2px solid green; */
 }
 
-.image{
+.column img {
   
 }
-
-.image2{
-  /* width: 50%; */
-}
-
 
 .overlay {
   /* backdrop-filter: blur(15px); */
