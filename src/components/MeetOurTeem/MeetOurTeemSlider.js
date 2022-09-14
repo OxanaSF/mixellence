@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import BartenderCard from './BartenderCard';
 import './MeetOurTeemSlider.css';
 import { BARTENDERS } from '../../data/bartenders';
 
@@ -57,19 +58,15 @@ function MeetOurTeemSlider() {
     <div className="test">
       <Slider {...settings}>
         {BARTENDERS.map((item) => (
-          <div className="card" onInvalid={item.id}>
-            
-            <div className="card-top">
-              <img src={item.linkImg} alt={item.name} />
-            </div>
-
-            <div className="card-bottom">
-              <h3 className='card-bottom-name'>{item.name}</h3>
-              <h3 className='card-bottom-drink'>{item.drink}</h3>
-              <h3 className='card-bottom-address'>{item.city}</h3>
-              <p className='card-bottom-quote'>{item.quote}</p>
-            </div>
-          </div>
+          <BartenderCard
+            key={item.id}
+            linkImg={item.linkImg}
+            alt={item.name}
+            name={item.name}
+            drink={item.drink}
+            city={item.city}
+            quote={item.quote}
+          />
         ))}
       </Slider>
     </div>

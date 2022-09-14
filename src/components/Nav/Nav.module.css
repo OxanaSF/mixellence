@@ -32,6 +32,13 @@
   padding: 1.2rem 2.4rem;
   border-radius: 5px;
   background-color: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.contact__us:hover,
+.contact__us:active {
+  background: #5d337d;
 }
 
 .mobile_btn {
