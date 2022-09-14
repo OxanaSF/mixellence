@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './MeetOurTeemSlider.css';
 
 const Card = ({ id, linkImg, name, drink, city, quote }) => {
-  const [display, setDisplay] = useState(false)
 
 
   return (
