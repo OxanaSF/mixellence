@@ -26,9 +26,9 @@ const Hero = () => {
         </div>
       </div>
       <div className={classes.overlay}>
-        <h2>Mobile Pop-Up Bar</h2>
+        <h2 className={classes.overlayHeaderText}>Mobile Pop-Up Bar</h2>
         <h1>Modern, Fun, Professional, {"&"} Convenient</h1>
-        <h3>Monterey Bay, California</h3>
+        <h3 className={classes.monterey}> <img className={classes.montereyPin} src={process.env.PUBLIC_URL + '/images/pin.png'} alt="" />Monterey Bay, California</h3>
         <h3>Native Owned</h3>
         <button>Book a Consultation</button>
       </div>

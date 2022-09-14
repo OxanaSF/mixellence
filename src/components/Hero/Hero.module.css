@@ -41,8 +41,56 @@
   background-color: rgba(0, 0, 0, 0.772);
   position: absolute;
   width: 75vw;
-  /* top: 24vh; */
-  /* left: 10vw; */
-  /* left: 50%;
-  right: 50%; */
+}
+
+.overlay img {
+}
+
+.overlay h3 {
+  font-weight: 400;
+}
+
+.overlay .monterey {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.montereyPin {
+  -webkit-filter: grayscale(1) invert(1);
+  filter: grayscale(1) invert(1);
+  /* width: 20px; */
+  width: 1rem;
+  display: block;
+}
+
+.overlay h1 {
+  width: 38%;
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.overlay button {
+  background: #5d337d;
+  border: 2px solid #fafafa;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  top: 10%;
+  box-sizing: border-box;
+  height: 3rem;
+  width: 16.5rem;
+}
+
+.overlay button:hover {
+  transition: all ease-out;
+  background: #5d337d00;
 }
