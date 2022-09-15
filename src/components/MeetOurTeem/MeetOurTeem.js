@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import MeetOurTeemSlider from './MeetOurTeemSlider';
+import MeetOurTeemSlider from './MeetOurTeemDisplay';
 
 
 const MeetOurTeem = () => {
