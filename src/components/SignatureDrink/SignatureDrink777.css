@@ -23,8 +23,10 @@
 
 .drink-card-top-name {
   font-size: 0.9rem;
-  margin: -1rem;
+  margin: -3rem;
   height: 1rem;
+  padding-left: 2rem;
+  position: relative;
   
   background-color: rgb(243, 18, 18);
 }
