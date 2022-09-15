@@ -4,11 +4,8 @@ import classes from './Modal.module.css'
 
 const Modal = (props) => {
 
-  const modal = props.modal;
-  const setModal = props.setModal;
-
   return (
-    <section onClick={() => setModal(!modal)} className={classes.modal}>
+    <section className={classes.modal}>
       Modal
     </section>
   )
