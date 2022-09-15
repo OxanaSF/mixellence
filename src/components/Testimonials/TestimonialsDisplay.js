@@ -3,13 +3,13 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import BartenderCard from './BartenderCard';
-import './MeetOurTeemSlider.css';
-import { BARTENDERS } from '../../data/bartenders';
+import TestimonialCard from './TestimonialCard';
+import './Testimonials.css';
+import {TESTIMONIALS} from '../../data/testimonials'
 
 
 
-function MeetOurTeemSlider() {
+function TestimonialsDisplay() {
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -42,6 +42,10 @@ function MeetOurTeemSlider() {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
+    autoplay: true,
+      speed: 5000,
+      autoplaySpeed: 5000,
+      cssEase: "linear",
     
       
     appendDots: (dots) => (
@@ -88,15 +92,13 @@ function MeetOurTeemSlider() {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {BARTENDERS.map((item) => (
-          <BartenderCard
+        {TESTIMONIALS.map((item) => (
+          <TestimonialCard
             key={item.id}
             linkImg={item.linkImg}
             alt={item.name}
             name={item.name}
-            drink={item.drink}
-            city={item.city}
-            quote={item.quote}
+            text={item.text}
           />
         ))}
       </Slider>
@@ -104,4 +106,4 @@ function MeetOurTeemSlider() {
   );
 }
 
-export default MeetOurTeemSlider;
+export default TestimonialsDisplay;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './MeetOurTeemSlider.css';
 
-const Card = ({ id, linkImg, name, drink, city, quote }) => {
+const BartenderCard = ({ id, linkImg, name, drink, city, quote }) => {
 
 
   return (
@@ -20,4 +20,4 @@ const Card = ({ id, linkImg, name, drink, city, quote }) => {
   );
 };
 
-export default Card;
+export default BartenderCard;
