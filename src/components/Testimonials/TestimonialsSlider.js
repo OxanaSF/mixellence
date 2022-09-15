@@ -30,13 +30,13 @@ const TestimonialsSlider = (props) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 8000,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    autoplay: true,
 
-    autoplaySpeed: 8000,
+    // speed: 8000,
+    // autoplay: true,
+      autoplaySpeed: 8000,
     cssEase: 'linear',
 
     appendDots: (dots) => (
