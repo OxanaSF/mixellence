@@ -6,7 +6,7 @@ import BottomNav from '../components/BottomNav/BottomNav';
 import AboutUs from '../components/About/About';
 import Services from '../components/Services/Services';
 import MeetOurTeem from '../components/MeetOurTeem/MeetOurTeem';
-import SignatureDrinks from '../components/SignatureDrinks/SignatureDrinks';
+import SignatureDrink from '../components/SignatureDrink/SignatureDrink';
 import Gallery from '../components/Gallery/Gallery';
 import Testimonials from '../components/Testimonials/Testimonials';
 import Footer from '../components/Footer/Footer';
@@ -20,7 +20,7 @@ const MainDisplay = () => {
       <AboutUs />
       <Services />
       <MeetOurTeem />
-      <SignatureDrinks />
+      <SignatureDrink />
       <Gallery />
       <Testimonials />
       <Footer />
