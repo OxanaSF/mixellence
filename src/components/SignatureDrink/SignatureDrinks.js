@@ -4,8 +4,7 @@ import Slider from 'react-slick';
 // import 'slick-carousel/slick/slick-theme.css';
 
 import DrinkCard from './DrinkCard';
-import './SignatureDrink.css';
-import { DRINKS } from '../../data2/drinks';
+import { DRINKS } from '../../data/drinks';
 
 function SignatureDrinks() {
   function SampleNextArrow(props) {
