@@ -1,0 +1,17 @@
+.sendBtn {
+  cursor: pointer;
+  font: inherit;
+  color: white;
+  background-color: #5d337d;
+  border: 1.4px solid white;
+  border-radius: 4px;
+  padding: 0.5rem 2.5rem;
+  width: 163px;
+  height: 42px;
+  letter-spacing: 1.5px;
+}
+
+.sendBtn:hover {
+  background-color: #873abb;
+  border-color: #873abb;
+}
