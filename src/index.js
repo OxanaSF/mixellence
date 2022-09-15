@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 import App from './App';
+import { ModalContextProvider } from './store/modal-context';
 
 import { AuthContextProvider } from './context/auth-context';
 
@@ -11,7 +12,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AuthContextProvider>
-      <App />
+      <ModalContextProvider>
+        <App />
+      </ModalContextProvider>
     </AuthContextProvider>
   </React.StrictMode>
 );
