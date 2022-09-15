@@ -1,10 +1,14 @@
 import React from 'react'
 
-// import classes from './Testimonials.module.css'
+import TestimonialsDisplay from './TestimonialsDisplay'
+import './Testimonials.css'
 
 const Testimonials = () => {
   return (
-    <section>Testimonials</section>
+    <section className='testimonials-section'>
+      <h2>Testimonials</h2> 
+      <TestimonialsDisplay />
+      </section>
   )
 }
 
