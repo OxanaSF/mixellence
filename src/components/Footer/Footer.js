@@ -1,10 +1,15 @@
 import React from 'react';
+import { useContext } from 'react';
 import { HashLink as MiddleLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 
+import AuthContext from '../../context/auth-context'
 import classes from './Footer.module.css';
 
 const Footer = () => {
+  const authCtx = useContext(AuthContext);
+  const isLoggedIn = authCtx.isLoggedIn;
+
   return (
     <footer className={classes.footer}>
       <div className={classes.footer_content}>
@@ -22,9 +27,15 @@ const Footer = () => {
       </div>
 
       <div className={classes.copyright}>
-        <Link to="admin-dashboard">
+
+        {isLoggedIn && <Link to="admin-dashboard">
           &copy; MIXELLENCE {new Date().getFullYear()}
-        </Link>
+        </Link>}
+
+        {!isLoggedIn && <Link to="auth">
+          &copy; MIXELLENCE {new Date().getFullYear()}
+        </Link>}
+      
       </div>
     </footer>
   );
