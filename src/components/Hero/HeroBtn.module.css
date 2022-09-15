@@ -1,0 +1,19 @@
+.heroButton {
+  background: #5d337d;
+  border: 2px solid #fafafa;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  top: 20%;
+  box-sizing: border-box;
+  height: 3rem;
+  width: 16.5rem;
+}
+
+.heroButton:hover {
+  transition: all 0.3s ease-in-out;
+  background: #5d337d00;
+}

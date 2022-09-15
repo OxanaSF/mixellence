@@ -1,8 +1,11 @@
 import React from 'react'
 
-const HeroBtn = () => {
+import classes from './HeroBtn.module.css'
+
+const HeroBtn = (props) => {
+  
   return (
-    <button>HeroBtn</button>
+    <button className={classes.heroButton}>{props.text}</button>
   )
 }
 

@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from '../Modal/Modal';
 
 import classes from './Hero.module.css'
+import HeroBtn from './HeroBtn';
 
 
 const Hero = () => {
+  const [modal, setModal] = useState(false);
+
   return (
     <section className={classes.hero}>
       <div className={classes.row}>
@@ -26,12 +30,19 @@ const Hero = () => {
         </div>
       </div>
       <div className={classes.overlay}>
-        <h2>Mobile Pop-Up Bar</h2>
+        <h2 className={classes.overlayHeaderText}>Mobile Pop-Up Bar</h2>
         <h1>Modern, Fun, Professional, {"&"} Convenient</h1>
-        <h3>Monterey Bay, California</h3>
+        <h3 className={classes.monterey}> <img className={classes.montereyPin} src={process.env.PUBLIC_URL + '/images/pin.png'} alt="" />Monterey Bay, California</h3>
         <h3>Native Owned</h3>
-        <button>Book a Consultation</button>
+
+        {/*TODO  Remove div and use Context instead of props*/}
+        <div onClick={() => setModal(!modal)} style={{padding: "10px"}}>
+          <HeroBtn text="Book a Consultation" />
+        </div>
+        {/* TODO */}
+        
       </div>
+      {modal === true && <Modal modal={modal} setModal={setModal}/>}
     </section>
   )
 }

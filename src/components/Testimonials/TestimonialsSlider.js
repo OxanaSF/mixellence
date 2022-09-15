@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const MeetOurTeemSlider = (props) => {
+const TestimonialsSlider = (props) => {
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -30,10 +30,14 @@ const MeetOurTeemSlider = (props) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 8000,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
+    autoplay: true,
+
+    autoplaySpeed: 8000,
+    cssEase: 'linear',
 
     appendDots: (dots) => (
       <div
@@ -76,7 +80,7 @@ const MeetOurTeemSlider = (props) => {
     ],
   };
 
-  return <Slider {...settings}>{props.children}</Slider>;
+  return <Slider {...settings}> {props.children}</Slider>;
 };
 
-export default MeetOurTeemSlider;
+export default TestimonialsSlider;
