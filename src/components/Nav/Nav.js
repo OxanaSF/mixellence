@@ -8,7 +8,6 @@ import ModalContext from '../../context/modal-context';
 import classes from './Nav.module.css';
 
 
-
 const Nav = () => {
   const [nav, setNav] = useState(false);
 
