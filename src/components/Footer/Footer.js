@@ -32,7 +32,7 @@ const Footer = () => {
           &copy; MIXELLENCE {new Date().getFullYear()}
         </Link>}
 
-        {!isLoggedIn && <Link to="auth">
+        {!isLoggedIn && <Link to="login">
           &copy; MIXELLENCE {new Date().getFullYear()}
         </Link>}
       
