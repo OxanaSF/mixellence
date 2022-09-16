@@ -1,17 +1,15 @@
 import { useState, useRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import SendBtn from '../../components/ui/SendBtn/SendBtn';
+import SendBtn from '../ui/SendBtn/SendBtn';
 import AuthContext from '../../context/auth-context';
-import classes from './AuthForm.module.css';
+import classes from './LogInForm.module.css'
 
-
-const AuthForm = () => {
+const LogInForm = () => {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
 
   const navigate = useNavigate();
-
 
   const authCtx = useContext(AuthContext);
 
@@ -22,7 +20,7 @@ const AuthForm = () => {
   //   setIsLogin((prevState) => !prevState);
   // };
 
-  const submitHandler = (event) => {
+  const loginHandler = (event) => {
     event.preventDefault();
 
     const enteredEmail = emailInputRef.current.value;
@@ -50,9 +48,6 @@ const AuthForm = () => {
         } else {
           return res.json().then((data) => {
             let errorMessage = 'Authentication failed!';
-            // if (data && data.error && data.error.message) {
-            //   errorMessage = data.error.message;
-            // }
 
             throw new Error(errorMessage);
           });
@@ -62,7 +57,7 @@ const AuthForm = () => {
         authCtx.login(data.idToken);
         console.log(data);
         console.log('SUCCESS!!!');
-        navigate("/admin-dashboard")
+        navigate('/admin-dashboard');
       })
       .catch((err) => {
         alert(err.message);
@@ -70,7 +65,8 @@ const AuthForm = () => {
   };
 
   return (
-    <section className={classes.auth}>
+    <section className={classes.logInWrapper}>
+      <div className={classes.login}>
       <div className={classes.adminImg}>
         <img
           src={`${process.env.PUBLIC_URL}/images/clients/client1.png`}
@@ -80,14 +76,14 @@ const AuthForm = () => {
 
       <h4>Log in</h4>
 
-      <form onSubmit={submitHandler}>
+      <form onSubmit={loginHandler}>
         <div className={classes.control}>
           <input
             className={classes.email}
             type="email"
             id="email"
             required
-            placeholder="User name"
+            placeholder="Email"
             ref={emailInputRef}
           />
         </div>
@@ -114,8 +110,9 @@ const AuthForm = () => {
           </button> */}
         </div>
       </form>
+      </div>
     </section>
   );
 };
 
-export default AuthForm;
+export default LogInForm;
