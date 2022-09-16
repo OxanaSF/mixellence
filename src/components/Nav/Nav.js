@@ -7,6 +7,8 @@ import classes from './Nav.module.css';
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
+
+
   return (
     <header className={classes.navbar}>
       <Link to="/">
@@ -39,3 +41,5 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
