@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import SendBtn from '../ui/SendBtn/SendBtn';
 import AuthContext from '../../context/auth-context';
-import classes from './LogInForm.module.css'
+import classes from './LogInForm.module.css';
 
 const LogInForm = () => {
   const emailInputRef = useRef();
@@ -54,7 +54,10 @@ const LogInForm = () => {
         }
       })
       .then((data) => {
-        authCtx.login(data.idToken);
+        const expirationTime = new Date(
+          new Date().getTime() + +data.expiresIn * 1000
+        );
+        authCtx.login(data.idToken, expirationTime.toISOString());
         console.log(data);
         console.log('SUCCESS!!!');
         navigate('/admin-dashboard');
@@ -67,40 +70,40 @@ const LogInForm = () => {
   return (
     <section className={classes.logInWrapper}>
       <div className={classes.login}>
-      <div className={classes.adminImg}>
-        <img
-          src={`${process.env.PUBLIC_URL}/images/clients/client1.png`}
-          alt="admin"
-        />
-      </div>
-
-      <h4>Log in</h4>
-
-      <form onSubmit={loginHandler}>
-        <div className={classes.control}>
-          <input
-            className={classes.email}
-            type="email"
-            id="email"
-            required
-            placeholder="Email"
-            ref={emailInputRef}
+        <div className={classes.adminImg}>
+          <img
+            src={`${process.env.PUBLIC_URL}/images/clients/client1.png`}
+            alt="admin"
           />
         </div>
-        <div className={classes.control}>
-          <input
-            className={classes.password}
-            type="password"
-            id="password"
-            required
-            placeholder="Password"
-            ref={passwordInputRef}
-          />
-        </div>
-        <div className={classes.actions}>
-          <button className={classes.forgotPassword}>Forgot password?</button>
-          <SendBtn></SendBtn>
-          {/* 
+
+        <h4>Log in</h4>
+
+        <form onSubmit={loginHandler}>
+          <div className={classes.control}>
+            <input
+              className={classes.email}
+              type="email"
+              id="email"
+              required
+              placeholder="Email"
+              ref={emailInputRef}
+            />
+          </div>
+          <div className={classes.control}>
+            <input
+              className={classes.password}
+              type="password"
+              id="password"
+              required
+              placeholder="Password"
+              ref={passwordInputRef}
+            />
+          </div>
+          <div className={classes.actions}>
+            <button className={classes.forgotPassword}>Forgot password?</button>
+            <SendBtn></SendBtn>
+            {/* 
           <button
             type="button"
             className={classes.toggle}
@@ -108,8 +111,8 @@ const LogInForm = () => {
           >
             {isLogin ? 'Create new account' : 'Login with existing account'}
           </button> */}
-        </div>
-      </form>
+          </div>
+        </form>
       </div>
     </section>
   );

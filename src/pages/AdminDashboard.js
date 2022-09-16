@@ -1,16 +1,13 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import AuthContext from '../context/auth-context'
-
-
+import AuthContext from '../context/auth-context';
 
 const AdminDashboard = () => {
   const authCtx = useContext(AuthContext);
 
   const logoutHandler = () => {
-    authCtx.logout()
-  }
-
+    authCtx.logout();
+  };
 
   return (
     <main>
@@ -19,8 +16,10 @@ const AdminDashboard = () => {
         <Link to="/">Client Website</Link>
       </button>
 
-      <button onClick={logoutHandler}>
-          Logout
+      <button onClick={logoutHandler}>Logout</button>
+
+      <button>
+        <Link to="/change-password">Profile</Link>
       </button>
     </main>
   );

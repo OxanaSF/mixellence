@@ -24,7 +24,7 @@ const App = () => {
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
           )}
 
-          {!authCtx.isLoggedIn && (
+          {authCtx.isLoggedIn && (
             <Route path="/change-password" element={<PasswordChangeForm />} />
           )}
 

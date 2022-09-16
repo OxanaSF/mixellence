@@ -13,7 +13,7 @@ const Nav = () => {
   const [nav, setNav] = useState(false);
 
   const modalCtx = useContext(ModalContext)
-  
+
   return (
     <header className={classes.navbar}>
       <Link to="/">
@@ -28,13 +28,13 @@ const Nav = () => {
           }
         >
           <li>
-            <MiddleLink onClick={() => setNav(!nav)}   to="/#about">About us</MiddleLink>
+            <MiddleLink onClick={() => setNav(!nav)} to="/#about">About us</MiddleLink>
           </li>
           <li>
-            <MiddleLink onClick={() => setNav(!nav)}  to="/#services">Services</MiddleLink>
+            <MiddleLink onClick={() => setNav(!nav)} to="/#services">Services</MiddleLink>
           </li>
           <li>
-            <button onClick={modalCtx.modalHandler}  className={classes.contact__us}>Contact Us</button>
+            <button onClick={modalCtx.modalHandler} className={classes.contact__us}>Contact Us</button>
           </li>
         </ul>
       </nav>
@@ -46,3 +46,5 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
