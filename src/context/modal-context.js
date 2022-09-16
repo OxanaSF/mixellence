@@ -14,16 +14,7 @@ export const ModalContextProvider = (props) => { //* We will wrap our components
 
   const modalHandler = () => {
     setModalIsOpen(!modalIsOpen);
-    console.log(modalIsOpen);
   }
-
-  // const closeModal = () => {
-  //   setModalIsOpen(false)
-  // }
-
-  // const openModal = () => {
-  //   setModalIsOpen(true);
-  // }
 
   return <ModalContext.Provider value={{
     modalIsOpen: modalIsOpen,
