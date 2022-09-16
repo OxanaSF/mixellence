@@ -21,6 +21,7 @@
 
 .bookConsultation {
   font-size: 1.125rem;
+  cursor: pointer;
   color: white;
   background: transparent;
   border: none;

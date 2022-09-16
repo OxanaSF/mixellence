@@ -5,8 +5,6 @@ import HeroBtn from './HeroBtn';
 
 const Hero = () => {
 
-  // const modalCtx = useContext(ModalContext);
-
   return (
     <section className={classes.hero}>
       <div className={classes.row}>

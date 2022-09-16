@@ -12,7 +12,7 @@ import Testimonials from '../components/Testimonials/Testimonials';
 import Footer from '../components/Footer/Footer';
 import Modal from '../components/Modal/Modal'
 
-import ModalContext from '../store/modal-context'; 
+import ModalContext from '../context/modal-context'; 
 
 const MainDisplay = () => {
 
