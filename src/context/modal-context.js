@@ -35,6 +35,11 @@ export const ModalContextProvider = (props) => { //* We will wrap our components
 export default ModalContext;
 
 // TODO - REPLACE HERO STATE WITH CONTEXT
+// ! red
+//* brighter
+// ? blue
+
+
 // STEPS TO REPLACE OUR LOCAL STATE WITH CONTEXT.
 // //CURRENTLY MY BRANCH IS USING LOCAL STATE WITHIN THE HERO COMPONENT
 // // I WILL NOW REMOVE THE FUNCTIONALITY OF DISPLAYING THE MODAL.

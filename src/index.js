@@ -4,7 +4,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 import App from './App';
-import { ModalContextProvider } from './store/modal-context';
+import { ModalContextProvider } from './context/modal-context';
 
 import { AuthContextProvider } from './context/auth-context';
 
