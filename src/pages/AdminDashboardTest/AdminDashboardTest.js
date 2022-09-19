@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import AuthContext from '../../context/auth-context';
 
 import SideBar from '../../AdminDashboard/components/SideBar/SideBar';
-import classes from './AdminDashboard.module.css'
+import classes from './AdminDashboardTest.module.css'
 
-const AdminDashboard = () => {
+const AdminDashboardTest = () => {
   const authCtx = useContext(AuthContext);
 
   const logoutHandler = () => {
@@ -30,4 +30,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default AdminDashboardTest;
