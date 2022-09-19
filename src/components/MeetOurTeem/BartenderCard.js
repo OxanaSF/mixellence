@@ -1,13 +1,28 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './MeetOurTeemSlider.css';
 
-const BartenderCard = ({ id, linkImg, name, drink, city, quote }) => {
-
+const BartenderCard = ({
+  id,
+  img,
+  name,
+  drink,
+  city,
+  quote,
+  deleteBartender,
+  setDeketeBartender,
+}) => {
+  const navigate = useNavigate();
 
   return (
-    <div className="card" onInvalid={id}>
+    <div className="card">
+      <button onClick={() => navigate(`/update-bartender/${id}`)}>
+        Add or Update
+      </button>
+      <button>Delete</button>
       <div className="card-top">
-        <img src={linkImg} alt={name} />
+        <img src={img} alt={name} />
       </div>
 
       <div className="card-bottom">

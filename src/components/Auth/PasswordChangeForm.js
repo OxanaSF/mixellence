@@ -1,18 +1,13 @@
 import React, { useRef, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import AuthContext from '../../context/auth-context';
 import SendBtn from '../ui/SendBtn/SendBtn';
 import classes from './PasswordChangeForm.module.css';
 
-const passwordChangeHandler = () => {};
-
 const LogOutForm = () => {
   const newPasswordInputRef = useRef();
   const authCtx = useContext(AuthContext);
-  const navigate = useNavigate()
-
-
 
   const passwordChangeHandler = (event) => {
     event.preventDefault();
@@ -34,27 +29,27 @@ const LogOutForm = () => {
           'Content-Type': 'application/json',
         },
       }
-    ).then (res => {
-      
-      // navigate('/admin-dashboard');
-
+    ).then((res) => {
       if (res.ok) {
-        console.log('OK!!!')
+        console.log('OK!!!');
         authCtx.logout();
-         navigate('/admin-dashboard');
       } else {
         return res.json().then((data) => {
           let errorMessage = 'failed!';
           throw new Error(errorMessage);
         });
       }
-    })
+    });
   };
 
   return (
-    <section className={classes.password_change_crapper}>
+    <section className={classes.password_change_wrapper}>
+      <button>
+        <Link to="/admin-dashboard">Back to Dashboarde</Link>
+      </button>
+
       <div className={classes.password_change}>
-        <h4>Forgot Password?</h4>
+        <h4>Change Password</h4>
 
         <form onSubmit={passwordChangeHandler}>
           <div className={classes.control}>

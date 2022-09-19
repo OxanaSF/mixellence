@@ -1,0 +1,11 @@
+.bartender_container {
+  width: 100%;
+  background: white;
+  height: 90vh;
+}
+
+.bartender_container h3 {
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
