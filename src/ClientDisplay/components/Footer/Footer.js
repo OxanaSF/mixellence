@@ -30,7 +30,7 @@ const Footer = () => {
 
       <div className={classes.copyright}>
 
-        {isLoggedIn && <Link to="admin-dashboard">
+        {isLoggedIn && <Link to="admin-dashboard-test">
           &copy; MIXELLENCE {new Date().getFullYear()}
         </Link>}
 

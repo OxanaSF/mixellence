@@ -10,6 +10,7 @@ const AdminDashboardTest = () => {
 
   const logoutHandler = () => {
     authCtx.logout();
+    console.log('LOGOUT!')
   };
 
   return (

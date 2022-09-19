@@ -29,7 +29,7 @@
   height: 100%;
   object-fit: cover;
 
-  -webkit-filter: grayscale(100%); 
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   display: block;
   margin: auto;
@@ -45,7 +45,6 @@
   background: #644bde;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  padding-left: 4rem;
 }
 
 .nav_links ul {
@@ -55,13 +54,39 @@
 }
 
 .nav_links ul li {
-  /* background: red; */
   padding: 2.5rem 0;
+  transition: all 1s ease;
+}
+
+.nav_links ul li:hover {
+  background: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .nav_links a {
+  padding-left: 4rem;
   color: white;
 }
+
+.nav_links a:visited {
+  color: black;
+}
+
+.nav_links ul li:hover a {
+  color: black;
+}
+
+
+
+.nav_link_active {
+  background: white;
+  padding: 2.5rem 0;
+  padding-right: 190px;
+  color: black;
+}
+
+
 
 .nav_container .logout {
   background: black;
@@ -73,6 +98,13 @@
   padding-left: 4rem;
   display: flex;
   gap: 1.5rem;
+  cursor: pointer;
+  transition: all 3s ease;
+}
+.nav_container .logout:hover {
+  background: white;
+  color: black;
+  border: 1px solid black;
 }
 
 .nav_container .logout img {
