@@ -22,6 +22,29 @@ export default function AddEditTestimonials() {
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value })
+  };
+
+  const validate = () => {
+    let errors = {};
+    if (!name) {
+      errors.name = "Name is Required"
+    }
+    if (!email) {
+      errors.email = "Email is Required"
+    }
+    if (!info) {
+      errors.info = "Info is Required"
+    }
+    if (!contact) {
+      errors.contact = "Contact is Required"
+    }
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let errors = validate();
+    if (Object.keys(errors).length) return setErrors(errors);
+
   }
 
 
@@ -34,7 +57,7 @@ export default function AddEditTestimonials() {
               {isSubmit ? <Loader active inline="centered" size="huge" />
                 : <>
                   <h2>Add User</h2>
-                  <Form>
+                  <Form onSubmit={handleSubmit}>
                     <Form.Input
                       label="Name"
                       placeholder="Enter Name"
