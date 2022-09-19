@@ -5,57 +5,85 @@ import AuthContext from '../../../context/auth-context';
 import classes from './NavSide.module.css';
 
 const NavSide = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const authCtx = useContext(AuthContext);
 
   const logoutHandler = () => {
     authCtx.logout();
-    navigate('/')
+    navigate('/');
   };
 
   return (
     <section className={classes.nav_container}>
       <header className={classes.nav_header}>
-        <div className={classes.img}>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/clients/client1.png`}
-            alt="admin"
-          />
-        </div>
+        <button>
+          <NavLink to="/change-password">
+            <div className={classes.img}>
+              <img
+                src={`${process.env.PUBLIC_URL}/images/clients/client1.png`}
+                alt="admin"
+              />
+            </div>
+          </NavLink>
+        </button>
+
         <p>Hi, Roel</p>
       </header>
 
       <nav className={classes.nav_links}>
-        <ul>
-          <li>
-            <NavLink
-              to="/">
-              Client Page
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about-dashboard"
-             className={({ isActive }) =>
-             isActive ? classes.nav_link_active : classes.nav_link
-           }
-            >About</NavLink>
-          </li>
-          <li>
-            <NavLink to="/services-dashboard">Services</NavLink>
-          </li>
-          <li>
-            {' '}
-            <NavLink to="/team-dashboard">Meet Our Team</NavLink>
-          </li>
-          <li>
-            {' '}
-            <NavLink to="/signature-drinks-dashboard">Signature Drinks</NavLink>
-          </li>
-          <li>
-            <NavLink to="/testimonials-dashboard">Testimonials</NavLink>
-          </li>
-        </ul>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? classes.nav_link_active : classes.client_page_link )}
+        >
+          Client Page
+        </NavLink>
+
+        <NavLink
+          to="/about-dashboard"
+         
+          className={({ isActive }) =>
+            isActive ? classes.nav_link_active : classes.nav_link
+          }
+        >
+          About
+        </NavLink>
+
+        <NavLink
+          to="/services-dashboard"
+          className={({ isActive }) =>
+            isActive ? classes.nav_link_active : classes.nav_link
+          }
+        >
+          Services
+        </NavLink>
+
+        <NavLink
+          to="/team-dashboard"
+          className={({ isActive }) =>
+            isActive ? classes.nav_link_active : classes.nav_link
+          }
+        >
+          Meet Our Team
+        </NavLink>
+
+        <NavLink
+          to="/signature-drinks-dashboard"
+          className={({ isActive }) =>
+            isActive ? classes.nav_link_active : classes.nav_link
+          }
+        >
+          Signature Drinks
+        </NavLink>
+
+        <NavLink
+          to="/testimonials-dashboard"
+          className={({ isActive }) =>
+            isActive ? classes.nav_link_active : classes.nav_link
+          }
+        >
+          Testimonials
+        </NavLink>
       </nav>
 
       <div onClick={logoutHandler} className={classes.logout}>
