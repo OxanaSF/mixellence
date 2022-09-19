@@ -4,7 +4,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { storage } from '../../firebase';
 import { db } from '../../firebase';
 import {
-  query,
   getDoc,
   doc,
   addDoc,

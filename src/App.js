@@ -5,7 +5,8 @@ import { useContext } from 'react';
 
 import MainDisplay from './pages/MainDisplay';
 import AdminDashboardTest from './pages/AdminDashboardTest/AdminDashboardTest';
-import AdminDashboardDisplay from './pages/AdminDashboardDisplay/AdminDashboardDisplay';
+
+// import AdminDashboardDisplay from './pages/AdminDashboardDisplay/AdminDashboardDisplay';
 import LogInForm from './ClientDisplay/components/Auth/LogInForm'
 import PasswordChangeForm from './ClientDisplay/components/Auth/PasswordChangeForm';
 
@@ -46,7 +47,11 @@ const App = () => {
 
           <Route
             path="/admin-dashboard"
-            element={<AdminDashboardDisplay />}
+            element={<AboutDashboard />}
+          ></Route>
+          <Route
+            path="/admin-dashboard-test"
+            element={<AdminDashboardTest />}
           ></Route>
 
           <Route path="/add-bartender" element={<EditBartendersPage />} />
