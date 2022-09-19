@@ -5,28 +5,28 @@ import AuthContext from '../../../context/auth-context';
 import classes from './NavSide.module.css';
 
 const NavSide = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const authCtx = useContext(AuthContext);
 
   const logoutHandler = () => {
     authCtx.logout();
-    navigate('/')
+    navigate('/');
   };
 
   return (
     <section className={classes.nav_container}>
       <header className={classes.nav_header}>
-      <button>
-        <NavLink to="/change-password">
-        <div className={classes.img}>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/clients/client1.png`}
-            alt="admin"
-          />
-        </div>
-        </NavLink>
-      </button>
+        <button>
+          <NavLink to="/change-password">
+            <div className={classes.img}>
+              <img
+                src={`${process.env.PUBLIC_URL}/images/clients/client1.png`}
+                alt="admin"
+              />
+            </div>
+          </NavLink>
+        </button>
 
         <p>Hi, Roel</p>
       </header>
@@ -34,17 +34,17 @@ const NavSide = () => {
       <nav className={classes.nav_links}>
         <ul>
           <li>
-            <NavLink
-              to="/">
-              Client Page
-            </NavLink>
+            <NavLink to="/">Client Page</NavLink>
           </li>
           <li>
-            <NavLink to="/about-dashboard"
-             className={({ isActive }) =>
-             isActive ? classes.nav_link_active : classes.nav_link
-           }
-            >About</NavLink>
+            <NavLink
+              to="/about-dashboard"
+              className={({ isActive }) =>
+                isActive ? classes.nav_link_active : classes.nav_link
+              }
+            >
+              About
+            </NavLink>
           </li>
           <li>
             <NavLink to="/services-dashboard">Services</NavLink>
