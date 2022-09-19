@@ -17,12 +17,17 @@ const NavSide = () => {
   return (
     <section className={classes.nav_container}>
       <header className={classes.nav_header}>
+      <button>
+        <NavLink to="/change-password">
         <div className={classes.img}>
           <img
             src={`${process.env.PUBLIC_URL}/images/clients/client1.png`}
             alt="admin"
           />
         </div>
+        </NavLink>
+      </button>
+
         <p>Hi, Roel</p>
       </header>
 
