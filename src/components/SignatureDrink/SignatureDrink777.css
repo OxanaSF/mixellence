@@ -3,7 +3,7 @@
   margin-top: -40;
   padding-top: 5.503rem;
   width: 21.875rem;
-  background-color: pink;
+  background-color: rgb(185, 180, 181);
   /* gap: 4rem; */
 }
 
@@ -28,7 +28,7 @@
   padding-left: 2rem;
   position: relative;
   
-  background-color: rgb(243, 18, 18);
+  background-color: rgb(160, 153, 153);
 }
 
 .drink-card-top {
