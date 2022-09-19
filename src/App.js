@@ -18,6 +18,7 @@ import SignatureDrinksDashboard from './AdminDashboard/components/SignatureDrink
 import './App.css';
 import AuthContext from './context/auth-context';
 import EditBartendersPage from './pages/EditBartendersPage/EditBartendersPage';
+import AddEditTestimonials from './pages/EditTestimonials/AddEditTestimonials';
 
 const App = () => {
   // const [dashBoard, setDashBoard] = useState(true)
@@ -66,10 +67,13 @@ const App = () => {
             path="/signature-drinks-dashboard"
             element={<SignatureDrinksDashboard />}
           />
-          <Route
+
+          <Route path="/add-testimonial" element={<AddEditTestimonials />} /> {/* Beginning of Add-Edit Testimonials. Testimonials Dashboard was commented out in order to test.  */}
+
+          {/* <Route
             path="/testimonials-dashboard"
             element={<TestimonialsDashboard />}
-          />
+          /> */}
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
