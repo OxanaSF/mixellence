@@ -4,7 +4,7 @@ import { useContext } from 'react';
 
 
 import MainDisplay from './pages/MainDisplay';
-import AdminDashboardTest from './pages/AdminDashboardTest/AdminDashboardTest';
+
 
 // import AdminDashboardDisplay from './pages/AdminDashboardDisplay/AdminDashboardDisplay';
 import LogInForm from './ClientDisplay/components/Auth/LogInForm'
@@ -35,10 +35,10 @@ const App = () => {
             <Route path="/login" element={<LogInForm />} />
           )}
           {/* {authCtx.isLoggedIn && ( */}
-          <Route
+          {/* <Route
             path="/admin-dashboard-test"
-            element={<AdminDashboardTest />}
-          />
+            element={<AdminDashboard />}
+          /> */}
           {/* )} */}
 
           {authCtx.isLoggedIn && (
@@ -49,10 +49,7 @@ const App = () => {
             path="/admin-dashboard"
             element={<AboutDashboard />}
           ></Route>
-          <Route
-            path="/admin-dashboard-test"
-            element={<AdminDashboardTest />}
-          ></Route>
+        
 
           <Route path="/add-bartender" element={<EditBartendersPage />} />
           <Route
@@ -72,8 +69,14 @@ const App = () => {
             path="/signature-drinks-dashboard"
             element={<SignatureDrinksDashboard />}
           />
+          <Route
+            path="/testimonials-dashboard"
+            element={<TestimonialsDashboard />}
+          />
 
-          <Route path="/add-testimonial" element={<AddEditTestimonials />} /> {/* Beginning of Add-Edit Testimonials. Testimonials Dashboard was commented out in order to test.  */}
+          
+{/* Beginning of Add-Edit Testimonials. Testimonials Dashboard was commented out in order to test.  */}
+          <Route path="/add-testimonial" element={<AddEditTestimonials />} /> 
 
           {/* <Route
             path="/testimonials-dashboard"

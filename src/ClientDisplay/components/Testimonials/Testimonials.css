@@ -38,6 +38,10 @@
   gap: 0.8rem;
 }
 
+.stars img{
+  width: 2rem;
+}
+
 .card-img {
   width: 5rem;
   height: 5rem;
@@ -47,6 +51,7 @@
 }
 
 .card-img img {
+  border-radius: 50%;
   width: 100%;
   height: 100%;
   object-fit: cover;
