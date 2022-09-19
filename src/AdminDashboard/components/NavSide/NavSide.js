@@ -36,8 +36,11 @@ const NavSide = () => {
           to="/"
           className={({ isActive }) => (isActive ? classes.nav_link_active : classes.client_page_link )}
         >
-          Client Page
+          Back to the App
         </NavLink>
+
+
+
 
         <NavLink
           to="/about-dashboard"
