@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { HashLink as MiddleLink } from 'react-router-hash-link';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import AuthContext from '../../../context/auth-context'
 import ModalContext from '../../../context/modal-context';
@@ -30,13 +30,17 @@ const Footer = () => {
 
       <div className={classes.copyright}>
 
-        {isLoggedIn && <Link to="admin-dashboard">
+        {isLoggedIn && <NavLink to="about-dashboard"
+          className={({ isActive }) =>
+          isActive ? classes.nav_link_active : classes.nav_link
+        }
+        >
           &copy; MIXELLENCE {new Date().getFullYear()}
-        </Link>}
+        </NavLink>}
 
-        {!isLoggedIn && <Link to="login">
+        {!isLoggedIn && <NavLink to="login">
           &copy; MIXELLENCE {new Date().getFullYear()}
-        </Link>}
+        </NavLink>}
       
       </div>
     </footer>
