@@ -21,7 +21,6 @@
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 50%;
-  background: red;
   border: 2px solid white;
 }
 .img img {
@@ -41,53 +40,67 @@
   font-weight: 500;
 }
 
+/* Nav Main */
+
 .nav_links {
   height: 60vh;
   background: #644bde;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-}
-
-.nav_links ul {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  text-align: left;
 }
 
-.nav_links ul li {
+.nav_link {
   padding: 2.5rem 0;
   transition: all 1s ease;
-}
-
-.nav_links ul li:hover {
-  background: white;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  width: 100%;
+  text-align: left;
 }
 
 .nav_links a {
   padding-left: 4rem;
   color: white;
+  transition: all 1s ease;
 }
 
-.nav_links a:visited {
+a.nav_link_active {
   color: black;
+  text-align: left;
 }
 
-.nav_links ul li:hover a {
-  color: black;
+.nav_link:hover,
+.client_page_link:hover {
+  background: #7861e8;
+  padding: 2.5rem 4rem;
+  color: white;
 }
-
-
 
 .nav_link_active {
   background: white;
-  padding: 2.5rem 0;
-  padding-right: 190px;
+  padding: 2.5rem 4rem;
   color: black;
+  transition: all 1s ease;
 }
 
+.client_page_link {
+  padding: 2.5rem 0;
+  transition: all 1s ease;
+  width: 100%;
+  text-align: left;
+}
 
+a.client_page_link {
+  padding: 2.5rem 0;
+  transition: all 1s ease;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+  padding-left: 4rem;
+}
 
 .nav_container .logout {
   background: black;
@@ -100,12 +113,12 @@
   display: flex;
   gap: 1.5rem;
   cursor: pointer;
-  transition: all 3s ease;
+  transition: all 1s ease;
 }
 .nav_container .logout:hover {
   background: white;
   color: black;
-  border: 1px solid black;
+  border: 1.4px solid black;
 }
 
 .nav_container .logout img {
