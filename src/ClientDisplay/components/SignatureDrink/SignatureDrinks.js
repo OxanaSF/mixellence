@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { DRINKS } from '../../data/drinks';
+import { DRINKS } from '../../../data/drinks';
 
 // import classes from './SignatureDrinks.module.css';
 

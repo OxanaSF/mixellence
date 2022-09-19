@@ -3,8 +3,8 @@ import { useContext } from 'react';
 import { HashLink as MiddleLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 
-import AuthContext from '../../context/auth-context'
-import ModalContext from '../../context/modal-context';
+import AuthContext from '../../../context/auth-context'
+import ModalContext from '../../../context/modal-context';
 import classes from './Footer.module.css';
 
 const Footer = () => {

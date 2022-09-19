@@ -3,7 +3,7 @@ import React from 'react';
 import TestimonialsSlider from './TestimonialsSlider';
 import TestimonialCard from './TestimonialCard';
 import './Testimonials.css';
-import { TESTIMONIALS } from '../../data/testimonials';
+import { TESTIMONIALS } from '../../../data/testimonials';
 
 function TestimonialsDisplay() {
   return (

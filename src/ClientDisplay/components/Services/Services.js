@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SERVICES_DATA } from '../../data/services-data';
+import { SERVICES_DATA } from '../../../data/services-data';
 import classes from './Services.module.css';
 
 const Services = () => {

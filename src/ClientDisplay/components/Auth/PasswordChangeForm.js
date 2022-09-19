@@ -1,7 +1,7 @@
 import React, { useRef, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import AuthContext from '../../context/auth-context';
+import AuthContext from '../../../context/auth-context';
 import SendBtn from '../ui/SendBtn/SendBtn';
 import classes from './PasswordChangeForm.module.css';
 

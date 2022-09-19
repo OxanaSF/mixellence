@@ -50,19 +50,14 @@ const EditBartendersPage = () => {
     }
   };
 
-
   useEffect(() => {
     id && getBartenderById();
     console.log('id', id);
   }, [id]);
 
-
-
-    // const deleteBartender = async (id) => {
-    //   await deleteDoc(doc(db, 'bartenders', id));
-    // };
-
-
+  // const deleteBartender = async (id) => {
+  //   await deleteDoc(doc(db, 'bartenders', id));
+  // };
 
   // useEffect(() => {
   //   if(id && props.deleteBartender) {
@@ -72,17 +67,11 @@ const EditBartendersPage = () => {
   //   props.setDeketeBartender(false)
   // }, [id, ]);
 
- 
-
- 
-
   useEffect(() => {
     const uploadImgFile = () => {
       // const name = new Date().getTime() + file.name;
       const storageRef = ref(storage, file.name);
       const uploadTask = uploadBytesResumable(storageRef, file);
-
-
 
       uploadTask.on(
         'state_changed',
