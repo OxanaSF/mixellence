@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import classes from './HeroBtn.module.css'
 
-import ModalContext from '../../context/modal-context'
+import ModalContext from '../../../context/modal-context'
 
 const HeroBtn = (props) => {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NavSide from '../NavSide/NavSide';
-import MeetOurTeam from '../../../components/MeetOurTeem/MeetOurTeem'
+import MeetOurTeam from '../../../ClientDisplay/components/MeetOurTeem/MeetOurTeem'
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
 import DashboardMain from '../ui/DashboardMain/DashboardMain';

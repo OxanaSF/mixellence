@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../../firebase';
+import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 
 import MeetOurTeemSlider from './MeetOurTeemSlider';
 import BartenderCard from './BartenderCard';
 import './MeetOurTeemSlider.css';
-import { BARTENDERS } from '../../data/bartenders';
+
 
 function MeetOurTeemDisplay(props) {
   const [bartenders, setBartenders] = useState([]);

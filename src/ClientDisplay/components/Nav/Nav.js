@@ -3,7 +3,7 @@ import { HashLink as MiddleLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
-import ModalContext from '../../context/modal-context';
+import ModalContext from '../../../context/modal-context';
 
 import classes from './Nav.module.css';
 

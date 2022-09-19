@@ -2,7 +2,7 @@ import { useState, useRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import SendBtn from '../ui/SendBtn/SendBtn';
-import AuthContext from '../../context/auth-context';
+import AuthContext from '../../../context/auth-context'
 import classes from './LogInForm.module.css';
 
 const LogInForm = () => {

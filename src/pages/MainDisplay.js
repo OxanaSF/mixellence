@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
 
-import Nav from '../components/Nav/Nav';
-import Hero from '../components/Hero/Hero';
-import BottomNav from '../components/BottomNav/BottomNav';
-import AboutUs from '../components/About/About';
-import Services from '../components/Services/Services';
-import MeetOurTeem from '../components/MeetOurTeem/MeetOurTeem';
-import SignatureDrink from '../components/SignatureDrink/SignatureDrink';
-import Gallery from '../components/Gallery/Gallery';
-import Testimonials from '../components/Testimonials/Testimonials';
-import Footer from '../components/Footer/Footer';
-import Modal from '../components/Modal/Modal';
+import Nav from '../ClientDisplay/components/Nav/Nav';
+import Hero from '../ClientDisplay/components/Hero/Hero';
+import BottomNav from '../ClientDisplay/components/BottomNav/BottomNav';
+import AboutUs from '../ClientDisplay/components/About/About';
+import Services from '../ClientDisplay/components/Services/Services';
+import MeetOurTeem from '../ClientDisplay/components/MeetOurTeem/MeetOurTeem';
+import SignatureDrink from '../ClientDisplay/components/SignatureDrink/SignatureDrink';
+import Gallery from '../ClientDisplay/components/Gallery/Gallery';
+import Testimonials from '../ClientDisplay/components/Testimonials/Testimonials';
+import Footer from '../ClientDisplay/components/Footer/Footer';
+import Modal from '../ClientDisplay/components/Modal/Modal';
 
 import ModalContext from '../context/modal-context';
 

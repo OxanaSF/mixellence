@@ -6,8 +6,8 @@ import { useContext } from 'react';
 import MainDisplay from './pages/MainDisplay';
 import AdminDashboardTest from './pages/AdminDashboardTest/AdminDashboardTest';
 import AdminDashboardDisplay from './pages/AdminDashboardDisplay/AdminDashboardDisplay';
-import LogInForm from './components/Auth/LogInForm';
-import PasswordChangeForm from './components/Auth/PasswordChangeForm';
+import LogInForm from './ClientDisplay/components/Auth/LogInForm'
+import PasswordChangeForm from './ClientDisplay/components/Auth/PasswordChangeForm';
 
 import AboutDashboard from './AdminDashboard/components/AboutDashboard/AboutDashboard';
 import ServicesDashboard from './AdminDashboard/components/ServicesDashboard/ServicesDashboard';

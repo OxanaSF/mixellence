@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import ModalContext from '../../context/modal-context';
+import ModalContext from '../../../context/modal-context';
 import classes from './BottomNav.module.css';
 
 const BottomNav = () => {
