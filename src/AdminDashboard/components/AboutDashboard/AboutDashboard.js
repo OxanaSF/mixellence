@@ -20,10 +20,12 @@ const AboutDashboard = () => {
         </DashboardHeader>
 
         <DashboardMain>
+          
           <div className={classes.about_wrapper}>
             <About />
             <AddEditDelete />
           </div>
+
         </DashboardMain>
         <DashboardFooter />
       </section>

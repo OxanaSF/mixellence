@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  height: 100vh;
+  height: 85%;
 }
 
 .nav_header {
@@ -43,7 +43,7 @@
 /* Nav Main */
 
 .nav_links {
-  height: 60vh;
+  height: 100%;
   background: #644bde;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;

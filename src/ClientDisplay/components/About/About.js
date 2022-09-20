@@ -12,7 +12,7 @@ const About = () => {
       collection(db, 'about'),
       (snapshot) => {
         snapshot.docs.forEach((doc) => {
-          setAboutInfo({ id: doc.id, ...doc.data() });
+          setAboutInfo({...doc.data() });
         });
       },
       (error) => {
