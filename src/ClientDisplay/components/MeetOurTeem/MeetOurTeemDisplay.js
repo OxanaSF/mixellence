@@ -18,7 +18,7 @@ function MeetOurTeemDisplay(props) {
       (snapshot) => {
         let list = [];
         snapshot.docs.forEach((doc) => {
-          console.log('doc.id', doc.id);
+          // console.log('doc.id', doc.id);
           list.push({ id: doc.id, ...doc.data() });
         });
         setBartenders(list);
