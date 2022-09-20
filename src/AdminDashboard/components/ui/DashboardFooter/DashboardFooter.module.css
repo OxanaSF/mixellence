@@ -1,0 +1,32 @@
+.dashboard_footer_container {
+  background: white;
+  color: black;
+  margin: 2rem;
+  padding: 1.4rem 3rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dashboard_footer_wrapper button {
+  gap: 2rem;
+  border: 1.5px solid black;
+  width: 11rem;
+  padding: 0.5rem 1rem;
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+.save_changes_btn {
+  margin-right: 2rem;
+  background: black;
+  color: white;
+  box-shadow: 0 4px 3px -0px lightgray;
+}
+
+.discard_changes_btn {
+  background: white;
+  color: black;
+}
