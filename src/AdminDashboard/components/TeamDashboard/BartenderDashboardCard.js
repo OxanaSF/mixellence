@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import './MeetOurTeemSlider.css';
+// import './TeemDashboard.css';
 
 const BartenderCard = ({
   id,
