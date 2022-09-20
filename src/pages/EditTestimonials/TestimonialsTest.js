@@ -15,11 +15,42 @@ export default function TestimonialsTest() {
       let list = [];
       snapshot.docs.forEach((doc) => {
         list.push({ id: doc.id, ...doc.data() })
-      })
-    })
+      });
+      setTestimonials(list);
+      setLoading(false);
+    },
+      (error) => {
+        console.log(error);
+      }
+    );
+    return () => {
+      unsub();
+    }
   }, []);
 
   return (
-    <div>TestimonialsTest</div>
+    <Container>
+      <Card.Group>
+        <Grid columns={3} stackable>
+          {testimonials && testimonials.map((item) => (
+            <Grid.Column>
+              <Card key={item.id}>
+                <Card.Content>
+                  <Image
+                    src={item.img}
+                    size="medium"
+                    style={{
+                      height: "150px",
+                      width: "150px",
+                      borderRadius: "50%"
+                    }} />
+                </Card.Content>
+              </Card>
+            </Grid.Column>
+          ))}
+
+        </Grid>
+      </Card.Group>
+    </Container>
   )
 }

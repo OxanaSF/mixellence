@@ -7,16 +7,20 @@ import classes from './AddEditTestimonials.module.css'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 
+//  TODO change video tutorial's data
+// TODO (cont.)  We need a name, rating, review, and picture in firebase
+
+
 const initialState = {
-  name: "",
-  email: "",
-  info: "",
-  contact: "",
+  name: "", // The name of the person leaving the review
+  rating: "", // the rating out of 5 the person left
+  review: "", // The text of our review the user left
+  // contact: "", // contact is not needed
 }
 
 export default function AddEditTestimonials() {
   const [data, setData] = useState(initialState);
-  const { name, email, info, contact } = data;
+  const { name, rating, review } = data;
   const [file, setFile] = useState(null);
   const [progress, setProgress] = useState(null);
   const [errors, setErrors] = useState({});
@@ -64,15 +68,15 @@ export default function AddEditTestimonials() {
     if (!name) {
       errors.name = "Name is Required"
     }
-    if (!email) {
-      errors.email = "Email is Required"
+    if (!rating) {
+      errors.rating = "Rating is Required"
     }
-    if (!info) {
-      errors.info = "Info is Required"
+    if (!review) {
+      errors.review = "Review is Required"
     }
-    if (!contact) {
-      errors.contact = "Contact is Required"
-    }
+    // if (!contact) {
+    //   errors.contact = "Contact is Required"
+    // }
 
     return errors;
   }
@@ -110,29 +114,29 @@ export default function AddEditTestimonials() {
                       autoFocus
                     />
                     <Form.Input
-                      label="Email"
-                      error={errors.email ? { content: errors.email } : null}
-                      placeholder="Enter Email"
-                      name="email"
+                      label="Rating"
+                      error={errors.rating ? { content: errors.rating } : null}
+                      placeholder="Enter Rating"
+                      name="rating"
                       onChange={handleChange}
-                      value={email}
+                      value={rating}
                     />
                     <Form.TextArea
-                      label="Info"
-                      error={errors.info ? { content: errors.info } : null}
-                      placeholder="Enter Info"
-                      name="info"
+                      label="Review"
+                      error={errors.review ? { content: errors.review } : null}
+                      placeholder="Enter Review"
+                      name="review"
                       onChange={handleChange}
-                      value={info}
+                      value={review}
                     />
-                    <Form.Input
+                    {/* <Form.Input
                       label="Contact"
                       error={errors.contact ? { content: errors.contact } : null}
                       placeholder="Enter Contact"
                       name="contact"
                       onChange={handleChange}
                       value={contact}
-                    />
+                    /> */}
                     <Form.Input
                       label="Upload"
                       type="file"

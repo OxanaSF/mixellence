@@ -19,7 +19,7 @@ const SignatureDrinksDashboard = () => {
         </DashboardHeader>
         
           <DashboardMain>
-            <h1>Testimonials</h1>
+            {/* <h1>Testimonials</h1> */}
             <Testimonials />
           </DashboardMain>
       
