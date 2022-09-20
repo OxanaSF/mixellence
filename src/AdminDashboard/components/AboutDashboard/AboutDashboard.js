@@ -6,6 +6,7 @@ import AddEditDelete from '../ui/AddEditDelete/AddEditDelete';
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
 import DashboardMain from '../ui/DashboardMain/DashboardMain';
+import DashboardFooter from '../ui/DashboardFooter/DashboardFooter';
 
 import classes from './AboutDashboard.module.css';
 
@@ -19,11 +20,14 @@ const AboutDashboard = () => {
         </DashboardHeader>
 
         <DashboardMain>
+          
           <div className={classes.about_wrapper}>
             <About />
             <AddEditDelete />
           </div>
+
         </DashboardMain>
+        <DashboardFooter />
       </section>
     </DashboardContainer>
   );

@@ -1,7 +1,12 @@
 .services__container {
-  min-height: 60vh;
+  min-height: 50vh;
   background-color: black;
   color: black;
+  margin-bottom: 10rem;
+}
+
+.service__item__container {
+  /* background: red; */
 }
 
 .services__container h2 {
@@ -12,12 +17,13 @@
 
 .services__main {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  display: grid;
+  grid-template-columns: 1.9fr 2fr 1.9fr;
 }
 
 .service__item__header {
-  height: 13rem;
+  min-height: 13rem;
   background-color: #121212;
   display: flex;
   flex-direction: column;
@@ -60,8 +66,6 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
-  height: 20rem;
-  width: 33rem;
 }
 
 .par1 {
@@ -77,8 +81,7 @@
 }
 
 .services__main img {
-  margin-bottom: 10rem;
-  width: 30rem;
+  width: 80%;
 }
 
 @media screen and (max-width: 720px) {
@@ -129,7 +132,6 @@
   }
   .services__main :nth-child(3) {
     order: 2;
-    /* width: 1fr; */
   }
 
   .services__main img {
@@ -158,13 +160,19 @@
   }
 }
 
-.wiggle a:hover{ 
+.wiggle a:hover {
   animation: wiggle 75ms infinite;
-  animation-timing-function: linear;   
+  animation-timing-function: linear;
 }
 
 @keyframes wiggle {
-  0% { transform: translate(2px, 0); }
-  50% { transform: translate(-2px, 0); }
-  100% { transform: translate(2px, 0); }
+  0% {
+    transform: translate(2px, 0);
+  }
+  50% {
+    transform: translate(-2px, 0);
+  }
+  100% {
+    transform: translate(2px, 0);
+  }
 }

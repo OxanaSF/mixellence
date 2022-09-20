@@ -1,11 +1,10 @@
 .add_edit_delete_container {
   background: white;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
   height: 30%;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
+  margin-left: 2rem;
 }
 
 .add_edit_delete_wrapper {
