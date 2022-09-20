@@ -5,7 +5,7 @@ export const BARTENDERS= [
       drink: 'Signature Drink: Mojito',
       city: 'Hayward, CA',
       quote: '"I love meeting new people and making custom drinks"',
-      linkImg:
+      img:
       `${process.env.PUBLIC_URL}/images/bartendersImg/bartender1.png`,
     },
     {
@@ -14,7 +14,7 @@ export const BARTENDERS= [
       drink: 'Signature Drink: Mojito',
       city: 'Hayward, CA',
       quote: '"I love meeting new people and making custom drinks"',
-      linkImg:
+      img:
       `${process.env.PUBLIC_URL}/images/bartendersImg/bartender2.png`,
     },
     {
@@ -23,7 +23,7 @@ export const BARTENDERS= [
       drink: 'Signature Drink: Mojito',
       city: 'Hayward, CA',
       quote: '"I love meeting new people and making custom drinks"',
-      linkImg:
+      img:
       `${process.env.PUBLIC_URL}/images/bartendersImg/bartender3.png`,
     },
     {
@@ -32,7 +32,7 @@ export const BARTENDERS= [
       drink: 'Signature Drink: Mojito',
       city: 'Hayward, CA',
       quote: '"I love meeting new people and making custom drinks"',
-      linkImg:
+      img:
       `${process.env.PUBLIC_URL}/images/bartendersImg/bartender4.png`,
     },
     {
@@ -41,7 +41,7 @@ export const BARTENDERS= [
       drink: 'Signature Drink: Mojito',
       city: 'Hayward, CA',
       quote: '"I love meeting new people and making custom drinks"',
-      linkImg:
+      img:
       `${process.env.PUBLIC_URL}/images/bartendersImg/bartender5.png`,
     },
   

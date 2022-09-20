@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 import classes from './About.module.css';
 
 const About = () => {
@@ -7,7 +9,7 @@ const About = () => {
     <section className={classes.about__container} id="about">
       <h2>About Us</h2>
 
-      <div>
+      <div className={classes.about_info_wrapper}>
         <div className={classes.about__info}>
           <p className={classes.par1}>
             Mixellence is a mobile pop-up bar that provides excellent and
@@ -38,11 +40,13 @@ const About = () => {
         </div>
       </div>
 
+<div className={classes.img}>
       <img
         className={classes.barImg}
         src={`${process.env.PUBLIC_URL}/images/bar.png`}
         alt="bar"
       />
+</div>
     </section>
   );
 };

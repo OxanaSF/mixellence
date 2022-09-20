@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NavSide from '../NavSide/NavSide';
-import MeetOurTeam from '../../../ClientDisplay/components/MeetOurTeem/MeetOurTeem'
+import TeamDashboardDisplay from './TeamDashboardDisplay';
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
 import DashboardMain from '../ui/DashboardMain/DashboardMain';
@@ -18,8 +18,7 @@ const MeetOurTeamDashboard = () => {
 
         <DashboardMain>
           <h1>Meet Our Team</h1>
-       
-    
+          <TeamDashboardDisplay />
         </DashboardMain>
       </section>
     </DashboardContainer>
