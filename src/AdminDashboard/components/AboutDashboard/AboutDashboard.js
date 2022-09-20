@@ -2,6 +2,7 @@ import React from 'react';
 
 import NavSide from '../NavSide/NavSide';
 import About from '../../../ClientDisplay/components/About/About';
+import AddEditDelete from '../ui/AddEditDelete/AddEditDelete';
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
 import DashboardMain from '../ui/DashboardMain/DashboardMain';
@@ -20,6 +21,7 @@ const AboutDashboard = () => {
         <DashboardMain>
           <div className={classes.about_wrapper}>
             <About />
+            <AddEditDelete />
           </div>
         </DashboardMain>
       </section>

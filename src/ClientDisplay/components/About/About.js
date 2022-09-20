@@ -40,11 +40,13 @@ const About = () => {
         </div>
       </div>
 
+<div className={classes.img}>
       <img
         className={classes.barImg}
         src={`${process.env.PUBLIC_URL}/images/bar.png`}
         alt="bar"
       />
+</div>
     </section>
   );
 };

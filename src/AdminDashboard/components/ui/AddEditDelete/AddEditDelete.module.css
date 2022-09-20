@@ -1,0 +1,20 @@
+.add_edit_delete_container {
+  background: white;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  height: 30%;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.add_edit_delete_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.5rem 0.7rem 1.5rem 1.4rem;
+}
+
+.add_edit_delete_wrapper img {
+  width: 1.5rem;
+}

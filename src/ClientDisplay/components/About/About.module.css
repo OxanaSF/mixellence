@@ -10,9 +10,12 @@
   margin-bottom: .5rem;
 }
 
+.img {
+  width: 100%;
+}
 
 .barImg {
-  width: 1409px;
+  width: 100%;
   height: 149px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -49,7 +52,8 @@
   padding-top: 0.3rem;
 }
 
-@media screen and (max-width: 720px) {
+
+@media screen and (max-width: 890px) {
   .about__container {
     padding: 1.2rem;
   }

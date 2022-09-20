@@ -9,9 +9,7 @@ const BartenderCard = ({
   name,
   drink,
   city,
-  quote,
-  deleteBartender,
-  setDeketeBartender,
+  quote
 }) => {
   const navigate = useNavigate();
 

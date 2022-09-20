@@ -5,10 +5,8 @@
   border-radius: 20px;
 }
 
-
 .dashboard_main_container h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 3rem;
-    margin-top: 3rem;
-  }
-  
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  margin-top: 3rem;
+}
