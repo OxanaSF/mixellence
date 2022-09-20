@@ -32,12 +32,13 @@ const Services = () => {
             </div>
           )
         )}
-
-        <img
-          className={classes.animation}
-          src={`${process.env.PUBLIC_URL}/images/ezgif.com-gif-maker.gif`}
-          alt="glass is filled with drink"
-        />
+       
+          <img
+            className={classes.animation}
+            src={`${process.env.PUBLIC_URL}/images/ezgif.com-gif-maker.gif`}
+            alt="glass is filled with drink"
+          />
+       
 
         {SERVICES_DATA.filter((item) => item.id === 'service2').map(
           (service) => (

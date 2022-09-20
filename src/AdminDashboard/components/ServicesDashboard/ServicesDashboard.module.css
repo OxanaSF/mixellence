@@ -1,4 +1,9 @@
-.services_dashboard_container {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
+.services_wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.services {
+  height: 50vh;
 }
