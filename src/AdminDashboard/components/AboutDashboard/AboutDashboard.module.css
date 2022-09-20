@@ -1,4 +1,2 @@
-.about_dashboard_container {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
+.about_wrapper {
 }

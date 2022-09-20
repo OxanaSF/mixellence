@@ -1,10 +1,10 @@
 import React from 'react';
 
 import NavSide from '../NavSide/NavSide';
+import About from '../../../ClientDisplay/components/About/About';
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
 import DashboardMain from '../ui/DashboardMain/DashboardMain';
-
 
 import classes from './AboutDashboard.module.css';
 
@@ -16,13 +16,12 @@ const AboutDashboard = () => {
         <DashboardHeader>
           <h3>About us</h3>
         </DashboardHeader>
-        
-          <DashboardMain>
-            <h1>About Us</h1>
-            <div>Something is here</div>
-            <div>Something is here</div>
-          </DashboardMain>
-      
+
+        <DashboardMain>
+          <div className={classes.about_wrapper}>
+            <About />
+          </div>
+        </DashboardMain>
       </section>
     </DashboardContainer>
   );
