@@ -7,7 +7,7 @@ const drinks = [
   {
     name: 'Margarita',
     id: Math.random(),
-    date: 'some word-1',
+    date: 'someword-1',
     image: margaritaImg,
     description:
       'Made with the finest ingridents & our secret sauce',

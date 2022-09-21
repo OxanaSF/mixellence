@@ -1,6 +1,8 @@
 import React from 'react';
 
-import drinks from '../../data/drinks';
+
+
+import drinks from '../../../data/drinks';
 import classes from './SignatureDrink.module.css'; 
 
 import Cards from '../../components/Cards/Cards';
