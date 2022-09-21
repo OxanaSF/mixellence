@@ -14,8 +14,6 @@ const About = () => {
         snapshot.docs.forEach((doc) => {
           setAboutInfo({...doc.data() });
         });
-
-        // setAboutInfo(...snapshot.data)
       },
       (error) => {
         console.log(error);

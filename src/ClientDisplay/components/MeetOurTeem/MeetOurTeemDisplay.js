@@ -47,9 +47,6 @@ function MeetOurTeemDisplay(props) {
               drink={item.drink}
               city={item.city}
               quote={item.quote}
-
-              deleteBartender={props.deleteBartender}
-      setDeketeBartender={props.setDeketeBartender}
             />
           ))}
       </MeetOurTeemSlider>
