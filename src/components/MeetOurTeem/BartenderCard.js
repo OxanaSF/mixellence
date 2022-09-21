@@ -16,7 +16,7 @@ const BartenderCard = ({ id, linkImg, name, drink, city, quote }) => {
         <h3 className="card-bottom-address">{city}</h3>
         <p className="card-bottom-quote">{quote}</p>
       </div>
-    </div>
+    </div >
   );
 };
 
