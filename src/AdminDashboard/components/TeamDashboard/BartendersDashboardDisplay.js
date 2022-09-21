@@ -2,12 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 
-import MeetOurTeemSlider from './MeetOurTeemSlider';
-import BartenderCard from './BartenderCard';
-import './MeetOurTeemSlider.css';
+import BartenderDashboardCard from './BartenderDashboardCard';
+import classes from './BartendersDashboardDisplay.module.css';
 
-
-function MeetOurTeemDisplay(props) {
+const CardsDisplay = () => {
   const [bartenders, setBartenders] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -18,7 +16,6 @@ function MeetOurTeemDisplay(props) {
       (snapshot) => {
         let list = [];
         snapshot.docs.forEach((doc) => {
-          console.log('doc.id', doc.id);
           list.push({ id: doc.id, ...doc.data() });
         });
         setBartenders(list);
@@ -34,11 +31,12 @@ function MeetOurTeemDisplay(props) {
   }, []);
 
   return (
-    <div className="slider-container">
-      <MeetOurTeemSlider>
+    <div>
+      <h1>Meet Our Team</h1>
+      <div className={classes.card_display_container}>
         {bartenders &&
           bartenders.map((item) => (
-            <BartenderCard
+            <BartenderDashboardCard
               id={item.id}
               key={item.id}
               img={item.img}
@@ -47,14 +45,11 @@ function MeetOurTeemDisplay(props) {
               drink={item.drink}
               city={item.city}
               quote={item.quote}
-
-              deleteBartender={props.deleteBartender}
-      setDeketeBartender={props.setDeketeBartender}
             />
           ))}
-      </MeetOurTeemSlider>
+      </div>
     </div>
   );
-}
+};
 
-export default MeetOurTeemDisplay;
+export default CardsDisplay;

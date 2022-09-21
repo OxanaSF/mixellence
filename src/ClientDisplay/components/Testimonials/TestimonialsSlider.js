@@ -61,7 +61,7 @@ const TestimonialsSlider = (props) => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 930,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,

@@ -36,6 +36,7 @@ const EditBartendersPage = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+
   const { id } = useParams();
 
   console.log('id', id);
@@ -46,12 +47,16 @@ const EditBartendersPage = () => {
 
     if (snapshot.exists()) {
       setBartenderData({ ...snapshot.data });
+      console.log('snapshot', snapshot)
     }
   };
+
+
 
   useEffect(() => {
     id && getBartenderById();
     console.log('id', id);
+  
   }, [id]);
 
   // const deleteBartender = async (id) => {
@@ -114,28 +119,28 @@ const EditBartendersPage = () => {
     });
   };
 
-  const validate = () => {
-    let errors = {};
-    if (!name) {
-      errors.name = 'Name is Required';
-    }
-    if (!drink) {
-      errors.drink = 'Signature drink is Required';
-    }
-    if (!city) {
-      errors.drink = 'City is Required';
-    }
-    if (!quote) {
-      errors.quote = 'Quote is Required';
-    }
+  // const validate = () => {
+  //   let errors = {};
+  //   if (!name) {
+  //     errors.name = 'Name is Required';
+  //   }
+  //   if (!drink) {
+  //     errors.drink = 'Signature drink is Required';
+  //   }
+  //   if (!city) {
+  //     errors.drink = 'City is Required';
+  //   }
+  //   if (!quote) {
+  //     errors.quote = 'Quote is Required';
+  //   }
 
-    return errors;
-  };
+  //   return errors;
+  // };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    let errors = validate();
-    if (Object.keys(errors).length) return setErrors(errors);
+    // let errors = validate();
+    // if (Object.keys(errors).length) return setErrors(errors);
     setIsSubmitted(true);
 
     if (!id) {
@@ -149,6 +154,7 @@ const EditBartendersPage = () => {
         console.log(error);
       }
     } else {
+      
       try {
         console.log('bartenderData', bartenderData);
         await updateDoc(doc(db, 'bartenders', id), {
@@ -160,7 +166,7 @@ const EditBartendersPage = () => {
       }
     }
 
-    navigare('/admin-dashboard');
+    navigare('/team-dashboard');
   };
 
   return (
@@ -183,7 +189,7 @@ const EditBartendersPage = () => {
                     <Form.Input
                       label="name"
                       error={errors.name ? { content: errors.name } : null}
-                      placeholder="Enter Name"
+                      placeholder={id && name ? name : 'Enter Name'}
                       name="name"
                       onChange={handleChange}
                       value={name || ''}
