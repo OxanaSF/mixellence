@@ -7,7 +7,8 @@ const DeleteData = (props) => {
   const navigate = useNavigate();
 
   return (
-    <button className={classes.delete_data} onClick={props.onClick}>
+    <button 
+    className={classes.delete_data} onClick={props.onClick}>
       <img
         src={`${process.env.PUBLIC_URL}/images/scissors.png`}
         alt="scissors"

@@ -1,10 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+
 // import { useNavigate } from 'react-router-dom';
 
+import { enableDeleteActions } from '../../../../store/enable-delete-slice'
 import AddData from './AddData';
 import classes from './AddEditDelete.module.css';
 
 const AddEditDelete = () => {
+  const dispatch = useDispatch();
   // const navigate = useNavigate();
 
   return (
@@ -18,12 +22,12 @@ const AddEditDelete = () => {
         {/* </div> */}
 
    
-        <div>
+        <button onClick={dispatch(enableDeleteActions.enable())}>
           <img
             src={`${process.env.PUBLIC_URL}/images/scissors.png`}
             alt="scissors"
           />
-        </div>
+        </button>
 
         <div>
           <img src={`${process.env.PUBLIC_URL}/images/draw.png`} alt="draw" />
