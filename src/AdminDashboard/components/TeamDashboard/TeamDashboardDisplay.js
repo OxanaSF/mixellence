@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { db } from '../../../firebase';
-import { BARTENDERS } from '../../../data/bartenders';
+// import { BARTENDERS } from '../../../data/bartenders';
 import { onSnapshot, collection } from 'firebase/firestore';
 
 
