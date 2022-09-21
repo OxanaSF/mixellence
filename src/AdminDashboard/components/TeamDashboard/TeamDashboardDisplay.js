@@ -1,15 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { db } from '../../../firebase';
 import { BARTENDERS } from '../../../data/bartenders';
 import { onSnapshot, collection } from 'firebase/firestore';
 
+
+import { enableDeleteActions } from '../../../store/enable-delete-slice'
 import TeamDashboardSlider from './TeemDashboardSlider';
 import BartenderDashboardCard from './BartenderDashboardCard';
 // import './TeemDashboard.css';
 
 function TeamDashboardDisplay(props) {
+  const dispatch = useDispatch();
   const [bartenders, setBartenders] = useState([]);
   const [loading, setLoading] = useState(false);
+
+
+  useEffect(() => {
+    dispatch(enableDeleteActions.disable())
+  },[])
+
 
   useEffect(() => {
     setLoading(true);

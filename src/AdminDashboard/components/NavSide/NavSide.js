@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
+
 import AuthContext from '../../../context/auth-context';
 import classes from './NavSide.module.css';
 
 const NavSide = () => {
+
+
   const navigate = useNavigate();
 
   const authCtx = useContext(AuthContext);
@@ -66,6 +69,7 @@ const NavSide = () => {
           className={({ isActive }) =>
             isActive ? classes.nav_link_active : classes.nav_link
           }
+          
         >
           Meet Our Team
         </NavLink>
