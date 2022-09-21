@@ -1,20 +1,17 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { db } from '../../../firebase';
-import {
-  query,
-  collection,
-  onSnapshot,
-  updateDoc,
-  doc,
-  addDoc,
-  deleteDoc,
-} from 'firebase/firestore';
+import { doc, deleteDoc } from 'firebase/firestore';
+// import { enableDeleteActions } from '../../../store/enable-delete-slice';
 
 import EditData from '../ui/AddEditDelete/EditData';
 import DeleteData from '../ui/AddEditDelete/DeleteData';
 import classes from './BartenderDashboardCard.module.css';
 
 const BartenderDashboardCard = ({ id, img, name, drink, city, quote }) => {
+  const enableDelete = useSelector((state) => state.enableDelete.enableDelete);
+  const dispatch = useDispatch();
+
   const deleteBartender = async (id) => {
     await deleteDoc(doc(db, 'bartenders', id));
   };
@@ -25,10 +22,16 @@ const BartenderDashboardCard = ({ id, img, name, drink, city, quote }) => {
 
   return (
     <div className={classes.bartender_card_container}>
-      <header className={classes.bartender_card_header}>
+      {/* <header className={classes.bartender_card_header}>
         <EditData navigate={`/update-bartender/${id}`} />
         <DeleteData onClick={bartenderDeleteHandler} />
-      </header>
+      </header> */}
+
+      {enableDelete && (
+        <header className={classes.bartender_card_header}>
+          <DeleteData onClick={bartenderDeleteHandler} />
+        </header>
+      )}
 
       <div className={classes.bartender_card_main}>
         <div className={classes.bartender_card_img}>

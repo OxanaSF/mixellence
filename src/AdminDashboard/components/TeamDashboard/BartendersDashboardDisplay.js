@@ -2,10 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 
+
 import BartenderDashboardCard from './BartenderDashboardCard';
 import classes from './BartendersDashboardDisplay.module.css';
 
+
+
 const CardsDisplay = () => {
+
+
   const [bartenders, setBartenders] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -33,6 +38,9 @@ const CardsDisplay = () => {
   return (
     <div>
       <h1>Meet Our Team</h1>
+
+
+
       <div className={classes.card_display_container}>
         {bartenders &&
           bartenders.map((item) => (

@@ -1,15 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../../../firebase';
-import {
-  query,
-  collection,
-  onSnapshot,
-  updateDoc,
-  doc,
-  addDoc,
-  deleteDoc,
-} from 'firebase/firestore';
+import { doc, deleteDoc } from 'firebase/firestore';
 
 import './MeetOurTeemSlider.css';
 
@@ -22,11 +14,6 @@ const BartenderCard = ({ id, img, name, drink, city, quote }) => {
 
   return (
     <div className="card">
-      <button onClick={() => navigate('/add-bartender')}>Add</button>
-      <button onClick={() => navigate(`/update-bartender/${id}`)}>
-        Add or Update
-      </button>
-      <button onClick={() => deleteBartender(id)}>Delete</button>
       <div className="card-top">
         <img src={img} alt={name} />
       </div>
