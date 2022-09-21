@@ -1,7 +1,9 @@
 import React from 'react';
 
 import NavSide from '../NavSide/NavSide';
-import TeamDashboardDisplay from './TeamDashboardDisplay';
+import BartendersDashboardDisplay from './BartendersDashboardDisplay';
+import AddEditDelete from '../ui/AddEditDelete/AddEditDelete';
+
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
 import DashboardMain from '../ui/DashboardMain/DashboardMain';
@@ -17,8 +19,10 @@ const MeetOurTeamDashboard = () => {
         </DashboardHeader>
 
         <DashboardMain>
-          <h1>Meet Our Team</h1>
-          <TeamDashboardDisplay />
+          <div className={classes.team_wrapper}>
+            <BartendersDashboardDisplay />
+            <AddEditDelete />
+          </div>
         </DashboardMain>
       </section>
     </DashboardContainer>
