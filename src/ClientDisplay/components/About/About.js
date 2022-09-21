@@ -7,17 +7,17 @@ import classes from './About.module.css';
 
 const About = () => {
   const [aboutInfo, setAboutInfo] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setIsSubmitted(true);
+    setIsLoading(true);
     const unsub = onSnapshot(
       collection(db, 'about'),
       (snapshot) => {
         snapshot.docs.forEach((doc) => {
           setAboutInfo({ ...doc.data() });
         });
-        setIsSubmitted(false);
+        setIsLoading(false);
       },
       (error) => {
         console.log(error);
@@ -32,7 +32,7 @@ const About = () => {
     <section className={classes.about__container} id="about">
       <h2>About Us</h2>
 
-      {isSubmitted ? (
+      {isLoading ? (
         <Loader active inline="centered" size="huge" />
       ) : (
         <>

@@ -58,17 +58,6 @@ const EditBartendersPage = () => {
     console.log('id', id);
   }, [id]);
 
-  // const deleteBartender = async (id) => {
-  //   await deleteDoc(doc(db, 'bartenders', id));
-  // };
-
-  // useEffect(() => {
-  //   if(id && props.deleteBartender) {
-  //     deleteBartender()
-  //   }
-  //   console.log('id', id);
-  //   props.setDeketeBartender(false)
-  // }, [id, ]);
 
   useEffect(() => {
     const uploadImgFile = () => {
