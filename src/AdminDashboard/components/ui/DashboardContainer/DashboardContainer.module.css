@@ -1,0 +1,8 @@
+.dashboard_container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+
