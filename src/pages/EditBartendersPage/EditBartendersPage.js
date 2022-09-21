@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
+import { enableEditActions } from '../../store/enable-edit-slice';
 import { storage } from '../../firebase';
 import { db } from '../../firebase';
 import {
@@ -8,10 +10,10 @@ import {
   doc,
   addDoc,
   updateDoc,
-  deleteDoc,
   collection,
   serverTimestamp,
 } from 'firebase/firestore';
+
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 import { Form, Grid, Loader, Button } from 'semantic-ui-react';
@@ -27,6 +29,7 @@ const initialBartenderState = {
 };
 
 const EditBartendersPage = () => {
+  const dispatch = useDispatch();
   const navigare = useNavigate();
 
   const [bartenderData, setBartenderData] = useState(initialBartenderState);
@@ -35,7 +38,6 @@ const EditBartendersPage = () => {
   const [progress, setProgress] = useState(null);
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-
 
   const { id } = useParams();
 
@@ -47,16 +49,13 @@ const EditBartendersPage = () => {
 
     if (snapshot.exists()) {
       setBartenderData({ ...snapshot.data });
-      console.log('snapshot', snapshot)
+      console.log('snapshot', snapshot);
     }
   };
-
-
 
   useEffect(() => {
     id && getBartenderById();
     console.log('id', id);
-  
   }, [id]);
 
   // const deleteBartender = async (id) => {
@@ -154,7 +153,6 @@ const EditBartendersPage = () => {
         console.log(error);
       }
     } else {
-      
       try {
         console.log('bartenderData', bartenderData);
         await updateDoc(doc(db, 'bartenders', id), {
@@ -165,7 +163,7 @@ const EditBartendersPage = () => {
         console.log(error);
       }
     }
-
+    dispatch(enableEditActions.disable());
     navigare('/team-dashboard');
   };
 

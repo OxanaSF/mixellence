@@ -2,18 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 
+import { Loader } from 'semantic-ui-react';
 import classes from './About.module.css';
 
 const About = () => {
   const [aboutInfo, setAboutInfo] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
+    setIsSubmitted(true);
     const unsub = onSnapshot(
       collection(db, 'about'),
       (snapshot) => {
         snapshot.docs.forEach((doc) => {
-          setAboutInfo({...doc.data() });
+          setAboutInfo({ ...doc.data() });
         });
+        setIsSubmitted(false);
       },
       (error) => {
         console.log(error);
@@ -28,27 +32,33 @@ const About = () => {
     <section className={classes.about__container} id="about">
       <h2>About Us</h2>
 
-      <div className={classes.about_info_wrapper}>
-        <div className={classes.about__info}>
-          <p className={classes.par1}>{aboutInfo.text1}</p>
+      {isSubmitted ? (
+        <Loader active inline="centered" size="huge" />
+      ) : (
+        <>
+          <div className={classes.about_info_wrapper}>
+            <div className={classes.about__info}>
+              <p className={classes.par1}>{aboutInfo.text1}</p>
 
-          <p className={classes.par2}>{aboutInfo.text2}</p>
+              <p className={classes.par2}>{aboutInfo.text2}</p>
 
-          <footer className={classes.about__footer}>
-            <div className={classes.about__footer__location}>
-              <div>
-                <img
-                  src={`${process.env.PUBLIC_URL}/images/pin.png`}
-                  alt="pin"
-                />
-              </div>
-              <div>{aboutInfo.city}</div>
+              <footer className={classes.about__footer}>
+                <div className={classes.about__footer__location}>
+                  <div>
+                    <img
+                      src={`${process.env.PUBLIC_URL}/images/pin.png`}
+                      alt="pin"
+                    />
+                  </div>
+                  <div>{aboutInfo.city}</div>
+                </div>
+
+                <div>{aboutInfo.text3}</div>
+              </footer>
             </div>
-
-            <div>{aboutInfo.text3}</div>
-          </footer>
-        </div>
-      </div>
+          </div>
+        </>
+      )}
 
       <div className={classes.img}>
         <img
