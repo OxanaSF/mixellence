@@ -2,20 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 
-
+import { Loader } from 'semantic-ui-react';
 import BartenderDashboardCard from './BartenderDashboardCard';
 import classes from './BartendersDashboardDisplay.module.css';
 
-
-
 const CardsDisplay = () => {
-
-
   const [bartenders, setBartenders] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
+    setIsLoading(true);
     const unsub = onSnapshot(
       collection(db, 'bartenders'),
       (snapshot) => {
@@ -24,7 +20,7 @@ const CardsDisplay = () => {
           list.push({ id: doc.id, ...doc.data() });
         });
         setBartenders(list);
-        setLoading(false);
+        setIsLoading(false);
       },
       (error) => {
         console.log(error);
@@ -38,8 +34,6 @@ const CardsDisplay = () => {
   return (
     <div>
       <h1>Meet Our Team</h1>
-
-
 
       <div className={classes.card_display_container}>
         {bartenders &&
