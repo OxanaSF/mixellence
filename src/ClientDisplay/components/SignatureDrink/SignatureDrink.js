@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 import drinks from '../../../data/drinks';
 import classes from './SignatureDrink.module.css'; 
 
@@ -11,7 +10,6 @@ import DrinksCard from '../../components/Cards/DrinksCard/DrinksCard';
 export default function SignatureDrink() {
   return (
     <main className={classes.SignatureDrink}>
-      {/* <PageMarker page="SignatureDrink" /> */}
       <section>
         <Cards>
           {drinks.map((drinks) => (
