@@ -2,24 +2,23 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { enableDeleteActions } from '../../../../store/enable-delete-slice'
-import { enableEditActions } from '../../../../store/enable-edit-slice'
+import { enableDeleteActions } from '../../../../store/enable-delete-slice';
+import { enableEditActions } from '../../../../store/enable-edit-slice';
 import AddData from './AddData';
 import classes from './AddEditDelete.module.css';
 
 const AddEditDelete = () => {
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const deleteBtnHandler = (props) => {
-    dispatch(enableDeleteActions.enable())
-  }
+    dispatch(enableEditActions.disable());
+    dispatch(enableDeleteActions.enable());
+  };
   const editBtnHandler = (props) => {
-    dispatch(enableEditActions.enable())
-  }
-
- 
+    dispatch(enableDeleteActions.disable());
+    dispatch(enableEditActions.enable());
+  };
 
   return (
     <div className={classes.add_edit_delete_container}>
@@ -31,7 +30,6 @@ const AddEditDelete = () => {
           </button> */}
         {/* </div> */}
 
-   
         <button onClick={deleteBtnHandler}>
           <img
             src={`${process.env.PUBLIC_URL}/images/scissors.png`}

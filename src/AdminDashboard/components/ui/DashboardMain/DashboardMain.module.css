@@ -1,6 +1,6 @@
 .dashboard_main_container {
   background: black;
-  height: 70vh;
+  min-height: 70vh;
   margin: 0 2rem;
   border-radius: 20px;
 }
