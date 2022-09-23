@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import { ToastContainer, toast } from 'react-toastify';
+
+import { addDataModalActions } from '../../store/add-data-modal-slice';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { alertMessageActions } from '../../store/alert-message-slice';
@@ -20,7 +22,7 @@ import {
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import { Form, Grid, Loader, Button } from 'semantic-ui-react';
+import { Form, Loader, Button } from 'semantic-ui-react';
 
 import classes from './AddEditBartender.module.css';
 
@@ -147,6 +149,7 @@ const AddEditBartendersPage = () => {
           ...bartenderData,
           timestamp: serverTimestamp(),
         });
+        dispatch(addDataModalActions.close());
         dispatch(
           alertMessageActions.alertMessageUpdate(
             'You SUCCESSFULLY ADDED the bartender!'
