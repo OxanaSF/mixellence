@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
-
 import { Loader } from 'semantic-ui-react';
+
+import AddUpdateModal from './AddUpdateModal/AddUpdateModal';
 import BartenderDashboardCard from './BartenderDashboardCard';
 import classes from './BartendersDashboardDisplay.module.css';
 
 const CardsDisplay = () => {
+  const addDataModal = useSelector((state) => state.addDataModal.addDataModal);
   const [bartenders, setBartenders] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -50,6 +53,9 @@ const CardsDisplay = () => {
             />
           ))}
       </div>
+
+{addDataModal && <AddUpdateModal />}
+      
     </div>
   );
 };

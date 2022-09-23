@@ -3,7 +3,7 @@ import palomaImg from '../assets/images/SignatureDrink/desktop/image-paloma.jpg'
 import mojitoImg from '../assets/images/SignatureDrink/desktop/image-mojito.jpg';
 
 
-const drinks = [
+export const DRINKS = [
   {
     name: 'Margarita',
     id: Math.random(),
@@ -30,4 +30,4 @@ const drinks = [
   },
 ];
 
-export default drinks;
+
