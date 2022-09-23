@@ -5,6 +5,7 @@ import enableDeleteReducer  from './enable-delete-slice'
 import enableEditReducer  from './enable-edit-slice'
 import alertMessageReducer  from './alert-message-slice'
 import addDataModalReducer  from './add-data-modal-slice'
+import bartendersDataReducer  from './bartenders-data-slice'
 
 
 const store = configureStore({
@@ -13,7 +14,8 @@ const store = configureStore({
     enableDelete: enableDeleteReducer, 
     enableEdit: enableEditReducer,
     alertMessage: alertMessageReducer,
-    addDataModal: addDataModalReducer 
+    addDataModal: addDataModalReducer, 
+    bartendersData: bartendersDataReducer 
   },
 });
 

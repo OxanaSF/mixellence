@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
-
-import { addDataModalActions } from '../../store/add-data-modal-slice';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { addDataModalActions } from '../../store/add-data-modal-slice';
 import { alertMessageActions } from '../../store/alert-message-slice';
 import { enableEditActions } from '../../store/enable-edit-slice';
 import { storage } from '../../firebase';
@@ -22,7 +21,7 @@ import {
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import { Form, Loader, Button } from 'semantic-ui-react';
+import { Form, Grid, Loader, Button } from 'semantic-ui-react';
 
 import classes from './AddEditBartender.module.css';
 
@@ -194,22 +193,18 @@ const AddEditBartendersPage = () => {
           <h3>{id ? 'Update ' : 'Add'}</h3>
 
           <Form onSubmit={handleSubmit}>
-
-            <div class="drop-zone">
-              <span class="drop-zone__prompt">
+            <div className="drop-zone">
+              <span className="drop-zone__prompt">
                 Drop file here or click to upload
               </span>
               <Form.Input
-              className={classes.upload}
-              error={errors.file && !id ? { content: errors.file } : null}
-              label="upload"
-              type="file"
-              onChange={(e) => setFile(e.target.files[0])}
-            ></Form.Input>
-            
+                className={classes.upload}
+                error={errors.file && !id ? { content: errors.file } : null}
+                label="upload"
+                type="file"
+                onChange={(e) => setFile(e.target.files[0])}
+              ></Form.Input>
             </div>
-
-           
 
             <Form.Input
               label="name"
