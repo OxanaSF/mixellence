@@ -1,7 +1,7 @@
 .bartender_card_container {
   width: 20rem;
-  /* min-height: 30rem; */
-  
+  flex: 0 1 22%;
+
   background: #1b1b1b;
   padding: 1rem;
   width: 15rem;

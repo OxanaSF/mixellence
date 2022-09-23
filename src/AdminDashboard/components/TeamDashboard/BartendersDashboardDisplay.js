@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
-
 import { Loader } from 'semantic-ui-react';
+
+import AddUpdateModal from './AddUpdateModal/AddUpdateModal';
 import BartenderDashboardCard from './BartenderDashboardCard';
 import classes from './BartendersDashboardDisplay.module.css';
 
@@ -50,6 +51,8 @@ const CardsDisplay = () => {
             />
           ))}
       </div>
+
+      <AddUpdateModal />
     </div>
   );
 };

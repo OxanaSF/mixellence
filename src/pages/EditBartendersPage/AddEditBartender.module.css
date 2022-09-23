@@ -1,0 +1,98 @@
+.bartender_container {
+  /* background: green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bartender_container h3 {
+  color: black;
+
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+form {
+  /* background: pink; */
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+  width: 80%;
+}
+
+form :nth-child(5) {
+  /* background: green; */
+  height: 5rem;
+}
+
+.upload {
+  color: darkgray;
+  border: 1.5px dashed darkgray;
+  border-radius: 50% !important;
+  height: 10rem !important;
+  width: 10rem !important;
+  align-self: center;
+  display: flex;
+  border: none;
+}
+
+input::file-selector-button {
+  background: red;
+  display: none;
+}
+form :first-child {
+  /* background: red; */
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  letter-spacing: 1px;
+  margin-bottom: 4rem;
+}
+
+form :first-child :first-child {
+  /* background: green; */
+}
+
+form :first-child :nth-child(2) {
+  /* background: green; */
+  display: flex;
+  flex-direction: column;
+}
+
+form :first-child :nth-child(2) :nth-child(1) {
+  /* background: green; */
+  height: 10rem !important;
+  width: 10rem !important;
+  border-radius: 50% !important;
+  display: flex;
+  cursor: pointer;
+}
+
+form :first-child :nth-child(2) :nth-child(1) {
+  /* color: white; */
+  padding: 4rem 1.3rem;
+}
+
+form input {
+  border-color: darkgray !important;
+  border-style: dashed !important;
+  height: 3rem !important;
+}
+
+.quote input {
+  height: 5rem !important;
+}
+
+form :nth-child(5) {
+  height: 5rem;
+}
+
+form label {
+  display: none !important;
+}
+
+form button {
+  letter-spacing: 1.5px;
+  height: 4rem;
+}

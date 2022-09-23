@@ -23,7 +23,11 @@ const AddEditDelete = () => {
   return (
     <div className={classes.add_edit_delete_container}>
       <div className={classes.add_edit_delete_wrapper}>
-        <AddData navigate={'/add-bartender'} />
+
+
+        <AddData navigate={'/add-bartender'} />\
+
+        
         {/* <div className={classes.img}> */}
         {/* <button onClick={() => navigate('/add-bartender')}>
             <img src={`${process.env.PUBLIC_URL}/images/plus.png`} alt="plus" />
