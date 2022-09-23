@@ -1,15 +1,18 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+
 
 import { enableDeleteActions } from '../../../../store/enable-delete-slice';
 import { enableEditActions } from '../../../../store/enable-edit-slice';
+import { addDataModalActions } from '../../../../store/add-data-modal-slice';
+
 import AddData from './AddData';
 import classes from './AddEditDelete.module.css';
 
 const AddEditDelete = () => {
+ 
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+
 
   const deleteBtnHandler = (props) => {
     dispatch(enableEditActions.disable());
@@ -20,15 +23,16 @@ const AddEditDelete = () => {
     dispatch(enableEditActions.enable());
   };
 
+  const addModalHandler = () => {
+    dispatch(addDataModalActions.open());
+  }
+
   return (
     <div className={classes.add_edit_delete_container}>
       <div className={classes.add_edit_delete_wrapper}>
-        <AddData navigate={'/add-bartender'} />
-        {/* <div className={classes.img}> */}
-        {/* <button onClick={() => navigate('/add-bartender')}>
-            <img src={`${process.env.PUBLIC_URL}/images/plus.png`} alt="plus" />
-          </button> */}
-        {/* </div> */}
+
+
+        <AddData onClick={addModalHandler} />
 
         <button onClick={deleteBtnHandler}>
           <img

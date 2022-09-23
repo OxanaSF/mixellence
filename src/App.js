@@ -18,7 +18,7 @@ import SignatureDrinksDashboard from './AdminDashboard/components/SignatureDrink
 
 import './App.css';
 import AuthContext from './context/auth-context';
-import EditBartendersPage from './pages/EditBartendersPage/EditBartendersPage';
+import AddEditBartendersPage from './pages/EditBartendersPage/AddEditBartendersPage';
 import AddEditTestimonials from './pages/EditTestimonials/AddEditTestimonials';
 
 const App = () => {
@@ -51,10 +51,10 @@ const App = () => {
           ></Route>
         
 
-          <Route path="/add-bartender" element={<EditBartendersPage />} />
+          <Route path="/add-bartender" element={<AddEditBartendersPage />} />
           <Route
             path="/update-bartender/:id"
-            element={<EditBartendersPage />}
+            element={<AddEditBartendersPage />}
           />
 
 

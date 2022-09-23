@@ -16,9 +16,6 @@ import ModalContext from '../context/modal-context';
 
 const MainDisplay = () => {
   const modalCtx = useContext(ModalContext);
-  {
-    /* Our Main Display receives the Context because it is not needed in the admin dashboard */
-  }
 
   return (
     <main>

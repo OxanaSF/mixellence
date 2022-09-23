@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
 import { db } from '../../../firebase';
 import { doc, deleteDoc } from 'firebase/firestore';
-import { enableDeleteActions } from '../../../store/enable-delete-slice';
 
+import { enableDeleteActions } from '../../../store/enable-delete-slice';
+import { alertMessageActions } from '../../../store/alert-message-slice';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import EditData from '../ui/AddEditDelete/EditData';
 import DeleteData from '../ui/AddEditDelete/DeleteData';
@@ -13,7 +18,11 @@ import classes from './BartenderDashboardCard.module.css';
 const BartenderDashboardCard = ({ id, img, name, drink, city, quote }) => {
   const enableDelete = useSelector((state) => state.enableDelete.enableDelete);
   const enableEdit = useSelector((state) => state.enableEdit.enableEdit);
+  const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
+
   const dispatch = useDispatch();
+
+  const notify = () => toast(alertMessage);
 
   const deleteBartender = async (id) => {
     await deleteDoc(doc(db, 'bartenders', id));
@@ -22,28 +31,31 @@ const BartenderDashboardCard = ({ id, img, name, drink, city, quote }) => {
   const bartenderDeleteHandler = () => {
     deleteBartender(id);
     dispatch(enableDeleteActions.disable());
+    dispatch(
+      alertMessageActions.alertMessageUpdate(
+        'You SUCCESSFULLY deleted the bartender!'
+      )
+    );
+    notify();
   };
 
- 
+  // useEffect(() => {
+
+  // }, [])
 
   return (
     <div className={classes.bartender_card_container}>
-      {/* <header className={classes.bartender_card_header}>
-        <EditData navigate={`/update-bartender/${id}`} />
-        <DeleteData onClick={bartenderDeleteHandler} />
-      </header> */}
+      <ToastContainer closeButton />
 
       {enableDelete && (
         <header className={classes.bartender_card_header}>
-          <DeleteData 
-            onClick={bartenderDeleteHandler} />
+          <DeleteData onClick={bartenderDeleteHandler} />
         </header>
       )}
 
       {enableEdit && (
         <header className={classes.bartender_card_header}>
-          <EditData 
-          navigate={`/update-bartender/${id}`} />
+          <EditData navigate={`/update-bartender/${id}`} />
         </header>
       )}
 

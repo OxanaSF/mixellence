@@ -6,7 +6,7 @@ const AddData = (props) => {
 
 
   return (
-    <button onClick={() => navigate(props.navigate)}>
+    <button onClick={props.onClick}>
       <img src={`${process.env.PUBLIC_URL}/images/plus.png`} alt="plus" />
     </button>
   );
