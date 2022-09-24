@@ -41,6 +41,32 @@ button {
   cursor: pointer;
 }
 
+/* UpdateModal */
+.modalDiv {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  background-color: rgba(91, 112, 131, 0.4);
+  background-color: rgb(100, 75, 222, 0.3);
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.modalWrapper {
+  background: white;
+  padding-top: 1rem;
+}
+
+.modal {
+  width: 25%;
+
+  margin: 12% 15% 8% 26%;
+  background-color: white;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 720px) {
   h2 {
     font-size: 24px;

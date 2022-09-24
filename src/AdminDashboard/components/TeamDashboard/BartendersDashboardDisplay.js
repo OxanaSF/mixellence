@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
@@ -8,7 +9,10 @@ import AddUpdateModal from './AddUpdateModal/AddUpdateModal';
 import BartenderDashboardCard from './BartenderDashboardCard';
 import classes from './BartendersDashboardDisplay.module.css';
 
-const CardsDisplay = () => {
+export const BartendersDashboardDisplay = () => {
+  const location = useLocation();
+
+
   const addDataModal = useSelector((state) => state.addDataModal.addDataModal);
   const [bartenders, setBartenders] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -38,6 +42,11 @@ const CardsDisplay = () => {
     <div>
       <h1>Meet Our Team</h1>
 
+      <Link to="modal" state={{ background: location }}>
+        Open Modal
+      </Link>
+      <Outlet />
+
       <div className={classes.card_display_container}>
         {bartenders &&
           bartenders.map((item) => (
@@ -60,4 +69,4 @@ const CardsDisplay = () => {
   );
 };
 
-export default CardsDisplay;
+

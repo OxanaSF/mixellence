@@ -21,7 +21,7 @@ import {
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import { Form, Grid, Loader, Button } from 'semantic-ui-react';
+import { Form, Loader, Button } from 'semantic-ui-react';
 
 import classes from './AddEditBartender.module.css';
 
@@ -165,6 +165,7 @@ const AddEditBartendersPage = () => {
           ...bartenderData,
           timestamp: serverTimestamp(),
         });
+        dispatch(addDataModalActions.close());
         dispatch(
           alertMessageActions.alertMessageUpdate(
             'You SUCCESSFULLY UPDATED the bartender!'
@@ -226,7 +227,7 @@ const AddEditBartendersPage = () => {
             ></Form.Input>
             <Form.Input
               label="city"
-              error={errors.city ? { content: errors.city } : null}
+              error={errors.city && !id ? { content: errors.city } : null}
               placeholder="city"
               name="city"
               onChange={handleChange}

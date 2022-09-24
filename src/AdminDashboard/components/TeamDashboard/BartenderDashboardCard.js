@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 
 import { db } from '../../../firebase';
 import { doc, deleteDoc } from 'firebase/firestore';
@@ -39,10 +38,6 @@ const BartenderDashboardCard = ({ id, img, name, drink, city, quote }) => {
     notify();
   };
 
-  // useEffect(() => {
-
-  // }, [])
-
   return (
     <div className={classes.bartender_card_container}>
       <ToastContainer closeButton />
@@ -55,7 +50,8 @@ const BartenderDashboardCard = ({ id, img, name, drink, city, quote }) => {
 
       {enableEdit && (
         <header className={classes.bartender_card_header}>
-          <EditData navigate={`/update-bartender/${id}`} />
+          {/* <EditData navigate={`/update-bartender/${id}`} /> */}
+          <EditData navigate={`/team-dashboard/${id}/modal`} />
         </header>
       )}
 

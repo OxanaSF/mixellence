@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-
 import { enableDeleteActions } from '../../../../store/enable-delete-slice';
 import { enableEditActions } from '../../../../store/enable-edit-slice';
 import { addDataModalActions } from '../../../../store/add-data-modal-slice';
@@ -10,9 +9,7 @@ import AddData from './AddData';
 import classes from './AddEditDelete.module.css';
 
 const AddEditDelete = () => {
- 
   const dispatch = useDispatch();
-
 
   const deleteBtnHandler = (props) => {
     dispatch(enableEditActions.disable());
@@ -25,21 +22,19 @@ const AddEditDelete = () => {
 
   const addModalHandler = () => {
     dispatch(addDataModalActions.open());
-  }
+  };
 
   return (
     <div className={classes.add_edit_delete_container}>
       <div className={classes.add_edit_delete_wrapper}>
-
-
         <AddData onClick={addModalHandler} />
 
-        <button onClick={deleteBtnHandler}>
+        {/* <button onClick={deleteBtnHandler}>
           <img
             src={`${process.env.PUBLIC_URL}/images/scissors.png`}
             alt="scissors"
           />
-        </button>
+        </button> */}
 
         <button onClick={editBtnHandler}>
           <img src={`${process.env.PUBLIC_URL}/images/draw.png`} alt="draw" />
