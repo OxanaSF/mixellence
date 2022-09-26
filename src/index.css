@@ -51,20 +51,32 @@ button {
   background-color: rgba(91, 112, 131, 0.4);
   background-color: rgb(100, 75, 222, 0.3);
   display: flex;
+  z-index: 1000;
   /* justify-content: center; */
   /* align-items: center; */
 }
 .modalWrapper {
   background: white;
   padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal {
   width: 25%;
-
   margin: 12% 15% 8% 26%;
   background-color: white;
   border-radius: 5px;
+}
+
+.modalWrapper .modalCancelBtn {
+  float: right;
+  align-self: flex-end;
+  padding-right: 1rem;
+}
+
+.modalWrapper img {
+  width: 1.5rem;
 }
 
 @media screen and (max-width: 720px) {

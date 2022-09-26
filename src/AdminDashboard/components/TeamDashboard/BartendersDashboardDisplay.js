@@ -1,21 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Outlet, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
+import { Link, Outlet, useLocation } from 'react-router-dom';
+
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 import { Loader } from 'semantic-ui-react';
 
-import AddUpdateModal from './AddUpdateModal/AddUpdateModal';
+
+
+import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
 import BartenderDashboardCard from './BartenderDashboardCard';
 import classes from './BartendersDashboardDisplay.module.css';
 
 export const BartendersDashboardDisplay = () => {
   const location = useLocation();
 
+  const dispatch = useDispatch();
 
+  // const bartenders = useSelector((state) => state.bartenders.bartenders);
   const addDataModal = useSelector((state) => state.addDataModal.addDataModal);
   const [bartenders, setBartenders] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  const activeCardHandler = () => {
+    // dispatch(activeCardActions.activate());
+  };
 
   useEffect(() => {
     setIsLoading(true);
@@ -38,13 +47,18 @@ export const BartendersDashboardDisplay = () => {
     };
   }, []);
 
+
+
+
+
+
+
+
   return (
     <div>
       <h1>Meet Our Team</h1>
 
-      <Link to="modal" state={{ background: location }}>
-        Open Modal
-      </Link>
+      <Link to="modal" state={{ background: location }}></Link>
       <Outlet />
 
       <div className={classes.card_display_container}>
@@ -59,14 +73,15 @@ export const BartendersDashboardDisplay = () => {
               drink={item.drink}
               city={item.city}
               quote={item.quote}
+              activateCard={activeCardHandler}
+              bartenders={bartenders}
             />
           ))}
       </div>
 
-{addDataModal && <AddUpdateModal />}
-      
+      {addDataModal && <AddUpdateDataModal />}
     </div>
   );
 };
 
-
+export default BartendersDashboardDisplay;

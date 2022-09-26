@@ -21,7 +21,7 @@ const EditData = (props) => {
       onClick={() => navigate(props.navigate)}
       // onClick={editModalHandler }
     >
-      <img src={`${process.env.PUBLIC_URL}/images/draw.png`} alt="draw" />
+      <img src={`${process.env.PUBLIC_URL}/images/pen_white.png`} alt="draw" />
     </button>
   );
 };

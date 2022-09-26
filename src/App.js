@@ -1,15 +1,13 @@
 import {
-  BrowserRouter,
   Route,
   Routes,
-  Navigate,
   useLocation,
 } from 'react-router-dom';
 import { useContext } from 'react';
 
 import MainDisplay from './pages/MainDisplay';
 
-import { UpdateModal } from './AdminDashboard/components/TeamDashboard/AddUpdateModal/UpdateModal';
+import { AddUpdateDataModal } from './AdminDashboard/components/ui/AddUpdateModal/AddUpdateDataModal';
 
 // import AdminDashboardDisplay from './pages/AdminDashboardDisplay/AdminDashboardDisplay';
 import LogInForm from './ClientDisplay/components/Auth/LogInForm';
@@ -62,7 +60,7 @@ const App = () => {
         <Route path="/team-dashboard" element={<TeamDashboard />} />
 
         <Route path="/team-dashboard/:id" element={<TeamDashboard />}>
-          <Route path="modal" element={<UpdateModal />} />
+          <Route path="modal" element={<AddUpdateDataModal />} />
         </Route>
 
         <Route
@@ -87,7 +85,7 @@ const App = () => {
 
       {background && (
         <Routes>
-          <Route path="modal" element={<UpdateModal />} />
+          <Route path="modal" element={<AddUpdateDataModal />} />
         </Routes>
       )}
     </main>

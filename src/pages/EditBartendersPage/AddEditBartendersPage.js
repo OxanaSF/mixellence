@@ -21,7 +21,7 @@ import {
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import { Form, Loader, Button } from 'semantic-ui-react';
+import { Form, Grid, Loader, Button } from 'semantic-ui-react';
 
 import classes from './AddEditBartender.module.css';
 
@@ -165,7 +165,6 @@ const AddEditBartendersPage = () => {
           ...bartenderData,
           timestamp: serverTimestamp(),
         });
-        dispatch(addDataModalActions.close());
         dispatch(
           alertMessageActions.alertMessageUpdate(
             'You SUCCESSFULLY UPDATED the bartender!'

@@ -1,10 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { db } from '../../../firebase';
 import { doc, deleteDoc } from 'firebase/firestore';
 
+import { activeCardActions } from '../../../store/active-card-slice';
+import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { enableDeleteActions } from '../../../store/enable-delete-slice';
+import { enableEditActions } from '../../../store/enable-edit-slice';
+import { enableAddActions } from '../../../store/enable-add-slice';
 import { alertMessageActions } from '../../../store/alert-message-slice';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -14,14 +18,35 @@ import EditData from '../ui/AddEditDelete/EditData';
 import DeleteData from '../ui/AddEditDelete/DeleteData';
 import classes from './BartenderDashboardCard.module.css';
 
-const BartenderDashboardCard = ({ id, img, name, drink, city, quote }) => {
+const BartenderDashboardCard = ({
+  id,
+  img,
+  name,
+  drink,
+  city,
+  quote,
+  activateCard,
+}) => {
+  const [visible, setVisible] = useState(false);
+  const [activeCard, setActveCard] = useState('');
+  const [tempRef, setTempRef] = useState(null)
+  
+
+  // const activeCard = useSelector((state) => state.activeCard.activeCard);
   const enableDelete = useSelector((state) => state.enableDelete.enableDelete);
   const enableEdit = useSelector((state) => state.enableEdit.enableEdit);
+  const enableAdd = useSelector((state) => state.enableAdd.enableAdd);
   const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
 
   const dispatch = useDispatch();
 
   const notify = () => toast(alertMessage);
+
+  const updateDataHandler = () => {
+    dispatch(addDataModalActions.open());
+  };
+
+// * Start Delete
 
   const deleteBartender = async (id) => {
     await deleteDoc(doc(db, 'bartenders', id));
@@ -38,22 +63,44 @@ const BartenderDashboardCard = ({ id, img, name, drink, city, quote }) => {
     notify();
   };
 
+  // * End Dellete
+
+  const ref = useRef();
+
+
+
+  const handleStyleClick = () => {
+    console.log('refOne', ref)
+    console.log('id', id)
+    if (ref !== id) {
+      setVisible(false)
+    }
+    setActveCard(ref)
+    setVisible(!visible);
+  };
+
+  let style = { visibility: 'visible' };
+  if (!visible) style.visibility = 'hidden';
+
   return (
-    <div className={classes.bartender_card_container}>
-      <ToastContainer closeButton />
+    <div
+      ref={ref}
+      className={classes.bartender_card_container}
+      onClick={handleStyleClick}
+    >
+      {/* <ToastContainer closeButton /> */}
 
-      {enableDelete && (
-        <header className={classes.bartender_card_header}>
-          <DeleteData onClick={bartenderDeleteHandler} />
-        </header>
-      )}
+      <header
+        style={style}
+        className={classes.bartender_card_header}
+      >
+        <DeleteData onClick={bartenderDeleteHandler} />
 
-      {enableEdit && (
-        <header className={classes.bartender_card_header}>
-          {/* <EditData navigate={`/update-bartender/${id}`} /> */}
-          <EditData navigate={`/team-dashboard/${id}/modal`} />
-        </header>
-      )}
+        <EditData
+          onClick={updateDataHandler}
+          navigate={`/team-dashboard/${id}/modal`}
+        />
+      </header>
 
       <div className={classes.bartender_card_main}>
         <div className={classes.bartender_card_img}>

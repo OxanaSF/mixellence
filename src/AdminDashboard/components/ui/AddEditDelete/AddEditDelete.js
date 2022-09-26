@@ -8,19 +8,21 @@ import { addDataModalActions } from '../../../../store/add-data-modal-slice';
 import AddData from './AddData';
 import classes from './AddEditDelete.module.css';
 
-const AddEditDelete = () => {
+const AddEditDelete = (props) => {
   const dispatch = useDispatch();
 
-  const deleteBtnHandler = (props) => {
-    dispatch(enableEditActions.disable());
-    dispatch(enableDeleteActions.enable());
-  };
-  const editBtnHandler = (props) => {
-    dispatch(enableDeleteActions.disable());
-    dispatch(enableEditActions.enable());
-  };
+  // const deleteBtnHandler = (props) => {
+  //   dispatch(enableEditActions.disable());
+  //   dispatch(enableDeleteActions.enable());
+  // };
+  // const editBtnHandler = (props) => {
+  //   dispatch(enableDeleteActions.disable());
+  //   dispatch(enableEditActions.enable());
+  // };
 
   const addModalHandler = () => {
+    dispatch(enableDeleteActions.disable());
+    dispatch(enableEditActions.disable());
     dispatch(addDataModalActions.open());
   };
 
@@ -36,9 +38,9 @@ const AddEditDelete = () => {
           />
         </button> */}
 
-        <button onClick={editBtnHandler}>
+        {/* <button onClick={editBtnHandler}>
           <img src={`${process.env.PUBLIC_URL}/images/draw.png`} alt="draw" />
-        </button>
+        </button> */}
       </div>
     </div>
   );

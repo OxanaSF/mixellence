@@ -3,9 +3,12 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import enableDeleteReducer  from './enable-delete-slice'
 import enableEditReducer  from './enable-edit-slice'
+import enableAddReducer  from './enable-add-slice'
 import alertMessageReducer  from './alert-message-slice'
 import addDataModalReducer  from './add-data-modal-slice'
-import bartendersDataReducer  from './bartenders-data-slice'
+import bartendersReducer  from './bartenders-slice'
+import activeCardReducer  from './active-card-slice'
+
 
 
 const store = configureStore({
@@ -13,9 +16,11 @@ const store = configureStore({
   
     enableDelete: enableDeleteReducer, 
     enableEdit: enableEditReducer,
+    enableAdd: enableAddReducer,
     alertMessage: alertMessageReducer,
     addDataModal: addDataModalReducer, 
-    bartendersData: bartendersDataReducer 
+    bartenders: bartendersReducer,
+    activeCard: activeCardReducer, 
   },
 });
 

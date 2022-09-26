@@ -11,7 +11,7 @@
   flex-basis: auto;
 }
 
-.card_display_container 
+.card_display_container {}
 
 @media screen and (max-width: 800px) {
   .card_display_container {
