@@ -5,11 +5,12 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { addDataModalActions } from '../../store/add-data-modal-slice';
-import { alertMessageActions } from '../../store/alert-message-slice';
-import { enableEditActions } from '../../store/enable-edit-slice';
-import { storage } from '../../firebase';
-import { db } from '../../firebase';
+import { addDataModalActions } from '../store/add-data-modal-slice';
+import { alertMessageActions } from '../store/alert-message-slice';
+import { enableEditActions } from '../store/enable-edit-slice';
+import { storage } from '../firebase';
+import { db } from '../firebase';
+
 import {
   getDoc,
   doc,
@@ -23,7 +24,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 import { Form, Grid, Loader, Button } from 'semantic-ui-react';
 
-import classes from './AddEditBartender.module.css';
+import classes from './EditBartendersPage/AddEditBartender.module.css';
 
 const initialBartenderState = {
   name: '',
@@ -33,7 +34,7 @@ const initialBartenderState = {
   img: '',
 };
 
-const AddEditBartendersPage = () => {
+const EditAboutPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -197,6 +198,19 @@ const AddEditBartendersPage = () => {
               <span className="drop-zone__prompt">
                 Drop file here or click to upload
               </span>
+
+              <Form.Input
+              className={classes.quote}
+              label="quote"
+              error={errors.quote && !id ? { content: errors.quote } : null}
+              placeholder="quote"
+              name="quote"
+              onChange={handleChange}
+              value={quote || ''}
+              autoFocus
+            ></Form.Input>
+            
+
               <Form.Input
                 className={classes.upload}
                 error={errors.file && !id ? { content: errors.file } : null}
@@ -233,16 +247,7 @@ const AddEditBartendersPage = () => {
               value={city || ''}
               autoFocus
             ></Form.Input>
-            <Form.Input
-              className={classes.quote}
-              label="quote"
-              error={errors.quote && !id ? { content: errors.quote } : null}
-              placeholder="quote"
-              name="quote"
-              onChange={handleChange}
-              value={quote || ''}
-              autoFocus
-            ></Form.Input>
+          
 
             <Button
               secondary
@@ -258,4 +263,4 @@ const AddEditBartendersPage = () => {
   );
 };
 
-export default AddEditBartendersPage;
+export default EditAboutPage;

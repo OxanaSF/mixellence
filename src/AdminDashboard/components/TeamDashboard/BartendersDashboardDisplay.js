@@ -17,6 +17,7 @@ export const BartendersDashboardDisplay = () => {
   const dispatch = useDispatch();
 
   const addDataModal = useSelector((state) => state.addDataModal.addDataModal);
+ 
   const [bartenders, setBartenders] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 

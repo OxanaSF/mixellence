@@ -2,8 +2,8 @@ import { createPortal } from 'react-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-
 import AddEditBartendersPage from '../../../../pages/EditBartendersPage/AddEditBartendersPage';
+import EditAboutPage from '../../../../pages/EditAboutPage';
 import { addDataModalActions } from '../../../../store/add-data-modal-slice';
 
 export const AddUpdateDataModal = () => {
@@ -27,7 +27,9 @@ export const AddUpdateDataModal = () => {
               alt="cancel"
             />
           </button>
-          <AddEditBartendersPage />
+
+          {returnLink === '/about-dashboard' && <EditAboutPage />}
+          {returnLink === '/admin-dashboard' && <AddEditBartendersPage />}
         </div>
       </div>
     </div>
