@@ -1,21 +1,33 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link, Outlet, useLocation } from 'react-router-dom';
+
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
+import { Loader } from 'semantic-ui-react';
 
 
+
+import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
 import BartenderDashboardCard from './BartenderDashboardCard';
 import classes from './BartendersDashboardDisplay.module.css';
 
+export const BartendersDashboardDisplay = () => {
+  const location = useLocation();
 
+  const dispatch = useDispatch();
 
-const CardsDisplay = () => {
-
-
+  // const bartenders = useSelector((state) => state.bartenders.bartenders);
+  const addDataModal = useSelector((state) => state.addDataModal.addDataModal);
   const [bartenders, setBartenders] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const activeCardHandler = () => {
+    // dispatch(activeCardActions.activate());
+  };
 
   useEffect(() => {
-    setLoading(true);
+    setIsLoading(true);
     const unsub = onSnapshot(
       collection(db, 'bartenders'),
       (snapshot) => {
@@ -24,7 +36,7 @@ const CardsDisplay = () => {
           list.push({ id: doc.id, ...doc.data() });
         });
         setBartenders(list);
-        setLoading(false);
+        setIsLoading(false);
       },
       (error) => {
         console.log(error);
@@ -35,11 +47,19 @@ const CardsDisplay = () => {
     };
   }, []);
 
+
+
+
+
+
+
+
   return (
     <div>
       <h1>Meet Our Team</h1>
 
-
+      <Link to="modal" state={{ background: location }}></Link>
+      <Outlet />
 
       <div className={classes.card_display_container}>
         {bartenders &&
@@ -53,11 +73,15 @@ const CardsDisplay = () => {
               drink={item.drink}
               city={item.city}
               quote={item.quote}
+              activateCard={activeCardHandler}
+              bartenders={bartenders}
             />
           ))}
       </div>
+
+      {addDataModal && <AddUpdateDataModal />}
     </div>
   );
 };
 
-export default CardsDisplay;
+export default BartendersDashboardDisplay;

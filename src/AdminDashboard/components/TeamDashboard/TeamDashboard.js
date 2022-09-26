@@ -1,8 +1,9 @@
 import React from 'react';
 
 import NavSide from '../NavSide/NavSide';
-import BartendersDashboardDisplay from './BartendersDashboardDisplay';
+import { BartendersDashboardDisplay } from './BartendersDashboardDisplay';
 import AddEditDelete from '../ui/AddEditDelete/AddEditDelete';
+import DashboardFooter from '../ui/DashboardFooter/DashboardFooter';
 
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
@@ -24,6 +25,7 @@ const MeetOurTeamDashboard = () => {
             <AddEditDelete />
           </div>
         </DashboardMain>
+        <DashboardFooter />
       </section>
     </DashboardContainer>
   );

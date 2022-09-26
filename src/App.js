@@ -1,13 +1,16 @@
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import {
+  Route,
+  Routes,
+  useLocation,
+} from 'react-router-dom';
 import { useContext } from 'react';
-// import 'semantic-ui-css/semantic.min.css'
-
 
 import MainDisplay from './pages/MainDisplay';
 
+import { AddUpdateDataModal } from './AdminDashboard/components/ui/AddUpdateModal/AddUpdateDataModal';
 
 // import AdminDashboardDisplay from './pages/AdminDashboardDisplay/AdminDashboardDisplay';
-import LogInForm from './ClientDisplay/components/Auth/LogInForm'
+import LogInForm from './ClientDisplay/components/Auth/LogInForm';
 import PasswordChangeForm from './ClientDisplay/components/Auth/PasswordChangeForm';
 
 import AboutDashboard from './AdminDashboard/components/AboutDashboard/AboutDashboard';
@@ -18,75 +21,74 @@ import SignatureDrinksDashboard from './AdminDashboard/components/SignatureDrink
 
 import './App.css';
 import AuthContext from './context/auth-context';
-import EditBartendersPage from './pages/EditBartendersPage/EditBartendersPage';
+import AddEditBartendersPage from './pages/EditBartendersPage/AddEditBartendersPage';
 import AddEditTestimonials from './pages/EditTestimonials/AddEditTestimonials';
 
 const App = () => {
-  // const [dashBoard, setDashBoard] = useState(true)
   const authCtx = useContext(AuthContext);
 
-  return (
-    <BrowserRouter>
-      <main className="App">
-        <Routes>
-          <Route path="/" element={<MainDisplay />} />
+  const location = useLocation();
+  const background = location.state && location.state.background;
 
-          {!authCtx.isLoggedIn && (
-            <Route path="/login" element={<LogInForm />} />
-          )}
-          {/* {authCtx.isLoggedIn && ( */}
-          {/* <Route
+  return (
+    <main className="App">
+      <Routes>
+        <Route path="/" element={<MainDisplay />} />
+
+        {!authCtx.isLoggedIn && <Route path="/login" element={<LogInForm />} />}
+        {/* {authCtx.isLoggedIn && ( */}
+        {/* <Route
             path="/admin-dashboard-test"
             element={<AdminDashboard />}
           /> */}
-          {/* )} */}
+        {/* )} */}
 
-          {authCtx.isLoggedIn && (
-            <Route path="/change-password" element={<PasswordChangeForm />} />
-          )}
+        {authCtx.isLoggedIn && (
+          <Route path="/change-password" element={<PasswordChangeForm />} />
+        )}
 
-          <Route
-            path="/admin-dashboard"
-            element={<AboutDashboard />}
-          ></Route>
-        
+        <Route path="/admin-dashboard" element={<AboutDashboard />}></Route>
 
-          <Route path="/add-bartender" element={<EditBartendersPage />} />
-          <Route
-            path="/update-bartender/:id"
-            element={<EditBartendersPage />}
-          />
+        <Route path="/add-bartender" element={<AddEditBartendersPage />} />
+        <Route
+          path="/update-bartender/:id"
+          element={<AddEditBartendersPage />}
+        />
 
+        <Route path="/about-dashboard" element={<AboutDashboard />} />
+        <Route path="/services-dashboard" element={<ServicesDashboard />} />
+        <Route path="/team-dashboard" element={<TeamDashboard />} />
 
+        <Route path="/team-dashboard/:id" element={<TeamDashboard />}>
+          <Route path="modal" element={<AddUpdateDataModal />} />
+        </Route>
 
-          <Route path="/about-dashboard" element={<AboutDashboard />} />
-          <Route path="/services-dashboard" element={<ServicesDashboard />} />
-          <Route
-            path="/team-dashboard"
-            element={<TeamDashboard />}
-          />
-          <Route
-            path="/signature-drinks-dashboard"
-            element={<SignatureDrinksDashboard />}
-          />
-          <Route
-            path="/testimonials-dashboard"
-            element={<TestimonialsDashboard />}
-          />
+        <Route
+          path="/signature-drinks-dashboard"
+          element={<SignatureDrinksDashboard />}
+        />
+        <Route
+          path="/testimonials-dashboard"
+          element={<TestimonialsDashboard />}
+        />
 
-          
-{/* Beginning of Add-Edit Testimonials. Testimonials Dashboard was commented out in order to test.  */}
-          <Route path="/add-testimonial" element={<AddEditTestimonials />} /> 
+        {/* Beginning of Add-Edit Testimonials. Testimonials Dashboard was commented out in order to test.  */}
+        <Route path="/add-testimonial" element={<AddEditTestimonials />} />
 
-          {/* <Route
+        {/* <Route
             path="/testimonials-dashboard"
             element={<TestimonialsDashboard />}
           /> */}
 
-          <Route path="*" element={<Navigate to="/" replace />} />
+        {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
+      </Routes>
+
+      {background && (
+        <Routes>
+          <Route path="modal" element={<AddUpdateDataModal />} />
         </Routes>
-      </main>
-    </BrowserRouter>
+      )}
+    </main>
   );
 };
 

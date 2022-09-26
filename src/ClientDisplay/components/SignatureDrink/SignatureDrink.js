@@ -1,17 +1,16 @@
 import React from 'react';
 
-
-import drinks from '../../../data/drinks';
-import classes from './SignatureDrink.module.css'; 
-
+import  drinks from '../../../data/drinks';
+import classes from './SignatureDrink.module.css';
+ 
 import PageMarker from '../../components/PageMarker/PageMarker';
 import Cards from '../../components/Cards/Cards';
 import DrinksCard from '../../components/Cards/DrinksCard/DrinksCard';
 
 export default function SignatureDrink() {
   return (
-    <main className={classes.SignatureDrink}>
-      <PageMarker page="portfolio" />
+    <main className={classes.SignatureDrinks}>
+      <PageMarker page="SignatureDrinks" />
       <section>
         <Cards>
           {drinks.map((drinks) => (
@@ -28,3 +27,4 @@ export default function SignatureDrink() {
     </main>
   );
 }
+

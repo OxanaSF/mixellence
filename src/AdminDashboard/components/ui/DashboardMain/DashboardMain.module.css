@@ -1,6 +1,6 @@
 .dashboard_main_container {
   background: black;
-  height: 70vh;
+  min-height: 70vh;
   margin: 0 2rem;
   border-radius: 20px;
 }
@@ -8,5 +8,5 @@
 .dashboard_main_container h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 3rem;
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
