@@ -9,7 +9,7 @@ const DeleteData = (props) => {
   return (
     <button className={classes.delete_data} onClick={props.onClick}>
       <img
-        src={`${process.env.PUBLIC_URL}/images/scissors.png`}
+        src={`${process.env.PUBLIC_URL}/images/delete.png`}
         alt="scissors"
       />
     </button>

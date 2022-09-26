@@ -226,7 +226,7 @@ const AddEditBartendersPage = () => {
             ></Form.Input>
             <Form.Input
               label="city"
-              error={errors.city ? { content: errors.city } : null}
+              error={errors.city && !id ? { content: errors.city } : null}
               placeholder="city"
               name="city"
               onChange={handleChange}
