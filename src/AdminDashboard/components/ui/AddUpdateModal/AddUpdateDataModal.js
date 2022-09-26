@@ -1,17 +1,20 @@
 import { createPortal } from 'react-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+
 
 import AddEditBartendersPage from '../../../../pages/EditBartendersPage/AddEditBartendersPage';
 import { addDataModalActions } from '../../../../store/add-data-modal-slice';
 
 export const AddUpdateDataModal = () => {
+  const returnLink = useSelector((state) => state.addDataModal.returnLink);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const closeModalHandler = () => {
     dispatch(addDataModalActions.close());
-    navigate('/team-dashboard');
+    navigate(returnLink);
   };
 
   const modalContent = (

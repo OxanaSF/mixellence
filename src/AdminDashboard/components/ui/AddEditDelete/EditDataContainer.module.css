@@ -1,0 +1,18 @@
+.edit_data_container {
+  background: white;
+  height: 5rem;
+  width: 6rem;
+  border-radius: 15px;
+  align-self: flex-end;
+
+}
+
+.edit_data_container_wrapper {
+  padding: 1rem;
+}
+
+.edit_data_container_wrapper img {
+  width: 2.1rem;
+  height: 2.1rem;
+  margin: 0 0.5rem;
+}
