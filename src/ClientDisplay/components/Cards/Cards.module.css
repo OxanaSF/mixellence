@@ -1,6 +1,5 @@
 .cards {
   display: grid;
-  gap: 1.5rem;
   grid-auto-rows: 20rem;
 }
 

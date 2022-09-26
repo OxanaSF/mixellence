@@ -7,26 +7,23 @@ const drinks = [
   {
     name: 'Margarita',
     id: Math.random(),
-    date: 'someword-1',
+    quote: 'Made with the finest ingridents & our secret sauce',
     image: margaritaImg,
     description:
-      'Made with the finest ingridents & our secret sauce',
+      'Click',
   },
   {
     name: 'Paloma',
     id: Math.random(),
-    date: 'some word-2',
+    quote: 'Made with the finest ingridents & our secret sauce',
     image: palomaImg,
-    description:
-      'Made with the finest ingridents & our secret sauce',
+    description: 'Click',
   },
   {
     name: 'Mojito',
     id: Math.random(),
-    date: 'some worrd-3',
+    quote: 'Made with the finest ingridents & our secret sauce',
     image: mojitoImg,
-    description:
-      'Made with the finest ingridents & our secret sauce.',
   },
 ];
 

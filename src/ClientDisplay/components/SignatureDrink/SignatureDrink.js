@@ -4,21 +4,23 @@ import React from 'react';
 import drinks from '../../../data/drinks';
 import classes from './SignatureDrink.module.css'; 
 
+import PageMarker from '../../components/PageMarker/PageMarker';
 import Cards from '../../components/Cards/Cards';
 import DrinksCard from '../../components/Cards/DrinksCard/DrinksCard';
 
 export default function SignatureDrink() {
   return (
     <main className={classes.SignatureDrink}>
+      <PageMarker page="portfolio" />
       <section>
         <Cards>
           {drinks.map((drinks) => (
             <DrinksCard
               key={drinks.id}
               name={drinks.name}
-              subtitle={drinks.date}
+              subtitle={drinks.quote}
               img={drinks.image}
-              onclick={() => undefined}
+              onClick={() => undefined}
             />
           ))}
         </Cards>
