@@ -57,10 +57,10 @@ const AboutDashboardDisplay = () => {
       <Link to="modal" state={{ background: location }}></Link>
       <Outlet />
 
-      <EditData
+      {/* <EditData
         onClick={updateDataHandler}
         navigate={`/about-dashboard/${aboutInfo.id}/modal`}
-      />
+      /> */}
 
      <button 
      onClick={editPageHandler}
