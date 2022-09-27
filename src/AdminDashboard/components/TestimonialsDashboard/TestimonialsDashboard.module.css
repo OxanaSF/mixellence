@@ -2,3 +2,10 @@
     display: grid;
     grid-template-columns: 1fr 5fr;
 }
+
+.testimonials_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -8rem;
+}
