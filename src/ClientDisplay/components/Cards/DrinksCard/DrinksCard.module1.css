@@ -1,6 +1,27 @@
 .drinksCard {
+  width: 21.875rem;
+  height: 21.875rem;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  /* margin-left: 21%; */
+  transition: all 0.5s ease;
+}
+
+.drinksCard:hover {
+  width: 15.625rem;
+  height: 15.625rem;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  /* margin-left: 21%; */
+}
+
+
+.drinksCard {
   position: relative;
   height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }

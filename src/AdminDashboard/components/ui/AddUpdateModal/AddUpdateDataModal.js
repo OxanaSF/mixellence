@@ -1,17 +1,23 @@
 import { createPortal } from 'react-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 
+
+import EditAboutPage from '../../../../pages/EditAboutPage';
 import AddEditBartendersPage from '../../../../pages/EditBartendersPage/AddEditBartendersPage';
+import EditServicesPage from '../../../../pages/EditServicesPage'
+import EditTestimonials from '../../../../pages/EditTestimonials/AddEditTestimonials';
 import { addDataModalActions } from '../../../../store/add-data-modal-slice';
 
 export const AddUpdateDataModal = () => {
+  const returnLink = useSelector((state) => state.addDataModal.returnLink);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const closeModalHandler = () => {
     dispatch(addDataModalActions.close());
-    navigate('/team-dashboard');
+    navigate(returnLink);
   };
 
   const modalContent = (
@@ -24,7 +30,10 @@ export const AddUpdateDataModal = () => {
               alt="cancel"
             />
           </button>
-          <AddEditBartendersPage />
+
+          {returnLink === '/about-dashboard' && <EditAboutPage />}
+          {returnLink === '/team-dashboard' && <AddEditBartendersPage />}
+          {returnLink === '/services-dashboard' && <EditServicesPage />}
         </div>
       </div>
     </div>
@@ -35,3 +44,5 @@ export const AddUpdateDataModal = () => {
     document.getElementById('add-update-modal-root')
   );
 };
+
+export default AddUpdateDataModal

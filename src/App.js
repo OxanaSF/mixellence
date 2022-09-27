@@ -1,8 +1,4 @@
-import {
-  Route,
-  Routes,
-  useLocation,
-} from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 
 import MainDisplay from './pages/MainDisplay';
@@ -56,9 +52,12 @@ const App = () => {
         />
 
         <Route path="/about-dashboard" element={<AboutDashboard />} />
+        <Route path="/about-dashboard/:id" element={<AboutDashboard />}>
+          <Route path="modal" element={<AddUpdateDataModal />} />
+        </Route>
+
         <Route path="/services-dashboard" element={<ServicesDashboard />} />
         <Route path="/team-dashboard" element={<TeamDashboard />} />
-
         <Route path="/team-dashboard/:id" element={<TeamDashboard />}>
           <Route path="modal" element={<AddUpdateDataModal />} />
         </Route>

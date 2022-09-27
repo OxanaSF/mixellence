@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { db } from '../../../firebase';
@@ -28,25 +28,34 @@ const BartenderDashboardCard = ({
   activateCard,
 }) => {
   const [visible, setVisible] = useState(false);
-  const [activeCard, setActveCard] = useState('');
-  const [tempRef, setTempRef] = useState(null)
-  
 
-  // const activeCard = useSelector((state) => state.activeCard.activeCard);
-  const enableDelete = useSelector((state) => state.enableDelete.enableDelete);
-  const enableEdit = useSelector((state) => state.enableEdit.enableEdit);
-  const enableAdd = useSelector((state) => state.enableAdd.enableAdd);
   const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
 
   const dispatch = useDispatch();
 
   const notify = () => toast(alertMessage);
 
+  const ref = useRef();
+
+  let style = { visibility: 'visible' };
+  if (!visible) style.visibility = 'hidden';
+
   const updateDataHandler = () => {
+    console.log('onClick');
     dispatch(addDataModalActions.open());
   };
 
-// * Start Delete
+  const handleStyleClick = () => {
+    console.log('handleStyleClick');
+    setVisible(!visible);
+  };
+
+  const handleBlur = () => {
+    console.log('oBlur');
+    setVisible(false);
+  };
+
+  // * Start Delete
 
   const deleteBartender = async (id) => {
     await deleteDoc(doc(db, 'bartenders', id));
@@ -62,38 +71,19 @@ const BartenderDashboardCard = ({
     );
     notify();
   };
-
-  // * End Dellete
-
-  const ref = useRef();
-
-
-
-  const handleStyleClick = () => {
-    console.log('refOne', ref)
-    console.log('id', id)
-    if (ref !== id) {
-      setVisible(false)
-    }
-    setActveCard(ref)
-    setVisible(!visible);
-  };
-
-  let style = { visibility: 'visible' };
-  if (!visible) style.visibility = 'hidden';
+  // * End Delete
 
   return (
-    <div
-      ref={ref}
+    
+    <button
       className={classes.bartender_card_container}
+      ref={ref}
       onClick={handleStyleClick}
+      // onClick={() => console.log('onClick')}
+      onBlur={handleBlur}
+      // onBlur={() => console.log('onBlur')}
     >
-      {/* <ToastContainer closeButton /> */}
-
-      <header
-        style={style}
-        className={classes.bartender_card_header}
-      >
+      <header style={style} className={classes.bartender_card_header}>
         <DeleteData onClick={bartenderDeleteHandler} />
 
         <EditData
@@ -114,7 +104,8 @@ const BartenderDashboardCard = ({
           <p className={classes.bartender_card_quote}>{quote}</p>
         </div>
       </div>
-    </div>
+    </button>
+    // </div>
   );
 };
 
