@@ -8,6 +8,7 @@ import alertMessageReducer  from './alert-message-slice'
 import addDataModalReducer  from './add-data-modal-slice'
 import bartendersReducer  from './bartenders-slice'
 import activeCardReducer  from './active-card-slice'
+import updateBtnToggleReducer  from './update-data-btn-toggle-slice'
 
 
 
@@ -21,6 +22,7 @@ const store = configureStore({
     addDataModal: addDataModalReducer, 
     bartenders: bartendersReducer,
     activeCard: activeCardReducer, 
+    updateBtnToggle: updateBtnToggleReducer, 
   },
 });
 

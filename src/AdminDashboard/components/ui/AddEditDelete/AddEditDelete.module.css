@@ -8,12 +8,16 @@
   margin-left: 2rem;
 }
 
+.add_edit_delete_container:hover {
+  background: rgb(100, 75, 222, 0.9);
+  color: white;
+}
+
 .add_edit_delete_wrapper {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   padding: 1.5rem 0.7rem 1.5rem 1.4rem;
- 
 }
 
 .add_edit_delete_wrapper img {
