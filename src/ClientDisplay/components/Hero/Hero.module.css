@@ -147,6 +147,10 @@
 }
 
 @media screen and (max-width: 890px) {
+  .hero{
+    border: 2px solid red;
+  }
+  
   .overlay {
     height: 48vh;
   }
@@ -171,6 +175,19 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+  }
+
+  .image1, .image2, .image3{
+    width: 50%;
+  }
+
+  .image4, .image5{
+    width: 40%;
+    right: 0px;
+  }
+  
+  .image6, .image7, .image8, .image9{
+    display: none;
   }
   
 }
