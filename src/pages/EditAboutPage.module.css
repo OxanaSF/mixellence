@@ -11,56 +11,73 @@
     font-size: 2rem;
     margin-bottom: 3rem;
   }
-  form {
+  
+  
+  .about_container form {
     /* background: pink; */
-    display: flex;
-    flex-direction: column;
-    /* gap: 1rem; */
-    width: 80%;
+    display: flex; 
+    flex-direction: column; 
+     gap: 1rem; 
+     width: 80%;
   }
   
-  form :nth-child(5) {
+  .about_container form :nth-child(1) {
     /* background: green; */
-    height: 5rem;
+    /* height: 7rem; */
+    width: 100%;
+    
+  }
+
+  .about_container form :nth-child(1) :nth-child(2) {
+/* background: red; */
+ height: 7rem;
+  }
+
+  .about_container form :nth-child(1) :nth-child(2) {
+    letter-spacing: 1px;
   }
   
 
   
-  input::file-selector-button {
-    background: red;
+  .about_container input::file-selector-button {
+    /* background: red; */
     display: none;
   }
-  form :first-child {
+
+
+  .about_container form :first-child {
     /* background: red; */
     align-self: center;
     display: flex;
     flex-direction: column;
     color: black;
     letter-spacing: 1px;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
   }
   
 
 
-  form input {
+  .about_container form input {
     border-color: darkgray !important;
     border-style: dashed !important;
     height: 3rem !important;
   }
-  
+
+
+
   .quote input {
     height: 5rem !important;
   }
   
-  form :nth-child(5) {
+  .about_container form :nth-child(5) {
     height: 5rem;
   }
   
-  form label {
+  .about_container form label {
     display: none !important;
-  }
+  } 
   
-  form button {
+  .about_container form button {
     letter-spacing: 1.5px;
     height: 4rem;
   }

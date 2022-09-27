@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { db } from '../../../firebase';
@@ -28,21 +28,31 @@ const BartenderDashboardCard = ({
   activateCard,
 }) => {
   const [visible, setVisible] = useState(false);
-  const [activeCard, setActveCard] = useState('');
-  const [tempRef, setTempRef] = useState(null);
 
-  // const activeCard = useSelector((state) => state.activeCard.activeCard);
-  const enableDelete = useSelector((state) => state.enableDelete.enableDelete);
-  const enableEdit = useSelector((state) => state.enableEdit.enableEdit);
-  const enableAdd = useSelector((state) => state.enableAdd.enableAdd);
   const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
 
   const dispatch = useDispatch();
 
   const notify = () => toast(alertMessage);
 
+  const ref = useRef();
+
+  let style = { visibility: 'visible' };
+  if (!visible) style.visibility = 'hidden';
+
   const updateDataHandler = () => {
+    console.log('onClick');
     dispatch(addDataModalActions.open());
+  };
+
+  const handleStyleClick = () => {
+    console.log('handleStyleClick');
+    setVisible(!visible);
+  };
+
+  const handleBlur = () => {
+    console.log('oBlur');
+    setVisible(false);
   };
 
   // * Start Delete
@@ -61,24 +71,17 @@ const BartenderDashboardCard = ({
     );
     notify();
   };
-
   // * End Delete
 
-  const ref = useRef();
-
-  const handleStyleClick = () => {
-    setVisible(!visible);
-  };
-
-  let style = { visibility: 'visible' };
-  if (!visible) style.visibility = 'hidden';
-
   return (
+    
     <button
       className={classes.bartender_card_container}
       ref={ref}
       onClick={handleStyleClick}
-      onBlur={() => setVisible(false)}
+      // onClick={() => console.log('onClick')}
+      onBlur={handleBlur}
+      // onBlur={() => console.log('onBlur')}
     >
       <header style={style} className={classes.bartender_card_header}>
         <DeleteData onClick={bartenderDeleteHandler} />

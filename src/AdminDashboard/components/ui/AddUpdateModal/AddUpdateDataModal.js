@@ -44,3 +44,5 @@ export const AddUpdateDataModal = () => {
     document.getElementById('add-update-modal-root')
   );
 };
+
+export default AddUpdateDataModal
