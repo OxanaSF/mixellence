@@ -2,9 +2,8 @@ import { createPortal } from 'react-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-
 import AddEditBartendersPage from '../../../../pages/EditBartendersPage/AddEditBartendersPage';
-import EditServicesPage from '../../../../pages/EditServicesPage'
+import EditServicesPage from '../../../../pages/EditServicesPage';
 import EditTestimonials from '../../../../pages/EditTestimonials/AddEditTestimonials';
 import { addDataModalActions } from '../../../../store/add-data-modal-slice';
 
@@ -30,7 +29,6 @@ export const AddUpdateDataModal = () => {
             />
           </button>
 
-      
           {returnLink === '/team-dashboard' && <AddEditBartendersPage />}
           {returnLink === '/services-dashboard' && <EditServicesPage />}
         </div>
@@ -44,4 +42,4 @@ export const AddUpdateDataModal = () => {
   );
 };
 
-export default AddUpdateDataModal
+export default AddUpdateDataModal;

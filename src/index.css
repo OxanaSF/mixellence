@@ -52,14 +52,14 @@ button {
   background-color: rgb(100, 75, 222, 0.3);
   display: flex;
   z-index: 1000;
-  /* justify-content: center; */
-  /* align-items: center; */
 }
+
 .modalWrapper {
   background: white;
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
+  border-radius: 15%;
 }
 
 .modal {
