@@ -1,4 +1,4 @@
-export const BARTENDERS= [
+export const BARTENDERS = [
     {
       id: 1,
       name: 'Mark Sloan',

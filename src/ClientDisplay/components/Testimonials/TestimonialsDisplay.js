@@ -6,7 +6,7 @@ import { collection, onSnapshot } from 'firebase/firestore';
 import TestimonialsSlider from './TestimonialsSlider';
 import TestimonialCard from './TestimonialCard';
 import './Testimonials.css';
-import { TESTIMONIALS } from '../../../data/testimonials';
+
 
 function TestimonialsDisplay() {
   const [testimonials, setTestimonials] = useState([]);

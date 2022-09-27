@@ -5,10 +5,6 @@
   margin-bottom: 10rem;
 }
 
-.service__item__container {
-  /* background: red; */
-}
-
 .services__container h2 {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -16,8 +12,6 @@
 }
 
 .services__main {
-  display: flex;
-  align-items: center;
   display: grid;
   grid-template-columns: 1.9fr 2fr 1.9fr;
 }
@@ -66,6 +60,7 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
+  min-height: 20rem;
 }
 
 .par1 {
@@ -86,6 +81,7 @@
 
 @media screen and (max-width: 720px) {
   .services__main {
+    display: flex;
     flex-wrap: wrap;
     margin-top: 4rem;
     margin-bottom: 6rem;
@@ -93,15 +89,15 @@
 
   .services__main > div {
     box-sizing: border-box;
-    width: 49.5%;
+    width: 50%;
   }
 
   .service__item__header {
     background: #212121;
-    height: 7rem;
     padding: 0;
     line-height: 1.9;
     transition: all 0.5s ease;
+
   }
 
   .service__item__header:hover {
@@ -118,11 +114,13 @@
   .service__item__header__tear1 p,
   .service__item__header__tear2 p {
     font-size: 14px;
+    font-weight: 100 !important;
+    line-height: 1.9;
   }
 
   .services__main :nth-child(1) {
     order: 1;
-    /* width: 1fr; */
+    width: 1fr;
   }
 
   .services__main :nth-child(2) {
