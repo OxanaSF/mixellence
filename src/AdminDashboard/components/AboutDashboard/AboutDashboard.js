@@ -6,6 +6,7 @@ import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
 import DashboardMain from '../ui/DashboardMain/DashboardMain';
 import DashboardFooter from '../ui/DashboardFooter/DashboardFooter';
+import UpdateDataContainer from '../ui/AddEditDelete/UpdateDataContainer'
 
 import classes from './AboutDashboard.module.css';
 
@@ -21,6 +22,7 @@ const AboutDashboard = () => {
         <DashboardMain>
           <div className={classes.about_wrapper}>
             <AboutDashboardDisplay />
+            <UpdateDataContainer />
           </div>
         </DashboardMain>
         <DashboardFooter />

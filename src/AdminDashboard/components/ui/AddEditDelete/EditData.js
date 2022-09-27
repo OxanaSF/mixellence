@@ -11,9 +11,9 @@ const EditData = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const editModalHandler = () => {
-    dispatch(addDataModalActions.open());
-  }
+  // const editModalHandler = () => {
+  //   dispatch(addDataModalActions.open());
+  // }
 
   return (
     <button
