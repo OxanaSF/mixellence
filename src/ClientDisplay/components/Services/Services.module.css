@@ -8,7 +8,7 @@
 .services__container h2 {
   margin-block-start: 0;
   margin-block-end: 0;
-  margin-top: 2.5rem;
+  margin-top: 5rem;
 }
 
 .services__main {
@@ -60,7 +60,7 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
-  min-height: 20rem;
+  min-height: 26rem;
 }
 
 .par1 {
@@ -76,15 +76,19 @@
 }
 
 .services__main img {
-  width: 80%;
+  /* width: 90%;
+  margin-top: auto; */
+  width: 90%;
+  height: 65%;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 800px) {
   .services__main {
     display: flex;
     flex-wrap: wrap;
     margin-top: 4rem;
     margin-bottom: 6rem;
+    
   }
 
   .services__main > div {
@@ -97,7 +101,6 @@
     padding: 0;
     line-height: 1.9;
     transition: all 0.5s ease;
-
   }
 
   .service__item__header:hover {
@@ -172,5 +175,29 @@
   }
   100% {
     transform: translate(2px, 0);
+  }
+}
+
+
+@media screen and (max-width: 1050px) {
+  .service__item__body {
+    max-height: 12rem;
+    padding: 2rem;
+  }
+
+  .services__main img {
+    /* width: 90%;
+    margin-top: auto; */
+    width: 30rem;
+    height: 40rem;
+  }
+}
+
+
+
+@media screen and (max-width: 1500px) {
+  .service__item__body {
+    max-height: 12rem;
+    padding: 2rem;
   }
 }
