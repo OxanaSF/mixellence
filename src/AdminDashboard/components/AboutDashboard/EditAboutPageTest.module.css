@@ -1,0 +1,153 @@
+.about_info_wrapper {
+  width: 100%;
+}
+
+.about_info_wrapper :nth-child(2) :nth-child(4) {
+  /* background: red; */
+  width: 60%;
+  height: 4rem !important;
+  margin: 2rem 20% 0 20%;
+  letter-spacing: 1.5px;
+}
+
+.barImg {
+  width: 100%;
+  height: 149px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.about__info {
+  margin-top: 4rem;
+  border-radius: 0.625rem;
+  background-color: white;
+  padding: 5rem;
+  /* margin: 0 5rem; */
+  text-align: left;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  /* background: pink; */
+  width: 100%;
+}
+
+form textarea {
+  /* border-color: darkgray !important; */
+  border-style: dashed !important;
+  height: 5rem !important;
+  border-color: #644bde !important;
+  color: black !important;
+  font-size: 13px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  letter-spacing: 1px;
+  line-height: 1.4 !important;
+}
+
+.about__info form {
+  /* background: yellow; */
+  width: 100%;
+}
+
+.about__info :nth-child(1) {
+  /* background: blue; */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.about__info :nth-child(1) :nth-child(1) {
+  text-align: left;
+}
+
+.about__info .par1 {
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.about__footer {
+  /* width: 100%; */
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  gap: 3rem;
+  /* background: green; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about__footer :nth-child(1) {
+  /* background: red; */
+  height: 3rem;
+}
+
+.about__footer :nth-child(2) {
+  /* background: red; */
+  height: 3rem;
+}
+
+.about__footer__location {
+  display: flex;
+  /* gap: 0.6rem;
+  */
+}
+
+.about__footer__location img {
+  width: 0.9rem;
+  padding-top: 0.3rem;
+}
+
+.edit_page_btn {
+  padding: 1rem;
+  background: white;
+  letter-spacing: 1.5px;
+}
+
+.textArea_main :nth-child(1) {
+  height: 8rem !important;
+}
+
+.textArea_phone :nth-child(2) {
+  background: greenyellow;
+  height: 2rem;
+}
+
+.textArea_input_business :nth-child(1) {
+  text-align: right;
+  background: greenyellow;
+  height: rem !important;
+}
+
+@media screen and (max-width: 890px) {
+  .about__container {
+    padding: 1.2rem;
+  }
+
+  .about__info {
+    padding: 2rem;
+    border-radius: 5px;
+  }
+
+  .par2 {
+    display: none;
+  }
+
+  .about__footer {
+    flex-direction: column;
+
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .about__footer__location {
+    margin-bottom: 1rem;
+  }
+
+  .about__footer__location img {
+    width: 1rem;
+  }
+
+  .barImg {
+    display: none;
+  }
+}

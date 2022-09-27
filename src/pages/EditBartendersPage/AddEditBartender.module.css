@@ -12,7 +12,8 @@
   font-size: 2rem;
   margin-bottom: 3rem;
 }
-form {
+
+.bartender_container form {
   /* background: pink; */
   display: flex;
   flex-direction: column;
@@ -20,7 +21,7 @@ form {
   width: 80%;
 }
 
-form :nth-child(5) {
+.bartender_container form :nth-child(5) {
   /* background: green; */
   height: 5rem;
 }
@@ -36,11 +37,13 @@ form :nth-child(5) {
   border: none;
 }
 
-input::file-selector-button {
-  background: red;
+.bartender_container input::file-selector-button {
+  /* background: red; */
   display: none;
 }
-form :first-child {
+
+
+.bartender_container form :first-child {
   /* background: red; */
   align-self: center;
   display: flex;
@@ -50,17 +53,17 @@ form :first-child {
   margin-bottom: 4rem;
 }
 
-form :first-child :first-child {
+.bartender_container form :first-child :first-child {
   /* background: green; */
 }
 
-form :first-child :nth-child(2) {
+.bartender_container form :first-child :nth-child(2) {
   /* background: green; */
   display: flex;
   flex-direction: column;
 }
 
-form :first-child :nth-child(2) :nth-child(1) {
+.bartender_container form :first-child :nth-child(2) :nth-child(1) {
   /* background: green; */
   height: 10rem !important;
   width: 10rem !important;
@@ -69,12 +72,12 @@ form :first-child :nth-child(2) :nth-child(1) {
   cursor: pointer;
 }
 
-form :first-child :nth-child(2) :nth-child(1) {
+.bartender_container form :first-child :nth-child(2) :nth-child(1) {
   /* color: white; */
   padding: 4rem 1.3rem;
 }
 
-form input {
+.bartender_container form input {
   border-color: darkgray !important;
   border-style: dashed !important;
   height: 3rem !important;
@@ -84,15 +87,15 @@ form input {
   height: 5rem !important;
 }
 
-form :nth-child(5) {
+.bartender_container form :nth-child(5) {
   height: 5rem;
 }
 
-form label {
+.bartender_container form label {
   display: none !important;
 }
 
-form button {
+.bartender_container form button {
   letter-spacing: 1.5px;
   height: 4rem;
 }

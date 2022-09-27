@@ -38,9 +38,9 @@ const About = () => {
         <>
           <div className={classes.about_info_wrapper}>
             <div className={classes.about__info}>
-              <p className={classes.par1}>{aboutInfo.text1}</p>
+              <p className={classes.par1}>{aboutInfo.mainParagraph}</p>
 
-              <p className={classes.par2}>{aboutInfo.text2}</p>
+              <p className={classes.par2}>{aboutInfo.phoneParagraph}</p>
 
               <footer className={classes.about__footer}>
                 <div className={classes.about__footer__location}>
@@ -50,10 +50,10 @@ const About = () => {
                       alt="pin"
                     />
                   </div>
-                  <div>{aboutInfo.city}</div>
+                  <div>{aboutInfo.place}</div>
                 </div>
 
-                <div>{aboutInfo.text3}</div>
+                <div>{aboutInfo.businessOwned}</div>
               </footer>
             </div>
           </div>

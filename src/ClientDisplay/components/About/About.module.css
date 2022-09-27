@@ -53,6 +53,14 @@
 }
 
 
+.edit_page_btn {
+ padding: 1rem;
+  background: white;
+  letter-spacing: 1.5px;
+
+}
+
+
 @media screen and (max-width: 890px) {
   .about__container {
     padding: 1.2rem;

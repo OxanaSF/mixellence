@@ -12,7 +12,6 @@ import { storage } from '../../firebase';
 import { db } from '../../firebase';
 import {
   getDoc,
-  getDocs,
   doc,
   addDoc,
   updateDoc,

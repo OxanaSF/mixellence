@@ -4,6 +4,9 @@ import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
+
+// import EditAboutPage from '../../../pages/EditAboutPage'
+import EditAboutPageTest from './EditAboutPageTest'
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { Loader } from 'semantic-ui-react';
 import classes from '../../../ClientDisplay/components/About/About.module.css';
@@ -13,6 +16,7 @@ import EditData from '../ui/AddEditDelete/EditData';
 const AboutDashboardDisplay = () => {
   const [aboutInfo, setAboutInfo] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [editArea, setEditArea] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -42,6 +46,11 @@ const AboutDashboardDisplay = () => {
     dispatch(addDataModalActions.open());
   };
 
+
+  const editPageHandler = () => {
+    setEditArea(!editArea)
+  }
+
   return (
     <section className={classes.about__container} id="about">
       <h2>About Us</h2>
@@ -53,31 +62,42 @@ const AboutDashboardDisplay = () => {
         navigate={`/about-dashboard/${aboutInfo.id}/modal`}
       />
 
+     <button 
+     onClick={editPageHandler}
+      className={classes.edit_page_btn}
+      >
+        EditPage
+      </button>
+
       {isLoading ? (
         <Loader active inline="centered" size="huge" />
       ) : (
         <>
-          <div className={classes.about_info_wrapper}>
-            <div className={classes.about__info}>
-              <p className={classes.par1}>{aboutInfo.text1}</p>
+          {!editArea && (
+            <div className={classes.about_info_wrapper}>
+              <div className={classes.about__info}>
+                <p className={classes.par1}>{aboutInfo.mainParagraph}</p>
 
-              <p className={classes.par2}>{aboutInfo.text2}</p>
+                <p className={classes.par2}>{aboutInfo.phoneParagraph}</p>
 
-              <footer className={classes.about__footer}>
-                <div className={classes.about__footer__location}>
-                  <div>
-                    <img
-                      src={`${process.env.PUBLIC_URL}/images/pin.png`}
-                      alt="pin"
-                    />
+                <footer className={classes.about__footer}>
+                  <div className={classes.about__footer__location}>
+                    <div>
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/pin.png`}
+                        alt="pin"
+                      />
+                    </div>
+                    <div>{aboutInfo.place}</div>
                   </div>
-                  <div>{aboutInfo.city}</div>
-                </div>
 
-                <div>{aboutInfo.text3}</div>
-              </footer>
+                  <div>{aboutInfo.businessOwned}</div>
+                </footer>
+              </div>
             </div>
-          </div>
+          )}
+
+          {editArea && <EditAboutPageTest id={aboutInfo.id}/>}
         </>
       )}
 
