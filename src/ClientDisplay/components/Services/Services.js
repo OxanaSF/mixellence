@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 
+import { BARTENDERS } from '../../../data/bartenders';
 
 import classes from './Services.module.css';
+import { createLanguageService } from 'typescript';
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -37,7 +39,7 @@ const Services = () => {
 
       <div className={classes.services__main}>
         {services
-          .filter((item) => item.serviceId === 'service1')
+          .filter((item) => item.id === '9EMmwb87lJ4Jyqjq01vu')
           .map((service) => (
             <div key={service.id}>
               <div className={classes.service__item__container}>
@@ -67,7 +69,7 @@ const Services = () => {
         />
 
         {services
-          .filter((item) => item.serviceId === 'service2')
+          .filter((item) => item.id === 'SapnqfrZnkbF6rStMzsR')
           .map((service) => (
             <div key={service.id}>
               <div className={classes.service__item__container}>
