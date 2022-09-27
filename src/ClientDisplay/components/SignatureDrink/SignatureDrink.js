@@ -1,28 +1,32 @@
-// import React from 'react';
+import React from 'react';
 
 
-// import drinks from '../../../data/drinks';
-// import classes from './SignatureDrink.module.css'; 
+import  drinks from '../../../data/drinks';
 
-// import Cards from '../../components/Cards/Cards';
-// import DrinksCard from '../../components/Cards/DrinksCard/DrinksCard';
+import classes from './SignatureDrink.module.css';
+ 
+import PageMarker from '../../components/PageMarker/PageMarker';
+import Cards from '../../components/Cards/Cards';
+import DrinksCard from '../../components/Cards/DrinksCard/DrinksCard';
 
-// export default function SignatureDrink() {
-//   return (
-//     <main className={classes.SignatureDrink}>
-//       <section>
-//         <Cards>
-//           {drinks.map((drinks) => (
-//             <DrinksCard
-//               key={drinks.id}
-//               name={drinks.name}
-//               subtitle={drinks.date}
-//               img={drinks.image}
-//               onclick={() => undefined}
-//             />
-//           ))}
-//         </Cards>
-//       </section>
-//     </main>
-//   );
-// }
+export default function SignatureDrink() {
+  return (
+    <main className={classes.SignatureDrinks}>
+      <PageMarker page="SignatureDrinks" />
+      <section>
+        <Cards>
+          {drinks.map((drinks) => (
+            <DrinksCard
+              key={drinks.id}
+              name={drinks.name}
+              subtitle={drinks.quote}
+              img={drinks.image}
+              onClick={() => undefined}
+            />
+          ))}
+        </Cards>
+      </section>
+    </main>
+  );
+}
+

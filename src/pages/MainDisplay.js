@@ -26,7 +26,7 @@ const MainDisplay = () => {
       <AboutUs />
       <Services />
       <MeetOurTeem />
-      {/* <SignatureDrink /> */}
+      <SignatureDrink />
       <Gallery />
       <Testimonials />
       <Footer />
