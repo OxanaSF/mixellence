@@ -1,33 +1,68 @@
 .hero {
-  /* outline: 2px solid red; */
-  height: 62vh;
+  outline: 2px solid rebeccapurple;
+  position: relative;
+  width: 100vw;
+  height: 68vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  display: flex;
 }
 
-.row {
-  z-index: -1;
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  /* outline: 2px solid purple; */
-  overflow: hidden;
-}
-.column {
-  flex: 25%;
-  max-width: 25%;
-  /* outline: 2px solid green; */
-}
-.column img {
-  vertical-align: middle;
-  /* width: 100%; */
-  /* outline: 2px solid red; */
+.bgImg { /* Styles which all images in the collage will share*/
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 
 .image1 {
-  /* height: 43%; */
-  width: 100%;
+  background-image: url('/public/images/heroImg/bg1.png');
+  left: 0px;
+  top: 0px;
+  width: 20%;
+  height: 40%;
+}
+
+.image2 {
+  background-image: url('/public/images/heroImg/bg2.png');
+  width: 20%;
+  height: 32%;
+  left: 0px;
+  top: 40%;
+}
+
+.image3{
+  background-image: url('/public/images/heroImg/bg3.png');
+  width: 20%;
+  height: 28%;
+  left: 0px;
+  bottom: 0px;
+}
+
+.image4{
+  background-image: url('/public/images/heroImg/bg4.png');
+  position: absolute;
+  left: 20%;
+  top: 0px;
+  width: 24%;
+  height: 50%;
+}
+
+.image5{
+  background-image: url('/public/images/heroImg/bg5.png');
+  left: 20%;
+  height: 50%;
+  width:25%;
+  bottom: 0px;
+}
+
+.image6{
+  background: red;
+  height: 368px;
+  /* height: 51%; */
+  width: 22%;
+  top: 0px;
+  right: 34%;
 }
 
 .overlay {
@@ -41,9 +76,6 @@
   background-color: rgba(0, 0, 0, 0.772);
   position: absolute;
   width: 75vw;
-}
-
-.overlay img {
 }
 
 .overlay h3 {

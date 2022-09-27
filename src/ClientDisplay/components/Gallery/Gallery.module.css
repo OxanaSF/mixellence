@@ -12,6 +12,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .pic1 {
   background-image: url('/public/images/galleryImg/1.gif');
   position: absolute;
