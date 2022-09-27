@@ -6,8 +6,7 @@ import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 import { Loader } from 'semantic-ui-react';
 
-
-
+import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
 import BartenderDashboardCard from './BartenderDashboardCard';
 import classes from './BartendersDashboardDisplay.module.css';
@@ -17,17 +16,16 @@ export const BartendersDashboardDisplay = () => {
 
   const dispatch = useDispatch();
 
-  // const bartenders = useSelector((state) => state.bartenders.bartenders);
   const addDataModal = useSelector((state) => state.addDataModal.addDataModal);
+ 
   const [bartenders, setBartenders] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const activeCardHandler = () => {
-    // dispatch(activeCardActions.activate());
-  };
+  const activeCardHandler = () => {};
 
   useEffect(() => {
     setIsLoading(true);
+    dispatch(addDataModalActions.updateReturnLink('/team-dashboard'));
     const unsub = onSnapshot(
       collection(db, 'bartenders'),
       (snapshot) => {
@@ -46,13 +44,6 @@ export const BartendersDashboardDisplay = () => {
       unsub();
     };
   }, []);
-
-
-
-
-
-
-
 
   return (
     <div>

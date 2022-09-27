@@ -1,0 +1,67 @@
+.about_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about_container h3 {
+    color: black;
+  
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  form {
+    /* background: pink; */
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    width: 80%;
+  }
+  
+  form :nth-child(5) {
+    /* background: green; */
+    height: 5rem;
+  }
+  
+
+  
+  input::file-selector-button {
+    background: red;
+    display: none;
+  }
+  form :first-child {
+    /* background: red; */
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    letter-spacing: 1px;
+    margin-bottom: 4rem;
+  }
+  
+
+
+  form input {
+    border-color: darkgray !important;
+    border-style: dashed !important;
+    height: 3rem !important;
+  }
+  
+  .quote input {
+    height: 5rem !important;
+  }
+  
+  form :nth-child(5) {
+    height: 5rem;
+  }
+  
+  form label {
+    display: none !important;
+  }
+  
+  form button {
+    letter-spacing: 1.5px;
+    height: 4rem;
+  }
+  

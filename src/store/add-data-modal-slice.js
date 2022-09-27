@@ -1,6 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialAddDataModalState = { addDataModal: false };
+const initialAddDataModalState = {
+  addDataModal: false,
+  returnLink: '',
+};
 
 const addDataModalSlice = createSlice({
   name: 'addDataModal',
@@ -10,9 +13,12 @@ const addDataModalSlice = createSlice({
       state.addDataModal = true;
       console.log('state.addDataModal: ', state.addDataModal);
     },
-   close(state) {
+    close(state) {
       state.addDataModal = false;
       console.log('state.addDataModal: ', state.addDataModal);
+    },
+    updateReturnLink(state, action) {
+      state.returnLink = action.payload;
     },
   },
 });

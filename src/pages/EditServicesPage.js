@@ -5,14 +5,13 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { addDataModalActions } from '../../store/add-data-modal-slice';
-import { alertMessageActions } from '../../store/alert-message-slice';
-import { enableEditActions } from '../../store/enable-edit-slice';
-import { storage } from '../../firebase';
-import { db } from '../../firebase';
+import { addDataModalActions } from '../store/add-data-modal-slice';
+import { alertMessageActions } from '../store/alert-message-slice';
+import { enableEditActions } from '../store/enable-edit-slice';
+import { storage } from '../firebase';
+import { db } from '../firebase';
 import {
   getDoc,
-  getDocs,
   doc,
   addDoc,
   updateDoc,
@@ -22,9 +21,9 @@ import {
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import { Form, Loader, Button } from 'semantic-ui-react';
+import { Form, Grid, Loader, Button } from 'semantic-ui-react';
 
-import classes from './AddEditBartender.module.css';
+import classes from './EditBartendersPage/AddEditBartender.module.css';
 
 const initialBartenderState = {
   name: '',
@@ -34,7 +33,7 @@ const initialBartenderState = {
   img: '',
 };
 
-const AddEditBartendersPage = () => {
+const EditServicesPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -52,25 +51,24 @@ const AddEditBartendersPage = () => {
 
   console.log('id', id);
 
-  useEffect(() => {
-    id && getBartenderById();
-    console.log('id', id);
-  }, [id]);
-
   const getBartenderById = async () => {
     const docRef = doc(db, 'bartenders', id);
     const snapshot = await getDoc(docRef);
 
     if (snapshot.exists()) {
-      setBartenderData({ ...snapshot.data() });
+      setBartenderData({ ...snapshot.data });
       console.log('snapshot', snapshot);
     }
   };
 
-
+  useEffect(() => {
+    id && getBartenderById();
+    console.log('id', id);
+  }, [id]);
 
   useEffect(() => {
     const uploadImgFile = () => {
+      // const name = new Date().getTime() + file.name;
       const storageRef = ref(storage, file.name);
       const uploadTask = uploadBytesResumable(storageRef, file);
 
@@ -101,7 +99,7 @@ const AddEditBartendersPage = () => {
             console.log('downloadURL', downloadURL);
 
             setBartenderData((prev) => ({ ...prev, img: downloadURL }));
-            setProgress(100);
+            setProgress(101);
           });
         }
       );
@@ -199,7 +197,6 @@ const AddEditBartendersPage = () => {
               <span className="drop-zone__prompt">
                 Drop file here or click to upload
               </span>
-              
               <Form.Input
                 className={classes.upload}
                 error={errors.file && !id ? { content: errors.file } : null}
@@ -215,7 +212,7 @@ const AddEditBartendersPage = () => {
               placeholder={id && name ? name : 'Enter Name'}
               name="name"
               onChange={handleChange}
-              defaultValue={name || ''}
+              value={name || ''}
               autoFocus
             ></Form.Input>
             <Form.Input
@@ -250,8 +247,7 @@ const AddEditBartendersPage = () => {
             <Button
               secondary
               type="submit"
-              // disabled={progress !== null && progress < 101}
-              disabled={progress !== null && progress < 100}
+              disabled={progress !== null && progress < 101}
             >
               Submit
             </Button>
@@ -262,4 +258,4 @@ const AddEditBartendersPage = () => {
   );
 };
 
-export default AddEditBartendersPage;
+export default EditServicesPage;

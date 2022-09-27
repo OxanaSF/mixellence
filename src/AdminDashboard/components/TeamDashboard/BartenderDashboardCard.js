@@ -29,8 +29,7 @@ const BartenderDashboardCard = ({
 }) => {
   const [visible, setVisible] = useState(false);
   const [activeCard, setActveCard] = useState('');
-  const [tempRef, setTempRef] = useState(null)
-  
+  const [tempRef, setTempRef] = useState(null);
 
   // const activeCard = useSelector((state) => state.activeCard.activeCard);
   const enableDelete = useSelector((state) => state.enableDelete.enableDelete);
@@ -46,7 +45,7 @@ const BartenderDashboardCard = ({
     dispatch(addDataModalActions.open());
   };
 
-// * Start Delete
+  // * Start Delete
 
   const deleteBartender = async (id) => {
     await deleteDoc(doc(db, 'bartenders', id));
@@ -63,19 +62,11 @@ const BartenderDashboardCard = ({
     notify();
   };
 
-  // * End Dellete
+  // * End Delete
 
   const ref = useRef();
 
-
-
   const handleStyleClick = () => {
-    console.log('refOne', ref)
-    console.log('id', id)
-    if (ref !== id) {
-      setVisible(false)
-    }
-    setActveCard(ref)
     setVisible(!visible);
   };
 
@@ -83,17 +74,13 @@ const BartenderDashboardCard = ({
   if (!visible) style.visibility = 'hidden';
 
   return (
-    <div
-      ref={ref}
+    <button
       className={classes.bartender_card_container}
+      ref={ref}
       onClick={handleStyleClick}
+      onBlur={() => setVisible(false)}
     >
-      {/* <ToastContainer closeButton /> */}
-
-      <header
-        style={style}
-        className={classes.bartender_card_header}
-      >
+      <header style={style} className={classes.bartender_card_header}>
         <DeleteData onClick={bartenderDeleteHandler} />
 
         <EditData
@@ -114,7 +101,8 @@ const BartenderDashboardCard = ({
           <p className={classes.bartender_card_quote}>{quote}</p>
         </div>
       </div>
-    </div>
+    </button>
+    // </div>
   );
 };
 
