@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 
-import EditAboutPage from '../../../../pages/EditAboutPage';
 import AddEditBartendersPage from '../../../../pages/EditBartendersPage/AddEditBartendersPage';
 import EditServicesPage from '../../../../pages/EditServicesPage'
 import EditTestimonials from '../../../../pages/EditTestimonials/AddEditTestimonials';
@@ -31,7 +30,7 @@ export const AddUpdateDataModal = () => {
             />
           </button>
 
-          {returnLink === '/about-dashboard' && <EditAboutPage />}
+      
           {returnLink === '/team-dashboard' && <AddEditBartendersPage />}
           {returnLink === '/services-dashboard' && <EditServicesPage />}
         </div>

@@ -176,6 +176,7 @@ const AddEditBartendersPage = () => {
         alert.log(error);
       }
     }
+    setIsSubmitted(false);
     dispatch(enableEditActions.disable());
     // notify()
     navigate('/team-dashboard');
