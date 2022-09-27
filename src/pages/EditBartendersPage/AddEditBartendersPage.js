@@ -41,7 +41,7 @@ const AddEditBartendersPage = () => {
   let notify = () => toast('');
 
   const [bartenderData, setBartenderData] = useState(initialBartenderState);
-  const { name, drink, city, quote } = bartenderData;
+  const { name, drink, city, quote, img } = bartenderData;
   const [file, setFile] = useState(null);
   const [progress, setProgress] = useState(null);
   const [errors, setErrors] = useState({});
@@ -202,6 +202,7 @@ const AddEditBartendersPage = () => {
               
               <Form.Input
                 className={classes.upload}
+                defaultValue={img || ''}
                 error={errors.file && !id ? { content: errors.file } : null}
                 label="upload"
                 type="file"

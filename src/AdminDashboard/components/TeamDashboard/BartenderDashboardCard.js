@@ -90,6 +90,8 @@ const BartenderDashboardCard = ({
           onClick={updateDataHandler}
           navigate={`/team-dashboard/${id}/modal`}
         />
+
+        
       </header>
 
       <div className={classes.bartender_card_main}>

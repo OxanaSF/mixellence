@@ -1,7 +1,7 @@
 .services_wrapper {
   display: flex;
   align-items: center;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
 }
 
 .services {

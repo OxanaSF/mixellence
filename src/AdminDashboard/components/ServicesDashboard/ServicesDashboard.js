@@ -15,23 +15,22 @@ const ServicesDashboard = () => {
     <DashboardContainer>
       <NavSide />
       <section>
-        <DashboardHeader>
-          <h3>Services</h3>
-        </DashboardHeader>
+        <DashboardHeader>{/* <h3>Services</h3> */}</DashboardHeader>
 
         <DashboardMain>
-
-
           <div className={classes.services_wrapper}>
             <div className={classes.services}>
-            <Services />
+              <Services />
             </div>
-            <AddEditDelete />
+            {/* <AddEditDelete /> */}
           </div>
-
-
         </DashboardMain>
-        
+
+        <div>
+          <button>EDIT TEAR 1</button>
+          <button>EDIT TEAR 2</button>
+        </div>
+
         <DashboardFooter />
       </section>
     </DashboardContainer>
