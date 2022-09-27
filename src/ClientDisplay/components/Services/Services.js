@@ -1,16 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { db } from '../../../firebase';
+import { onSnapshot, collection } from 'firebase/firestore';
 
-import { SERVICES_DATA } from '../../../data/services-data';
+
 import classes from './Services.module.css';
 
 const Services = () => {
+  const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    const unsub = onSnapshot(
+      collection(db, 'services'),
+      (snapshot) => {
+        let list = [];
+        snapshot.docs.forEach((doc) => {
+          // console.log('doc.id', doc.id);
+          list.push({ id: doc.id, ...doc.data() });
+        });
+        setServices(list);
+        setLoading(false);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+    return () => {
+      unsub();
+    };
+  }, []);
+
   return (
     <section className={classes.services__container} id="services">
       <h2>Services</h2>
 
       <div className={classes.services__main}>
-        {SERVICES_DATA.filter((item) => item.id === 'service1').map(
-          (service) => (
+        {services
+          .filter((item) => item.serviceId === 'service1')
+          .map((service) => (
             <div key={service.id}>
               <div className={classes.service__item__container}>
                 <header
@@ -30,18 +58,17 @@ const Services = () => {
                 </div>
               </div>
             </div>
-          )
-        )}
-       
-          <img
-            className={classes.animation}
-            src={`${process.env.PUBLIC_URL}/images/ezgif.com-gif-maker.gif`}
-            alt="glass is filled with drink"
-          />
-       
+          ))}
 
-        {SERVICES_DATA.filter((item) => item.id === 'service2').map(
-          (service) => (
+        <img
+          className={classes.animation}
+          src={`${process.env.PUBLIC_URL}/images/ezgif.com-gif-maker.gif`}
+          alt="glass is filled with drink"
+        />
+
+        {services
+          .filter((item) => item.serviceId === 'service2')
+          .map((service) => (
             <div key={service.id}>
               <div className={classes.service__item__container}>
                 <header
@@ -59,8 +86,7 @@ const Services = () => {
                 </div>
               </div>
             </div>
-          )
-        )}
+          ))}
       </div>
     </section>
   );

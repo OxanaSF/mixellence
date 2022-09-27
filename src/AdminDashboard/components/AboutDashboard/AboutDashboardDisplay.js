@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
-
 // import EditAboutPage from '../../../pages/EditAboutPage'
-import EditAboutPageTest from './EditAboutPageTest'
+import { updateBtnToggleActions } from '../../../store/update-data-btn-toggle-slice';
+import EditAboutPage from './EditAboutPage';
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { Loader } from 'semantic-ui-react';
 import classes from '../../../ClientDisplay/components/About/About.module.css';
@@ -14,6 +15,10 @@ import classes from '../../../ClientDisplay/components/About/About.module.css';
 import EditData from '../ui/AddEditDelete/EditData';
 
 const AboutDashboardDisplay = () => {
+  const updateBtnToggle = useSelector(
+    (state) => state.updateBtnToggle.updateBtnToggle
+  );
+
   const [aboutInfo, setAboutInfo] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [editArea, setEditArea] = useState(false);
@@ -46,10 +51,9 @@ const AboutDashboardDisplay = () => {
     dispatch(addDataModalActions.open());
   };
 
-
   const editPageHandler = () => {
-    setEditArea(!editArea)
-  }
+    setEditArea(!editArea);
+  };
 
   return (
     <section className={classes.about__container} id="about">
@@ -57,23 +61,11 @@ const AboutDashboardDisplay = () => {
       <Link to="modal" state={{ background: location }}></Link>
       <Outlet />
 
-      {/* <EditData
-        onClick={updateDataHandler}
-        navigate={`/about-dashboard/${aboutInfo.id}/modal`}
-      /> */}
-
-     <button 
-     onClick={editPageHandler}
-      className={classes.edit_page_btn}
-      >
-        EditPage
-      </button>
-
       {isLoading ? (
         <Loader active inline="centered" size="huge" />
       ) : (
         <>
-          {!editArea && (
+          {!updateBtnToggle && (
             <div className={classes.about_info_wrapper}>
               <div className={classes.about__info}>
                 <p className={classes.par1}>{aboutInfo.mainParagraph}</p>
@@ -97,7 +89,8 @@ const AboutDashboardDisplay = () => {
             </div>
           )}
 
-          {editArea && <EditAboutPageTest id={aboutInfo.id}/>}
+          {/* {editArea && <EditAboutPageTest id={aboutInfo.id}/>} */}
+          {updateBtnToggle && <EditAboutPage id={aboutInfo.id} />}
         </>
       )}
 

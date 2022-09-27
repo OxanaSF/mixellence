@@ -5,6 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { updateBtnToggleActions } from '../../../store/update-data-btn-toggle-slice';
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { alertMessageActions } from '../../../store/alert-message-slice';
 import { enableEditActions } from '../../../store/enable-edit-slice';
@@ -24,7 +25,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 import { Form, Loader, Button } from 'semantic-ui-react';
 
-import classes from './EditAboutPageTest.module.css';
+import classes from './EditAboutPage.module.css';
 
 const initialAboutState = {
   mainParagraph: '',
@@ -33,7 +34,7 @@ const initialAboutState = {
   businessOwned: '',
 };
 
-const EditAboutPageTest = ({ id }) => {
+const EditAboutPage = ({ id }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -112,8 +113,9 @@ const EditAboutPageTest = ({ id }) => {
       alert.log(error);
     }
 
-    dispatch(enableEditActions.disable());
+    // dispatch(enableEditActions.disable());
     // notify()
+    dispatch(updateBtnToggleActions.updateBtnToggle());
     navigate('/about-dashboard');
   };
 
@@ -124,9 +126,8 @@ const EditAboutPageTest = ({ id }) => {
           <Loader active inline="centered" size="huge" />
         ) : (
           <>
-        
             <h3>Update</h3>
-          
+
             <Form onSubmit={handleSubmit}>
               <div className={classes.par1}>
                 <Form.TextArea
@@ -205,4 +206,4 @@ const EditAboutPageTest = ({ id }) => {
   );
 };
 
-export default EditAboutPageTest;
+export default EditAboutPage;

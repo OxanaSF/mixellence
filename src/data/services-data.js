@@ -10,7 +10,7 @@ export const SERVICES_DATA = [
     id: 'service2',
     title: 'Tear 2',
     description: 'Bartending service PLUS.',
-    par1: 'This is our best selling package. With this package you get a custom menu & a hands off service, where you provide the alcohol and we take care of everything else. ',
+    par1: 'This is our best selling package. With this package you get a custom menu & a hands off service, where you provide the alcohol and we take care of everything else.',
     par2: 'We arrive at your event fully prepared, matching your design aesthetic and dress code. We provide excellent and affordable service.',
   },
 ];
