@@ -24,7 +24,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 import { Form, Grid, Loader, Button } from 'semantic-ui-react';
 
-import classes from './EditBartendersPage/AddEditBartender.module.css';
+import classes from './EditAboutPage.module.css';
 
 const initialBartenderState = {
   name: '',
@@ -186,7 +186,7 @@ const EditAboutPage = () => {
   // }, [])
 
   return (
-    <div className={classes.bartender_container}>
+    <div className={classes.about_container}>
       {isSubmitted ? (
         <Loader active inline="centered" size="huge" />
       ) : (
@@ -194,7 +194,7 @@ const EditAboutPage = () => {
           <h3>{id ? 'Update ' : 'Add'}</h3>
 
           <Form onSubmit={handleSubmit}>
-            <div className="drop-zone">
+            {/* <div className="drop-zone">
               <span className="drop-zone__prompt">
                 Drop file here or click to upload
               </span>
@@ -218,15 +218,16 @@ const EditAboutPage = () => {
                 type="file"
                 onChange={(e) => setFile(e.target.files[0])}
               ></Form.Input>
-            </div>
+            </div> */}
 
             <Form.Input
-              label="name"
-              error={errors.name && !id ? { content: errors.name } : null}
-              placeholder={id && name ? name : 'Enter Name'}
-              name="name"
+              className={classes.quote}
+              label="quote"
+              error={errors.quote && !id ? { content: errors.quote } : null}
+              placeholder="quote"
+              name="quote"
               onChange={handleChange}
-              value={name || ''}
+              value={quote || ''}
               autoFocus
             ></Form.Input>
             <Form.Input
