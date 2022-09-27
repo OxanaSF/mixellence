@@ -1,9 +1,9 @@
 import React from 'react';
 
 import NavSide from '../NavSide/NavSide';
-import BartendersDashboardDisplay from './BartendersDashboardDisplay';
-import AddEditDelete from '../ui/AddEditDelete/AddEditDelete';
-import DashboardFooter from '../ui/DashboardFooter/DashboardFooter'
+import { BartendersDashboardDisplay } from './BartendersDashboardDisplay';
+import AddDataContainer from '../ui/AddEditDelete/AddDataContainer';
+import DashboardFooter from '../ui/DashboardFooter/DashboardFooter';
 
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
@@ -22,7 +22,7 @@ const MeetOurTeamDashboard = () => {
         <DashboardMain>
           <div className={classes.team_wrapper}>
             <BartendersDashboardDisplay />
-            <AddEditDelete />
+            <AddDataContainer />
           </div>
         </DashboardMain>
         <DashboardFooter />

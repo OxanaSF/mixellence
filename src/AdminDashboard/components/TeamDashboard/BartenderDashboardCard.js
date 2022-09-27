@@ -1,19 +1,61 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+
 import { db } from '../../../firebase';
 import { doc, deleteDoc } from 'firebase/firestore';
-import { enableDeleteActions } from '../../../store/enable-delete-slice';
 
+import { activeCardActions } from '../../../store/active-card-slice';
+import { addDataModalActions } from '../../../store/add-data-modal-slice';
+import { enableDeleteActions } from '../../../store/enable-delete-slice';
+import { enableEditActions } from '../../../store/enable-edit-slice';
+import { enableAddActions } from '../../../store/enable-add-slice';
+import { alertMessageActions } from '../../../store/alert-message-slice';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import EditData from '../ui/AddEditDelete/EditData';
 import DeleteData from '../ui/AddEditDelete/DeleteData';
 import classes from './BartenderDashboardCard.module.css';
 
-const BartenderDashboardCard = ({ id, img, name, drink, city, quote }) => {
-  const enableDelete = useSelector((state) => state.enableDelete.enableDelete);
-  const enableEdit = useSelector((state) => state.enableEdit.enableEdit);
+const BartenderDashboardCard = ({
+  id,
+  img,
+  name,
+  drink,
+  city,
+  quote,
+  activateCard,
+}) => {
+  const [visible, setVisible] = useState(false);
+
+  const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
+
   const dispatch = useDispatch();
+
+  const notify = () => toast(alertMessage);
+
+  const ref = useRef();
+
+  let style = { visibility: 'visible' };
+  if (!visible) style.visibility = 'hidden';
+
+  const updateDataHandler = () => {
+    console.log('onClick');
+    dispatch(addDataModalActions.open());
+  };
+
+  const handleStyleClick = () => {
+    console.log('handleStyleClick');
+    setVisible(!visible);
+  };
+
+  const handleBlur = () => {
+    console.log('oBlur');
+    setVisible(false);
+  };
+
+  // * Start Delete
 
   const deleteBartender = async (id) => {
     await deleteDoc(doc(db, 'bartenders', id));
@@ -22,30 +64,33 @@ const BartenderDashboardCard = ({ id, img, name, drink, city, quote }) => {
   const bartenderDeleteHandler = () => {
     deleteBartender(id);
     dispatch(enableDeleteActions.disable());
+    dispatch(
+      alertMessageActions.alertMessageUpdate(
+        'You SUCCESSFULLY deleted the bartender!'
+      )
+    );
+    notify();
   };
-
- 
+  // * End Delete
 
   return (
-    <div className={classes.bartender_card_container}>
-      {/* <header className={classes.bartender_card_header}>
-        <EditData navigate={`/update-bartender/${id}`} />
+    
+    <button
+      className={classes.bartender_card_container}
+      ref={ref}
+      onClick={handleStyleClick}
+      // onClick={() => console.log('onClick')}
+      onBlur={handleBlur}
+      // onBlur={() => console.log('onBlur')}
+    >
+      <header style={style} className={classes.bartender_card_header}>
         <DeleteData onClick={bartenderDeleteHandler} />
-      </header> */}
 
-      {enableDelete && (
-        <header className={classes.bartender_card_header}>
-          <DeleteData 
-            onClick={bartenderDeleteHandler} />
-        </header>
-      )}
-
-      {enableEdit && (
-        <header className={classes.bartender_card_header}>
-          <EditData 
-          navigate={`/update-bartender/${id}`} />
-        </header>
-      )}
+        <EditData
+          onClick={updateDataHandler}
+          navigate={`/team-dashboard/${id}/modal`}
+        />
+      </header>
 
       <div className={classes.bartender_card_main}>
         <div className={classes.bartender_card_img}>
@@ -59,7 +104,8 @@ const BartenderDashboardCard = ({ id, img, name, drink, city, quote }) => {
           <p className={classes.bartender_card_quote}>{quote}</p>
         </div>
       </div>
-    </div>
+    </button>
+    // </div>
   );
 };
 

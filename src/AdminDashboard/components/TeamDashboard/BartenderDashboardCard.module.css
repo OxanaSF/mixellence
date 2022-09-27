@@ -1,17 +1,35 @@
 .bartender_card_container {
   width: 20rem;
-  /* min-height: 30rem; */
-  
+  flex: 0 1 22%;
   background: #1b1b1b;
-  padding: 1rem;
+  padding: 0 0 1rem 0;
   width: 15rem;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+  color: white;
+  margin: 0;
+
+}
+
+.bartender_card_container:hover {
+  border: 1.5px solid rgba(255, 255, 255, 0.92);
+  transform: scale(0.9);
 }
 
 .bartender_card_header {
-  margin-bottom: 2rem;
+  background: white;
+  width: 70%;
+  margin: auto;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 1rem;
+  visibility: visible;
+  margin-bottom: 1rem;
+  visibility: visible;
+  visibility: hidden;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .bartender_card_main {

@@ -1,7 +1,12 @@
 .edit_data {
   background: white;
   border-radius: 5px;
-  padding: 1rem;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+.edit_data:hover {
+  background: rgb(100, 75, 222, 0.3);
 }
 
 .edit_data img {
