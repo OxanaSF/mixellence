@@ -20,7 +20,7 @@ const Hero = () => {
         <h2 className={classes.overlayHeaderText}>Mobile Pop-Up Bar</h2>
         <h1>Modern, Fun, Professional, {"&"} Convenient</h1>
         <h3 className={classes.monterey}> <img className={classes.montereyPin} src={process.env.PUBLIC_URL + '/images/pin.png'} alt="" />Monterey Bay, California</h3>
-        <h3>Native Owned</h3>
+        <h3 className={classes.native}>Native Owned</h3>
         <HeroBtn text="Book a Consultation" />
       </div>
     </section>

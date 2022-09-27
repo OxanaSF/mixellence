@@ -17,3 +17,10 @@
   transition: all 0.3s ease-in-out;
   background: #5d337d00;
 }
+
+@media screen and (max-width: 890px) {
+  .heroButton{
+    height: 42px;
+    width: 182px;
+  }
+}
