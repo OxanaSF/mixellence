@@ -8,6 +8,7 @@ import DashboardMain from '../ui/DashboardMain/DashboardMain';
 
 
 import classes from './TestimonialsDashboard.module.css';
+import AddEditDelete from '../ui/AddEditDelete/AddEditDelete';
 
 const SignatureDrinksDashboard = () => {
   return (
@@ -17,12 +18,14 @@ const SignatureDrinksDashboard = () => {
         <DashboardHeader>
           <h3>Testimonials</h3>
         </DashboardHeader>
-        
-          <DashboardMain>
-            {/* <h1>Testimonials</h1> */}
+
+        <DashboardMain>
+          <div className={classes.testimonials_wrapper}> 
             <Testimonials />
-          </DashboardMain>
-      
+            <AddEditDelete />
+          </div>
+        </DashboardMain>
+
       </section>
     </DashboardContainer>
   );
