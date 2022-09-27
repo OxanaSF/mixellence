@@ -30,6 +30,11 @@
   width: 100%;
 }
 
+.about__info h3 {
+  font-size: 2.2rem;
+  padding-bottom: 2rem !important;
+}
+
 form textarea {
   /* border-color: darkgray !important; */
   border-style: dashed !important;
@@ -56,6 +61,7 @@ form textarea {
 
 .about__info :nth-child(1) :nth-child(1) {
   text-align: left;
+  /* background: blue; */
 }
 
 .about__info .par1 {
@@ -106,15 +112,17 @@ form textarea {
   height: 8rem !important;
 }
 
-.textArea_phone :nth-child(2) {
-  background: greenyellow;
-  height: 2rem;
+.textArea_phone :nth-child(1) {
+  height: 3rem !important;
 }
 
+.textArea_input_place :nth-child(1) {
+  text-align: right;
+  height: 3rem !important;
+}
 .textArea_input_business :nth-child(1) {
   text-align: right;
-  background: greenyellow;
-  height: rem !important;
+  height: 3rem !important;
 }
 
 @media screen and (max-width: 890px) {

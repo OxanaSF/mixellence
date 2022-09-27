@@ -33,7 +33,7 @@ const initialAboutState = {
   businessOwned: '',
 };
 
-const EditAboutPageTest = ( { id }) => {
+const EditAboutPageTest = ({ id }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -46,7 +46,7 @@ const EditAboutPageTest = ( { id }) => {
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-//   const { id } = useParams();
+  //   const { id } = useParams();
 
   const getAboutById = async () => {
     const docRef = doc(db, 'about', id);
@@ -101,6 +101,7 @@ const EditAboutPageTest = ( { id }) => {
         ...aboutData,
         timestamp: serverTimestamp(),
       });
+      setIsSubmitted(false);
       dispatch(
         alertMessageActions.alertMessageUpdate(
           'You SUCCESSFULLY UPDATED About page information!'
@@ -123,8 +124,9 @@ const EditAboutPageTest = ( { id }) => {
           <Loader active inline="centered" size="huge" />
         ) : (
           <>
+        
             <h3>Update</h3>
-
+          
             <Form onSubmit={handleSubmit}>
               <div className={classes.par1}>
                 <Form.TextArea
