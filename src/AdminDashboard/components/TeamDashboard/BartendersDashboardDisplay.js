@@ -11,6 +11,10 @@ import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
 import BartenderDashboardCard from './BartenderDashboardCard';
 import classes from './BartendersDashboardDisplay.module.css';
 
+
+
+
+
 export const BartendersDashboardDisplay = () => {
   const location = useLocation();
 
@@ -21,7 +25,7 @@ export const BartendersDashboardDisplay = () => {
   const [bartenders, setBartenders] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const activeCardHandler = () => {};
+
 
   useEffect(() => {
     setIsLoading(true);
@@ -64,7 +68,7 @@ export const BartendersDashboardDisplay = () => {
               drink={item.drink}
               city={item.city}
               quote={item.quote}
-              activateCard={activeCardHandler}
+              // activateCard={activeCardHandler}
               bartenders={bartenders}
             />
           ))}

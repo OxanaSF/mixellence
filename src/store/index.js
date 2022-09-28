@@ -9,6 +9,7 @@ import addDataModalReducer  from './add-data-modal-slice'
 import bartendersReducer  from './bartenders-slice'
 import activeCardReducer  from './active-card-slice'
 import updateBtnToggleReducer  from './update-data-btn-toggle-slice'
+import activateServicesDashboardReducer from './activate-service-dashboard-slice'
 
 
 
@@ -23,6 +24,7 @@ const store = configureStore({
     bartenders: bartendersReducer,
     activeCard: activeCardReducer, 
     updateBtnToggle: updateBtnToggleReducer, 
+    activateServicesDashboard: activateServicesDashboardReducer,
   },
 });
 

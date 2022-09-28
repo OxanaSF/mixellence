@@ -14,7 +14,7 @@ import { alertMessageActions } from '../../../store/alert-message-slice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import EditData from '../ui/AddEditDelete/EditData';
+import EditBartender from '../ui/AddEditDelete/EditBartender';
 import DeleteData from '../ui/AddEditDelete/DeleteData';
 import classes from './BartenderDashboardCard.module.css';
 
@@ -74,24 +74,19 @@ const BartenderDashboardCard = ({
   // * End Delete
 
   return (
-    
     <button
       className={classes.bartender_card_container}
       ref={ref}
       onClick={handleStyleClick}
-      // onClick={() => console.log('onClick')}
       onBlur={handleBlur}
-      // onBlur={() => console.log('onBlur')}
     >
       <header style={style} className={classes.bartender_card_header}>
         <DeleteData onClick={bartenderDeleteHandler} />
 
-        <EditData
-          onClick={updateDataHandler}
+        <EditBartender
+          // onClick={updateDataHandler}
           navigate={`/team-dashboard/${id}/modal`}
         />
-
-        
       </header>
 
       <div className={classes.bartender_card_main}>

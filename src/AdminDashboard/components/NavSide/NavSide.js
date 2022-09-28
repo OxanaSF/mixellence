@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+// import { useDispatch } from 'react-redux';
 
-
+// import { activateServicesDashboardActions } from '../../../store/activate-service-dashboard-slice';
 import AuthContext from '../../../context/auth-context';
 import classes from './NavSide.module.css';
 
 const NavSide = () => {
-
-
+  // const dispatch = useDispatch()
   const navigate = useNavigate();
 
   const authCtx = useContext(AuthContext);
@@ -16,6 +16,14 @@ const NavSide = () => {
     authCtx.logout();
     navigate('/');
   };
+
+  // const activateServiceDashboardHandler = () => {
+  //   dispatch(activateServicesDashboardActions.activate())
+  // }
+
+  // const deactivateServiceDashboardHandler = () => {
+  //   dispatch(activateServicesDashboardActions.deactivate())
+  // }
 
   return (
     <section className={classes.nav_container}>
@@ -37,17 +45,15 @@ const NavSide = () => {
       <nav className={classes.nav_links}>
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? classes.nav_link_active : classes.client_page_link )}
+          className={({ isActive }) =>
+            isActive ? classes.nav_link_active : classes.client_page_link
+          }
         >
           Back to the App
         </NavLink>
 
-
-
-
         <NavLink
           to="/about-dashboard"
-         
           className={({ isActive }) =>
             isActive ? classes.nav_link_active : classes.nav_link
           }
@@ -69,7 +75,6 @@ const NavSide = () => {
           className={({ isActive }) =>
             isActive ? classes.nav_link_active : classes.nav_link
           }
-          
         >
           Meet Our Team
         </NavLink>
