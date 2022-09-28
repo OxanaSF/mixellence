@@ -76,7 +76,7 @@
 }
 .image7 {
   background-image: url("/public/images/heroImg/bg7.png");
-  background-color: brown;
+  /* background-color: brown; */
   width: 37%;
   height: 44%;
   bottom: 0px;

@@ -125,3 +125,12 @@ a.client_page_link {
   width: 1.8rem;
   padding-top: 0.5rem;
 }
+
+@media screen and (max-width: 890px) {
+  .nav_container {
+    /* border: 2px solid red; */
+    display: none;
+  }
+
+
+}
