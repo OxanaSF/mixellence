@@ -1,16 +1,16 @@
 import React from 'react';
 
 import NavSide from '../NavSide/NavSide';
-import Testimonials from '../../../ClientDisplay/components/Testimonials/Testimonials'
+import TestimonialsDisplayDashboard from './TestimonialsDisplayDashboard';
+import AddDataContainer from '../ui/AddEditDelete/AddDataContainer';
+import DashboardFooter from '../ui/DashboardFooter/DashboardFooter';
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
 import DashboardMain from '../ui/DashboardMain/DashboardMain';
 
-
 import classes from './TestimonialsDashboard.module.css';
-import AddEditDelete from '../ui/AddEditDelete/AddEditDelete';
 
-const SignatureDrinksDashboard = () => {
+const TestimonialsDashboard = () => {
   return (
     <DashboardContainer>
       <NavSide />
@@ -20,15 +20,15 @@ const SignatureDrinksDashboard = () => {
         </DashboardHeader>
 
         <DashboardMain>
-          <div className={classes.testimonials_wrapper}> 
-            <Testimonials />
-            <AddEditDelete />
+          <div className={classes.services_wrapper}>
+            <TestimonialsDisplayDashboard />
+            <AddDataContainer />
           </div>
         </DashboardMain>
-
+        <DashboardFooter />
       </section>
     </DashboardContainer>
   );
 };
 
-export default SignatureDrinksDashboard;
+export default TestimonialsDashboard;

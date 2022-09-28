@@ -1,9 +1,4 @@
 .card_display_container {
-  /* padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-gap: 3rem; */
-
   display: flex;
   justify-content: space-around;
   gap: 2rem;
@@ -11,7 +6,7 @@
   flex-basis: auto;
 }
 
-.card_display_container {}
+
 
 @media screen and (max-width: 800px) {
   .card_display_container {
