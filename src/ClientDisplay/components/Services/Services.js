@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 
-import { BARTENDERS } from '../../../data/bartenders';
+// import { BARTENDERS } from '../../../data/bartenders';
+import EditData from '../../../AdminDashboard/components/ui/AddEditDelete/EditData';
 
 import classes from './Services.module.css';
 import { createLanguageService } from 'typescript';
 
 const Services = () => {
+  const activeServiceDashboard = useSelector(
+    (state) => state.activateServicesDashboard.activateServicesDashboard
+  );
+
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -46,6 +52,15 @@ const Services = () => {
                 <header
                   className={`${classes.service__item__header} ${classes.service__item__header__tear1} `}
                 >
+                  {activeServiceDashboard && (
+                    <div className={classes.service_update_btn1}>
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/pen_white.png`}
+                        alt="draw"
+                      />
+                    </div>
+                  )}
+
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
                 </header>
@@ -76,6 +91,15 @@ const Services = () => {
                 <header
                   className={`${classes.service__item__header} ${classes.service__item__header__tear2}`}
                 >
+                  {activeServiceDashboard && (
+                    <div className={classes.service_update_btn2}>
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/pen_white.png`}
+                        alt="draw"
+                      />
+                    </div>
+                  )}
+
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
                 </header>

@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
-
+import { activateServicesDashboardActions } from '../../../store/activate-service-dashboard-slice';
 import AuthContext from '../../../context/auth-context';
 import classes from './NavSide.module.css';
 
 const NavSide = () => {
 
-
+  const dispatch = useDispatch()
   const navigate = useNavigate();
 
   const authCtx = useContext(AuthContext);
@@ -16,6 +17,11 @@ const NavSide = () => {
     authCtx.logout();
     navigate('/');
   };
+
+const activateServiceDashboardHandler = () => {
+  dispatch(activateServicesDashboardActions.activate())
+}
+  
 
   return (
     <section className={classes.nav_container}>
@@ -57,9 +63,11 @@ const NavSide = () => {
 
         <NavLink
           to="/services-dashboard"
+         
           className={({ isActive }) =>
             isActive ? classes.nav_link_active : classes.nav_link
           }
+          onClick={activateServiceDashboardHandler}
         >
           Services
         </NavLink>
@@ -88,7 +96,7 @@ const NavSide = () => {
           className={({ isActive }) =>
             isActive ? classes.nav_link_active : classes.nav_link
           }
-        >
+          >
           Testimonials
         </NavLink>
       </nav>
