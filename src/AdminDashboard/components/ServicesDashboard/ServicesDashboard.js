@@ -1,8 +1,7 @@
 import React from 'react';
 
 import NavSide from '../NavSide/NavSide';
-import AddEditDelete from '../ui/AddEditDelete/AddEditDelete';
-import Services from '../../../ClientDisplay/components/Services/Services';
+import ServicesDashboardDisplay from './ServicesDashboardDisplay'
 import DashboardFooter from '../ui/DashboardFooter/DashboardFooter';
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
@@ -15,21 +14,15 @@ const ServicesDashboard = () => {
     <DashboardContainer>
       <NavSide />
       <section>
-        <DashboardHeader>{/* <h3>Services</h3> */}</DashboardHeader>
+        <DashboardHeader>{<h3>Services</h3>}</DashboardHeader>
 
         <DashboardMain>
           <div className={classes.services_wrapper}>
             <div className={classes.services}>
-              <Services />
+              <ServicesDashboardDisplay  />
             </div>
-            {/* <AddEditDelete /> */}
           </div>
         </DashboardMain>
-
-        <div>
-          <button>EDIT TEAR 1</button>
-          <button>EDIT TEAR 2</button>
-        </div>
 
         <DashboardFooter />
       </section>

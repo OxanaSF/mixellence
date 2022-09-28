@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 
-import { activateServicesDashboardActions } from '../../../store/activate-service-dashboard-slice';
+// import { activateServicesDashboardActions } from '../../../store/activate-service-dashboard-slice';
 import AuthContext from '../../../context/auth-context';
 import classes from './NavSide.module.css';
 
 const NavSide = () => {
-
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
   const navigate = useNavigate();
 
   const authCtx = useContext(AuthContext);
@@ -18,10 +17,13 @@ const NavSide = () => {
     navigate('/');
   };
 
-const activateServiceDashboardHandler = () => {
-  dispatch(activateServicesDashboardActions.activate())
-}
-  
+  // const activateServiceDashboardHandler = () => {
+  //   dispatch(activateServicesDashboardActions.activate())
+  // }
+
+  // const deactivateServiceDashboardHandler = () => {
+  //   dispatch(activateServicesDashboardActions.deactivate())
+  // }
 
   return (
     <section className={classes.nav_container}>
@@ -43,17 +45,15 @@ const activateServiceDashboardHandler = () => {
       <nav className={classes.nav_links}>
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? classes.nav_link_active : classes.client_page_link )}
+          className={({ isActive }) =>
+            isActive ? classes.nav_link_active : classes.client_page_link
+          }
         >
           Back to the App
         </NavLink>
 
-
-
-
         <NavLink
           to="/about-dashboard"
-         
           className={({ isActive }) =>
             isActive ? classes.nav_link_active : classes.nav_link
           }
@@ -63,11 +63,9 @@ const activateServiceDashboardHandler = () => {
 
         <NavLink
           to="/services-dashboard"
-         
           className={({ isActive }) =>
             isActive ? classes.nav_link_active : classes.nav_link
           }
-          onClick={activateServiceDashboardHandler}
         >
           Services
         </NavLink>
@@ -77,7 +75,6 @@ const activateServiceDashboardHandler = () => {
           className={({ isActive }) =>
             isActive ? classes.nav_link_active : classes.nav_link
           }
-          
         >
           Meet Our Team
         </NavLink>
@@ -96,7 +93,7 @@ const activateServiceDashboardHandler = () => {
           className={({ isActive }) =>
             isActive ? classes.nav_link_active : classes.nav_link
           }
-          >
+        >
           Testimonials
         </NavLink>
       </nav>

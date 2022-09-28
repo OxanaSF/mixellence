@@ -7,9 +7,14 @@ const activateServicesDashboardSlice = createSlice({
   initialState: initialActivateServicesDashboardState,
   reducers: {
     activate(state) {
-      state.activateServicesDashboard = !state.activateServicesDashboard;
+      state.activateServicesDashboard = true;
       console.log('activateServicesDashboard: ', state.activateServicesDashboard);
     },
+    deactivate(state) {
+      state.activateServicesDashboard = false;
+      console.log('activateServicesDashboard: ', state.activateServicesDashboard);
+    },
+
   },
 });
 
