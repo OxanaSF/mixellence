@@ -1,19 +1,21 @@
 
 .drinksCard {
   position: relative;
-  height: 100%;
-  width: 24rem;
+  background: white;
+  height: 43rem;
+  width: 22rem;
+  gap: 3rem;
   cursor: pointer;
 }
 
-.drinks-cardImg:hover {
+/* .drinks-cardImg:hover {
   position: relative;
   height: 100%;
   width: 28rem;
   cursor: pointer;
-}
+} */
 
-.cardImg {
+/* .cardImg {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -25,26 +27,31 @@
   align-items: center;
   gap: 4rem;
   transition: all 0.5s ease;
-}
+} */
 
 .cardImg img {
+   
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  /* width: 100%;
+  height: 100%; */
+  /* object-fit: cover; */
+  margin-top: 1rem;
+  
 }
 
 .cardBody {
-  position: absolute;
-  left: 1.5rem;
-  bottom: 2rem;
+  position: absolute;;
+  background: transparent;
+  border: 1px solid red;
+  left: 1.rem;
+  width: 26rem;
+  bottom: 1rem;
   font-family: var(--ff-primary);
 }
 
 .cardBody h1 {
-  margin-bottom: 35rem;
+  margin-bottom: 45rem;
+ 
   color: var(--white);
   font-size: var(--text-xl);
 
@@ -52,13 +59,13 @@
 
 .cardBody h2 {
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: var(--grey-300);
   font-size: var(--text-base);
 }
 
-.Cards_cards {
+.drinksCards {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 3rem;
 }
 
