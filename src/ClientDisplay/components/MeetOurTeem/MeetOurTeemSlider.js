@@ -12,7 +12,10 @@ const MeetOurTeemSlider = (props) => {
         className={className}
         style={{ ...style, display: 'none', background: 'red' }}
         onClick={onClick}
-      />
+      >
+        <img src={process.env.PUBLIC_URL + '/public/images/exit.png'} />
+        </div>
+      
     );
   }
 
