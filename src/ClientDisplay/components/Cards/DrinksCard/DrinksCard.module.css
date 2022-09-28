@@ -8,26 +8,26 @@
   
 }
 
-.cardImg {
+.cardImg:hover {
+  display: flex;
   z-index: -1;
   width: 24rem;
-  height: 32rem;
-  display: flex;
+  height: 35rem;
   flex-direction: row;
   align-items: left;
   gap: 4rem;
   transition: all 0.5s ease;
 }
 
-.cardImg img {
+.cardImg img:hover {
   display: block;
-  width: 35rem;
-  height: 35rem;
+  width: 33rem;
+  height: 32rem;
   padding-bottom: 4rem;
 
 }
 
-/* text edit here AND CAUSED PROB_TOP */
+/* text edit here */
 .cardBody {
   font-size: 2rem;
   position: absolute;
