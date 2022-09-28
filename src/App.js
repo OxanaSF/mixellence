@@ -11,7 +11,7 @@ import PasswordChangeForm from './ClientDisplay/components/Auth/PasswordChangeFo
 
 import AboutDashboard from './AdminDashboard/components/AboutDashboard/AboutDashboard';
 import ServicesDashboard from './AdminDashboard/components/ServicesDashboard/ServicesDashboard';
-import TeamDashboard from './AdminDashboard/components/TeamDashboard/TeamDashboard';
+import BartendersDashboard from './AdminDashboard/components/BartendersDashboard/BartendersDashboard';
 import TestimonialsDashboard from './AdminDashboard/components/TestimonialsDashboard/TestimonialsDashboard';
 import SignatureDrinksDashboard from './AdminDashboard/components/SignatureDrinksDashboard/SignatureDrinksDashboard';
 
@@ -61,8 +61,8 @@ const App = () => {
           <Route path="modal" element={<AddUpdateDataModal />} />
         </Route>
 
-        <Route path="/team-dashboard" element={<TeamDashboard />} />
-        <Route path="/team-dashboard/:id" element={<TeamDashboard />}>
+        <Route path="/team-dashboard" element={<BartendersDashboard />} />
+        <Route path="/team-dashboard/:id" element={<BartendersDashboard />}>
           <Route path="modal" element={<AddUpdateDataModal />} />
         </Route>
 
