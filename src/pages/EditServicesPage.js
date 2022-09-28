@@ -23,7 +23,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 import { Form, Loader, Button } from 'semantic-ui-react';
 
-import classes from './EditBartendersPage/AddEditBartender.module.css';
+import classes from './EditServicesPage.module.css';
 
 const initialServicesState = {
   title: '',
@@ -40,7 +40,7 @@ const EditServicesPage = () => {
   // let notify = () => toast('');
 
   const [servicesData, setServicesData] = useState(initialServicesState);
-  const {  title, description, par1, par2 } = servicesData;
+  const { title, description, par1, par2 } = servicesData;
 
   const [progress, setProgress] = useState(null);
   const [errors, setErrors] = useState({});
@@ -49,6 +49,11 @@ const EditServicesPage = () => {
   const { id } = useParams();
 
   console.log('id', id);
+
+  useEffect(() => {
+    id && getServiceById();
+    console.log('id', id);
+  }, [id]);
 
   const getServiceById = async () => {
     const docRef = doc(db, 'services', id);
@@ -60,14 +65,10 @@ const EditServicesPage = () => {
     }
   };
 
-  useEffect(() => {
-    id && getServiceById();
-    console.log('id', id);
-  }, [id]);
-
  
+
   const handleChange = (event) => {
-    getServiceById({
+    setServicesData({
       ...servicesData,
       [event.target.name]: event.target.value,
     });
@@ -75,11 +76,11 @@ const EditServicesPage = () => {
 
   const validate = () => {
     let errors = {};
-  
-    if (! title) {
+
+    if (!title) {
       errors.name = "Service's title is Required";
     }
-    if (! description) {
+    if (!description) {
       errors.drink = 'Short description description is Required';
     }
     if (!par1) {
@@ -98,78 +99,85 @@ const EditServicesPage = () => {
     if (Object.keys(errors).length) return setErrors(errors);
     setIsSubmitted(true);
 
-      try {
-        console.log('servicesData', servicesData);
-        await updateDoc(doc(db, 'bartenders', id), {
-          ...servicesData,
-          timestamp: serverTimestamp(),
-        });
-        dispatch(
-          alertMessageActions.alertMessageUpdate(
-            'You SUCCESSFULLY UPDATED the service!'
-          )
-        );
-        // notify = () => toast(alertMessage);
-      } catch (error) {
-        alert.log(error);
-      }
-    
+    try {
+      console.log('servicesData', servicesData);
+      await updateDoc(doc(db, 'services', id), {
+        ...servicesData,
+        timestamp: serverTimestamp(),
+      });
+      dispatch(
+        alertMessageActions.alertMessageUpdate(
+          'You SUCCESSFULLY UPDATED the service!'
+        )
+      );
+      // notify = () => toast(alertMessage);
+    } catch (error) {
+      alert.log(error);
+    }
+
     dispatch(enableEditActions.disable());
     // notify()
     navigate('/services-dashboard');
   };
 
-
-
   return (
-    <div className={classes.bartender_container}>
+    <div className={classes.service_container}>
       {isSubmitted ? (
         <Loader active inline="centered" size="huge" />
       ) : (
         <>
-          <h3>{id ? 'Update ' : 'Add'}</h3>
+          <h3>Update service</h3>
 
           <Form onSubmit={handleSubmit}>
-          
+            <div className={`${classes.service_header_wrapper}`}>
+              <div className={`${classes.service_header}`}>
+                <Form.TextArea
+                className={classes.service_header_title}
+                  error={errors.tile && !id ? { content: errors.title } : null}
+                  placeholder={id && title ? title : 'Enter Title'}
+                  name="title"
+                  onChange={handleChange}
+                  defaultValue={title || ''}
+                  autoFocus
+                ></Form.TextArea>
+                <Form.TextArea
+                className={classes.service_header_description}
+                  error={
+                    errors.description && !id
+                      ? { content: errors.description }
+                      : null
+                  }
+                  placeholder="description"
+                  name="description"
+                  onChange={handleChange}
+                  defaultValue={description || ''}
+                  autoFocus
+                ></Form.TextArea>
+              </div>
+            </div>
 
-            <Form.Input
-            
-              error={errors.tile && !id ? { content: errors.title } : null}
-              placeholder={id && title ? title : 'Enter Title'}
-              name="title"
-              onChange={handleChange}
-              value={title || ''}
-              autoFocus
-            ></Form.Input>
-            <Form.Input
-          
-              error={errors.description && !id ? { content: errors.description} : null}
-              placeholder="description"
-              name="description"
-              onChange={handleChange}
-              value={description || ''}
-              autoFocus
-            ></Form.Input>
-            <Form.Input
-           
-              error={errors.par1 && !id ? { content: errors.par1 } : null}
-              placeholder="first paragraph"
-              name="par1"
-              onChange={handleChange}
-              value={par1 || ''}
-              autoFocus
-            ></Form.Input>
-            <Form.Input
-              className={classes.quote}
-           
-              error={errors.par2 && !id ? { content: errors.par2 } : null}
-              placeholder="Second paragraph"
-              name="par2"
-              onChange={handleChange}
-              value={par2 || ''}
-              autoFocus
-            ></Form.Input>
-
+            <div className={`${classes.service_body_wrapper}`}>
+              <div className={`${classes.service_body}`}>
+                <Form.TextArea
+                className={classes.par1}
+                  error={errors.par1 && !id ? { content: errors.par1 } : null}
+                  placeholder="first paragraph"
+                  name="par1"
+                  onChange={handleChange}
+                  defaultValue={par1 || ''}
+                  autoFocus
+                ></Form.TextArea>
+                <Form.TextArea
+                  className={classes.quote}
+                  error={errors.par2 && !id ? { content: errors.par2 } : null}
+                  placeholder="Second paragraph"
+                  name="par2"
+                  onChange={handleChange}
+                  defaultValue={par2 || ''}
+                  autoFocus
+                ></Form.TextArea>
+              </div>
+            </div>
             <Button
               secondary
               type="submit"

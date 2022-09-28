@@ -48,7 +48,6 @@ button {
   position: absolute;
   top: 0;
   left: 20%;
-  background-color: rgba(91, 112, 131, 0.4);
   background-color: rgb(100, 75, 222, 0.3);
   display: flex;
   z-index: 1000;
@@ -63,10 +62,14 @@ button {
 }
 
 .modal {
-  width: 25%;
-  margin: 12% 15% 8% 26%;
+  min-width: 30%;
+  margin: 12% 14% 8% 25%;
   background-color: white;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  min-height: 40rem;
 }
 
 .modalWrapper .modalCancelBtn {
