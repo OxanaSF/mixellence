@@ -1,11 +1,6 @@
-.testimonials_dashboard_container {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-}
-
-.testimonials_wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: -8rem;
+.services_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 0 2.4rem 2.4rem;
 }

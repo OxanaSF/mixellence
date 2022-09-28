@@ -8,14 +8,14 @@ import { Loader } from 'semantic-ui-react';
 
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
-import BartenderDashboardCard from './BartenderDashboardCard';
-import classes from './BartendersDashboardDisplay.module.css';
+import BartenderCardDashboard from './BartenderCardDashboard';
+import classes from './BartendersDisplayDashboard.module.css';
 
 
 
 
 
-export const BartendersDashboardDisplay = () => {
+export const BartendersDisplayDashboard = () => {
   const location = useLocation();
 
   const dispatch = useDispatch();
@@ -59,7 +59,7 @@ export const BartendersDashboardDisplay = () => {
       <div className={classes.card_display_container}>
         {bartenders &&
           bartenders.map((item) => (
-            <BartenderDashboardCard
+            <BartenderCardDashboard
               id={item.id}
               key={item.id}
               img={item.img}
@@ -68,7 +68,6 @@ export const BartendersDashboardDisplay = () => {
               drink={item.drink}
               city={item.city}
               quote={item.quote}
-              // activateCard={activeCardHandler}
               bartenders={bartenders}
             />
           ))}
@@ -79,4 +78,4 @@ export const BartendersDashboardDisplay = () => {
   );
 };
 
-export default BartendersDashboardDisplay;
+export default BartendersDisplayDashboard;

@@ -16,16 +16,15 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import EditBartender from '../ui/AddEditDelete/EditBartender';
 import DeleteData from '../ui/AddEditDelete/DeleteData';
-import classes from './BartenderDashboardCard.module.css';
+import classes from './BartenderCardDashboard.module.css';
 
-const BartenderDashboardCard = ({
+const BartenderCardDashboard = ({
   id,
   img,
   name,
   drink,
   city,
   quote,
-  activateCard,
 }) => {
   const [visible, setVisible] = useState(false);
 
@@ -106,4 +105,4 @@ const BartenderDashboardCard = ({
   );
 };
 
-export default BartenderDashboardCard;
+export default BartenderCardDashboard;
