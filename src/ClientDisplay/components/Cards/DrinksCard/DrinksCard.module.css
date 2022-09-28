@@ -20,45 +20,38 @@
   transition: all 0.5s ease;
 }
 
-.cardImg img:hover {
-  
+/* .cardImg img:hover {
   display: block;
   width: 35rem;
   height: 35rem;
-  /* border-radius: 1rem; */
   padding-bottom: 2rem;
-  /* object-fit: cover; */
-  /* margin-top: 1rem; */
-  
-}
 
-.cardBody {
-  /* text edit here */
+} */
+
+/* text edit here AND CAUSED PROB_TOP */
+/* .cardBody {
   font-size: 2rem;
   position: absolute;
   background: transparent;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   height: 46rem;
   left: 0;
   width: 24rem;
   bottom: 3.5rem;
-}
+} */
 
 .cardBody h1 {
-  /* margin-top: 0rem; */
   height: 8rem;
   background-color: grey;
   font-weight: var(--text-xs);
   color: var(--white);
   font-size: var(--text-xl);
-  
 }
 .drinksCard:hover {
   position: relative;
   background: white;
   height: 40rem;
   width: 24rem;
-  /* img width */
   cursor: pointer;
 }
 .cardBody h2 {

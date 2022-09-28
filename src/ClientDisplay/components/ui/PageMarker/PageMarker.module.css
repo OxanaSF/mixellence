@@ -1,20 +1,17 @@
 .marker {
   position: absolute;
-  top: -6px;
-  left: calc(var(--container) / 2);
-  transform: rotate(90deg);
-  transform-origin: left;
   display: flex;
   align-items: center;
+  margin-top: -10rem;
+  /* transform-origin: left; */
 }
 .marker :first-child {
   background-color: var(--grey-300);
-  height: 2px;
-  width: 5rem;
+  
   margin-right: 2rem;
 }
 .marker :last-child {
-  color: var(--grey-300);
+  color: white;
   font-size: var(--text-sm);
   text-transform: uppercase;
   font-weight: 600;
