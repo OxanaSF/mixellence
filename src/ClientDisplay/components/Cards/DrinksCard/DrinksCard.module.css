@@ -10,19 +10,24 @@
 
 .cardImg {
   z-index: -1;
-  width: 31rem;
-  /* height: 32rem; */
+  width: 24rem;
+  height: 32rem;
   display: flex;
   flex-direction: row;
-  /* gap: 4rem; */
+  align-items: left;
+  gap: 4rem;
+  
   transition: all 0.5s ease;
 }
 
 .cardImg img:hover {
+  
   display: block;
-  width: 39rem;
+  width: 35rem;
   height: 35rem;
+  /* border-radius: 1rem; */
   padding-bottom: 2rem;
+  /* object-fit: cover; */
   /* margin-top: 1rem; */
   
 }
@@ -51,7 +56,7 @@
 .drinksCard:hover {
   position: relative;
   background: white;
-  height: 41rem;
+  height: 40rem;
   width: 24rem;
   /* img width */
   cursor: pointer;
@@ -60,13 +65,15 @@
   margin-bottom: 30rem;
   margin-top: 35rem;
   color: black;
+  
   height: 0rem;
   font-weight: 01;
   font-size: 1.5rem;
   
 }
 
-.drinksCards:hover {
+.drinksCards {
+  
   display: grid;
   grid-gap: 3rem;
 }
