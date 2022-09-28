@@ -10,63 +10,63 @@
 
 .cardImg {
   z-index: -1;
-  width: 31rem;
-  /* height: 32rem; */
+  width: 24rem;
+  height: 32rem;
   display: flex;
   flex-direction: row;
-  /* gap: 4rem; */
+  align-items: left;
+  gap: 4rem;
+  
   transition: all 0.5s ease;
 }
 
-.cardImg img:hover {
+/* .cardImg img:hover {
   display: block;
-  width: 39rem;
+  width: 35rem;
   height: 35rem;
   padding-bottom: 2rem;
-  /* margin-top: 1rem; */
-  
-}
 
-.cardBody {
-  /* text edit here */
+} */
+
+/* text edit here AND CAUSED PROB_TOP */
+/* .cardBody {
   font-size: 2rem;
   position: absolute;
   background: transparent;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   height: 46rem;
   left: 0;
   width: 24rem;
   bottom: 3.5rem;
-}
+} */
 
 .cardBody h1 {
-  /* margin-top: 0rem; */
   height: 8rem;
   background-color: grey;
   font-weight: var(--text-xs);
   color: var(--white);
   font-size: var(--text-xl);
-  
 }
 .drinksCard:hover {
   position: relative;
   background: white;
-  height: 41rem;
+  height: 40rem;
   width: 24rem;
-  /* img width */
   cursor: pointer;
 }
 .cardBody h2 {
   margin-bottom: 30rem;
   margin-top: 35rem;
   color: black;
+  
   height: 0rem;
   font-weight: 01;
   font-size: 1.5rem;
   
 }
 
-.drinksCards:hover {
+.drinksCards {
+  
   display: grid;
   grid-gap: 3rem;
 }

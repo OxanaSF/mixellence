@@ -4,14 +4,14 @@ import  drinks from '../../../data/drinks';
 
 import classes from './SignatureDrink.module.css';
  
-import PageMarker from '../../components/PageMarker/PageMarker';
+import PageMarker from '../../components/ui/PageMarker/PageMarker';
 import Cards from '../../components/Cards/Cards';
 import DrinksCard from '../../components/Cards/DrinksCard/DrinksCard';
 
 export default function SignatureDrink() {
   return (
     <main className={classes.SignatureDrink}>
-      <PageMarker page="SignatureDrink" />
+       <PageMarker page="SignatureDrink" /> 
       <section>
         <Cards>
           {drinks.map((drinks) => (

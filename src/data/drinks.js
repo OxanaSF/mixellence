@@ -1,6 +1,6 @@
-import margaritaImg from '../assets/images/SignatureDrink/desktop/image-margarita.jpg';
-import palomaImg from '../assets/images/SignatureDrink/desktop/image-paloma.jpg';
-import mojitoImg from '../assets/images/SignatureDrink/desktop/image-mojito.jpg';
+import margaritaImg from '../SignatureImage/desktop/image-margarita.jpg';
+import palomaImg from '../SignatureImage/desktop/image-paloma.jpg';
+import mojitoImg from '../SignatureImage/desktop/image-mojito.jpg';
 
 
 const drinks = [
@@ -24,6 +24,7 @@ const drinks = [
     id: Math.random(),
     quote: 'Made with the finest ingridents & our secret sauce',
     image: mojitoImg,
+    description: 'Click',
   },
 ];
 
