@@ -43,7 +43,7 @@ const MeetOurTeemSlider = (props) => {
           padding: '20px',
         }}
       >
-        <ul style={{ margin: '0px' }}> {dots} </ul>
+        <ul style={{ margin: '0px', position:'relative', width: '100%'  }}> {dots} </ul>
       </div>
     ),
     responsive: [
