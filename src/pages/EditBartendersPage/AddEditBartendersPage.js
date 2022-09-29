@@ -66,8 +66,6 @@ const AddEditBartendersPage = () => {
     }
   };
 
-
-
   useEffect(() => {
     const uploadImgFile = () => {
       const storageRef = ref(storage, file.name);
@@ -156,7 +154,7 @@ const AddEditBartendersPage = () => {
         //   )
         // );
         // notify = () => toast(alertMessage);
-        alert('You SUCCESSFULLY ADDED the bartender!')
+        alert('You SUCCESSFULLY ADDED the bartender!');
       } catch (error) {
         alert.log(error);
       }
@@ -173,7 +171,7 @@ const AddEditBartendersPage = () => {
         //   )
         // );
         // notify = () => toast(alertMessage);
-        alert('You SUCCESSFULLY UPDATED the bartender!')
+        alert('You SUCCESSFULLY UPDATED the bartender!');
       } catch (error) {
         alert.log(error);
       }
@@ -184,25 +182,34 @@ const AddEditBartendersPage = () => {
     navigate('/team-dashboard');
   };
 
- 
-
   return (
     <div className={classes.bartender_container}>
       {isSubmitted ? (
         <Loader active inline="centered" size="huge" />
       ) : (
         <>
-          <h3>{id ? 'Update ' : 'Add'}</h3>
+          <h3>{id ? 'Update a bartender' : 'Add a bartender'}</h3>
 
-          <Form onSubmit={handleSubmit}>
-            <div className="drop-zone">
-              <span className="drop-zone__prompt">
-                Drop file here or click to upload
-              </span>
-              
+          <Form onSubmit={handleSubmit} className={classes.bartenders_form}>
+            <div className={classes.drop_zone}>
+              {id ? (
+                <div>
+                  <img src={img} alt="bartender" />
+                </div>
+              ) : (
+                <div>
+                  {' '}
+                  <img
+                    src={`${process.env.PUBLIC_URL}/images/drink_placeholder.jpg`}
+                    alt="drink"
+                  />
+                </div>
+              )}
+
               <Form.Input
                 className={classes.upload}
-                defaultValue={img || ''}
+                accept="image/gif, image/jpeg, image/png"
+                fileName={img}
                 error={errors.file && !id ? { content: errors.file } : null}
                 label="upload"
                 type="file"
@@ -211,6 +218,7 @@ const AddEditBartendersPage = () => {
             </div>
 
             <Form.Input
+         
               label="name"
               error={errors.name && !id ? { content: errors.name } : null}
               placeholder={id && name ? name : 'Enter Name'}
@@ -222,14 +230,14 @@ const AddEditBartendersPage = () => {
             <Form.Input
               label="drink"
               error={errors.drink && !id ? { content: errors.drink } : null}
-              placeholder="drink"
+              placeholder=""
               name="drink"
               onChange={handleChange}
               value={drink || ''}
               autoFocus
             ></Form.Input>
             <Form.Input
-              label="city"
+              label=""
               error={errors.city && !id ? { content: errors.city } : null}
               placeholder="city"
               name="city"
@@ -237,18 +245,19 @@ const AddEditBartendersPage = () => {
               value={city || ''}
               autoFocus
             ></Form.Input>
-            <Form.Input
-              className={classes.quote}
-              label="quote"
+            <Form.TextArea
+              className={classes.input}
+              label=""
               error={errors.quote && !id ? { content: errors.quote } : null}
-              placeholder="quote"
+              placeholder=""
               name="quote"
               onChange={handleChange}
               value={quote || ''}
               autoFocus
-            ></Form.Input>
+            ></Form.TextArea>
 
             <Button
+              className={classes.bartender_btn}
               secondary
               type="submit"
               // disabled={progress !== null && progress < 101}

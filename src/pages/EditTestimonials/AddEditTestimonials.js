@@ -23,7 +23,9 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 import { Form, Loader, Button } from 'semantic-ui-react';
 
-import classes from './AddEditBartender.module.css';
+
+
+import classes from './AddEditTestimonials.module.css';
 
 const initialState = {
   name: '', // The name of the person leaving the review
