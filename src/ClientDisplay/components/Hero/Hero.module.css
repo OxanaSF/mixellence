@@ -10,7 +10,7 @@
 }
 
 .heroGalleryWrapper{
-  /* outline: 2px solid white; */
+  outline: 2px solid white;
   position: absolute;
   width: 90%;
   height: 100%;
@@ -19,6 +19,7 @@
 .bgImg {
   /* Styles which all images in the collage will share*/
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
 }
@@ -68,11 +69,11 @@
 }
 .image6 {
   background-image: url("/public/images/heroImg/bg6.png");
-  /* background-color: pink; */
+  background-color: pink;
   height: 58%;
   width: 25%;
   top: 0px;
-  right: 32%;
+  right: 30%;
 }
 .image7 {
   background-image: url("/public/images/heroImg/bg7.png");
@@ -80,12 +81,12 @@
   width: 37%;
   height: 44%;
   bottom: 0px;
-  right: 21%;
+  right: 18%;
 }
 .image8 {
   background-image: url("/public/images/heroImg/bg8.png");
   /* background-color: orange; */
-  width: 28%;
+  width: 30%;
   height: 56%;
   top: 0px;
   right: 0px;
@@ -94,7 +95,7 @@
   background-image: url("/public/images/heroImg/bg9.png");
   /* background-color: aqua; */
   width: 18%;
-  height: 40%;
+  height: 44%;
   bottom: 0px;
   right: 0px;
 } 

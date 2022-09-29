@@ -30,7 +30,7 @@
 /* text edit here */
 .cardBody {
   font-size: 2rem;
-  position: absolute;
+  /* position: absolute; */
   background: transparent;
   border: 1px solid red;
   height: 46rem;

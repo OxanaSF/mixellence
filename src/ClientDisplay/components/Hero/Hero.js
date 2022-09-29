@@ -18,13 +18,13 @@ const Hero = () => {
         <div className={`${classes.image8} ${classes.bgImg}`} src={process.env.PUBLIC_URL + '/images/heroImg/bg8.png'} alt="" ></div>
         <div className={`${classes.image9} ${classes.bgImg}`} src={process.env.PUBLIC_URL + '/images/heroImg/bg9.png'} alt="" ></div>
       </div>
-      <div className={classes.overlay}>
+      {/* <div className={classes.overlay}>
         <h2 className={classes.overlayHeaderText}>Mobile Pop-Up Bar</h2>
         <h1>Modern, Fun, Professional, {"&"} Convenient</h1>
         <h3 className={classes.monterey}> <img className={classes.montereyPin} src={process.env.PUBLIC_URL + '/images/pin.png'} alt="" />Monterey Bay, California</h3>
         <h3 className={classes.native}>Native Owned</h3>
         <HeroBtn text="Book a Consultation" />
-      </div>
+      </div> */}
     </section>
   )
 }
