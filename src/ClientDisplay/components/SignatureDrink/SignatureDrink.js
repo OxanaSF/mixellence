@@ -3,15 +3,16 @@ import React from 'react';
 import  drinks from '../../../data/drinks';
 
 import classes from './SignatureDrink.module.css';
- 
-import PageMarker from '../../components/ui/PageMarker/PageMarker';
-import Cards from '../../components/Cards/Cards';
-import DrinksCard from '../../components/Cards/DrinksCard/DrinksCard';
+
+import SignatureTitle from '../../components/ui/SignatureTitle/SignatureTitle';
+
+import Cards from '../../components/SignatureDrink/Cards/Cards';
+import DrinksCard from '../../components/SignatureDrink/DrinksCard';
 
 export default function SignatureDrink() {
   return (
     <main className={classes.SignatureDrink}>
-       <PageMarker page="SignatureDrink" /> 
+       <SignatureTitle page="SignatureDrinks" /> 
       <section>
         <Cards>
           {drinks.map((drinks) => (
