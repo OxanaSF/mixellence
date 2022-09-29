@@ -31,6 +31,7 @@ export const AddUpdateDataModal = () => {
 
           {returnLink === '/team-dashboard' && <AddEditBartendersPage />}
           {returnLink === '/services-dashboard' && <EditServicesPage />}
+          {returnLink === '/testimonials-dashboard' && <EditTestimonials />}
         </div>
       </div>
     </div>

@@ -1,21 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { db } from '../../../firebase';
 import { doc, deleteDoc } from 'firebase/firestore';
 
-import { activeCardActions } from '../../../store/active-card-slice';
+
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { enableDeleteActions } from '../../../store/enable-delete-slice';
-import { enableEditActions } from '../../../store/enable-edit-slice';
-import { enableAddActions } from '../../../store/enable-add-slice';
 import { alertMessageActions } from '../../../store/alert-message-slice';
-
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import EditBartender from '../ui/AddEditDelete/EditBartender';
 import DeleteData from '../ui/AddEditDelete/DeleteData';
+
+import 'react-toastify/dist/ReactToastify.css';
 import classes from './BartenderCardDashboard.module.css';
 
 const BartenderCardDashboard = ({
@@ -26,6 +23,7 @@ const BartenderCardDashboard = ({
   city,
   quote,
 }) => {
+
   const [visible, setVisible] = useState(false);
 
   const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
@@ -39,10 +37,10 @@ const BartenderCardDashboard = ({
   let style = { visibility: 'visible' };
   if (!visible) style.visibility = 'hidden';
 
-  const updateDataHandler = () => {
-    console.log('onClick');
-    dispatch(addDataModalActions.open());
-  };
+  // const updateDataHandler = () => {
+  //   console.log('onClick');
+  //   dispatch(addDataModalActions.open());
+  // };
 
   const handleStyleClick = () => {
     console.log('handleStyleClick');
@@ -50,7 +48,7 @@ const BartenderCardDashboard = ({
   };
 
   const handleBlur = () => {
-    console.log('oBlur');
+    console.log('onBlur');
     setVisible(false);
   };
 
@@ -83,7 +81,6 @@ const BartenderCardDashboard = ({
         <DeleteData onClick={bartenderDeleteHandler} />
 
         <EditBartender
-          // onClick={updateDataHandler}
           navigate={`/team-dashboard/${id}/modal`}
         />
       </header>
@@ -101,7 +98,7 @@ const BartenderCardDashboard = ({
         </div>
       </div>
     </button>
-    // </div>
+    
   );
 };
 

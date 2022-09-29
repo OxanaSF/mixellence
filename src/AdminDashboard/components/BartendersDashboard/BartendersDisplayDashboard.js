@@ -11,21 +11,15 @@ import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
 import BartenderCardDashboard from './BartenderCardDashboard';
 import classes from './BartendersDisplayDashboard.module.css';
 
-
-
-
-
 export const BartendersDisplayDashboard = () => {
   const location = useLocation();
 
   const dispatch = useDispatch();
 
   const addDataModal = useSelector((state) => state.addDataModal.addDataModal);
- 
+
   const [bartenders, setBartenders] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
-
 
   useEffect(() => {
     setIsLoading(true);
