@@ -13,26 +13,53 @@ const DashboardHeader = (props) => {
   return (
     <header onClick={dropNavHandler} className={classes.dashboard_header}>
       {props.children}
-      {dropNav && <div className={classes.dropNav}>
-        <NavLink
-          to="/about-dashboard"
-          className={({ isActive }) =>
-            isActive ? classes.nav_link_active : classes.nav_link
-          }
-        >
-          About
-        </NavLink>
+      {dropNav && <nav className={classes.dropNavContainer}>
+        {/* <nav className={classes.dropNav}> */}
+          <NavLink
+            to="/about-dashboard"
+            className={({ isActive }) =>
+              isActive ? classes.nav_link_active : classes.nav_link
+            }
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/services-dashboard"
+            className={({ isActive }) =>
+              isActive ? classes.nav_link_active : classes.nav_link
+            }
+          >
+            Services
+          </NavLink>
 
-        <NavLink
-          to="/services-dashboard"
-          className={({ isActive }) =>
-            isActive ? classes.nav_link_active : classes.nav_link
-          }
-        >
-          Services
-        </NavLink>
+          <NavLink
+            to="/team-dashboard"
+            className={({ isActive }) =>
+              isActive ? classes.nav_link_active : classes.nav_link
+            }
+          >
+            Meet Our Team
+          </NavLink>
 
-      </div>}
+          <NavLink
+            to="/signature-drinks-dashboard"
+            className={({ isActive }) =>
+              isActive ? classes.nav_link_active : classes.nav_link
+            }
+          >
+            Signature Drinks
+          </NavLink>
+
+          <NavLink
+            to="/testimonials-dashboard"
+            className={({ isActive }) =>
+              isActive ? classes.nav_link_active : classes.nav_link
+            }
+          >
+            Testimonials
+          </NavLink>
+        {/* </nav> */}
+      </nav>}
     </header>
   )
 }

@@ -13,13 +13,28 @@
     text-align: left;
     padding-left: 2rem;
   }
+
+  .dropNavContainer{
+    display: none;
+  }
+  .dropNav {
+    display: none;
+  } 
   
   @media screen and (max-width: 890px) {
+    .dropNavContainer{
+      /* border: 2px solid red; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     .dropNav{
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      position: absolute;
     }
   }
   
