@@ -150,12 +150,13 @@ const AddEditBartendersPage = () => {
           timestamp: serverTimestamp(),
         });
         dispatch(addDataModalActions.close());
-        dispatch(
-          alertMessageActions.alertMessageUpdate(
-            'You SUCCESSFULLY ADDED the bartender!'
-          )
-        );
+        // dispatch(
+        //   alertMessageActions.alertMessageUpdate(
+        //     'You SUCCESSFULLY ADDED the bartender!'
+        //   )
+        // );
         // notify = () => toast(alertMessage);
+        alert('You SUCCESSFULLY ADDED the bartender!')
       } catch (error) {
         alert.log(error);
       }
@@ -166,12 +167,13 @@ const AddEditBartendersPage = () => {
           ...bartenderData,
           timestamp: serverTimestamp(),
         });
-        dispatch(
-          alertMessageActions.alertMessageUpdate(
-            'You SUCCESSFULLY UPDATED the bartender!'
-          )
-        );
+        // dispatch(
+        //   alertMessageActions.alertMessageUpdate(
+        //     'You SUCCESSFULLY UPDATED the bartender!'
+        //   )
+        // );
         // notify = () => toast(alertMessage);
+        alert('You SUCCESSFULLY UPDATED the bartender!')
       } catch (error) {
         alert.log(error);
       }
@@ -182,9 +184,7 @@ const AddEditBartendersPage = () => {
     navigate('/team-dashboard');
   };
 
-  // useEffect (() => {
-  //   notify();
-  // }, [])
+ 
 
   return (
     <div className={classes.bartender_container}>

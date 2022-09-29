@@ -67,13 +67,16 @@ const App = () => {
         </Route>
 
         <Route
+          path="/testimonials-dashboard" element={<TestimonialsDashboard />} />
+          <Route path="/testimonials-dashboard/:id" element={<TestimonialsDashboard />}>
+          <Route path="modal" element={<AddUpdateDataModal />} />
+        </Route>
+
+        <Route
           path="/signature-drinks-dashboard"
           element={<SignatureDrinksDashboard />}
         />
-        <Route
-          path="/testimonials-dashboard"
-          element={<TestimonialsDashboard />}
-        />
+       
 
         {/* Beginning of Add-Edit Testimonials. Testimonials Dashboard was commented out in order to test.  */}
         <Route path="/add-testimonial" element={<AddEditTestimonials />} />

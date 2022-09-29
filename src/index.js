@@ -13,7 +13,7 @@ import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
 
   <Router>
   <Provider store={store}>
@@ -25,7 +25,7 @@ root.render(
     </Provider>
     </Router>
 
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 reportWebVitals();
