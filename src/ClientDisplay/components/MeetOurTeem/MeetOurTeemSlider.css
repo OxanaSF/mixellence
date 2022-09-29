@@ -115,8 +115,13 @@
 }
 
 .slick-arrow::before {
-  background: red;
-  background: black;
+  /* background: red; */
+  position: relative;
+  top: 0.1rem;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  /* background: black; */
 }
 
 .slick-prev {
@@ -168,8 +173,8 @@
   }
 
   .slick-dots {
-    width: 40%;
-    left: 28%;
+    width: 50%;
+    left: 25%;
     padding: 0 !important;
     /* height: .8rem; */
   }

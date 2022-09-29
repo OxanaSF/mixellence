@@ -117,6 +117,7 @@
   }
 
   .services__main > div {
+    outline: 1px solid black;
     box-sizing: border-box;
     width: 50%;
   }
