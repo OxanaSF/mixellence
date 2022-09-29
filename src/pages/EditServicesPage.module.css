@@ -1,6 +1,6 @@
 .service_container {
-  width: 100%;
-  /* background: red; */
+  width: 95%;
+  margin: auto;
   min-height: 35rem !important;
   margin-bottom: 4rem;
 }
@@ -50,7 +50,7 @@
 }
 
 .service_body_wrapper {
-  padding: 4.5rem;
+  padding: 4rem;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
   /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
