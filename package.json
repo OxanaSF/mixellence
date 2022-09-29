@@ -10,6 +10,7 @@
     "firebase": "^9.10.0",
     "formik": "^2.2.9",
     "framer-motion": "^7.3.5",
+    "perf_hooks": "^0.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
