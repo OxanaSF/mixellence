@@ -23,15 +23,13 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 import { Form, Loader, Button } from 'semantic-ui-react';
 
-
-
 import classes from './AddEditTestimonials.module.css';
 
 const initialState = {
   name: '', // The name of the person leaving the review
   rating: '', // the rating out of 5 the person left
   review: '', // The text of our review the user left
-  img: ''
+  img: '',
 };
 
 const AddEditTestimonials = () => {
@@ -47,6 +45,8 @@ const AddEditTestimonials = () => {
   const [progress, setProgress] = useState(null);
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const num = +rating;
 
   const { id } = useParams();
 
@@ -84,7 +84,7 @@ const AddEditTestimonials = () => {
               break;
             case 'running':
               console.log('Upload is Running', progress);
-              break
+              break;
             default:
               break;
           }
@@ -145,7 +145,7 @@ const AddEditTestimonials = () => {
         //   )
         // );
         // notify = () => toast(alertMessage);
-        alert('You SUCCESSFULLY ADDED the testimonial!');
+        // alert('You SUCCESSFULLY ADDED the testimonial!');
       } catch (error) {
         alert.log(error);
       }
@@ -162,7 +162,7 @@ const AddEditTestimonials = () => {
         //   )
         // );
         // notify = () => toast(alertMessage);
-        alert('You SUCCESSFULLY UPDATED the testimonial!');
+        // alert('You SUCCESSFULLY UPDATED the testimonial!');
       } catch (error) {
         alert.log(error);
       }
@@ -174,60 +174,82 @@ const AddEditTestimonials = () => {
   };
 
   return (
-    <div className={classes.bartender_container}>
+    <div className={classes.testimonial_container}>
       {isSubmitted ? (
         <Loader active inline="centered" size="huge" />
       ) : (
         <>
-          <h3>{id ? 'Update ' : 'Add'}</h3>
+          <h3>{id ? 'Update Testimonial' : 'Add Testimonial'}</h3>
 
-          <Form onSubmit={handleSubmit}>
-            <Form.TextArea
-              error={errors.review && !id ? { content: errors.review } : null}
-              placeholder={id && review ? review : 'Enter review'}
-              name="review"
-              onChange={handleChange}
-              defaultValue={review || ''}
-              autoFocus
-            ></Form.TextArea>
-
-            <Form.TextArea
-              error={errors.rating && !id ? { content: errors.rating } : null}
-              placeholder="rating"
-              name="rating"
-              onChange={handleChange}
-              defaultValue={rating || ''}
-              autoFocus
-            ></Form.TextArea>
-
-            <Form.TextArea
-              error={errors.name && !id ? { content: errors.name } : null}
-              placeholder="name"
-              name="name"
-              onChange={handleChange}
-              defaultValue={name || ''}
-              autoFocus
-            ></Form.TextArea>
-
-         
+          <Form onSubmit={handleSubmit} className={classes.testimonial_form}>
+            <div className={classes.testimonial_form_text}>
+              <Form.TextArea
+                className={classes.review}
+                label=""
+                error={errors.quote && !id ? { content: errors.review } : null}
+                placeholder={id && review ? review : 'Enter Review'}
+                name="review "
+                onChange={handleChange}
+                value={review || ''}
+                autoFocus
+              ></Form.TextArea>
 
 
-            <div className="drop-zone">
-              <span className="drop-zone__prompt">
-                Drop file here or click to upload
-              </span>
+{/* 
+              <div className={classes.stars}>
+                {[...Array(num)].map((el, index) => (
+                  <img
+                    key={index}
+                    src={`${process.env.PUBLIC_URL}/images/pointed-star.png`}
+                    alt="star"
+                  />
+                ))}
+              </div> */}
+
+
+              <Form.TextArea
+                className={classes.rating}
+                error={errors.rating && !id ? { content: errors.rating } : null}
+                placeholder="rating"
+                name="rating"
+                onChange={handleChange}
+                defaultValue={rating || ''}
+                autoFocus
+              ></Form.TextArea>
 
               <Form.Input
-                className={classes.upload}
-                defaultValue={img || ''}
-                error={errors.file && !id ? { content: errors.file } : null}
-                label="upload"
-                type="file"
-                onChange={(e) => setFile(e.target.files[0])}
+                error={errors.name && !id ? { content: errors.name } : null}
+                placeholder={id && name ? name : 'Enter Name'}
+                name="name"
+                onChange={handleChange}
+                defaultValue={name || ''}
+                autoFocus
               ></Form.Input>
             </div>
 
-
+            <div className={classes.drop_zone}>
+              {id ? (
+                <div>
+                  <img src={img} alt="bartender" />
+                </div>
+              ) : (
+                <div>
+                  {' '}
+                  <img
+                    src={`${process.env.PUBLIC_URL}/images/drink_placeholder.jpg`}
+                    alt="drink"
+                  />
+                </div>
+              )}
+            </div>
+            <Form.Input
+              className={classes.upload}
+              accept="image/gif, image/jpeg, image/png"
+              fileName={img}
+              // error={errors.file && !id ? { content: errors.file } : null}
+              type="file"
+              onChange={(e) => setFile(e.target.files[0])}
+            ></Form.Input>
 
             <Button
               secondary

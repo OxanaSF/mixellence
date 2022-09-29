@@ -14,7 +14,7 @@
   margin-bottom: 3rem;
 }
 
-.bartenders_form {
+.bartender_form {
   background: #1b1b1b;
   border-radius: 15px;
   padding: 0 2rem;
@@ -117,7 +117,9 @@ input[type='file']::file-selector-button:hover {
   border: 2px solid #00cec9;
 }
 
-form input {
-  /* background: pink !important; */
+form input,
+.bartender_container :nth-child(2) :nth-child(2) {
   text-align: center !important;
+  color: darkgray;
 }
+
