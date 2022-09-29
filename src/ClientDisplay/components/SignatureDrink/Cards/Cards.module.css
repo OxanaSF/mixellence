@@ -1,0 +1,13 @@
+.cards {
+  /* background-color: red; */
+  display:flex;
+  justify-content: center;
+  gap:3rem;
+}
+
+/* @media screen and (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 35rem;
+  }
+} */
