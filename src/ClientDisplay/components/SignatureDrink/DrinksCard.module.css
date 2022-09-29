@@ -1,0 +1,99 @@
+.card_header {
+  background-color: white;
+  display:flex;
+  align-items: flex-end;
+  height: 7rem;
+  width: 100%;
+}
+.card_header h3 {
+  background-color: white;
+  color: black;
+  margin-left: 1rem;
+  margin-bottom:1rem ;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:500;
+  font-size: 32px;
+}
+.card_description:hover {
+  /* background-color: black; */
+  display:flex;
+  align-items: flex-end;
+  height: 7rem;
+}
+.card_description p:hover {
+  background-color: white;
+  height: 7rem;
+  color: black;
+  padding-left: 1rem;
+  padding-bottom:2.5rem ;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:500;
+  font-size: 17px;
+}
+.card_description p {
+  background-color: black;
+  height: 7rem;
+  color: black;
+}
+/* .cardImg {
+  width: 100%;
+} */
+.drinksCard img {
+  width: 100%;
+} 
+
+/* .drinksCard:hover {
+  position: relative;
+  height: 50rem;
+  width: 28rem;
+  cursor: pointer;
+}
+.cardImg:hover {
+  display: flex;
+  z-index: -1;
+  width: 24rem;
+  height: 35rem;
+  flex-direction: row;
+  align-items: left;
+  gap: 4rem;
+  transition: all 0.5s ease;
+} */
+/* .cardImg img:hover {
+  display: block;
+  width: 33rem;
+  height: 32rem;
+  padding-bottom: 4rem;
+} */
+/* .cardBody {
+  font-size: 2rem;
+  position: absolute;
+  background: transparent;
+  border: 1px solid red;
+  height: 46rem;
+  left: 0;
+  bottom: 3.4rem;
+  border: 1px solid red;
+} */
+.drinksCard {
+  background: white;
+  height: 40rem;
+  cursor: pointer;
+}
+/* .cardBody h1 {
+  height: 9.4rem;
+  background-color: grey;
+  font-weight: 01rem;
+  font-size: 1.9rem;
+} */
+/* .cardBody h2 {
+  margin-top: 35rem;
+  color: black;
+  height: 0rem;
+  font-weight: 1;
+  font-size: 1.5rem;
+} */
+/* .drinksCards {
+  display: grid;
+  grid-gap: 1rem;
+}
+ */

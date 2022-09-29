@@ -1,0 +1,12 @@
+.sigtitle {
+  position: absolute;
+  display: flex;
+  margin-left: 57rem;
+  margin-top:-10rem;
+  justify-content: center;
+  /* color: rgb(18, 127, 228); */
+  font-size: 3.7rem;
+  font-weight: 600;
+}
+
+
