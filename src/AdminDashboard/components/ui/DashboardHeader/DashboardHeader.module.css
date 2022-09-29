@@ -23,18 +23,39 @@
   
   @media screen and (max-width: 890px) {
     .dropNavContainer{
-      /* border: 2px solid red; */
-      display: flex;
+      display: block;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      background-color: #644bde;
+      box-shadow: 2px 4px rgba(0, 0, 0, 0.072);
+      /* border-bottom-left-radius: 10px ; */
+      /* border-bottom-right-radius: 10px ; */
+      border-radius: 10px ;
+      transition: all 1s ease;
     }
     .dropNav{
+      transition: all 1s ease;
       display: flex;
+      color: white;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      position: absolute;
+      position: relative;
+
     }
+
+    .dropNav a {
+      color: white;
+    }
+
+    a.nav_link_active {
+      background: white;
+      border-radius: 4px;
+      width: 100%;
+      /* padding: 2.5rem 4rem; */
+      color: black;
+      transition: all 1s ease;
+    }
+    
   }
   

@@ -13,8 +13,8 @@ const DashboardHeader = (props) => {
   return (
     <header onClick={dropNavHandler} className={classes.dashboard_header}>
       {props.children}
-      {dropNav && <nav className={classes.dropNavContainer}>
-        {/* <nav className={classes.dropNav}> */}
+      {dropNav && <div className={classes.dropNavContainer}>
+        <nav className={classes.dropNav}> 
           <NavLink
             to="/about-dashboard"
             className={({ isActive }) =>
@@ -58,8 +58,8 @@ const DashboardHeader = (props) => {
           >
             Testimonials
           </NavLink>
-        {/* </nav> */}
-      </nav>}
+        </nav>
+      </div>}
     </header>
   )
 }
