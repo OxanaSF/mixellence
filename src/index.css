@@ -44,7 +44,7 @@ button {
 /* UpdateModal */
 .modalDiv {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: absolute;
   top: 0;
   left: 20%;
@@ -59,17 +59,18 @@ button {
   display: flex;
   flex-direction: column;
   border-radius: 15%;
+  width: 100%;
 }
 
 .modal {
-  min-width: 30%;
+  min-width: 25%;
   margin: 12% 14% 8% 25%;
   background-color: white;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   text-align: center;
-  min-height: 40rem;
+  min-height: 30rem;
 }
 
 .modalWrapper .modalCancelBtn {
