@@ -128,20 +128,46 @@
     transition: all 0.5s ease;
   }
 
+  .service_update_btn1,
+  .service_update_btn2 {
+    background: white;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+
+  .service_update_btn1 {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    width: 4rem;
+    border-radius: 5px;
+  }
+
+  .service_update_btn2 {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 4rem;
+    border-radius: 5px;
+  }
+
   .service__item__header:hover {
     background-color: #5e337d;
   }
 
   .service__item__header__tear1 h3,
   .service__item__header__tear2 h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 0;
     overflow-y: hidden;
   }
 
   .service__item__header__tear1 p,
   .service__item__header__tear2 p {
-    font-size: 14px;
+    font-size: 9px;
+    padding: 0 2rem;
     font-weight: 100 !important;
     line-height: 1.9;
   }
@@ -160,17 +186,12 @@
     order: 2;
   }
 
-  /* .services__main img {
-    width: 20rem;
-    margin: 0 auto;
-    height: 25rem;
-  } */
-
   .service__item__header__tear1,
   .service__item__header__tear2,
   .service__item__body__tear1,
   .service__item__body__tear2 {
-    width: 100%;
+    width: 95%;
+    margin: auto;
   }
 
   .service__item__header__tear1 {

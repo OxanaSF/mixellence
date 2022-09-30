@@ -17,7 +17,12 @@ const ServicesDashboardCard = ({ id, title, description, par1, par2 }) => {
     <div>
       <div className={classes.service__item__container}>
         <header
-          className={`${classes.service__item__header} ${classes.service__item__header__tear2}`}
+          className={
+            id === '9EMmwb87lJ4Jyqjq01vu'
+              ?  `${classes.service__item__header} ${classes.service__item__header__tear1}`
+              :  `${classes.service__item__header} ${classes.service__item__header__tear2}`
+          }
+             
         >
           <button
             className={
