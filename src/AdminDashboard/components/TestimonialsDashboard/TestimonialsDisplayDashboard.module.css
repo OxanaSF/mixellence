@@ -1,17 +1,14 @@
 .card_display_container {
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
-    flex-wrap: wrap;
-    /* flex-basis: auto; */
+  display: flex;
+  justify-content: space-around;
+  /* gap: .1rem; */
+  flex-wrap: wrap;
+  /* flex-basis: auto; */
+}
+
+@media screen and (max-width: 800px) {
+  .card_display_container {
+    display: grid;
+    grid-template-columns: 1fr;
   }
-  
-  
-  
-  @media screen and (max-width: 800px) {
-    .card_display_container {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-  }
-  
+}

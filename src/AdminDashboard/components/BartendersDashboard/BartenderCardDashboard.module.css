@@ -1,6 +1,8 @@
 .bartender_card_container {
   width: 20rem;
   flex: 0 1 22%;
+  display: flex;
+  flex-wrap: wrap;
   background: #1b1b1b;
   padding: 0 1rem 1rem 1rem;
   width: 15rem;

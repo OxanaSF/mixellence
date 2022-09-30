@@ -8,14 +8,13 @@ import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
 import DashboardMain from '../ui/DashboardMain/DashboardMain';
 
-
 import classes from './BartendersDashboard.module.css';
-
 
 const BartendersDashboard = () => {
   return (
     <DashboardContainer>
       <NavSide />
+
       <section>
         <DashboardHeader>
           <h3>Bartenders</h3>
