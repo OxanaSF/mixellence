@@ -9,7 +9,6 @@
 }
 
 .add_edit_delete_container:hover {
-  background: rgb(100, 75, 222, 0.9);
   color: white;
 }
 
@@ -22,4 +21,9 @@
 
 .add_edit_delete_wrapper img {
   width: 2rem;
+  transition: all 0.5s ease;
+}
+
+.add_edit_delete_wrapper img:hover {
+  transform: scale(1.1);
 }
