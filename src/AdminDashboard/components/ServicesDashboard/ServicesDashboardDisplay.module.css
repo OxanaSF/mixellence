@@ -76,8 +76,8 @@
 }
 
 .services__main img {
-  width: 90%;
-  height: 65%;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .service_update_btn1,
@@ -92,8 +92,8 @@
 
 .service_update_btn1 img,
 .service_update_btn2 img {
-  width: 100%;
-  height: 100%;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .service_update_btn1 {
@@ -160,11 +160,11 @@
     order: 2;
   }
 
-  .services__main img {
+  /* .services__main img {
     width: 20rem;
     margin: 0 auto;
     height: 25rem;
-  }
+  } */
 
   .service__item__header__tear1,
   .service__item__header__tear2,
