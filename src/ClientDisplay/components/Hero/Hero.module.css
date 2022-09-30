@@ -165,6 +165,8 @@
   box-sizing: border-box;
   height: 3rem;
   width: 16.5rem;
+  letter-spacing: .5px;
+  font-weight: 200;
 }
 
 .overlay button:hover {
