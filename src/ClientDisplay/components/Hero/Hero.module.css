@@ -69,7 +69,7 @@
 }
 .image6 {
   background-image: url('/public/images/heroImg/bg6.png');
-  background-color: pink;
+  /* background-color: pink; */
   height: 58%;
   width: 25%;
   top: 0px;
