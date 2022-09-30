@@ -1,19 +1,47 @@
 .hero {
-  /* outline: 2px solid rebeccapurple; */
-  position: relative;
-  width: 100vw;
-  height: 68vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.hero_intro_text {
+  padding: 1rem 0;
+  background: repeating-linear-gradient();
+}
+
+.hero_intro_text h1,
+.hero_intro_text h2 {
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+.hero_intro_text h1 {
+  font-size: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.hero_intro_text h2 {
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.hero_business_info_wrapper {
+  display: flex;
+  
+}
+
+.hero_business_info {
+}
+
 .heroGalleryWrapper {
   /* outline: 2px solid white; */
-  position: absolute;
+  /* position: absolute; */
+  /* width: 60rem;
+  height: 40rem; */
   width: 100%;
-  height: 100%;
 }
 
 .bgImg {
@@ -53,7 +81,7 @@
 .image4 {
   background-image: url('/public/images/heroImg/bg4.png');
   /* background-color: green; */
-  position: absolute;
+  /* position: absolute; */
   left: 20%;
   top: 0px;
   width: 25%;
@@ -101,57 +129,47 @@
 }
 
 .overlay {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 55vh;
-  height: 90%;
-  backdrop-filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  width: 75vw;
-  width: 95%;
+  /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.772);
+    position: absolute;
+    width: 75vw; */
 }
 
-.overlay h3 {
-  font-weight: lighter;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  padding: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
+/* .overlay h3 {
+  font-weight: 400;
+} */
 
 .overlay .monterey {
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-  display: flex;
-  gap: 8px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  /* font-weight: 400;
+    margin-bottom: 0.5rem;
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
 }
 
 .montereyPin {
   -webkit-filter: grayscale(1) invert(1);
   filter: grayscale(1) invert(1);
-  /* width: 20px; */
+  width: 20px;
   width: 1rem;
   display: block;
 }
 
-.overlay h1 {
+/* .overlay h1 {
   width: 38%;
-  font-size: 25px;
-  font-weight: 400;
+  font-size: 32px;
+  font-weight: 500;
   margin-top: 2rem;
   margin-bottom: 2.5rem;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.5px;
-}
-
+} */
+/* 
 .overlay button {
   background: #5d337d;
   border: 2px solid #fafafa;
@@ -170,7 +188,12 @@
 .overlay button:hover {
   transition: all 0.3s ease-in-out;
   background: #5d337d00;
-}
+} */
+/* 
+
+
+
+
 
 @media screen and (max-width: 890px) {
   .overlay {
@@ -217,5 +240,34 @@
   .image8,
   .image9 {
     display: none;
+  }
+} */
+
+.heroButton {
+  background: #5d337d;
+  border: 2px solid #fafafa;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  top: 20%;
+  box-sizing: border-box;
+  height: 3rem;
+  width: 16.5rem;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+}
+
+.heroButton:hover {
+  transition: all 0.3s ease-in-out;
+  background: #5d337d00;
+}
+
+@media screen and (max-width: 890px) {
+  .heroButton {
+    height: 42px;
+    width: 182px;
   }
 }
