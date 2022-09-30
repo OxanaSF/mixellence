@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
-
 import EditTestimonial from '../ui/AddEditDelete/EditTestimonial';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -11,18 +10,15 @@ import classes from './ServicesDashboardDisplay.module.css';
 const ServicesDashboardCard = ({ id, title, description, par1, par2 }) => {
   const navigate = useNavigate();
 
-  
-
   return (
     <div>
       <div className={classes.service__item__container}>
         <header
           className={
             id === '9EMmwb87lJ4Jyqjq01vu'
-              ?  `${classes.service__item__header} ${classes.service__item__header__tear1}`
-              :  `${classes.service__item__header} ${classes.service__item__header__tear2}`
+              ? `${classes.service__item__header} ${classes.service__item__header__tear1}`
+              : `${classes.service__item__header} ${classes.service__item__header__tear2}`
           }
-             
         >
           <button
             className={
@@ -43,7 +39,11 @@ const ServicesDashboardCard = ({ id, title, description, par1, par2 }) => {
         </header>
 
         <div
-          className={`${classes.service__item__body} ${classes.service__item__body__tear2}`}
+          className={
+            id === '9EMmwb87lJ4Jyqjq01vu'
+              ? `${classes.service__item__body} ${classes.service__item__body__tear1}`
+              : `${classes.service__item__body} ${classes.service__item__body__tear2}`
+          }
         >
           <p className={classes.par1}>{par1}</p>
           <p>{par2}</p>
