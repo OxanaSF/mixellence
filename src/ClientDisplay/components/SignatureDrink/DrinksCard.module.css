@@ -1,7 +1,9 @@
 .drinksCard {
   /* border:3px solid red; */
   background: white;
-  height: 40rem;
+  background-color: white;
+  width: 302px;
+  height: 559px; 
   cursor: pointer;
 }
 .card_header {
@@ -10,7 +12,8 @@
   align-items: flex-end;
   height: 7rem;
   width: 100%;
-  border-top-right-radius: 1rem;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .card_header h3 {
   background-color: white;
