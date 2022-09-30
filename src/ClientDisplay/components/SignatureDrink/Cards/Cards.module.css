@@ -1,5 +1,4 @@
 .cards {
-  /* background-color: red; */
   display:flex;
   justify-content: center;
   gap:3rem;
