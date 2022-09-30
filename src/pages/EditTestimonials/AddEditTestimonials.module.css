@@ -1,101 +1,138 @@
-.bartender_container {
-  /* background: green; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.testimonial_container {
+  padding: 6rem 2rem;
+  background: black;
+  margin-top: 3rem;
+  height: 100%;
+  padding-bottom: 10rem;
+  height: 60rem !important;
 }
 
-.bartender_container h3 {
-  color: black;
-
+.testimonial_container h3 {
+  /* color: white !important; */
+  font-size: 2rem !important;
   font-size: 2rem;
   margin-bottom: 3rem;
 }
 
-.bartender_container form {
+.testimonial_form {
+  background: #d9d9d9;
+  border-radius: 15px;
+  padding: 0 2rem;
+  height: 25rem !important;
+}
+
+.testimonial_container form {
   /* background: pink; */
-  display: flex;
-  flex-direction: column;
-  /* gap: 1rem; */
-  width: 80%;
+  padding-top: 2rem;
 }
 
-.bartender_container form :nth-child(5) {
-  /* background: green; */
-  height: 5rem;
+.testimonial_container form :nth-child(1) :nth-child(1) .review {
+  background: red;
 }
 
-.upload {
-  color: darkgray;
-  border: 1.5px dashed darkgray;
-  border-radius: 50% !important;
-  height: 10rem !important;
-  width: 10rem !important;
-  align-self: center;
-  display: flex;
-  border: none;
-}
-
-.bartender_container input::file-selector-button {
+/* REVIEW */
+.testimonial_container form .review {
   /* background: red; */
-  display: none;
+  width: 100%;
+  height: 7rem;
 }
 
+.testimonial_container form .review {
+  /* background: red; */
+  width: 100%;
+  height: 7rem;
+}
 
-.bartender_container form :first-child {
+.testimonial_container form .rating {
+  /* background: red; */
+  width: 50% !important;
+  height: 7rem;
+}
+
+.drop_zone :nth-child(1) :nth-child(1) {
+  color: white !important;
+  border: 3px solid white;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 1rem;
+  /* background: red !important; */
+}
+
+.testimonial_container form :first-child {
   /* background: red; */
   align-self: center;
   display: flex;
   flex-direction: column;
   color: black;
   letter-spacing: 1px;
-  margin-bottom: 4rem;
+  margin-bottom: 0.5rem;
 }
 
-.bartender_container form :first-child :first-child {
-  /* background: green; */
+/* Enter Name input */
+.testimonial_container form :nth-child(2) {
+  /* background: red; */
+  width: 100% !important;
+  border-color: darkgray !important;
+  /* border-style: dashed !important; */
+}
+.testimonial_container form :first-child :nth-child(1) :nth-child(1) {
+  /* background: red; */
+  width: 100% !important;
+  border-color: darkgray !important;
+  /* border-style: dashed !important; */
 }
 
-.bartender_container form :first-child :nth-child(2) {
-  /* background: green; */
-  display: flex;
-  flex-direction: column;
+.testimonial_container form input[type='file'] {
+  color: #d9d9d9 !important;
+  background: white !important;
+  width: 50% !important;
+  align-self: center !important;
+  /* margin: 1rem !important; */
+  /* height: 1rem !important; */
+  display: flex !important;
+  border: none !important;
+  /* border: 1px solid #d9d9d9 !important; */
+  height: 2rem !important;
+  display: flex !important;
 }
 
-.bartender_container form :first-child :nth-child(2) :nth-child(1) {
-  /* background: green; */
-  height: 10rem !important;
-  width: 10rem !important;
-  border-radius: 50% !important;
-  display: flex;
-  cursor: pointer;
+.testimonial_container form input[type='file']::file-selector-button {
+  border: none !important;
+  outline: none !important;
+  /* padding: 1rem 1.2rem !important; */
+  border-radius: 0.2rem !important;
+  background-color: white !important;
+  transition: 1s !important;
+  color: black !important;
+  letter-spacing: 1.5px !important;
+  cursor: pointer !important;
+  background: green !important;
+  border: 1px solid #d9d9d9 !important;
 }
 
-.bartender_container form :first-child :nth-child(2) :nth-child(1) {
-  /* color: white; */
-  padding: 4rem 1.3rem;
+input[type='file']::file-selector-button:hover {
+  transform: scale(0.9);
+  background: #d9d9d9 !important;
 }
 
-.bartender_container form input {
+/* .testimonial_container input[type='text'] {
+  background: red !important;
+  width: 80% !important;
+} */
+
+.testimonial_container form input {
   border-color: darkgray !important;
   border-style: dashed !important;
   height: 3rem !important;
+  background: red;
 }
 
-.quote input {
-  height: 5rem !important;
-}
-
-.bartender_container form :nth-child(5) {
-  height: 5rem;
-}
-
-.bartender_container form label {
-  display: none !important;
-}
-
-.bartender_container form button {
+.testimonial_container button {
   letter-spacing: 1.5px;
-  height: 4rem;
+  height: 3.5rem !important;
+  transform: translateY(3rem) !important;
+  width: 70% !important;
+  margin: auto !important;
 }

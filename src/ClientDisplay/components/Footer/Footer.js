@@ -30,7 +30,7 @@ const Footer = () => {
 
       <div className={classes.copyright}>
 
-        {isLoggedIn && <NavLink to="about-dashboard"
+        {isLoggedIn && <NavLink to="hero-dashboard"
           className={({ isActive }) =>
           isActive ? classes.nav_link_active : classes.nav_link
         }

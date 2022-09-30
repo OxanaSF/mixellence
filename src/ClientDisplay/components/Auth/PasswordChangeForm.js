@@ -45,7 +45,7 @@ const LogOutForm = () => {
   return (
     <section className={classes.password_change_wrapper}>
       <button>
-        <Link to="/admin-dashboard">Back to Dashboarde</Link>
+        <Link to="/admin-dashboard">Back to Dashboard</Link>
       </button>
 
       <div className={classes.password_change}>

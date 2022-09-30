@@ -52,13 +52,24 @@ const NavSide = () => {
           Back to the App
         </NavLink>
 
+
+        <NavLink
+          to="/hero-dashboard"
+          className={({ isActive }) =>
+            isActive ? classes.nav_link_active : classes.nav_link
+          }
+        >
+          Landing Page
+        </NavLink>
+
+
         <NavLink
           to="/about-dashboard"
           className={({ isActive }) =>
             isActive ? classes.nav_link_active : classes.nav_link
           }
         >
-          About
+          About Us
         </NavLink>
 
         <NavLink
@@ -70,6 +81,8 @@ const NavSide = () => {
           Services
         </NavLink>
 
+
+
         <NavLink
           to="/team-dashboard"
           className={({ isActive }) =>
@@ -78,6 +91,9 @@ const NavSide = () => {
         >
           Meet Our Team
         </NavLink>
+
+
+
 
         <NavLink
           to="/signature-drinks-dashboard"

@@ -154,6 +154,7 @@ const AddEditBartendersPage = () => {
         //   )
         // );
         // notify = () => toast(alertMessage);
+
         alert('You SUCCESSFULLY ADDED the bartender!');
       } catch (error) {
         alert.log(error);
@@ -171,7 +172,8 @@ const AddEditBartendersPage = () => {
         //   )
         // );
         // notify = () => toast(alertMessage);
-        alert('You SUCCESSFULLY UPDATED the bartender!');
+        setIsSubmitted(false);
+        // alert('You SUCCESSFULLY UPDATED the bartender!');
       } catch (error) {
         alert.log(error);
       }
@@ -190,7 +192,7 @@ const AddEditBartendersPage = () => {
         <>
           <h3>{id ? 'Update a bartender' : 'Add a bartender'}</h3>
 
-          <Form onSubmit={handleSubmit} className={classes.bartenders_form}>
+          <Form onSubmit={handleSubmit} className={classes.bartender_form}>
             <div className={classes.drop_zone}>
               {id ? (
                 <div>
@@ -208,9 +210,10 @@ const AddEditBartendersPage = () => {
 
               <Form.Input
                 className={classes.upload}
+                defaultValue={img || ''}
                 accept="image/gif, image/jpeg, image/png"
                 fileName={img}
-                error={errors.file && !id ? { content: errors.file } : null}
+                // error={errors.file && !id ? { content: errors.file } : null}
                 label="upload"
                 type="file"
                 onChange={(e) => setFile(e.target.files[0])}
@@ -218,7 +221,6 @@ const AddEditBartendersPage = () => {
             </div>
 
             <Form.Input
-         
               label="name"
               error={errors.name && !id ? { content: errors.name } : null}
               placeholder={id && name ? name : 'Enter Name'}
@@ -230,7 +232,7 @@ const AddEditBartendersPage = () => {
             <Form.Input
               label="drink"
               error={errors.drink && !id ? { content: errors.drink } : null}
-              placeholder=""
+              placeholder={id && drink ? drink : 'Enter Drink'}
               name="drink"
               onChange={handleChange}
               value={drink || ''}
@@ -239,17 +241,17 @@ const AddEditBartendersPage = () => {
             <Form.Input
               label=""
               error={errors.city && !id ? { content: errors.city } : null}
-              placeholder="city"
+              placeholder={id && city ? city : 'Enter City'}
               name="city"
               onChange={handleChange}
               value={city || ''}
               autoFocus
             ></Form.Input>
             <Form.TextArea
-              className={classes.input}
+              className={classes.input_quote}
               label=""
               error={errors.quote && !id ? { content: errors.quote } : null}
-              placeholder=""
+              placeholder={id && quote ? quote : 'Enter Quote'}
               name="quote"
               onChange={handleChange}
               value={quote || ''}

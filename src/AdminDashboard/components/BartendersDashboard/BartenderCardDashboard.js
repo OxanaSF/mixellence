@@ -5,7 +5,6 @@ import { db } from '../../../firebase';
 import { doc, deleteDoc } from 'firebase/firestore';
 
 
-import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { enableDeleteActions } from '../../../store/enable-delete-slice';
 import { alertMessageActions } from '../../../store/alert-message-slice';
 import { ToastContainer, toast } from 'react-toastify';
@@ -37,10 +36,6 @@ const BartenderCardDashboard = ({
   let style = { visibility: 'visible' };
   if (!visible) style.visibility = 'hidden';
 
-  // const updateDataHandler = () => {
-  //   console.log('onClick');
-  //   dispatch(addDataModalActions.open());
-  // };
 
   const handleStyleClick = () => {
     console.log('handleStyleClick');

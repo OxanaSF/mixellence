@@ -64,13 +64,13 @@ button {
 
 .modal {
   min-width: 25%;
-  margin: 12% 14% 8% 25%;
+  margin: 12% 14% 8% 20%;
   background-color: white;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   text-align: center;
-  min-height: 30rem;
+  /* min-height: 30rem; */
 }
 
 .modalWrapper .modalCancelBtn {
