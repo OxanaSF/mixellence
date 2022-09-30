@@ -2,7 +2,7 @@ import { useState, useRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import SendBtn from '../ui/SendBtn/SendBtn';
-import AuthContext from '../../../context/auth-context'
+import AuthContext from '../../../context/auth-context';
 import classes from './LogInForm.module.css';
 
 const LogInForm = () => {
@@ -60,7 +60,7 @@ const LogInForm = () => {
         authCtx.login(data.idToken, expirationTime.toISOString());
         console.log(data);
         console.log('SUCCESS!!!');
-        navigate('/admin-dashboard');
+        navigate('/hero-dashboard');
       })
       .catch((err) => {
         alert(err.message);

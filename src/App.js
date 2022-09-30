@@ -9,6 +9,8 @@ import { AddUpdateDataModal } from './AdminDashboard/components/ui/AddUpdateModa
 import LogInForm from './ClientDisplay/components/Auth/LogInForm';
 import PasswordChangeForm from './ClientDisplay/components/Auth/PasswordChangeForm';
 
+
+import HeroDashboard from './AdminDashboard/components/HeroDashboard/HeroDashboard'
 import AboutDashboard from './AdminDashboard/components/AboutDashboard/AboutDashboard';
 import ServicesDashboard from './AdminDashboard/components/ServicesDashboard/ServicesDashboard';
 import BartendersDashboard from './AdminDashboard/components/BartendersDashboard/BartendersDashboard';
@@ -43,7 +45,8 @@ const App = () => {
           <Route path="/change-password" element={<PasswordChangeForm />} />
         )}
 
-        <Route path="/admin-dashboard" element={<AboutDashboard />}></Route>
+        <Route path="/hero-dashboard" element={<HeroDashboard />}></Route>
+        <Route path="/admin-dashboard" element={<HeroDashboard />}></Route>
 
         <Route path="/add-bartender" element={<AddEditBartendersPage />} />
         <Route
