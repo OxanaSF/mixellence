@@ -81,6 +81,8 @@ const NavSide = () => {
           Services
         </NavLink>
 
+
+
         <NavLink
           to="/team-dashboard"
           className={({ isActive }) =>
@@ -89,6 +91,9 @@ const NavSide = () => {
         >
           Meet Our Team
         </NavLink>
+
+
+
 
         <NavLink
           to="/signature-drinks-dashboard"
