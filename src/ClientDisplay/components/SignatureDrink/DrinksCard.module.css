@@ -1,9 +1,9 @@
 .drinksCard {
-  /* border:3px solid red; */
+  border:3px solid red;
   background: white;
   background-color: white;
-  width: 302px;
-  height: 559px; 
+  width: 275px;
+  height: 550px; 
   cursor: pointer;
 }
 .card_header {
@@ -12,8 +12,6 @@
   align-items: flex-end;
   height: 7rem;
   width: 100%;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
 }
 .card_header h3 {
   background-color: white;
@@ -34,7 +32,7 @@
   height: 7rem;
   color: black;
   padding-left: 1rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 2.1rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 17px;
@@ -46,4 +44,9 @@
 }
 .drinksCard img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px; 
 }
+

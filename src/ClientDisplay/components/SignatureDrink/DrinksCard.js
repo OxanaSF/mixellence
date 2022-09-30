@@ -9,9 +9,9 @@ export default function DrinksCard({ name, description, img, onclick }) {
         <h3>{name}</h3>
       </div>
 
-      {/* <div className={classes.cardImg}> */}
+      <div className={classes.cardImg}>
         <img src={img} alt={name} />
-      {/* </div> */}
+      </div>
 
       {/* <div className={classes.cardBody}>
         <p>{subtitle}</p>
