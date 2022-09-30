@@ -114,7 +114,7 @@
   border-top-left-radius: 10px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .services__main {
     display: flex;
     flex-wrap: wrap;
