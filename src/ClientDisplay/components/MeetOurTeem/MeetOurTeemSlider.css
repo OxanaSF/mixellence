@@ -1,3 +1,7 @@
+.client_bartenders_section {
+  margin-top: 10rem;
+}
+
 .slick-slide > div {
   margin: 5rem 2rem;
   /* background: green; */
@@ -5,8 +9,9 @@
 
 .slick-slider {
   /* background: pink; */
-  height: 50rem;
+  height: 45rem;
   overflow-y: hidden;
+  gap: 0 !important;
 }
 
 .slider-container {
@@ -28,7 +33,7 @@
   /* border: 1px solid #fff; */
   background: black;
   /* background: yellowgreen; */
-  height: 670px;
+  /* height: 670px; */
   color: #fff;
   cursor: pointer;
   display: flex !important;
@@ -39,14 +44,14 @@
 }
 
 .card button {
-  border: 2px solid green;
-  color: greenyellow;
+  /* border: 2px solid green; */
+  /* color: greenyellow; */
   padding: 1rem;
 }
 
 .card-top h1 {
   font-size: 0.9rem;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 .card-top {
@@ -150,15 +155,29 @@
 .slick-dots li button::before {
   font-size: 1rem;
   padding: 0;
+
 }
 
-@media screen and (max-width: 720px) {
+
+@media screen and (max-width: 1230px) {
+  .card-top {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .card-top:hover {
+    width: 12.625rem;
+    height: 12.625rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
   .slider-container {
     margin: 0;
   }
   .slick-slider {
     /* background: red; */
-    height: 45rem;
+    height: 39rem;
   }
   .card {
     height: 670px;
@@ -179,9 +198,6 @@
     /* height: .8rem; */
   }
 
-  .slick-dots ul {
-  }
-
   .slick-dots li {
     width: 15px;
   }
@@ -190,4 +206,6 @@
     font-size: 0.7rem;
     padding: 0;
   }
+
+  
 }

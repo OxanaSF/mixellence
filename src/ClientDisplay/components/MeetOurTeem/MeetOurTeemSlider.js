@@ -14,8 +14,7 @@ const MeetOurTeemSlider = (props) => {
         onClick={onClick}
       >
         <img src={process.env.PUBLIC_URL + '/public/images/exit.png'} />
-        </div>
-      
+      </div>
     );
   }
 
@@ -46,21 +45,24 @@ const MeetOurTeemSlider = (props) => {
           padding: '20px',
         }}
       >
-        <ul style={{ margin: '0px', position:'relative', width: '100%'  }}> {dots} </ul>
+        <ul style={{ margin: '0px', position: 'relative', width: '100%' }}>
+          {' '}
+          {dots}{' '}
+        </ul>
       </div>
     ),
     responsive: [
       {
         breakpoint: 1574,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 2,
           // infinite: true,
           dots: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 1050,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -68,7 +70,7 @@ const MeetOurTeemSlider = (props) => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 850,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
