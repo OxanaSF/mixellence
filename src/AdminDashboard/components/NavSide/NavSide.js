@@ -46,9 +46,8 @@ const NavSide = () => {
       <nav className={classes.nav_links}>
         <NavLink
           to="/"
-          className={({ isActive }) =>
-            isActive ? '' : classes.client_page_link
-          }
+          className={classes.client_page_link}
+          
         >
           Client App
         </NavLink>
