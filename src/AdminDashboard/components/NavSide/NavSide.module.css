@@ -84,16 +84,12 @@ a.nav_link_active {
 }
 
 .client_page_link {
-  padding: 2.5rem 0;
-  transition: all 1s ease;
-  width: 100%;
-  text-align: left;
+  /* padding: 2.5rem 0; */
+  /* transition: all 1s ease; */
+  /* width: 100%; */
+  /* text-align: left; */
+  /* background: brown; */
 }
-
-.client_page_link:hover {
-transform: scale(1.1);
-}
-
 a.client_page_link {
   padding: 2.5rem 0;
   transition: all 1s ease;
@@ -103,7 +99,15 @@ a.client_page_link {
   margin-bottom: 3rem;
   letter-spacing: 1px;
   padding-left: 4rem;
+  /* background: red; */
+  text-align: left;
 }
+
+.client_page_link:hover {
+transform: scale(1.1);
+}
+
+
 
 .nav_container .logout {
   background: black;

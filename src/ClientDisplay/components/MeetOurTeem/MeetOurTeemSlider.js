@@ -13,7 +13,7 @@ const MeetOurTeemSlider = (props) => {
         style={{ ...style, display: 'none', background: 'red' }}
         onClick={onClick}
       >
-        <img src={process.env.PUBLIC_URL + '/public/images/exit.png'} />
+        <img src={process.env.PUBLIC_URL + '/public/images/exit.png'} alt='exit'/>
       </div>
     );
   }
@@ -61,14 +61,7 @@ const MeetOurTeemSlider = (props) => {
           dots: true,
         },
       },
-      {
-        breakpoint: 1050,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          // initialSlide: 2,
-        },
-      },
+   
       {
         breakpoint: 600,
         settings: {
