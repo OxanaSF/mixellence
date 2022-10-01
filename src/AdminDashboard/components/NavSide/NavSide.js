@@ -42,6 +42,7 @@ const NavSide = () => {
         <p>Hi, Roel</p>
       </header>
 
+
       <nav className={classes.nav_links}>
         <NavLink
           to="/"
@@ -49,7 +50,7 @@ const NavSide = () => {
             isActive ? classes.nav_link_active : classes.client_page_link
           }
         >
-          Back to the App
+          Client App
         </NavLink>
 
 

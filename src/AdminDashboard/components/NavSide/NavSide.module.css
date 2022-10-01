@@ -70,8 +70,7 @@ a.nav_link_active {
   text-align: left;
 }
 
-.nav_link:hover,
-.client_page_link:hover {
+.nav_link:hover {
   background: #7861e8;
   padding: 2.5rem 4rem;
   color: white;
@@ -89,6 +88,10 @@ a.nav_link_active {
   transition: all 1s ease;
   width: 100%;
   text-align: left;
+}
+
+.client_page_link:hover {
+transform: scale(1.1);
 }
 
 a.client_page_link {
