@@ -65,8 +65,6 @@ const EditServicesPage = () => {
     }
   };
 
- 
-
   const handleChange = (event) => {
     setServicesData({
       ...servicesData,
@@ -128,56 +126,63 @@ const EditServicesPage = () => {
         <>
           <h3>Update service</h3>
 
-          <Form onSubmit={handleSubmit}>
-            <div className={`${classes.service_header_wrapper}`}>
-              <div className={`${classes.service_header}`}>
-                <Form.TextArea
-                className={classes.service_header_title}
-                  error={errors.tile && !id ? { content: errors.title } : null}
-                  placeholder={id && title ? title : 'Enter Title'}
-                  name="title"
-                  onChange={handleChange}
-                  defaultValue={title || ''}
-                  autoFocus
-                ></Form.TextArea>
-                <Form.TextArea
-                className={classes.service_header_description}
-                  error={
-                    errors.description && !id
-                      ? { content: errors.description }
-                      : null
-                  }
-                  placeholder="description"
-                  name="description"
-                  onChange={handleChange}
-                  defaultValue={description || ''}
-                  autoFocus
-                ></Form.TextArea>
+          <form onSubmit={handleSubmit}>
+            <div className={classes.service__item__container}>
+              <header className={classes.service__item__header}>
+                <h3>
+                  <textarea
+                    className={classes.service_header_title}
+                    error={
+                      errors.tile && !id ? { content: errors.title } : null
+                    }
+                    placeholder={id && title ? title : 'Enter Title'}
+                    name="title"
+                    onChange={handleChange}
+                    defaultValue={title || ''}
+                    autoFocus
+                  ></textarea>
+                </h3>
+                <p>
+                  <textarea
+                    className={classes.service_header_description}
+                    error={
+                      errors.description && !id
+                        ? { content: errors.description }
+                        : null
+                    }
+                    placeholder="description"
+                    name="description"
+                    onChange={handleChange}
+                    defaultValue={description || ''}
+                    autoFocus
+                  ></textarea>
+                </p>
+              </header>
+
+              <div className={classes.service__item__body}>
+                <p className={classes.par1}>
+                  <textarea
+                    error={errors.par1 && !id ? { content: errors.par1 } : null}
+                    placeholder="first paragraph"
+                    name="par1"
+                    onChange={handleChange}
+                    defaultValue={par1 || ''}
+                    autoFocus
+                  ></textarea>
+                </p>
+                <p>
+                  <textarea
+                    error={errors.par2 && !id ? { content: errors.par2 } : null}
+                    placeholder="Second paragraph"
+                    name="par2"
+                    onChange={handleChange}
+                    defaultValue={par2 || ''}
+                    autoFocus
+                  ></textarea>
+                </p>
               </div>
             </div>
 
-            <div className={`${classes.service_body_wrapper}`}>
-              <div className={`${classes.service_body}`}>
-                <Form.TextArea
-                className={classes.par1}
-                  error={errors.par1 && !id ? { content: errors.par1 } : null}
-                  placeholder="first paragraph"
-                  name="par1"
-                  onChange={handleChange}
-                  defaultValue={par1 || ''}
-                  autoFocus
-                ></Form.TextArea>
-                <Form.TextArea
-                  className={classes.quote}
-                  error={errors.par2 && !id ? { content: errors.par2 } : null}
-                  placeholder="Second paragraph"
-                  name="par2"
-                  onChange={handleChange}
-                  defaultValue={par2 || ''}
-                  autoFocus
-                ></Form.TextArea>
-              </div>
-            </div>
             <Button
               secondary
               type="submit"
@@ -185,7 +190,7 @@ const EditServicesPage = () => {
             >
               Submit
             </Button>
-          </Form>
+          </form>
         </>
       )}
     </div>
