@@ -1,8 +1,9 @@
 .hero_container {
   padding: 3rem 1rem;
   background: black;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+
+  margin-bottom: 2rem;
+ 
 
 }
 
@@ -11,10 +12,11 @@
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .hero_card {
-  /* background: red; */
+/* background: black; */
  width: 100%;
   text-align: center;
   /* margin: auto; */
@@ -38,8 +40,11 @@
   border: 10px solid white;
 }
 
-.hero_container :nth-child(1) :nth-child(2) {
-  /* background: red; */
+.hero_container button{
+  /* background: red !important; */
+  margin: auto !important;
+  margin-top: 2rem !important;
+  width: 100% !important;
 }
 
 input::file-selector-button {
