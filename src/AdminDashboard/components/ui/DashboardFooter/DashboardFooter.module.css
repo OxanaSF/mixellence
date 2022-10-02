@@ -30,3 +30,10 @@
   background: white;
   color: black;
 }
+
+@media screen and (max-width: 890px) {
+  .dashboard_footer_container {
+    padding: 0;
+    display: block;
+  }
+}
