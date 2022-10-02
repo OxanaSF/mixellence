@@ -36,3 +36,10 @@
   height: 300px;
   object-fit: cover;
 }
+
+@media screen and (max-width: 800px) {
+  .drinks_display_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
