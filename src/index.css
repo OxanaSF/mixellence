@@ -43,14 +43,13 @@ button {
 
 /* UpdateModal */
 .modalDiv {
-  width: 100vw;
   min-height: 100vh;
   position: absolute;
   top: 0;
-  /* left: 20%; */
-  /* left: 0; */
   background-color: rgb(100, 75, 222, 0.3);
-  /* background-color: white; */
+  width: 80%;
+  margin-left: 20%;
+
   display: flex;
   z-index: 1000;
   display: flex;
@@ -68,10 +67,6 @@ button {
 }
 
 .modal {
-  /* min-width: 25%;
-  margin-top: 12%;
-  margin-bottom: 8%;
-  margin-left: 40%; */
   background-color: white;
   border-radius: 5px;
 }
@@ -84,6 +79,13 @@ button {
 
 .modalWrapper img {
   width: 1.5rem;
+}
+
+@media screen and (max-width: 890px) {
+  .modalDiv {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 720px) {
