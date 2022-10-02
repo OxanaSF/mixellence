@@ -21,7 +21,7 @@
   align-items: center;
 }
 .hero_card :nth-child(1) {
-  background: plum;
+  /* background: plum; */
 }
 
 .card_img {
@@ -37,5 +37,17 @@
 }
 
 .hero_container :nth-child(1) :nth-child(2) {
-  background: red;
+  /* background: red; */
 }
+
+input::file-selector-button {
+  font-weight: bold;
+  padding: 0.5em;
+  /* border: thin solid grey; */
+  border-radius: 3px;
+  width: 100%;
+  height: 2rem;
+  cursor: pointer;
+}
+
+
