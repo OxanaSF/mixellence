@@ -125,42 +125,16 @@ const EditDrinks = () => {
     if (Object.keys(errors).length) return setErrors(errors);
     setIsSubmitted(true);
 
-    if (!id) {
-      try {
-        console.log('drinksData', drinksData);
-        await addDoc(collection(db, 'drinks'), {
-          ...drinksData,
-          timestamp: serverTimestamp(),
-        });
-        dispatch(addDataModalActions.close());
-        // dispatch(
-        //   alertMessageActions.alertMessageUpdate(
-        //     'You SUCCESSFULLY ADDED the testimonial!'
-        //   )
-        // );
-        // notify = () => toast(alertMessage);
-        // alert('You SUCCESSFULLY ADDED the testimonial!');
-      } catch (error) {
-        alert.log(error);
-      }
-    } else {
-      try {
-        console.log('drinksData', drinksData);
-        await updateDoc(doc(db, 'drinks', id), {
-          ...drinksData,
-          timestamp: serverTimestamp(),
-        });
-        // dispatch(
-        //   alertMessageActions.alertMessageUpdate(
-        //     'You SUCCESSFULLY UPDATED the bartender!'
-        //   )
-        // );
-        // notify = () => toast(alertMessage);
-        // alert('You SUCCESSFULLY UPDATED the testimonial!');
-      } catch (error) {
-        alert.log(error);
-      }
+    try {
+      console.log('drinksData', drinksData);
+      await updateDoc(doc(db, 'drinks', id), {
+        ...drinksData,
+        timestamp: serverTimestamp(),
+      });
+    } catch (error) {
+      alert.log(error);
     }
+
     setIsSubmitted(false);
     dispatch(enableEditActions.disable());
     // notify()
@@ -168,59 +142,50 @@ const EditDrinks = () => {
   };
 
   return (
-    <div className={classes.testimonial_container}>
+    <div className={classes.drinks_container}>
       {isSubmitted ? (
         <Loader active inline="centered" size="huge" />
       ) : (
         <>
           <h3>{'Update Drink'}</h3>
 
-          <Form onSubmit={handleSubmit} className={classes.testimonial_form}>
-            <div className={classes.testimonial_form_text}>
-              <Form.Input
-                error={errors.title && !id ? { content: errors.title } : null}
-                placeholder={id && title ? title : 'Enter drink name'}
-                name="title"
-                onChange={handleChange}
-                defaultValue={title || ''}
-                autoFocus
-              ></Form.Input>
-
-              <div className={classes.drop_zone}>
-                {id ? (
-                  <div>
-                    <img src={img} alt={title} />
-                  </div>
-                ) : (
-                  <div>
-                    {' '}
-                    <img
-                      src={img}
-                      alt="drink"
-                    />
-                  </div>
-                )}
+          <form onSubmit={handleSubmit}>
+            <div className={classes.drink_card} onInvalid={id}>
+              <div className={classes.drink_card_title}>
+                <input
+                  error={errors.title && !id ? { content: errors.title } : null}
+                  placeholder={id && title ? title : 'Enter drink name'}
+                  name="title"
+                  onChange={handleChange}
+                  defaultValue={title || ''}
+                  autoFocus
+                ></input>
               </div>
-              <Form.Input
+              <div className={classes.card_img}>
+                <img src={img} alt={title} />
+              </div>
+              <input
                 className={classes.upload}
                 accept="image/gif, image/jpeg, image/png"
                 fileName={img}
-                // error={errors.file && !id ? { content: errors.file } : null}
                 type="file"
                 onChange={(e) => setFile(e.target.files[0])}
-              ></Form.Input>
-            </div>
+              ></input>
 
-            <Form.TextArea
-              className={classes.review}
-             
-              error={errors.quote && !id ? { content: errors.review } : null}
-              placeholder={id && description ? description : 'Enter a drink description'}
-              name="description"
-              onChange={handleChange}
-              value={description || ''}
-              autoFocus
-            ></Form.TextArea>
+              <div className={classes.drink_card_description}>
+                <textArea
+                  error={
+                    errors.quote && !id ? { content: errors.review } : null
+                  }
+                  name="description"
+                  onChange={handleChange}
+                  value={description || ''}
+                  autoFocus
+                >
+                  {description}
+                </textArea>
+              </div>
+            </div>
 
             <Button
               secondary
@@ -230,7 +195,7 @@ const EditDrinks = () => {
             >
               Submit
             </Button>
-          </Form>
+          </form>
         </>
       )}
     </div>

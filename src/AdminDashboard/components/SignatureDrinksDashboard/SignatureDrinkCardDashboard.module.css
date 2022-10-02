@@ -5,6 +5,10 @@
   padding: 7%;
 }
 
+.drink_card_container :nth-child(1) {
+  margin-bottom: .5rem;
+}
+
 .drink_card_container {
   background: white;
   border-radius: 8px;

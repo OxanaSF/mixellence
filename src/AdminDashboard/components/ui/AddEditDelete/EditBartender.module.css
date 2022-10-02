@@ -1,23 +1,19 @@
 .edit_bartender {
-    background: white;
-    border-radius: 5px;
-    padding: 0.5rem;
-  }
-  
-  .edit_bartender:hover {
+  background: white;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+/* .edit_bartender:hover {
     background: rgb(100, 75, 222, 0.3);
-  }
-  
-  .edit_bartender img {
-    width: 1.7rem;
-    height: 1.7rem;
-    transition: all 0.2s ease;
-  }
+  } */
 
+.edit_bartender img {
+  width: 1.7rem;
+  height: 1.7rem;
+  transition: all .5s ease;
+}
 
-  .edit_bartender img:hover {
-    transform: scale(1.1);
-  }
-
-  
-  
+.edit_bartender img:hover {
+  transform: scale(1.2);
+}
