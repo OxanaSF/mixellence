@@ -4,6 +4,7 @@ import NavSide from '../NavSide/NavSide';
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
 import DashboardMain from '../ui/DashboardMain/DashboardMain';
+import SignatureDrinksDisplayDashboard from './SignatureDrinksDisplayDashboard';
 
 
 import classes from './SignatureDrinksDashboard.module.css';
@@ -18,9 +19,7 @@ const SignatureDrinksDashboard = () => {
         </DashboardHeader>
         
           <DashboardMain>
-            <h1>Signature Drinks</h1>
-            <div>Something is here</div>
-            <div>Something is here</div>
+           <SignatureDrinksDisplayDashboard />
           </DashboardMain>
       
       </section>

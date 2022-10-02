@@ -1,0 +1,38 @@
+.drinks_display_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.6rem;
+  padding: 7%;
+}
+
+.drink_card_container {
+  background: white;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.drink_card_title {
+  text-align: left;
+  font-weight: 500;
+  font-size: 18px;
+  padding-left: 0.5rem;
+  padding-bottom: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+.drink_card_description {
+  font-size: 10px;
+  text-align: left;
+  padding: 0.7rem;
+  line-height: 1.7;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  padding-bottom: 2rem;
+}
+
+.card_img img {
+  width: 100%;
+  height: 100%;
+  height: 300px;
+  object-fit: cover;
+}

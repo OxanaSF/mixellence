@@ -69,6 +69,13 @@ const App = () => {
           <Route path="modal" element={<AddUpdateDataModal />} />
         </Route>
 
+
+        <Route
+          path="/drinks-dashboard" element={<SignatureDrinksDashboard />} />
+          <Route path="/drinks-dashboard/:id" element={<SignatureDrinksDashboard />}>
+          <Route path="modal" element={<AddUpdateDataModal />} />
+        </Route>
+
         <Route
           path="/testimonials-dashboard" element={<TestimonialsDashboard />} />
           <Route path="/testimonials-dashboard/:id" element={<TestimonialsDashboard />}>
