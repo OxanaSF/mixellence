@@ -97,7 +97,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border: 5px solid white;
+  border: 3px solid white;
 }
 
 .image_gallery :nth-child(1) {
