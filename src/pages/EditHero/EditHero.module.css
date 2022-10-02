@@ -1,6 +1,8 @@
 .hero_container {
   padding: 3rem 1rem;
   background: black;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 
 }
 
