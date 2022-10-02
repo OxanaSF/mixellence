@@ -1,6 +1,10 @@
-
 .drinks_container {
-padding-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.drinks_container :nth-child(2) {
+  display: flex;
+  flex-direction: column;
 }
 
 .drink_card_title {
@@ -21,6 +25,8 @@ padding-bottom: 1rem;
   font-weight: 500;
   font-size: 20px;
   caret-color: #644bde;
+  /* background: red; */
+  width: 100%;
 }
 
 .drink_card_description textarea {
@@ -34,7 +40,6 @@ padding-bottom: 1rem;
   margin: 0 1rem;
   caret-color: #644bde;
   margin-bottom: 2rem;
-
 }
 
 .drink_card_description:active {
@@ -47,4 +52,27 @@ padding-bottom: 1rem;
   height: 100%;
   height: 300px;
   object-fit: cover;
+}
+
+.drinks_container form button {
+  background: red;
+}
+
+.service_container form button {
+  height: 3.5rem;
+  width: 70%;
+  letter-spacing: 1.5px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form button {
+  height: 3.5rem;
+  width: 70%;
+  letter-spacing: 1.5px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

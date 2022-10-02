@@ -2,9 +2,15 @@
   padding-bottom: 1rem;
 }
 
+.service_container :nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
 .service_container h3 {
   color: black;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .service__item__header {
@@ -15,7 +21,7 @@
 }
 
 .service__item__header textarea {
-  width: 90%;
+  width: 100%;
   border: 0.5px dashed white;
   background: black;
   text-align: center;
@@ -40,9 +46,12 @@
   padding: 0.5rem;
 }
 
-form button {
+.service_container form button {
   height: 3.5rem;
-  width: 70% !important;
-  letter-spacing: 1.5px !important;
+  width: 70%;
+  letter-spacing: 1.5px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
