@@ -1,0 +1,41 @@
+.hero_container {
+  padding: 3rem 1rem;
+  background: black;
+
+}
+
+.hero_container h3 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.hero_card {
+  /* background: red; */
+ width: 100%;
+  text-align: center;
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero_card :nth-child(1) {
+  background: plum;
+}
+
+.card_img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.hero_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 10px solid white;
+}
+
+.hero_container :nth-child(1) :nth-child(2) {
+  background: red;
+}

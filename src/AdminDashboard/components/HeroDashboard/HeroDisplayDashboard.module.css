@@ -98,6 +98,7 @@
   height: 100%;
   object-fit: cover;
   border: 3px solid white;
+  cursor: pointer;
 }
 
 .image_gallery :nth-child(1) {

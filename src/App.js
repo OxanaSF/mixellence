@@ -45,7 +45,7 @@ const App = () => {
           <Route path="/change-password" element={<PasswordChangeForm />} />
         )}
 
-        <Route path="/hero-dashboard" element={<HeroDashboard />}></Route>
+        {/* <Route path="/hero-dashboard" element={<HeroDashboard />}></Route> */}
         <Route path="/admin-dashboard" element={<HeroDashboard />}></Route>
 
         <Route path="/add-bartender" element={<AddEditBartendersPage />} />
@@ -53,6 +53,11 @@ const App = () => {
           path="/update-bartender/:id"
           element={<AddEditBartendersPage />}
         />
+
+        <Route path="/hero-dashboard" element={<HeroDashboard />} />
+        <Route path="/hero-dashboard/:id" element={<HeroDashboard />}>
+          <Route path="modal" element={<AddUpdateDataModal />} />
+        </Route>
 
         <Route path="/about-dashboard" element={<AboutDashboard />} />
         <Route path="/about-dashboard/:id" element={<AboutDashboard />}>

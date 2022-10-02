@@ -6,6 +6,7 @@ import { db } from '../../../firebase';
 import { useNavigate } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
 
+import HeroCardDashboard from './HeroCardDashboard';
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
 
@@ -75,7 +76,9 @@ const HeroDisplayDashboard = () => {
 
       <div className={classes.image_gallery_wrapper}>
         <div className={classes.image_gallery}>
-          {images && images.map((item) => <img src={item.img} alt="party" />)}
+          {images && images.map((item) => 
+         <HeroCardDashboard key={item.id} id={item.id} img={item.img} />
+          )}
         </div>
       </div>
     </section>
