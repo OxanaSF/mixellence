@@ -1,11 +1,16 @@
 .drinksCard {
-  border:3px solid red;
+  /* border:3px solid red; */
   background: white;
   background-color: white;
   width: 275px;
   height: 550px; 
   cursor: pointer;
 }
+/* .Drinks_card_header  {
+  border-top-left-radius: 10px;
+
+} */
+
 .card_header {
   background-color: white;
   display: flex;

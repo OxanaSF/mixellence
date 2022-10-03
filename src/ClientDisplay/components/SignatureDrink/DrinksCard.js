@@ -21,7 +21,6 @@ export default function DrinksCard({ name, description, img, onclick }) {
         <p >{description}</p>
       </div>
 
-
     </section>
   );
 }
