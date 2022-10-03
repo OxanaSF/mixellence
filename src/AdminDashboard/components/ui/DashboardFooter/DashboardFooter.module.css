@@ -32,8 +32,8 @@
 }
 
 @media screen and (max-width: 890px) {
-  .dashboard_footer_container {
-    padding: 0;
-    display: block;
+  .save_changes_btn {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
   }
 }
