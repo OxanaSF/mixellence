@@ -192,7 +192,7 @@ const AddEditBartendersPage = () => {
         <>
           <h3>{id ? 'Update a bartender' : 'Add a bartender'}</h3>
 
-          <Form onSubmit={handleSubmit} className={classes.bartender_form}>
+          <form onSubmit={handleSubmit} className={classes.bartender_form}>
             <div className={classes.drop_zone}>
               {id ? (
                 <div>
@@ -208,55 +208,47 @@ const AddEditBartendersPage = () => {
                 </div>
               )}
 
-              <Form.Input
-                className={classes.upload}
-                defaultValue={img || ''}
-                accept="image/gif, image/jpeg, image/png"
-                fileName={img}
-                // error={errors.file && !id ? { content: errors.file } : null}
-                label="upload"
-                type="file"
-                onChange={(e) => setFile(e.target.files[0])}
-              ></Form.Input>
+              <div className={classes.upload}>
+                <input
+                  defaultValue={img || ''}
+                  accept="image/gif, image/jpeg, image/png"
+                  fileName={img}
+                  // error={errors.file && !id ? { content: errors.file } : null}
+                  label="upload"
+                  type="file"
+                  onChange={(e) => setFile(e.target.files[0])}
+                ></input>
+              </div>
             </div>
 
-            <Form.Input
-              label="name"
+            <input
               error={errors.name && !id ? { content: errors.name } : null}
               placeholder={id && name ? name : 'Enter Name'}
               name="name"
               onChange={handleChange}
               defaultValue={name || ''}
-              autoFocus
-            ></Form.Input>
-            <Form.Input
-              label="drink"
+            ></input>
+            <input
               error={errors.drink && !id ? { content: errors.drink } : null}
               placeholder={id && drink ? drink : 'Enter Drink'}
               name="drink"
               onChange={handleChange}
               value={drink || ''}
-              autoFocus
-            ></Form.Input>
-            <Form.Input
-              label=""
+            ></input>
+            <input
               error={errors.city && !id ? { content: errors.city } : null}
               placeholder={id && city ? city : 'Enter City'}
               name="city"
               onChange={handleChange}
               value={city || ''}
-              autoFocus
-            ></Form.Input>
-            <Form.TextArea
-              className={classes.input_quote}
-              label=""
+            ></input>
+            <textarea
               error={errors.quote && !id ? { content: errors.quote } : null}
               placeholder={id && quote ? quote : 'Enter Quote'}
               name="quote"
               onChange={handleChange}
               value={quote || ''}
-              autoFocus
-            ></Form.TextArea>
+            ></textarea>
 
             <Button
               className={classes.bartender_btn}
@@ -267,7 +259,7 @@ const AddEditBartendersPage = () => {
             >
               Submit
             </Button>
-          </Form>
+          </form>
         </>
       )}
     </div>

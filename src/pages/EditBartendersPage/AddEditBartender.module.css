@@ -6,52 +6,60 @@
   padding-bottom: 6rem;
 }
 
-.bartender_container h3 {
-  color: black;
-  font-size: 2rem !important;
-
-  font-size: 2rem;
-  margin-bottom: 3rem;
+.bartender_container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 90%;
 }
 
 .bartender_form {
   background: #1b1b1b;
   border-radius: 15px;
-  padding: 0 2rem;
 }
 
-.bartender_container form {
-  /* background: pink; */
-  /* background: #1b1b1b; */
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 80%;
+.bartender_form input {
+  width: 70%;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  color: white !important;
+  border: 1px dashed white;
+
+  background: #1b1b1b;
+  text-align: center;
 }
 
-.bartender_container form button {
-  background: green;
+.upload input {
+  border: 0px dashed black;
+}
+
+.bartender_container h3 {
+  color: black;
+  font-size: 2rem;
+}
+
+.bartender_form textarea {
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  color: black;
+  padding: 0.5rem;
   height: 5rem;
-}
-
-form input {
-  width: 10rem;
+  display: flex;
+  line-height: 1.4;
 }
 
 .drop_zone :nth-child(1) :nth-child(1) {
-  color: white !important;
-  border: 3px solid white;
-  width: 10rem;
-  height: 10rem;
+  border: 2px solid white;
+  width: 7rem;
+  height: 7rem;
   object-fit: cover;
   border-radius: 50%;
-  margin-top: 5rem;
-}
-
-.bartender_container form :first-child :nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
+  margin-top: 4rem;
 }
 
 .bartender_container form :first-child {
@@ -65,11 +73,7 @@ form input {
 }
 
 input[type='file'] {
-  color: transparent !important;
-  /* background: red !important; */
-  width: 40% !important;
-  align-self: center !important;
-  margin: 1rem !important;
+  width: 40%;
 }
 
 input[type='file']::file-selector-button {
@@ -93,15 +97,7 @@ input[type='file']::file-selector-button:hover {
   border-color: darkgray !important;
   border-style: dashed !important;
   height: 3rem !important;
-  background: red;
-}
-
-.bartender_container form :nth-child(5) {
-  height: 5rem;
-}
-
-.bartender_container form label {
-  display: none !important;
+  /* background: red; */
 }
 
 .bartender_container button {
@@ -111,15 +107,3 @@ input[type='file']::file-selector-button:hover {
   width: 70% !important;
   margin: auto !important;
 }
-
-input[type='file']::file-selector-button:hover {
-  background-color: #81ecec;
-  border: 2px solid #00cec9;
-}
-
-form input,
-.bartender_container :nth-child(2) :nth-child(2) {
-  text-align: center !important;
-  color: darkgray;
-}
-
