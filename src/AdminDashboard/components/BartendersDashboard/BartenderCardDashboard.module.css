@@ -85,5 +85,6 @@
 @media screen and (max-width: 800px) {
   .bartender_card_container {
     width: 90%;
+    margin: auto;
   }
 }

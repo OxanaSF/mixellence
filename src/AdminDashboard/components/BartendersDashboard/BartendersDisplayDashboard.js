@@ -44,7 +44,9 @@ export const BartendersDisplayDashboard = () => {
   }, []);
 
   return (
-    <div>
+    <div 
+    className={classes.card_display_wrapper}
+    >
       <h1>Meet Our Team</h1>
 
       <Link to="modal" state={{ background: location }}></Link>

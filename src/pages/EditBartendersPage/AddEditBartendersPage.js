@@ -113,30 +113,30 @@ const AddEditBartendersPage = () => {
     });
   };
 
-  const validate = () => {
-    let errors = {};
-    if (!file) {
-      errors.file = 'Image is Required';
-    }
-    if (!name) {
-      errors.name = 'Name is Required';
-    }
-    if (!drink) {
-      errors.drink = 'Signature drink is Required';
-    }
-    if (!city) {
-      errors.city = 'City is Required';
-    }
-    if (!quote) {
-      errors.quote = 'Quote is Required';
-    }
+  // const validate = () => {
+  //   let errors = {};
+  //   if (!file) {
+  //     errors.file = 'Image is Required';
+  //   }
+  //   if (!name) {
+  //     errors.name = 'Name is Required';
+  //   }
+  //   if (!drink) {
+  //     errors.drink = 'Signature drink is Required';
+  //   }
+  //   if (!city) {
+  //     errors.city = 'City is Required';
+  //   }
+  //   if (!quote) {
+  //     errors.quote = 'Quote is Required';
+  //   }
 
-    return errors;
-  };
+  //   return errors;
+  // };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    let errors = validate();
+    // let errors = validate();
     if (Object.keys(errors).length) return setErrors(errors);
     setIsSubmitted(true);
 
@@ -210,13 +210,14 @@ const AddEditBartendersPage = () => {
 
               <div className={classes.upload}>
                 <input
-                  defaultValue={img || ''}
+                  // defaultValue={img || ''}
                   accept="image/gif, image/jpeg, image/png"
                   filename={img}
-                  // error={errors.file && !id ? { content: errors.file } : null}
-                  label="upload"
+                  error={errors.file && !id ? { content: errors.file } : null}
+                  // label="upload"
                   type="file"
                   onChange={(e) => setFile(e.target.files[0])}
+                  required={!id ? true : false}
                 ></input>
               </div>
             </div>
@@ -227,6 +228,7 @@ const AddEditBartendersPage = () => {
               name="name"
               onChange={handleChange}
               defaultValue={name || ''}
+              required={!id ? true : false}
             ></input>
             <input
               error={errors.drink && !id ? { content: errors.drink } : null}
@@ -234,6 +236,7 @@ const AddEditBartendersPage = () => {
               name="drink"
               onChange={handleChange}
               value={drink || ''}
+              required={!id ? true : false}
             ></input>
             <input
               error={errors.city && !id ? { content: errors.city } : null}
@@ -241,6 +244,7 @@ const AddEditBartendersPage = () => {
               name="city"
               onChange={handleChange}
               value={city || ''}
+              required={!id ? true : false}
             ></input>
             <textarea
               error={errors.quote && !id ? { content: errors.quote } : null}
@@ -248,10 +252,11 @@ const AddEditBartendersPage = () => {
               name="quote"
               onChange={handleChange}
               value={quote || ''}
+              required={!id ? true : false}
             ></textarea>
 
             <Button
-              className={classes.bartender_btn}
+              // className={classes.bartender_btn}
               secondary
               type="submit"
               // disabled={progress !== null && progress < 101}

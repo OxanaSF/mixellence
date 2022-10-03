@@ -45,7 +45,7 @@ function TestimonialsDisplay() {
   }, []);
 
   return (
-    <div>
+    <div className={classes.card_display_wrapper}>
       <h1>Testimonials</h1>
 
       <Link to="modal" state={{ background: location }}></Link>
