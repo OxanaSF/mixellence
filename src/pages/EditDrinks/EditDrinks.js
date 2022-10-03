@@ -158,7 +158,7 @@ const EditDrinks = () => {
                   name="title"
                   onChange={handleChange}
                   defaultValue={title || ''}
-                  autoFocus
+              
                 ></input>
               </div>
               <div className={classes.card_img}>
@@ -180,7 +180,7 @@ const EditDrinks = () => {
                   name="description"
                   onChange={handleChange}
                   value={description || ''}
-                  autoFocus
+                
                 >
                   {description}
                 </textArea>

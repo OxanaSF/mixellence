@@ -17,12 +17,12 @@
 }
 
 .testimonial_card input {
-  border: 1px dashed black;
+  border: .5px dashed black;
   font-family: 'Montserrat', sans-serif;
 }
 
 .testimonial_card textarea {
-  border: 1px dashed black;
+  border: .5px dashed black;
   font-family: 'Montserrat', sans-serif;
 }
 
