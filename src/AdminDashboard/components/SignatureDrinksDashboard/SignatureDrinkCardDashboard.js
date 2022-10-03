@@ -3,13 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { db } from '../../../firebase';
 
-
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 
 import { alertMessageActions } from '../../../store/alert-message-slice';
 import { ToastContainer, toast } from 'react-toastify';
-import EditTestimonial from '../ui/AddEditDelete/EditTestimonial';
-
+import EditData from '../ui/AddEditDelete/EditData';
 
 import 'react-toastify/dist/ReactToastify.css';
 import classes from './SignatureDrinkCardDashboard.module.css';
@@ -30,7 +28,7 @@ const SignatureDrinkCardDashboard = ({ id, title, img, description }) => {
 
   return (
     <button className={classes.drink_card_container} id={id}>
-      <EditTestimonial navigate={`/drinks-dashboard/${id}/modal`} />
+      <EditData navigate={`/drinks-dashboard/${id}/modal`} />
 
       <div className={classes.drink_card} onInvalid={id}>
         <div className={classes.drink_card_title}>{title}</div>

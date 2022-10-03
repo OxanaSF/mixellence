@@ -8,7 +8,7 @@ import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { enableDeleteActions } from '../../../store/enable-delete-slice';
 import { alertMessageActions } from '../../../store/alert-message-slice';
 import { ToastContainer, toast } from 'react-toastify';
-import EditTestimonial from '../ui/AddEditDelete/EditTestimonial';
+import EditData from '../ui/AddEditDelete/EditData';
 import DeleteData from '../ui/AddEditDelete/DeleteData';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -81,7 +81,7 @@ const TestimonialCardDashboard = ({
         onClick={testimonialDeleteHandler} 
         />
 
-        <EditTestimonial navigate={`/testimonials-dashboard/${id}/modal`} />
+        <EditData navigate={`/testimonials-dashboard/${id}/modal`} />
       </header>
 
       <div className={classes.testimonial_card} onInvalid={id}>

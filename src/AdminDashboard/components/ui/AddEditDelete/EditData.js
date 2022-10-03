@@ -17,12 +17,12 @@ const EditData = (props) => {
 
   return (
  
-    <button
+    <div
       className={classes.edit_data}
       onClick={() => navigate(props.navigate)}
     >
       <img src={`${process.env.PUBLIC_URL}/images/pen_white.png`} alt="draw" />
-    </button>
+    </div>
   );
 };
 
