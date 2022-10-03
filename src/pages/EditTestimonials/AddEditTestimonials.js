@@ -182,7 +182,7 @@ const AddEditTestimonials = () => {
           <h3>{id ? 'Update Testimonial' : 'Add Testimonial'}</h3>
 
           <form onSubmit={handleSubmit} className={classes.testimonial_form}>
-            <div className={classes.testimonial_card} onInvalid={id}>
+            <div className={classes.testimonial_card} >
               <div className={classes.card_info}>
                 <p className={classes.text}>
                   <textarea
@@ -262,7 +262,7 @@ const AddEditTestimonials = () => {
                 <input
                   className={classes.upload}
                   accept="image/gif, image/jpeg, image/png"
-                  fileName={img}
+                  filename={img}
                   // error={errors.file && !id ? { content: errors.file } : null}
                   type="file"
                   onChange={(e) => setFile(e.target.files[0])}
