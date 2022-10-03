@@ -1,138 +1,73 @@
 .testimonial_container {
-  padding: 6rem 2rem;
-  background: black;
-  margin-top: 3rem;
-  height: 100%;
-  padding-bottom: 10rem;
-  height: 60rem !important;
+  padding-bottom: 16rem;
+  /* background: black; */
 }
 
 .testimonial_container h3 {
-  /* color: white !important; */
-  font-size: 2rem !important;
-  font-size: 2rem;
-  margin-bottom: 3rem;
+  color: black;
+  text-align: center;
 }
 
 .testimonial_form {
   background: #d9d9d9;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 0 2rem;
-  height: 25rem !important;
+  text-align: center;
+  height: 29.5rem;
 }
 
-.testimonial_container form {
-  /* background: pink; */
-  padding-top: 2rem;
+.testimonial_card input {
+  border: 1px dashed black;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.testimonial_container form :nth-child(1) :nth-child(1) .review {
-  background: red;
+.testimonial_card textarea {
+  border: 1px dashed black;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* REVIEW */
-.testimonial_container form .review {
-  /* background: red; */
-  width: 100%;
-  height: 7rem;
+.text textarea {
+  margin-top: 2rem;
+  width: 70%;
+  height: 9rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 2rem;
+  margin-bottom: 3rem;
 }
 
-.testimonial_container form .review {
-  /* background: red; */
-  width: 100%;
-  height: 7rem;
+.rating input {
+  width: 4rem;
+  height: 3.7rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
 }
 
-.testimonial_container form .rating {
-  /* background: red; */
-  width: 50% !important;
-  height: 7rem;
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 0.8rem;
 }
 
-.drop_zone :nth-child(1) :nth-child(1) {
-  color: white !important;
-  border: 3px solid white;
-  width: 10rem;
-  height: 10rem;
+.stars img {
+  width: 2rem;
+}
+
+.card_name input {
+  height: 2rem;
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.card_img img {
+  width: 5rem;
+  height: 5rem;
   object-fit: cover;
   border-radius: 50%;
-  margin-top: 1rem;
-  /* background: red !important; */
-}
-
-.testimonial_container form :first-child {
-  /* background: red; */
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  color: black;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
-}
-
-/* Enter Name input */
-.testimonial_container form :nth-child(2) {
-  /* background: red; */
-  width: 100% !important;
-  border-color: darkgray !important;
-  /* border-style: dashed !important; */
-}
-.testimonial_container form :first-child :nth-child(1) :nth-child(1) {
-  /* background: red; */
-  width: 100% !important;
-  border-color: darkgray !important;
-  /* border-style: dashed !important; */
-}
-
-.testimonial_container form input[type='file'] {
-  color: #d9d9d9 !important;
-  background: white !important;
-  width: 50% !important;
-  align-self: center !important;
-  /* margin: 1rem !important; */
-  /* height: 1rem !important; */
-  display: flex !important;
-  border: none !important;
-  /* border: 1px solid #d9d9d9 !important; */
-  height: 2rem !important;
-  display: flex !important;
-}
-
-.testimonial_container form input[type='file']::file-selector-button {
-  border: none !important;
-  outline: none !important;
-  /* padding: 1rem 1.2rem !important; */
-  border-radius: 0.2rem !important;
-  background-color: white !important;
-  transition: 1s !important;
-  color: black !important;
-  letter-spacing: 1.5px !important;
-  cursor: pointer !important;
-  background: green !important;
-  border: 1px solid #d9d9d9 !important;
-}
-
-input[type='file']::file-selector-button:hover {
-  transform: scale(0.9);
-  background: #d9d9d9 !important;
-}
-
-/* .testimonial_container input[type='text'] {
-  background: red !important;
-  width: 80% !important;
-} */
-
-.testimonial_container form input {
-  border-color: darkgray !important;
-  border-style: dashed !important;
-  height: 3rem !important;
-  background: red;
+  border: 2.5px solid white;
 }
 
 .testimonial_container button {
-  letter-spacing: 1.5px;
-  height: 3.5rem !important;
-  transform: translateY(3rem) !important;
-  width: 70% !important;
-  margin: auto !important;
+  transform: translateY(4rem) !important;
 }
