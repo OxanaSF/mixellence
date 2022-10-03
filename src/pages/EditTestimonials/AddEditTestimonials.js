@@ -95,6 +95,7 @@ const AddEditTestimonials = () => {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             setTestimonialData((prev) => ({ ...prev, img: downloadURL }));
+            alert('Image was uploaded!');
           });
         }
       );
@@ -110,24 +111,24 @@ const AddEditTestimonials = () => {
     });
   };
 
-  const validate = () => {
-    let errors = {};
-    if (!name) {
-      errors.name = 'Name is Required';
-    }
-    if (!rating) {
-      errors.rating = 'Rating is Required';
-    }
-    if (!review) {
-      errors.review = 'Review is Required';
-    }
+  // const validate = () => {
+  //   let errors = {};
+  //   if (!name) {
+  //     errors.name = 'Name is Required';
+  //   }
+  //   if (!rating) {
+  //     errors.rating = 'Rating is Required';
+  //   }
+  //   if (!review) {
+  //     errors.review = 'Review is Required';
+  //   }
 
-    return errors;
-  };
+  //   return errors;
+  // };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    let errors = validate();
+    // let errors = validate();
     if (Object.keys(errors).length) return setErrors(errors);
     setIsSubmitted(true);
 
@@ -145,7 +146,7 @@ const AddEditTestimonials = () => {
         //   )
         // );
         // notify = () => toast(alertMessage);
-        // alert('You SUCCESSFULLY ADDED the testimonial!');
+        alert('You SUCCESSFULLY ADDED the testimonial!');
       } catch (error) {
         alert.log(error);
       }
@@ -187,12 +188,13 @@ const AddEditTestimonials = () => {
                 <p className={classes.text}>
                   <textarea
                     error={
-                      errors.quote && !id ? { content: errors.review } : null
+                      errors.review && !id ? { content: errors.review } : null
                     }
                     placeholder={id && review ? review : 'Enter Review'}
-                    name="review "
+                    name="review"
                     onChange={handleChange}
                     value={review || ''}
+                    required={!id ? true : false}
                   ></textarea>
                 </p>
 
@@ -228,6 +230,7 @@ const AddEditTestimonials = () => {
                     name="rating"
                     onChange={handleChange}
                     defaultValue={rating || ''}
+                    required={!id ? true : false}
                   ></input>
                 </div>
 
@@ -238,6 +241,7 @@ const AddEditTestimonials = () => {
                     name="name"
                     onChange={handleChange}
                     defaultValue={name || ''}
+                    required={!id ? true : false}
                   ></input>
                 </p>
               </div>
@@ -246,7 +250,7 @@ const AddEditTestimonials = () => {
                 <div className={classes.drop_zone}>
                   {id ? (
                     <div className={classes.card_img}>
-                      <img src={img} alt="bartender" />
+                      <img src={img} alt="user" />
                     </div>
                   ) : (
                     <div className={classes.card_img}>
@@ -258,15 +262,16 @@ const AddEditTestimonials = () => {
                     </div>
                   )}
                 </div>
-
-                <input
-                  className={classes.upload}
-                  accept="image/gif, image/jpeg, image/png"
-                  fileName={img}
-                  // error={errors.file && !id ? { content: errors.file } : null}
-                  type="file"
-                  onChange={(e) => setFile(e.target.files[0])}
-                ></input>
+                <div className={classes.upload}>
+                  <input
+                    accept="image/gif, image/jpeg, image/png"
+                    fileName={img}
+                    error={errors.file && !id ? { content: errors.file } : null}
+                    type="file"
+                    onChange={(e) => setFile(e.target.files[0])}
+                    required={!id ? true : false}
+                  ></input>
+                </div>
               </div>
             </div>
 

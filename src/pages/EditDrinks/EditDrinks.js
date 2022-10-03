@@ -175,7 +175,7 @@ const EditDrinks = () => {
               <div className={classes.drink_card_description}>
                 <textArea
                   error={
-                    errors.quote && !id ? { content: errors.review } : null
+                    errors.description && !id ? { content: errors.description} : null
                   }
                   name="description"
                   onChange={handleChange}
