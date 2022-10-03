@@ -92,7 +92,7 @@ const Services = () => {
                   )}
 
                   <h3>{service.title}</h3>
-                  <p>{service.description}</p> . 
+                  <p>{service.description}</p> 
                 </header>
 
                 <div className={[classes.className]}>

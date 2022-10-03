@@ -8,7 +8,11 @@
 
 @media screen and (max-width: 800px) {
   .card_display_container {
-    display: grid;
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .card_display_wrapper h1 {
+    font-size: 2rem;
+    text-align: center;
   }
 }
