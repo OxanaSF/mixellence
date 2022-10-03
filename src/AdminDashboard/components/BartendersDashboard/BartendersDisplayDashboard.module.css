@@ -6,8 +6,6 @@
   flex-basis: auto;
 }
 
-
-
 @media screen and (max-width: 800px) {
   .card_display_container {
     display: grid;

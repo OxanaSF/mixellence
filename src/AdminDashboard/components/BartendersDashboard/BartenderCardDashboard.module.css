@@ -5,13 +5,11 @@
   flex-wrap: wrap;
   background: #1b1b1b;
   padding: 0 1rem 1rem 1rem;
-  width: 15rem;
   cursor: pointer;
   border-radius: 15px;
   transition: all 0.5s ease;
   color: white;
   margin: 0;
-
 }
 
 .bartender_card_container:hover {
@@ -69,7 +67,6 @@
   letter-spacing: 0.5px;
 }
 
-
 .bartender_card_img {
   width: 20rem;
   border-radius: 50%;
@@ -83,4 +80,10 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+  .bartender_card_container {
+    width: 90%;
+  }
 }

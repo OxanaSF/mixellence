@@ -124,7 +124,7 @@
   }
 
   .services__container {
-    margin-bottom: 0rem;
+    margin-bottom: 2rem;
   }
 
   .services__main > div {
@@ -219,6 +219,7 @@
 
   .services__container h2 {
     margin-top: 2rem;
+    letter-spacing: 1px;
   }
 }
 
