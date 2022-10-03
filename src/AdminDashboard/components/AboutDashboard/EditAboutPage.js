@@ -119,13 +119,14 @@ const EditAboutPage = ({ id }) => {
     navigate('/about-dashboard');
   };
 
+  const closeModalHandler = () => {
+    dispatch(updateBtnToggleActions.updateBtnToggle());
+  };
+
   return (
     <div className={classes.about_info_wrapper}>
       <div className={classes.about__info}>
-        <button
-          className={classes.modalCancelBtn}
-          // onClick={closeModalHandler}
-        >
+        <button className={classes.modalCancelBtn} onClick={closeModalHandler}>
           <img
             src={`${process.env.PUBLIC_URL}/images/cancel.png`}
             alt="cancel"
@@ -140,8 +141,6 @@ const EditAboutPage = ({ id }) => {
             <form onSubmit={handleSubmit}>
               <div className={classes.par1}>
                 <textarea
-                  className={classes.textArea_main}
-                  // label="mainParagraph"
                   error={
                     errors.mainParagraph && !id
                       ? { content: errors.mainParagraph }
@@ -151,14 +150,11 @@ const EditAboutPage = ({ id }) => {
                   name="mainParagraph"
                   onChange={handleChange}
                   value={mainParagraph || ''}
-                  autoFocus
                 ></textarea>
               </div>
 
               <div className={classes.par2}>
                 <textarea
-                  className={classes.textArea_phone}
-                  // label="phoneParagraph"
                   error={
                     errors.phoneParagraph && !id
                       ? { content: errors.phoneParagraph }
@@ -168,25 +164,19 @@ const EditAboutPage = ({ id }) => {
                   name="phoneParagraph"
                   onChange={handleChange}
                   value={phoneParagraph || ''}
-                  autoFocus
                 ></textarea>
               </div>
 
               <footer className={classes.about__footer}>
                 <textarea
-                  className={classes.textArea_input_place}
-                  // label="place"
                   error={errors.quote && !id ? { content: errors.quote } : null}
                   placeholder="area, city, state"
                   name="place"
                   onChange={handleChange}
                   value={place || ''}
-                  autoFocus
                 ></textarea>
 
                 <textarea
-                  className={classes.textArea_input_business}
-                  // label="businessOwned"
                   error={
                     errors.businessOwned && !id
                       ? { content: errors.businessOwned }
@@ -196,12 +186,11 @@ const EditAboutPage = ({ id }) => {
                   name="businessOwned"
                   onChange={handleChange}
                   value={businessOwned || ''}
-                  autoFocus
                 ></textarea>
               </footer>
 
               <Button
-              className={classes.submitBtn}
+                className={classes.submitBtn}
                 secondary
                 type="submit"
                 disabled={progress !== null && progress < 101}

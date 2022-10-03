@@ -19,7 +19,7 @@
   color: black !important;
   padding: 2rem 3rem;
   line-height: 1.5;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 .modalCancelBtn {
@@ -34,8 +34,11 @@
 
 .about__info h3 {
   font-size: 2rem;
-  padding-bottom: 2rem !important;
   text-align: center;
+}
+
+.about__footer {
+  margin-top: 0rem !important;
 }
 
 .about__footer textarea {
