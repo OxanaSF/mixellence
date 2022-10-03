@@ -139,7 +139,7 @@ const EditServicesPage = () => {
                     name="title"
                     onChange={handleChange}
                     defaultValue={title || ''}
-                    autoFocus
+            
                   ></textarea>
                 </h3>
                 <p>
@@ -154,7 +154,7 @@ const EditServicesPage = () => {
                     name="description"
                     onChange={handleChange}
                     defaultValue={description || ''}
-                    autoFocus
+                   
                   ></textarea>
                 </p>
               </header>
@@ -167,7 +167,7 @@ const EditServicesPage = () => {
                     name="par1"
                     onChange={handleChange}
                     defaultValue={par1 || ''}
-                    autoFocus
+                 
                   ></textarea>
                 </p>
                 <p>
@@ -177,7 +177,7 @@ const EditServicesPage = () => {
                     name="par2"
                     onChange={handleChange}
                     defaultValue={par2 || ''}
-                    autoFocus
+             
                   ></textarea>
                 </p>
               </div>
