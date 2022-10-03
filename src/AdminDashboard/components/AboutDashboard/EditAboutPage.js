@@ -122,15 +122,24 @@ const EditAboutPage = ({ id }) => {
   return (
     <div className={classes.about_info_wrapper}>
       <div className={classes.about__info}>
+        <button
+          className={classes.modalCancelBtn}
+          // onClick={closeModalHandler}
+        >
+          <img
+            src={`${process.env.PUBLIC_URL}/images/cancel.png`}
+            alt="cancel"
+          />
+        </button>
         {isSubmitted ? (
           <Loader active inline="centered" size="huge" />
         ) : (
           <>
             <h3>Update</h3>
 
-            <Form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
               <div className={classes.par1}>
-                <Form.TextArea
+                <textarea
                   className={classes.textArea_main}
                   // label="mainParagraph"
                   error={
@@ -143,11 +152,11 @@ const EditAboutPage = ({ id }) => {
                   onChange={handleChange}
                   value={mainParagraph || ''}
                   autoFocus
-                ></Form.TextArea>
+                ></textarea>
               </div>
 
               <div className={classes.par2}>
-                <Form.TextArea
+                <textarea
                   className={classes.textArea_phone}
                   // label="phoneParagraph"
                   error={
@@ -160,11 +169,11 @@ const EditAboutPage = ({ id }) => {
                   onChange={handleChange}
                   value={phoneParagraph || ''}
                   autoFocus
-                ></Form.TextArea>
+                ></textarea>
               </div>
 
               <footer className={classes.about__footer}>
-                <Form.TextArea
+                <textarea
                   className={classes.textArea_input_place}
                   // label="place"
                   error={errors.quote && !id ? { content: errors.quote } : null}
@@ -173,9 +182,9 @@ const EditAboutPage = ({ id }) => {
                   onChange={handleChange}
                   value={place || ''}
                   autoFocus
-                ></Form.TextArea>
+                ></textarea>
 
-                <Form.TextArea
+                <textarea
                   className={classes.textArea_input_business}
                   // label="businessOwned"
                   error={
@@ -188,17 +197,18 @@ const EditAboutPage = ({ id }) => {
                   onChange={handleChange}
                   value={businessOwned || ''}
                   autoFocus
-                ></Form.TextArea>
+                ></textarea>
               </footer>
 
               <Button
+              className={classes.submitBtn}
                 secondary
                 type="submit"
                 disabled={progress !== null && progress < 101}
               >
                 Submit
               </Button>
-            </Form>
+            </form>
           </>
         )}
       </div>
