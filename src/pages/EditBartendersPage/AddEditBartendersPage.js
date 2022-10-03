@@ -212,7 +212,7 @@ const AddEditBartendersPage = () => {
                 <input
                   // defaultValue={img || ''}
                   accept="image/gif, image/jpeg, image/png"
-                  fileName={img}
+                  filename={img}
                   error={errors.file && !id ? { content: errors.file } : null}
                   // label="upload"
                   type="file"

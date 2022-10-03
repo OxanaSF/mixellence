@@ -106,12 +106,12 @@
   align-items: center;
   justify-content: center;
   height: 55vh;
-  height: 90%;
+  /* height: 90%; */
   backdrop-filter: blur(4px);
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   width: 75vw;
-  width: 95%;
+  /* width: 95%; */
 }
 
 .overlay h3 {

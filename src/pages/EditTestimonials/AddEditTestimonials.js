@@ -183,7 +183,7 @@ const AddEditTestimonials = () => {
           <h3>{id ? 'Update Testimonial' : 'Add Testimonial'}</h3>
 
           <form onSubmit={handleSubmit} className={classes.testimonial_form}>
-            <div className={classes.testimonial_card} onInvalid={id}>
+            <div className={classes.testimonial_card} >
               <div className={classes.card_info}>
                 <p className={classes.text}>
                   <textarea
