@@ -2,8 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  font-size: 1.4rem;
   /* min-height: 85%; */
   max-height: 100vh;
+  max-height: 100%;
+  outline: 2px solid red;
 }
 
 .nav_header {
@@ -15,7 +18,7 @@
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 .img {
@@ -51,6 +54,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 
 .nav_link {
@@ -103,7 +107,7 @@ a.client_page_link {
   background: black;
   height: 4rem;
   border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
+  /* border-bottom-right-radius: 7px; */
   display: flex;
   align-items: center;
   padding-left: 4rem;
