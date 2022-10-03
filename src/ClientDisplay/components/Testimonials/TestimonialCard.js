@@ -3,7 +3,7 @@ import './Testimonials.css';
 
 const TestimonialCard = ({ id, linkImg, name, text }) => {
   return (
-    <div className="testimonial-card" onInvalid={id}>
+    <div className="testimonial-card">
       <div className="card-info">
         
           <p className="text"> {text}</p>

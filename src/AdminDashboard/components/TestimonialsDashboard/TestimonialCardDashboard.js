@@ -84,7 +84,7 @@ const TestimonialCardDashboard = ({
         <EditData navigate={`/testimonials-dashboard/${id}/modal`} />
       </header>
 
-      <div className={classes.testimonial_card} onInvalid={id}>
+      <div className={classes.testimonial_card}>
         <div className={classes.card_info}>
           <p className={classes.text}> {text}</p>
 

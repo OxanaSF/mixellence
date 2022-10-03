@@ -30,7 +30,7 @@ const SignatureDrinkCardDashboard = ({ id, title, img, description }) => {
     <button className={classes.drink_card_container} id={id}>
       <EditData navigate={`/drinks-dashboard/${id}/modal`} />
 
-      <div className={classes.drink_card} onInvalid={id}>
+      <div className={classes.drink_card} >
         <div className={classes.drink_card_title}>{title}</div>
         <div className={classes.card_img}>
           <img src={img} alt={title} />

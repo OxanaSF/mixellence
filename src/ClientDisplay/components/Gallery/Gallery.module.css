@@ -8,86 +8,83 @@
   align-items: center;
 }
 
-.bgImg { /* Styles which all images in the collage will share*/
+.galleryWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.bgImg {
+  /* Styles which all images in the collage will share*/
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
 }
 
 .pic1 {
-  background-image: url('/public/images/galleryImg/1.gif');
-  position: absolute;
+  background-image: url("/public/images/galleryImg/1.gif");
   top: 0px;
   left: 0px;
-  /* outline: 2px solid red; */
   height: 44%;
   width: 36%;
 }
 
 .pic2 {
-  background-image: url('/public/images/galleryImg/2.gif');
-  /* outline: 2px solid green; */
-  position: absolute;
+  background-image: url("/public/images/galleryImg/2.gif");
   width: 19%;
   height: 56%;
   left: 0px;
   top: 44%;
 }
 .pic3 {
-  background-image: url('/public/images/galleryImg/3.gif');
-  /* outline: 2px solid orange; */
-  position: absolute;
+  background-image: url("/public/images/galleryImg/3.gif");
   width: 17%;
   height: 56%;
   left: 19%;
   top: 44%;
 }
 .pic4 {
-  background-image: url('/public/images/galleryImg/4.gif');
+  background-image: url("/public/images/galleryImg/4.gif");
   background-position: 50% 65%;
-  /* outline: 2px solid orchid; */
-  position: absolute;
+  top: 0px;
+  left: 36%;
   width: 28%;
   height: 100%;
 }
 .pic5 {
-  background-image: url('/public/images/galleryImg/5.gif');
-  /* outline: 2px solid turquoise; */
-  position: absolute;
+  background-image: url("/public/images/galleryImg/5.gif");
   width: 36%;
-  height: 274px;
+  height: 44%;
   top: 0px;
   right: 0px;
 }
 .pic6 {
-  background-image: url('/public/images/galleryImg/6.gif');
+  background-image: url("/public/images/galleryImg/6.gif");
   background-position: 50% 70%;
-  /* outline: 2px solid darkgrey; */
-  position: absolute;
   width: 19%;
   height: 55%;
   right: 17%;
   top: 45%;
 }
 .pic7 {
-  background-image: url('/public/images/galleryImg/7.gif');
-  /* outline: 2px solid green; */
-  position: absolute;
+  background-image: url("/public/images/galleryImg/7.gif");
   width: 17%;
   height: 56%;
   right: 0px;
   top: 44%;
 }
 
-
 .overlay {
   /* backdrop-filter: blur(15px); */
   display: flex;
+  font-size: 2rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 515px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(7.5px);
   background-color: rgba(0, 0, 0, 0.65);
   position: absolute;
   width: 75vw;
+  height: 55vh;
 }
