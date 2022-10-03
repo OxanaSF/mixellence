@@ -100,4 +100,45 @@
   .barImg {
     display: none;
   }
+
+  .about__info textarea {
+    border: 0.5px dashed black;
+    padding: 1rem;
+    height: 18rem;
+  }
+
+  .about__footer {
+    gap: 0.5rem;
+  }
+
+  .about__footer textarea {
+    height: 4rem;
+    margin: 2rem 0;
+    padding: 0.5rem;
+    font-size: 10px;
+  }
+
+  .modalCancelBtn img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about__info textarea {
+    border: 0.5px dashed black;
+    padding: 1rem;
+    height: 22rem;
+  }
+
+  .about__footer textarea {
+    height: 4rem;
+    margin: 2rem 0;
+    padding: 0.5rem;
+    font-size: 10px;
+  }
+  .modalCancelBtn img {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
 }
