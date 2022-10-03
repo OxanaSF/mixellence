@@ -1,73 +1,57 @@
 .service_container {
-  width: 95%;
-  margin: auto;
-  min-height: 35rem !important;
-  margin-bottom: 4rem;
+  padding-bottom: 1rem;
+}
+
+.service_container :nth-child(2) {
+  display: flex;
+  flex-direction: column;
 }
 
 .service_container h3 {
   color: black;
-  font-size: 2rem;
-
+  font-size: 1.5rem;
   text-align: center;
-  margin-bottom: 3rem;
 }
 
-.service_header_wrapper {
+.service__item__header {
   background: black;
-  padding: 3rem 0;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-.service_header {
-  width: 70%;
-  margin: auto;
-  /* border: 1px solid red; */
+  padding: 5rem 2rem 1rem 2rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.service_header :nth-child(1) {
-  color: white !important;
-  background: black !important;
-  height: 4rem !important;
-  text-align: center !important;
-  font-size: 1.2rem !important;
-  margin-bottom: 2rem !important;
-  border-color: white !important;
+.service__item__header textarea {
+  width: 100%;
+  border: 0.5px dashed white;
+  background: black;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  font-family: 500;
+  padding-top: 1rem;
 }
 
-.service_header :nth-child(1) :nth-child(1) {
-  /* background: black;
-  color: white !important;
-  text-align: center; */
-  font-size: 2rem !important;
-  font-family: Georgia, 'Times New Roman', Times, serif !important;
-  font-weight: 600;
-  overflow-y: hidden;
-  padding-bottom: 1rem !important;
-  height: 5rem !important;
-  /* color: red !important; */
+.service__item__body {
+  padding: 2rem;
 }
 
-.service_body_wrapper {
-  padding: 4rem;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-  border: 0.1px solid black;
+.service__item__body textarea {
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  font-family: 'Montserrat', sans-serif;
+  height: 10rem;
+  width: 100%;
+  border: 0.5px dashed black;
+  padding: 0.5rem;
 }
 
-form :nth-child(2) :nth-child(1) :nth-child(1) {
-  /* background: red; */
-  height: 10rem !important;
-}
-
-form button {
+.service_container form button {
   height: 3.5rem;
-  width: 70% !important;
-  letter-spacing: 1.5px !important;
-  margin-top: 2rem !important;
+  width: 70%;
+  letter-spacing: 1.5px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-
-

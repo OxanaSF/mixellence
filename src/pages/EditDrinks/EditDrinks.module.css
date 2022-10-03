@@ -1,0 +1,78 @@
+.drinks_container {
+  padding-bottom: 1rem;
+}
+
+.drinks_container :nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+.drink_card_title {
+  text-align: left;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  border: 1px dashed black;
+  margin: 2rem;
+  width: 50%;
+  padding: 0.5rem;
+}
+.drink_card_title input {
+  border: none;
+  outline: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  caret-color: #644bde;
+  /* background: red; */
+  width: 100%;
+}
+
+.drink_card_description textarea {
+  width: 90%;
+  height: 5.5rem;
+  padding: 1rem;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.9;
+  border: 1px dashed black;
+  margin: 0 1rem;
+  caret-color: #644bde;
+  margin-bottom: 2rem;
+}
+
+.drink_card_description:active {
+  border: none;
+  outline: none;
+}
+
+.card_img img {
+  width: 100%;
+  height: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.drinks_container form button {
+  background: red;
+}
+
+.service_container form button {
+  height: 3.5rem;
+  width: 70%;
+  letter-spacing: 1.5px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form button {
+  height: 3.5rem;
+  width: 70%;
+  letter-spacing: 1.5px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

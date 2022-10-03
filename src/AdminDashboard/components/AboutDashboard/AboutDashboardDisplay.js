@@ -56,7 +56,7 @@ const AboutDashboardDisplay = () => {
   };
 
   return (
-    <section className={classes.about__container} id="about">
+    <section className={`${classes.about__container} ${classes.about__container_dashboard}`} id="about">
       <h2>About Us</h2>
       <Link to="modal" state={{ background: location }}></Link>
       <Outlet />

@@ -4,11 +4,12 @@
   padding: 0.5rem;
 }
 
-.delete_data:hover {
-  background: rgb(100, 75, 222, 0.3);
-}
-
 .delete_data img {
   width: 1.7rem;
   height: 1.7rem;
+  transition: all 0.5s ease;
+}
+
+.delete_data img:hover {
+  transform: scale(1.1);
 }

@@ -181,75 +181,94 @@ const AddEditTestimonials = () => {
         <>
           <h3>{id ? 'Update Testimonial' : 'Add Testimonial'}</h3>
 
-          <Form onSubmit={handleSubmit} className={classes.testimonial_form}>
-            <div className={classes.testimonial_form_text}>
-              <Form.TextArea
-                className={classes.review}
-                label=""
-                error={errors.quote && !id ? { content: errors.review } : null}
-                placeholder={id && review ? review : 'Enter Review'}
-                name="review "
-                onChange={handleChange}
-                value={review || ''}
-                autoFocus
-              ></Form.TextArea>
+          <form onSubmit={handleSubmit} className={classes.testimonial_form}>
+            <div className={classes.testimonial_card} onInvalid={id}>
+              <div className={classes.card_info}>
+                <p className={classes.text}>
+                  <textarea
+                    error={
+                      errors.quote && !id ? { content: errors.review } : null
+                    }
+                    placeholder={id && review ? review : 'Enter Review'}
+                    name="review "
+                    onChange={handleChange}
+                    value={review || ''}
+                  ></textarea>
+                </p>
 
-
-{/* 
-              <div className={classes.stars}>
-                {[...Array(num)].map((el, index) => (
-                  <img
-                    key={index}
-                    src={`${process.env.PUBLIC_URL}/images/pointed-star.png`}
-                    alt="star"
-                  />
-                ))}
-              </div> */}
-
-
-              <Form.TextArea
-                className={classes.rating}
-                error={errors.rating && !id ? { content: errors.rating } : null}
-                placeholder="rating"
-                name="rating"
-                onChange={handleChange}
-                defaultValue={rating || ''}
-                autoFocus
-              ></Form.TextArea>
-
-              <Form.Input
-                error={errors.name && !id ? { content: errors.name } : null}
-                placeholder={id && name ? name : 'Enter Name'}
-                name="name"
-                onChange={handleChange}
-                defaultValue={name || ''}
-                autoFocus
-              ></Form.Input>
-            </div>
-
-            <div className={classes.drop_zone}>
-              {id ? (
-                <div>
-                  <img src={img} alt="bartender" />
+                {id ? (
+                  <div className={classes.stars}>
+                    {[...Array(num)].map((el, index) => (
+                      <img
+                        key={index}
+                        src={`${process.env.PUBLIC_URL}/images/pointed-star.png`}
+                        alt="star"
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className={classes.stars}>
+                    {[...Array(5)].map((el, index) => (
+                      <img
+                        key={index}
+                        src={`${process.env.PUBLIC_URL}/images/pointed-star.png`}
+                        alt="star"
+                      />
+                    ))}
+                  </div>
+                )}
+                <div className={classes.rating}>
+                  <input
+                    error={
+                      errors.rating && !id ? { content: errors.rating } : null
+                    }
+                    min="1"
+                    max="5"
+                    placeholder="rating"
+                    name="rating"
+                    onChange={handleChange}
+                    defaultValue={rating || ''}
+                  ></input>
                 </div>
-              ) : (
-                <div>
-                  {' '}
-                  <img
-                    src={`${process.env.PUBLIC_URL}/images/drink_placeholder.jpg`}
-                    alt="drink"
-                  />
+
+                <p className={classes.card_name}>
+                  <input
+                    error={errors.name && !id ? { content: errors.name } : null}
+                    placeholder={id && name ? name : 'Enter Name'}
+                    name="name"
+                    onChange={handleChange}
+                    defaultValue={name || ''}
+                  ></input>
+                </p>
+              </div>
+
+              <div>
+                <div className={classes.drop_zone}>
+                  {id ? (
+                    <div className={classes.card_img}>
+                      <img src={img} alt="bartender" />
+                    </div>
+                  ) : (
+                    <div className={classes.card_img}>
+                      {' '}
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/drink_placeholder.jpg`}
+                        alt="drink"
+                      />
+                    </div>
+                  )}
                 </div>
-              )}
+
+                <input
+                  className={classes.upload}
+                  accept="image/gif, image/jpeg, image/png"
+                  fileName={img}
+                  // error={errors.file && !id ? { content: errors.file } : null}
+                  type="file"
+                  onChange={(e) => setFile(e.target.files[0])}
+                ></input>
+              </div>
             </div>
-            <Form.Input
-              className={classes.upload}
-              accept="image/gif, image/jpeg, image/png"
-              fileName={img}
-              // error={errors.file && !id ? { content: errors.file } : null}
-              type="file"
-              onChange={(e) => setFile(e.target.files[0])}
-            ></Form.Input>
 
             <Button
               secondary
@@ -259,7 +278,7 @@ const AddEditTestimonials = () => {
             >
               Submit
             </Button>
-          </Form>
+          </form>
         </>
       )}
     </div>

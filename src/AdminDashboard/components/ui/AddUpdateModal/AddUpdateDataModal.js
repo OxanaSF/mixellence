@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import AddEditBartendersPage from '../../../../pages/EditBartendersPage/AddEditBartendersPage';
 import EditServicesPage from '../../../../pages/EditServicesPage';
 import EditTestimonials from '../../../../pages/EditTestimonials/AddEditTestimonials';
+import EditDrinks from '../../../../pages/EditDrinks/EditDrinks';
+import EditHero from '../../../../pages/EditHero/EditHero';
 import { addDataModalActions } from '../../../../store/add-data-modal-slice';
 
 export const AddUpdateDataModal = () => {
@@ -29,9 +31,11 @@ export const AddUpdateDataModal = () => {
             />
           </button>
 
+          {returnLink === '/hero-dashboard' && <EditHero />}
           {returnLink === '/team-dashboard' && <AddEditBartendersPage />}
           {returnLink === '/services-dashboard' && <EditServicesPage />}
           {returnLink === '/testimonials-dashboard' && <EditTestimonials />}
+          {returnLink === '/drinks-dashboard' && <EditDrinks />}
         </div>
       </div>
     </div>

@@ -60,7 +60,7 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
-  min-height: 26rem;
+  min-height: 21rem;
 }
 
 .par1 {
@@ -75,9 +75,9 @@
   border-radius: 0px 0px 0px 10px;
 }
 
-.services__main img {
+.animation {
   width: 90%;
-  height: 65%;
+  height: 90%;
 }
 
 .service_update_btn1,
@@ -94,6 +94,12 @@
 .service_update_btn2 img {
   width: 1.7rem;
   height: 1.7rem;
+  transition: all 0.2s ease;
+}
+
+.service_update_btn1 img:hover,
+.service_update_btn2 img:hover {
+  transform: scale(1.2);
 }
 
 .service_update_btn1 {
@@ -108,7 +114,7 @@
   border-top-left-radius: 10px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .services__main {
     display: flex;
     flex-wrap: wrap;
@@ -224,10 +230,11 @@
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1115px) {
   .service__item__body {
     max-height: 12rem;
     padding: 2rem;
+    min-height: 27rem;
   }
 }
 
@@ -236,4 +243,5 @@
     max-height: 12rem;
     padding: 2rem;
   }
+
 }

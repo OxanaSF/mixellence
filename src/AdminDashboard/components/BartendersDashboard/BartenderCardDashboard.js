@@ -4,25 +4,17 @@ import { useSelector, useDispatch } from 'react-redux';
 import { db } from '../../../firebase';
 import { doc, deleteDoc } from 'firebase/firestore';
 
-
 import { enableDeleteActions } from '../../../store/enable-delete-slice';
 import { alertMessageActions } from '../../../store/alert-message-slice';
 import { ToastContainer, toast } from 'react-toastify';
-import EditBartender from '../ui/AddEditDelete/EditBartender';
+
+import EditData from '../ui/AddEditDelete/EditData';
 import DeleteData from '../ui/AddEditDelete/DeleteData';
 
 import 'react-toastify/dist/ReactToastify.css';
 import classes from './BartenderCardDashboard.module.css';
 
-const BartenderCardDashboard = ({
-  id,
-  img,
-  name,
-  drink,
-  city,
-  quote,
-}) => {
-
+const BartenderCardDashboard = ({ id, img, name, drink, city, quote }) => {
   const [visible, setVisible] = useState(false);
 
   const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
@@ -35,7 +27,6 @@ const BartenderCardDashboard = ({
 
   let style = { visibility: 'visible' };
   if (!visible) style.visibility = 'hidden';
-
 
   const handleStyleClick = () => {
     console.log('handleStyleClick');
@@ -75,9 +66,7 @@ const BartenderCardDashboard = ({
       <header style={style} className={classes.bartender_card_header}>
         <DeleteData onClick={bartenderDeleteHandler} />
 
-        <EditBartender
-          navigate={`/team-dashboard/${id}/modal`}
-        />
+        <EditData navigate={`/team-dashboard/${id}/modal`} />
       </header>
 
       <div className={classes.bartender_card_main}>
@@ -93,7 +82,6 @@ const BartenderCardDashboard = ({
         </div>
       </div>
     </button>
-    
   );
 };
 

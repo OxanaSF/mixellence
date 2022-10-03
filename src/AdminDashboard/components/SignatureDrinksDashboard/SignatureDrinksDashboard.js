@@ -4,7 +4,8 @@ import NavSide from '../NavSide/NavSide';
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
 import DashboardMain from '../ui/DashboardMain/DashboardMain';
-
+import SignatureDrinksDisplayDashboard from './SignatureDrinksDisplayDashboard';
+import DashboardFooter from '../ui/DashboardFooter/DashboardFooter';
 
 import classes from './SignatureDrinksDashboard.module.css';
 
@@ -16,13 +17,11 @@ const SignatureDrinksDashboard = () => {
         <DashboardHeader>
           <h3>Signature Drinks</h3>
         </DashboardHeader>
-        
-          <DashboardMain>
-            <h1>Signature Drinks</h1>
-            <div>Something is here</div>
-            <div>Something is here</div>
-          </DashboardMain>
-      
+
+        <DashboardMain>
+          <SignatureDrinksDisplayDashboard />
+        </DashboardMain>
+        <DashboardFooter />
       </section>
     </DashboardContainer>
   );

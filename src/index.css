@@ -43,14 +43,18 @@ button {
 
 /* UpdateModal */
 .modalDiv {
-  width: 100vw;
   min-height: 100vh;
   position: absolute;
   top: 0;
-  left: 20%;
   background-color: rgb(100, 75, 222, 0.3);
+  width: 80%;
+  margin-left: 20%;
+
   display: flex;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modalWrapper {
@@ -63,14 +67,8 @@ button {
 }
 
 .modal {
-  min-width: 25%;
-  margin: 12% 14% 8% 20%;
   background-color: white;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  /* min-height: 30rem; */
 }
 
 .modalWrapper .modalCancelBtn {
@@ -81,6 +79,13 @@ button {
 
 .modalWrapper img {
   width: 1.5rem;
+}
+
+@media screen and (max-width: 890px) {
+  .modalDiv {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 720px) {

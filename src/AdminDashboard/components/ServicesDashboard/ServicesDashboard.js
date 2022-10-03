@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NavSide from '../NavSide/NavSide';
-import ServicesDashboardDisplay from './ServicesDashboardDisplay'
+import ServicesDashboardDisplay from './ServicesDashboardDisplay';
 import DashboardFooter from '../ui/DashboardFooter/DashboardFooter';
 import DashboardContainer from '../ui/DashboardContainer/DashboardContainer';
 import DashboardHeader from '../ui/DashboardHeader/DashboardHeader';
@@ -13,14 +13,13 @@ const ServicesDashboard = () => {
   return (
     <DashboardContainer>
       <NavSide />
+
       <section>
         <DashboardHeader>{<h3>Services</h3>}</DashboardHeader>
 
         <DashboardMain>
           <div className={classes.services_wrapper}>
-            <div className={classes.services}>
-              <ServicesDashboardDisplay  />
-            </div>
+            <ServicesDashboardDisplay />
           </div>
         </DashboardMain>
 

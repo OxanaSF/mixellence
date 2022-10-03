@@ -36,6 +36,11 @@ const Nav = () => {
             </MiddleLink>
           </li>
           <li>
+            <MiddleLink onClick={() => setNav(!nav)} to="/#bartenders">
+              Bartenders
+            </MiddleLink>
+          </li>
+          <li>
             <button
               onClick={modalCtx.modalHandler}
               className={classes.contact__us}
