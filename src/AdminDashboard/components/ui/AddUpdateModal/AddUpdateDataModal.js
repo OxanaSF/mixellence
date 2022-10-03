@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import AddEditBartendersPage from '../../../../pages/EditBartendersPage/AddEditBartendersPage';
-import EditServicesPage from '../../../../pages/EditServicesPage';
+import EditServicesPage from '../../../../pages/EditServicesPage/EditServicesPage';
 import EditTestimonials from '../../../../pages/EditTestimonials/AddEditTestimonials';
 import EditDrinks from '../../../../pages/EditDrinks/EditDrinks';
 import EditHero from '../../../../pages/EditHero/EditHero';
