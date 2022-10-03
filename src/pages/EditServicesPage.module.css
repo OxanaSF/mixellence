@@ -55,3 +55,9 @@
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 900px) {
+  .service__item__body :nth-child(1) textarea {
+    height: 12.5rem;
+  }
+}
