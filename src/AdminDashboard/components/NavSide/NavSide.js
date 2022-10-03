@@ -47,7 +47,7 @@ const NavSide = () => {
         <NavLink
           to="/"
           className={classes.client_page_link}
-          
+
         >
           Client App
         </NavLink>
