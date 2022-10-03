@@ -118,8 +118,13 @@
   .services__main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-top: 4rem;
-    margin-bottom: 6rem;
+    margin-bottom: 0;
+  }
+
+  .services__container {
+    margin-bottom: 0rem;
   }
 
   .services__main > div {
@@ -211,6 +216,10 @@
   .service__item__body__tear2 {
     display: none;
   }
+
+  .services__container h2 {
+    margin-top: 2rem;
+  }
 }
 
 .wiggle a:hover {
@@ -243,5 +252,4 @@
     max-height: 12rem;
     padding: 2rem;
   }
-
 }
