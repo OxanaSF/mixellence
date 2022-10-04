@@ -231,6 +231,7 @@ const AddEditBartendersPage = () => {
               onChange={handleChange}
               value={quote || ''}
               required={!id ? true : false}
+              minLength='18'
             ></textarea>
 
             <Button

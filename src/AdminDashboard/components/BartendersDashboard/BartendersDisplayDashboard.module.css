@@ -13,9 +13,9 @@
   gap: 2rem;
   flex-wrap: wrap;
   flex-basis: auto;
-  display: grid;
-
-  margin: 0 auto;
+  /* display: grid;
+  margin: 0 2rem; */
+  
 }
 
 @media (min-width: 500px) {
@@ -24,7 +24,6 @@
   }
   .card_display_wrapper h1 {
     font-size: 3rem;
-  
   }
 
   .card_display_container {
@@ -49,14 +48,3 @@
     grid-template-columns: repeat(5, 1fr);
   }
 }
-
-/* @media screen and (max-width: 800px) {
-  .card_display_container {
-    flex-direction: column;
-  }
-
-  .card_display_wrapper h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-} */

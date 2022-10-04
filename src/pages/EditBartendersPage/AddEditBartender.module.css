@@ -26,14 +26,15 @@
   /* color: white !important; */
   border: 0.5px dashed white;
 
-  background: #1b1b1b;
+  /* background: #1b1b1b; */
   text-align: center;
+  /* background: red; */
 }
 
 
 
 .upload input {
-  border: 0px dashed white;
+  /* border: 0px dashed black; */
 }
 
 .bartender_container h3 {
@@ -100,7 +101,7 @@ input[type='file']::file-selector-button:hover {
 
 .bartender_container form input {
   border-color: darkgray !important;
-  border-style: dashed !important;
+  border: 0px dashed black;
   height: 3rem !important;
   /* background: red; */
 

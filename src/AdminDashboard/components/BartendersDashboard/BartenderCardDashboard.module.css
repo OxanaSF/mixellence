@@ -2,6 +2,7 @@
   width: 20rem;
   flex: 0 1 22%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   background: #1b1b1b;
   padding: 0 1rem 1rem 1rem;
@@ -11,10 +12,6 @@
   color: white;
   margin: 0;
   /* background: pink; */
-  display: flex;
-  justify-content: center;
-
- 
 }
 
 .bartender_card_container:hover {
@@ -35,7 +32,6 @@
   visibility: hidden;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-
 }
 
 .bartender_card_main {
@@ -70,7 +66,6 @@
   font-size: 16px;
   letter-spacing: 1px;
   font-weight: 500;
-  
 }
 
 .bartender_card_quote {

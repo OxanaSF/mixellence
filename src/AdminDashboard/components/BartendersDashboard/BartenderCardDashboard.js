@@ -21,7 +21,11 @@ const BartenderCardDashboard = ({ id, img, name, drink, city, quote }) => {
 
   const dispatch = useDispatch();
 
-  const notify = () => toast(alertMessage);
+  // const notify = () => toast(alertMessage);
+  const notify = () => {
+    toast('You SUCCESSFULLY deleted the bartender!')
+  }
+
 
   const ref = useRef();
 
@@ -47,12 +51,13 @@ const BartenderCardDashboard = ({ id, img, name, drink, city, quote }) => {
   const bartenderDeleteHandler = () => {
     deleteBartender(id);
     dispatch(enableDeleteActions.disable());
-    dispatch(
-      alertMessageActions.alertMessageUpdate(
-        'You SUCCESSFULLY deleted the bartender!'
-      )
-    );
-    notify();
+    // dispatch(
+    //   alertMessageActions.alertMessageUpdate(
+    //     'You SUCCESSFULLY deleted the bartender!'
+    //   )
+    // );
+    notify()
+    
   };
   // * End Delete
 
