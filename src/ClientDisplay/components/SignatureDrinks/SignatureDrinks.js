@@ -49,6 +49,7 @@ function SinatureDrinksDisplay() {
      <h2>Signature Drinks</h2>
 
       <div className={classes.drinks_display_container}>
+
         {drinks &&
           drinks.map((item) => (
             <SignatureDrinkCard
@@ -60,6 +61,7 @@ function SinatureDrinksDisplay() {
               description={item.description}
             />
           ))}
+          
       </div>
 
       {addDataModal && <AddUpdateDataModal />}
