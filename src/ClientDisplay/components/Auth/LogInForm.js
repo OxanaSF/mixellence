@@ -13,12 +13,7 @@ const LogInForm = () => {
 
   const authCtx = useContext(AuthContext);
 
-  // const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
-
-  // const switchAuthModeHandler = () => {
-  //   setIsLogin((prevState) => !prevState);
-  // };
 
   const loginHandler = (event) => {
     event.preventDefault();
