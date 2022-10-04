@@ -103,14 +103,6 @@ const LogInForm = () => {
           <div className={classes.actions}>
             <button className={classes.forgotPassword}>Forgot password?</button>
             <SendBtn></SendBtn>
-            {/* 
-          <button
-            type="button"
-            className={classes.toggle}
-            onClick={switchAuthModeHandler}
-          >
-            {isLogin ? 'Create new account' : 'Login with existing account'}
-          </button> */}
           </div>
         </form>
       </div>
