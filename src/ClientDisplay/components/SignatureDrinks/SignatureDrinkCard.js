@@ -8,7 +8,6 @@ import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { alertMessageActions } from '../../../store/alert-message-slice';
 import { ToastContainer, toast } from 'react-toastify';
 
-
 import 'react-toastify/dist/ReactToastify.css';
 import classes from './SignatureDrinks.module.css';
 
@@ -28,7 +27,6 @@ const SignatureDrinkCard = ({ id, title, img, description }) => {
 
   return (
     <div className={classes.drink_card_container} id={id}>
- 
 
       {/* <div className={classes.drink_card} > */}
         <div className={classes.drink_card_title}>
@@ -42,6 +40,18 @@ const SignatureDrinkCard = ({ id, title, img, description }) => {
         </div>
       {/* </div> */}
     </div>
+
+
+    // <article className={classes.card}>
+    //   <header>
+    //     <h3>{title}</h3>
+    //   </header>
+    //   <img src={img} alt={title} />
+    //   <div className={classes.content}>
+    //     <p>Short content.</p>
+    //   </div>
+    //   <footer>I have a footer!</footer>
+    // </article>
   );
 };
 
