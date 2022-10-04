@@ -34,10 +34,10 @@
 }
 .card_description p:hover {
   background-color: white;
-  height: 7rem;
+  height: 8rem;
   color: black;
   padding-left: 1rem;
-  /* padding-top: 1rem; */
+  padding-top: 1rem;
   padding-bottom: 2.1rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -58,10 +58,10 @@
   border-bottom-right-radius: 15px; 
 }
 
-.drinksCard img:hover {
+/* .drinksCard img:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; 
-}
+} */
