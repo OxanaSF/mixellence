@@ -48,7 +48,9 @@ A UX/UI team [Dillon] and [Sam] created the design implemented for the mixcellen
     <td><b>Desktop</td>     
   </tr>
   <tr>
-    <td valign="top"><img src="https://user-images.githubusercontent.com/38548029/179036015-a580da45-4264-45c2-b31c-eb9610e89e94.png" width="300" /></td>
+    <td valign="top"><img 
+    src="https://user-images.githubusercontent.com/49917973/193936299-36a76f23-b404-41d5-a663-3f2f979aeefb.png" 
+    width="300" /></td>
     <td valign="top"><img src="https://user-images.githubusercontent.com/38548029/179036089-3016abe7-ecab-46ce-9c0b-e6f8160d233f.png" width="300" /></td>
     <td valign="top"><img src="https://user-images.githubusercontent.com/38548029/179036104-e38e722d-6d42-497e-8420-32f30f41ecce.png" width="300" /></td>
   </tr>
