@@ -51,7 +51,7 @@ function TestimonialsDisplay() {
       <Link to="modal" state={{ background: location }}></Link>
       <Outlet />
 
-      <div className={classes.card_display_container}>
+      <div className={classes.card_display_container}>  
         {testimonials &&
           testimonials.map((item) => (
             <TestimonialCardDashboard
