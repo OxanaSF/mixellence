@@ -22,6 +22,10 @@ import AuthContext from './context/auth-context';
 import AddEditBartendersPage from './pages/EditBartendersPage/AddEditBartendersPage';
 import AddEditTestimonials from './pages/EditTestimonials/AddEditTestimonials';
 
+
+
+
+
 const App = () => {
   const authCtx = useContext(AuthContext);
 

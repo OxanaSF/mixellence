@@ -3,8 +3,6 @@
   background: black;
 
   margin-bottom: 2rem;
- 
-
 }
 
 .hero_container h3 {
@@ -16,16 +14,15 @@
 }
 
 .hero_card {
-/* background: black; */
- width: 100%;
+  width: 100%;
   text-align: center;
-  /* margin: auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.hero_card :nth-child(1) {
-  /* background: plum; */
+
+.upload {
+  margin-top: 1rem;
 }
 
 .card_img {
@@ -40,7 +37,7 @@
   border: 10px solid white;
 }
 
-.hero_container button{
+.hero_container button {
   /* background: red !important; */
   margin: auto !important;
   margin-top: 2rem !important;
@@ -50,11 +47,8 @@
 input::file-selector-button {
   font-weight: bold;
   padding: 0.5em;
-  /* border: thin solid grey; */
   border-radius: 3px;
   width: 100%;
   height: 2rem;
   cursor: pointer;
 }
-
-

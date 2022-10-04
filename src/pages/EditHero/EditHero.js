@@ -149,13 +149,17 @@ const EditDrinks = () => {
               <div className={classes.card_img}>
                 <img src={img} alt='party' />
               </div>
+              <div
+               className={classes.upload}
+              >
               <input
-                className={classes.upload}
+               
                 accept="image/gif, image/jpeg, image/png"
                 filename={img}
                 type="file"
                 onChange={(e) => setFile(e.target.files[0])}
               ></input>
+              </div>
 
             
             </div>

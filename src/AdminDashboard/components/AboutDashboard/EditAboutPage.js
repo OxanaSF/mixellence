@@ -71,28 +71,9 @@ const EditAboutPage = ({ id }) => {
     });
   };
 
-  const validate = () => {
-    let errors = {};
-
-    if (!mainParagraph) {
-      errors.mainParagraph = 'Main Paragraph is Required';
-    }
-    if (!phoneParagraph) {
-      errors.phoneParagraph = 'Paragraph with phone number is Required';
-    }
-    if (!place) {
-      errors.place = 'Place is Required';
-    }
-    if (!businessOwned) {
-      errors.businessOwned = 'Short info about business is Required';
-    }
-
-    return errors;
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-    let errors = validate();
+
     if (Object.keys(errors).length) return setErrors(errors);
     setIsSubmitted(true);
 

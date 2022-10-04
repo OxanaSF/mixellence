@@ -23,21 +23,25 @@
   margin: auto;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.5px;
-  color: white !important;
-  border: .5px dashed white;
+  /* color: white !important; */
+  border: 0.5px dashed white;
 
-  background: #1b1b1b;
+  /* background: #1b1b1b; */
   text-align: center;
+  /* background: red; */
 }
 
+
+
 .upload input {
-  border: 0px dashed black;
+  /* border: 0px dashed black; */
 }
 
 .bartender_container h3 {
   color: black;
   font-size: 2rem;
 }
+
 
 .bartender_form textarea {
   width: 90%;
@@ -51,6 +55,7 @@
   height: 5rem;
   display: flex;
   line-height: 1.4;
+
 }
 
 .drop_zone :nth-child(1) :nth-child(1) {
@@ -60,6 +65,7 @@
   object-fit: cover;
   border-radius: 50%;
   margin-top: 4rem;
+    /* background: red; */
 }
 
 .bartender_container form :first-child {
@@ -95,9 +101,10 @@ input[type='file']::file-selector-button:hover {
 
 .bartender_container form input {
   border-color: darkgray !important;
-  border-style: dashed !important;
+  border: 0px dashed black;
   height: 3rem !important;
   /* background: red; */
+
 }
 
 .bartender_container button {

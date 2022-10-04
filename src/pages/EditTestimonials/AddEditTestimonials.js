@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -31,6 +32,8 @@ const initialState = {
   review: '', // The text of our review the user left
   img: '',
 };
+
+
 
 const AddEditTestimonials = () => {
   const dispatch = useDispatch();
@@ -111,24 +114,9 @@ const AddEditTestimonials = () => {
     });
   };
 
-  // const validate = () => {
-  //   let errors = {};
-  //   if (!name) {
-  //     errors.name = 'Name is Required';
-  //   }
-  //   if (!rating) {
-  //     errors.rating = 'Rating is Required';
-  //   }
-  //   if (!review) {
-  //     errors.review = 'Review is Required';
-  //   }
-
-  //   return errors;
-  // };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // let errors = validate();
+
     if (Object.keys(errors).length) return setErrors(errors);
     setIsSubmitted(true);
 
@@ -183,7 +171,7 @@ const AddEditTestimonials = () => {
           <h3>{id ? 'Update Testimonial' : 'Add Testimonial'}</h3>
 
           <form onSubmit={handleSubmit} className={classes.testimonial_form}>
-            <div className={classes.testimonial_card} >
+            <div className={classes.testimonial_card}>
               <div className={classes.card_info}>
                 <p className={classes.text}>
                   <textarea
@@ -224,6 +212,7 @@ const AddEditTestimonials = () => {
                     error={
                       errors.rating && !id ? { content: errors.rating } : null
                     }
+                    type='number'
                     min="1"
                     max="5"
                     placeholder="rating"

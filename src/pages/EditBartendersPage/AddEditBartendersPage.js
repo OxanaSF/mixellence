@@ -113,30 +113,8 @@ const AddEditBartendersPage = () => {
     });
   };
 
-  // const validate = () => {
-  //   let errors = {};
-  //   if (!file) {
-  //     errors.file = 'Image is Required';
-  //   }
-  //   if (!name) {
-  //     errors.name = 'Name is Required';
-  //   }
-  //   if (!drink) {
-  //     errors.drink = 'Signature drink is Required';
-  //   }
-  //   if (!city) {
-  //     errors.city = 'City is Required';
-  //   }
-  //   if (!quote) {
-  //     errors.quote = 'Quote is Required';
-  //   }
-
-  //   return errors;
-  // };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // let errors = validate();
     if (Object.keys(errors).length) return setErrors(errors);
     setIsSubmitted(true);
 
@@ -195,7 +173,7 @@ const AddEditBartendersPage = () => {
           <form onSubmit={handleSubmit} className={classes.bartender_form}>
             <div className={classes.drop_zone}>
               {id ? (
-                <div>
+                <div className={classes.bartender_card_img}>
                   <img src={img} alt="bartender" />
                 </div>
               ) : (
@@ -208,7 +186,7 @@ const AddEditBartendersPage = () => {
                 </div>
               )}
 
-              <div className={classes.upload}>
+              <div className={classes.bartender_card_info}>
                 <input
                   // defaultValue={img || ''}
                   accept="image/gif, image/jpeg, image/png"
@@ -253,6 +231,7 @@ const AddEditBartendersPage = () => {
               onChange={handleChange}
               value={quote || ''}
               required={!id ? true : false}
+              minLength='18'
             ></textarea>
 
             <Button
