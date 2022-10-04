@@ -5,14 +5,13 @@ import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
-// import EditAboutPage from '../../../pages/EditAboutPage'
 import { updateBtnToggleActions } from '../../../store/update-data-btn-toggle-slice';
 import EditAboutPage from './EditAboutPage';
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { Loader } from 'semantic-ui-react';
-import classes from '../../../ClientDisplay/components/About/About.module.css';
-// import EditDataContainer from '../ui/AddEditDelete/EditDataContainer';
 import EditData from '../ui/AddEditDelete/EditData';
+
+import classes from '../../../ClientDisplay/components/About/About.module.css';
 
 const AboutDashboardDisplay = () => {
   const updateBtnToggle = useSelector(
@@ -56,7 +55,10 @@ const AboutDashboardDisplay = () => {
   };
 
   return (
-    <section className={`${classes.about__container} ${classes.about__container_dashboard}`} id="about">
+    <section
+      className={`${classes.about__container} ${classes.about__container_dashboard}`}
+      id="about"
+    >
       <h2>About Us</h2>
       <Link to="modal" state={{ background: location }}></Link>
       <Outlet />
@@ -83,7 +85,9 @@ const AboutDashboardDisplay = () => {
                     <div>{aboutInfo.place}</div>
                   </div>
 
-                  <div>{aboutInfo.businessOwned}</div>
+                  <div className={classes.business_owned}>
+                    {aboutInfo.businessOwned}
+                  </div>
                 </footer>
               </div>
             </div>

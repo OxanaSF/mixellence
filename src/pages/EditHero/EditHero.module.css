@@ -16,16 +16,15 @@
 }
 
 .hero_card {
-/* background: black; */
  width: 100%;
   text-align: center;
-  /* margin: auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.hero_card :nth-child(1) {
-  /* background: plum; */
+
+.upload{
+  margin-top: 1rem;
 }
 
 .card_img {

@@ -27,31 +27,12 @@ const SignatureDrinkCard = ({ id, title, img, description }) => {
 
   return (
     <div className={classes.drink_card_container} id={id}>
+      <div className={classes.drink_card_title}>{title}</div>
 
-      {/* <div className={classes.drink_card} > */}
-        <div className={classes.drink_card_title}>
-          {title}
-        </div>
-        {/* <div className={classes.card_img}> */}
-          <img src={img} alt={title} />
-        {/* </div> */}
-        <div className={classes.drink_card_description}>
-          {description}
-        </div>
-      {/* </div> */}
+      <img src={img} alt={title} />
+
+      <div className={classes.drink_card_description}>{description}</div>
     </div>
-
-
-    // <article className={classes.card}>
-    //   <header>
-    //     <h3>{title}</h3>
-    //   </header>
-    //   <img src={img} alt={title} />
-    //   <div className={classes.content}>
-    //     <p>Short content.</p>
-    //   </div>
-    //   <footer>I have a footer!</footer>
-    // </article>
   );
 };
 
