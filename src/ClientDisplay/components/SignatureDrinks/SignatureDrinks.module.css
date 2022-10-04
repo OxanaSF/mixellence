@@ -108,7 +108,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .drinks_display_container {
     display: grid;
     grid-template-columns: 1fr;
@@ -134,9 +134,7 @@
     height: 400px;
   }
 
-
-.drink_card_container:hover > .drink_card_description {
-  height: 80px;
- 
-}
+  .drink_card_container:hover > .drink_card_description {
+    height: 80px;
+  }
 }
