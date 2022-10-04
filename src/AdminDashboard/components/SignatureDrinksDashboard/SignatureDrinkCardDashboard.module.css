@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1.6rem;
   padding: 7%;
+  margin: 0 10%;
 }
 
 .drink_card_container :nth-child(1) {

@@ -7,32 +7,32 @@ import { useNavigate } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
 
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
-import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
-import TestimonialCardDashboard from './TestimonialCardDashboard';
+import { AddUpdateDataModal } from '../../../AdminDashboard/components/ui/AddUpdateModal/AddUpdateDataModal';
+import SignatureDrinkCard from './SignatureDrinkCard';
 
-import classes from './TestimonialsDisplayDashboard.module.css';
+import classes from './SignatureDrinks.module.css';
 
-function TestimonialsDisplay() {
+function SinatureDrinksDisplay() {
   const location = useLocation();
 
   const dispatch = useDispatch();
 
   const addDataModal = useSelector((state) => state.addDataModal.addDataModal);
 
-  const [testimonials, setTestimonials] = useState([]);
+  const [drinks, setDrinks] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
-    dispatch(addDataModalActions.updateReturnLink('/testimonials-dashboard'));
+    dispatch(addDataModalActions.updateReturnLink('/drinks-dashboard'));
     const unsub = onSnapshot(
-      collection(db, 'testimonials'),
+      collection(db, 'drinks'),
       (snapshot) => {
         let list = [];
         snapshot.docs.forEach((doc) => {
           list.push({ id: doc.id, ...doc.data() });
         });
-        setTestimonials(list);
+        setDrinks(list);
         setLoading(false);
       },
       (error) => {
@@ -45,25 +45,23 @@ function TestimonialsDisplay() {
   }, []);
 
   return (
-    <div className={classes.card_display_wrapper}>
-      <h1>Testimonials</h1>
+    <div className={classes.drinks_wrapper}>
+     <h2>Signature Drinks</h2>
 
-      <Link to="modal" state={{ background: location }}></Link>
-      <Outlet />
+      <div className={classes.drinks_display_container}>
 
-      <div className={classes.card_display_container}>
-        {testimonials &&
-          testimonials.map((item) => (
-            <TestimonialCardDashboard
+        {drinks &&
+          drinks.map((item) => (
+            <SignatureDrinkCard
               id={item.id}
               key={item.id}
-              linkImg={item.img}
-              alt={`${item.name} review`}
-              name={item.name}
-              text={item.review}
-              rating={item.rating}
+              img={item.img}
+              alt={item.title}
+              title={item.title}
+              description={item.description}
             />
           ))}
+          
       </div>
 
       {addDataModal && <AddUpdateDataModal />}
@@ -71,4 +69,4 @@ function TestimonialsDisplay() {
   );
 }
 
-export default TestimonialsDisplay;
+export default SinatureDrinksDisplay;

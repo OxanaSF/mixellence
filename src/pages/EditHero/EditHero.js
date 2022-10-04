@@ -144,18 +144,22 @@ const EditDrinks = () => {
           <h3>{'Update image'}</h3>
 
           <form onSubmit={handleSubmit}>
-            <div className={classes.hero_card} onInvalid={id}>
+            <div className={classes.hero_card}>
              
               <div className={classes.card_img}>
                 <img src={img} alt='party' />
               </div>
+              <div
+               className={classes.upload}
+              >
               <input
-                className={classes.upload}
+               
                 accept="image/gif, image/jpeg, image/png"
-                fileName={img}
+                filename={img}
                 type="file"
                 onChange={(e) => setFile(e.target.files[0])}
               ></input>
+              </div>
 
             
             </div>

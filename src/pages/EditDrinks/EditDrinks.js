@@ -150,7 +150,7 @@ const EditDrinks = () => {
           <h3>{'Update Drink'}</h3>
 
           <form onSubmit={handleSubmit}>
-            <div className={classes.drink_card} onInvalid={id}>
+            <div className={classes.drink_card} >
               <div className={classes.drink_card_title}>
                 <input
                   error={errors.title && !id ? { content: errors.title } : null}
@@ -158,7 +158,7 @@ const EditDrinks = () => {
                   name="title"
                   onChange={handleChange}
                   defaultValue={title || ''}
-                  autoFocus
+              
                 ></input>
               </div>
               <div className={classes.card_img}>
@@ -167,23 +167,23 @@ const EditDrinks = () => {
               <input
                 className={classes.upload}
                 accept="image/gif, image/jpeg, image/png"
-                fileName={img}
+                filename={img}
                 type="file"
                 onChange={(e) => setFile(e.target.files[0])}
               ></input>
 
               <div className={classes.drink_card_description}>
-                <textArea
+                <textarea
                   error={
-                    errors.quote && !id ? { content: errors.review } : null
+                    errors.description && !id ? { content: errors.description} : null
                   }
                   name="description"
                   onChange={handleChange}
                   value={description || ''}
-                  autoFocus
+                
                 >
                   {description}
-                </textArea>
+                </textarea>
               </div>
             </div>
 

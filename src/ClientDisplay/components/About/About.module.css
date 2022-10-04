@@ -74,7 +74,7 @@
   }
 
   .par2 {
-    display: none;
+    /* display: none; */
   }
 
   .about__footer {
@@ -94,5 +94,14 @@
 
   .barImg {
     display: none;
+  }
+
+  .about__footer__location,
+  .business_owned {
+    font-size: 16px;
+  }
+
+  .about__footer__location img {
+    width: 0.8rem;
   }
 }

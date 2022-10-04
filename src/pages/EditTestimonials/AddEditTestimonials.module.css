@@ -17,12 +17,12 @@
 }
 
 .testimonial_card input {
-  border: 1px dashed black;
+  border: .5px dashed black;
   font-family: 'Montserrat', sans-serif;
 }
 
 .testimonial_card textarea {
-  border: 1px dashed black;
+  border: .5px dashed black;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -40,7 +40,8 @@
   width: 4rem;
   height: 3.7rem;
   margin-bottom: 1.5rem;
-  padding: 0.5rem;
+  padding-left: 1rem;
+  text-align: center;
 }
 
 .stars {
@@ -58,6 +59,7 @@
   height: 2rem;
   width: 70%;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .card_img img {

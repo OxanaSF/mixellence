@@ -1,70 +1,118 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# [Mixellence](https://github.com/OxanaSF/mixellence.git/)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+  - [Design](#designs)
+  - [Screenshots](#screenshots)
+- [Our process](#our-process)
+  - [What We Learned](#what-we-learned) 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Authors
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Fabian Villasenor - Software Engineer**
 
-### `npm test`
+  - [Website](https://mynameisfabian-villasenor.github.io/react-portfolio/)
+  - [LinkedIn](https://www.linkedin.com/in/fabian-villsenor/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Oxana Howard - Software Engineer**
+  - [Website](https://oxana-howard.com/)
+  - [LinkedIn](https://www.linkedin.com/in/oxana-howard/)
 
-### `npm run build`
+- **Dale Cottrell - Software Engineer**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - [Website](https://dale cottrell.github.io/portfolio/)
+  - [LinkedIn](https://www.linkedin.com/in/dale-cottrell/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Overview
 
-### `npm run eject`
+This is a desktop and mobile version website created for bartending catering business. Through the websites cleints can find genral information such as name description and services offered, products, and bartenders, and contact make an order. Addionally, the website has a feature for a admin that lets them directly update inofmation on website. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### The challenge
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The main challenge was taking a desgn and re-creating it as a frontend website that also allows then admin to update its contents. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Designs
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+A UX/UI team [Dillon] and [Sam] created the design implemented for the mixcellence website built.   
 
-## Learn More
+### Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<table>
+  <tr>
+    <td><b>Desktop</td>     
+  </tr>
+  <tr>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/38548029/179036015-a580da45-4264-45c2-b31c-eb9610e89e94.png" width="300" /></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/38548029/179036089-3016abe7-ecab-46ce-9c0b-e6f8160d233f.png" width="300" /></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/38548029/179036104-e38e722d-6d42-497e-8420-32f30f41ecce.png" width="300" /></td>
+  </tr>
+  <tr>
+    <td><b>Mobile</td>
+  </tr>
+  <tr>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188966348-11775b57-ca9e-43c4-bd90-9d76a303a2ed.png" width="300" /></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188966566-0d72263d-c998-4d7d-88f7-657e3d17777c.png" width="300" /></td>
+  </tr>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+   <tr>
+    <td><b>Dashboard</td>
+  </tr>
+  <tr>
+     <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188970548-b79adf84-65af-4ea7-ab5c-b2ba379a0f66.png" width="300" /></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188969739-b124a6aa-4dcd-41c9-919a-f760b1955e0d.png" width="300" /></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188969811-5ed03e6b-7424-4733-a614-1ea58a7e3bce.png" width="300" /></td>
+  </tr>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+ </table>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Links
 
-### Making a Progressive Web App
+- Repository URL: [https://github.com/OxanaSF/mixellence.git](https://github.com/OxanaSF/mixellence.git)
+- Live Site URL: [https://mixcellence.netlify.app/](https://mixcellence.netlify.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Our process
 
-### Advanced Configuration
+**Frontend**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Semantic HTML5 markup
+- Module CSS components
+- CSS Flex Box
+- CSS Grid
+- [React](https://reactjs.org/)
+- [React-Context](https://reactjs.org/docs/context.html/)
+- [React-Redux](https://firebase.google.com/)
+- [React-Slider](https://www.npmjs.com/package/react-slider)
+- [React Slick](https://reactslick.neostack.com/)
+- [react-responsive-carousel](https://www.npmjs.com/package/react-responsive-carousel)
+- [React-Router-Dom](https://www.npmjs.com/package/react-router-dom)
+- [Netlify](https://www.netlify.com/)
+- [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link)
+- [semantic-ui-react](https://react.semantic-ui.com/)
 
-### Deployment
+**Backend**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [Firebase](https://firebase.google.com/)
 
-### `npm run build` fails to minify
+### What we learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Fabian Villasenor:**
+This was a great opportunity for me to ... ... ...
+
+
+**Oxana Howard:**
+
+This project was a great opportunity ro work in a team and create the balance when I needed to push my ideas and listen to others' opinion. My goal was to create an app from scratch to deployment that works well and looks good on different devises. It was important to me to find the balance in which stretching goals are set up and achieved, but not affected the deadlines. I was able to deep dive into following topics and technologies: express js, API data fetching and css. Additionally I started learning how github  works in team projects.
+
+**Dale Cottrell:**
+This project was a valuable learning experience for me. Working two developers I viewed their methodologies in code problem solving.
+I learned additional version control concepts. For me one of the most valuable experiences was team work building out a large complex app that entialed multi modules which overlaped. 
+
+
