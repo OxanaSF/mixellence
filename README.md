@@ -1,4 +1,4 @@
-# [Live Healthy](https://we-live-healthy.netlify.app/)
+# [MIXELLENCE](https://we-live-healthy.netlify.app/)
 
 ## Table of contents
 
