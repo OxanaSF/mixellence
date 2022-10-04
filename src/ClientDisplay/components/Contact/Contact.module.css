@@ -1,0 +1,30 @@
+.contact_form_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_form_wrapper p{
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  width: 100;
+}
+
+.contact_form_container {
+  width: 300px;
+  height: 397px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_form_container input,
+.contact_form_container textarea {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  color: black;
+  border: none;
+  margin-bottom: 0.3rem;
+}

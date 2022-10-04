@@ -20,10 +20,6 @@ import AuthContext from './context/auth-context';
 
 import './App.css';
 
-
-
-
-
 const App = () => {
   const authCtx = useContext(AuthContext);
 

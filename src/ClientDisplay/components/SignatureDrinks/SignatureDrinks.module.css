@@ -1,6 +1,5 @@
 .drinks_wrapper {
   margin-bottom: 10rem;
-
   padding: 0 !important;
 }
 
@@ -29,6 +28,17 @@
   transition: all 0.5s ease;
   object-fit: cover;
 }
+
+.drink_card_container img:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation-delay: 0.1s;
+}
+
+
+
 
 .drink_card_title {
   border-top-left-radius: 8px;
@@ -71,40 +81,28 @@
 .drink_card_container:hover {
   transform: scaleX(1.14);
   transform-origin: left center;
-
-  animation: 0.1s bugle;
-  animation-duration: 0.2s;
-  animation-delay: 0.3s;
-}
-
-@keyframes bulge {
-  0% {
-    opacity: 0;
-    transform: scale(0.8, 0.8);
-  }
-  20% {
-    opacity: 1;
-    transform: scale(1.2, 1.2);
-  }
 }
 
 @keyframes shake {
-  0%,
-  100% {
-    transform: translate(0);
-  }
   10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
   30%,
   50%,
-  70%,
-  90% {
-    transform: translate(-10px);
+  70% {
+    transform: translate3d(-4px, 0, 0);
   }
-  20%,
+
   40%,
-  60%,
-  80% {
-    transform: translate(10px);
+  60% {
+    transform: translate3d(4px, 0, 0);
   }
 }
 

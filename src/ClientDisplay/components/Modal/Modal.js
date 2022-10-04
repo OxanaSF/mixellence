@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 
+import ContactForm from '../Contact/ContactForm'
+
 import ModalContext from '../../../context/modal-context'
 
 import classes from './Modal.module.css'
@@ -12,7 +14,7 @@ const Modal = (props) => {
       className={classes.modal}
       onClick={modalCtx.modalHandler}
     >
-      Modal
+      <ContactForm />
     </section>
   )
 }
