@@ -1,0 +1,118 @@
+.drinks_wrapper {
+  margin-bottom: 10rem;
+}
+
+.drinks_wrapper h2 {
+  margin-bottom: 5rem;
+}
+
+.drinks_display_container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  /* margin: 0 10rem; */
+  /* height: 669px; */
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.drink_card_container {
+  /* background: white; */
+  /* border: 3px solid red; */
+
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.5s ease;
+  width: 295px;
+}
+
+.drink_card_container img {
+  height: 448px;
+  width: 100%;
+  border-radius: 0 !important;
+  transition: all 0.5s ease;
+}
+
+.drink_card_title {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: white;
+  display: flex;
+  align-items: flex-end;
+  font-weight: 500;
+  font-size: 18px;
+  padding-left: 0.5rem;
+  padding-bottom: 0.7rem;
+  letter-spacing: 0.5px;
+  height: 123px;
+  color: black;
+}
+
+.drink_card_description {
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.drink_card_container:hover > .drink_card_description {
+  height: 123px;
+  background: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-align: left;
+  padding: 0.7rem;
+  line-height: 1.7;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  padding-bottom: 2rem;
+  color: black;
+  display: inline-block;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.drink_card_container:hover {
+  transform: scaleX(1.14);
+  transform-origin: left center;
+
+  animation: 0.1s bugle;
+  animation-duration: 0.2s;
+  animation-delay: 0.3s;
+}
+
+@keyframes bulge {
+  0% {
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(10px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .drinks_display_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
