@@ -6,6 +6,8 @@
 }
 
 .card_display_container {
+  /* border: 2px solid purple; */
+  width: 100%;
   display: flex;
   justify-content: space-around;
   gap: 2rem;
@@ -32,6 +34,7 @@
 
 
 @media (min-width: 1250px) {
+
   .card_display_container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -39,7 +42,10 @@
 
 @media (min-width: 1630px) {
   .card_display_container {
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* grid-template-columns: repeat(4, 1fr); */
   }
 }
 
