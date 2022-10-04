@@ -1,31 +1,31 @@
 .drinksCard {
-  /* border:3px solid red; */
-  background: white;
-  background-color: white;
+  background: rgb(70, 36, 180);
+  background-color: rgb(219, 194, 31);
   width: 275px;
-  height: 550px; 
+  height: 500px; 
   cursor: pointer;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
-/* .Drinks_card_header  {
-  border-top-left-radius: 10px;
-
-} */
-
 .card_header {
-  background-color: white;
+  
   display: flex;
   align-items: flex-end;
   height: 7rem;
   width: 100%;
 }
 .card_header h3 {
-  background-color: white;
-  color: black;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+  background-color: rgb(27, 193, 96);
+  color: rgb(223, 24, 24);
+  padding-top: 3.1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 9.8rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 32px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; 
 }
 .card_description:hover {
   display: flex;
@@ -37,10 +37,13 @@
   height: 7rem;
   color: black;
   padding-left: 1rem;
+  /* padding-top: 1rem; */
   padding-bottom: 2.1rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 17px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px; 
 }
 .card_description p {
   background-color: black;
@@ -55,3 +58,10 @@
   border-bottom-right-radius: 15px; 
 }
 
+.drinksCard img:hover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; 
+}
