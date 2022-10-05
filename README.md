@@ -241,6 +241,7 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
 ### What we learned
 
 **Fabian Villasenor:**
+
 This was a great opportunity for me to ... ... ...
 
 **Oxana Howard:**
@@ -248,7 +249,6 @@ This was a great opportunity for me to ... ... ...
 This project was a great opportunity ro work in a team and create the balance when I needed to push my ideas and listen to others' opinion. My goal was to create an app from scratch to deployment that works well and looks good on different devises. It was important to me to find the balance in which stretching goals are set up and achieved, but not affected the deadlines. I was able to deep dive into following topics and technologies: express js, API data fetching and css. Additionally I started learning how github  works in team projects.
 
 **Dale Cottrell:**
-This project was a valuable learning experience for me. Working two developers I viewed their methodologies in code problem solving.
-I learned additional version control concepts. For me one of the most valuable experiences was team work building out a large complex app that entialed multi modules which overlaped. 
 
+While working in a team of three developers I was able to learn additonal methodologies in code problem solving and some new version control concepts. For me one of the most valuable experiences was team work building out a large complex app that entialed multi modules which overlaped. Skillful problem solving in pre-build collaboration and real-time build-out is the key to quality and timeliness while producing a unique and professional UX/UI design from Sam and Dillon C. (noted above).
 
