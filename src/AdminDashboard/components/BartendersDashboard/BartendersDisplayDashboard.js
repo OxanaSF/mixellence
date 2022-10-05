@@ -5,7 +5,8 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 import { Loader } from 'semantic-ui-react';
-import { ToastContainer, toast } from 'react-toastify';
+
+import { ToastContainer } from 'react-toastify';
 
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
@@ -50,6 +51,7 @@ export const BartendersDisplayDashboard = () => {
 
       <Link to="modal" state={{ background: location }}></Link>
       <Outlet />
+      
       <ToastContainer
         position="top-right"
         autoClose={3000}

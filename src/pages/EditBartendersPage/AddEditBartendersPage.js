@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import { addDataModalActions } from '../../store/add-data-modal-slice';
-import { alertMessageActions } from '../../store/alert-message-slice';
 import { enableEditActions } from '../../store/enable-edit-slice';
 import { storage } from '../../firebase';
 import { db } from '../../firebase';
@@ -138,7 +134,7 @@ const AddEditBartendersPage = () => {
           timestamp: serverTimestamp(),
         });
         dispatch(addDataModalActions.close());
-        notify('🍷 You SUCCESSFULLY ADDED a bartender!');
+        notify('🍷 You SUCCESSFULLY Added a BARTENDER!');
       } catch (error) {
         alert.log(error);
       }
@@ -149,7 +145,7 @@ const AddEditBartendersPage = () => {
           ...bartenderData,
           timestamp: serverTimestamp(),
         });
-        notify('🍷 You SUCCESSFULLY UPDATED the bartender!');
+        notify('🍷 You SUCCESSFULLY Updated the BARTENDER!');
         setIsSubmitted(false);
       } catch (error) {
         alert.log(error);

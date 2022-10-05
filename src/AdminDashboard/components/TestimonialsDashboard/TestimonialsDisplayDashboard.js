@@ -3,8 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
 import { db } from '../../../firebase';
-import { useNavigate } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
+
+import { ToastContainer } from 'react-toastify';
 
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
@@ -50,6 +51,19 @@ function TestimonialsDisplay() {
 
       <Link to="modal" state={{ background: location }}></Link>
       <Outlet />
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <ToastContainer />
 
       <div className={classes.card_display_container}>
         {testimonials &&
