@@ -81,8 +81,9 @@ A UX/UI team [Dillon] and [Sam] created the design implemented for the mixcellen
  </td>
     <td valign="top"><img width="387" alt="Screen Shot 2022-10-04 at 5 28 09 PM" src="https://user-images.githubusercontent.com/100964288/193954989-f3c43a60-f6fa-4417-a3a9-75e5d1b138b3.png" />
  </td>
+    <td valign="top"><img width="388" alt="Screen Shot 2022-10-04 at 12 58 32 PM" src="https://user-images.githubusercontent.com/100964288/193955136-2ed846aa-d226-4d1c-8333-4b2a4e11d044.png" />
+ </td>
 
-    
   </tr>
 
 
