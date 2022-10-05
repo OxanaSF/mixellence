@@ -68,10 +68,6 @@ function TestimonialsDisplay() {
 
     
       <div className={classes.card_display_container}>
-        
-        {/* TODO  Can we change the amount of cards displayed in the carousel?? */}
-        {/* ADD some margin between dots and carousel card  */}
-
         <ReactResponsiveCarousel className={classes.reactCarousel}>
           {testimonials &&
             testimonials.map((item) => (
