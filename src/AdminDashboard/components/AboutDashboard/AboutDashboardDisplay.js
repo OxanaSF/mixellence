@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
-import { updateBtnToggleActions } from '../../../store/update-data-btn-toggle-slice';
+import { ToastContainer } from 'react-toastify';
+
 import EditAboutPage from './EditAboutPage';
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { Loader } from 'semantic-ui-react';
-import EditData from '../ui/AddEditDelete/EditData';
 
 import classes from '../../../ClientDisplay/components/About/About.module.css';
 
@@ -67,6 +67,18 @@ const AboutDashboardDisplay = () => {
         <Loader active inline="centered" size="huge" />
       ) : (
         <>
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
+          <ToastContainer />
           {!updateBtnToggle && (
             <div className={classes.about_info_wrapper}>
               <div className={classes.about__info}>
@@ -93,7 +105,6 @@ const AboutDashboardDisplay = () => {
             </div>
           )}
 
-          {/* {editArea && <EditAboutPageTest id={aboutInfo.id}/>} */}
           {updateBtnToggle && <EditAboutPage id={aboutInfo.id} />}
         </>
       )}
