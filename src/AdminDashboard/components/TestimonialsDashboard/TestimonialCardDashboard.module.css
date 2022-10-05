@@ -6,8 +6,9 @@
 }
 
 .card_info {
-  width: 270px;
-  height: 270px;
+  /* outline:2px solid red; */
+  width: 19rem;
+  height: 19rem;
   background: #d9d9d9;
   color: black;
   display: flex;
@@ -32,12 +33,15 @@
 
 .stars {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
   gap: 0.8rem;
 }
 
 .stars img {
+  object-fit: contain;
+  height: 2rem;
   width: 2rem;
 }
 

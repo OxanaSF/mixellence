@@ -3,14 +3,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
 import { db } from '../../../firebase';
-import { useNavigate } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
+
+import { ToastContainer } from 'react-toastify';
 
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
 import TestimonialCardDashboard from './TestimonialCardDashboard';
 
 import classes from './TestimonialsDisplayDashboard.module.css';
+import ReactResponsiveCarousel from './ReactResponsiveCarousel';
 
 function TestimonialsDisplay() {
   const location = useLocation();
@@ -51,23 +53,42 @@ function TestimonialsDisplay() {
       <Link to="modal" state={{ background: location }}></Link>
       <Outlet />
 
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <ToastContainer />
+
       <div className={classes.card_display_container}>
-        {testimonials &&
-          testimonials.map((item) => (
-            <TestimonialCardDashboard
-              id={item.id}
-              key={item.id}
-              linkImg={item.img}
-              alt={`${item.name} review`}
-              name={item.name}
-              text={item.review}
-              rating={item.rating}
-            />
-          ))}
+        
+        {/* TODO  Can we change the amount of cards displayed in the carousel?? */}
+        {/* ADD some margin between dots and carousel card  */}
+
+        <ReactResponsiveCarousel className={classes.reactCarousel}>
+          {testimonials &&
+            testimonials.map((item) => (
+              <TestimonialCardDashboard
+                id={item.id}
+                key={item.id}
+                linkImg={item.img}
+                alt={`${item.name} review`}
+                name={item.name}
+                text={item.review}
+                rating={item.rating}
+              />
+            ))}
+        </ReactResponsiveCarousel>
       </div>
 
       {addDataModal && <AddUpdateDataModal />}
-    </div>
+    </div >
   );
 }
 

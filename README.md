@@ -16,7 +16,7 @@
 
 - **Fabian Villasenor - Software Engineer**
 
-  - [Website](https://mynameisfabian-villasenor.github.io/react-portfolio/)
+  - [Website](https://fabianvillasenor.com/)
   - [LinkedIn](https://www.linkedin.com/in/fabian-villsenor/)
 
 - **Oxana Howard - Software Engineer**
