@@ -91,6 +91,7 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
   </tr>
   <tr>
       <td valign="top"><img width="1092" alt="Screen Shot 2022-10-04 at 3 05 31 PM" src="https://user-images.githubusercontent.com/100964288/193969827-ab29525c-a4ed-43d8-9869-c04315f57f26.png" />
+
   </td>
     <td valign="top"><img width="1422" alt="Screen Shot 2022-10-04 at 1 02 08 PM" src="https://user-images.githubusercontent.com/100964288/193970001-e79ee9f7-5076-4ba3-a20d-d2fb08ab54f6.png" />
   </td>
@@ -104,8 +105,7 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
   </td>     
      <td valign="top"><img width="1090" alt="Screen Shot 2022-10-04 at 3 07 28 PM" src="https://user-images.githubusercontent.com/100964288/193971059-b12f402b-2839-47ee-a4e1-165d2aa1f18f.png" />
   </td>
-    
-    
+
   </tr>
 
  </table>
