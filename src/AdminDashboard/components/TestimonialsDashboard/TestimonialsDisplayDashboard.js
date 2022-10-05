@@ -12,6 +12,7 @@ import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
 import TestimonialCardDashboard from './TestimonialCardDashboard';
 
 import classes from './TestimonialsDisplayDashboard.module.css';
+import ReactResponsiveCarousel from './ReactResponsiveCarousel';
 
 function TestimonialsDisplay() {
   const location = useLocation();
@@ -65,23 +66,27 @@ function TestimonialsDisplay() {
       />
       <ToastContainer />
 
+    
       <div className={classes.card_display_container}>
-        {testimonials &&
-          testimonials.map((item) => (
-            <TestimonialCardDashboard
-              id={item.id}
-              key={item.id}
-              linkImg={item.img}
-              alt={`${item.name} review`}
-              name={item.name}
-              text={item.review}
-              rating={item.rating}
-            />
-          ))}
+        {/* TODO  Can we change the amount of cards displayed in the carousel?? */}
+        <ReactResponsiveCarousel className={classes.reactCarousel}>
+          {testimonials &&
+            testimonials.map((item) => (
+              <TestimonialCardDashboard
+                id={item.id}
+                key={item.id}
+                linkImg={item.img}
+                alt={`${item.name} review`}
+                name={item.name}
+                text={item.review}
+                rating={item.rating}
+              />
+            ))}
+        </ReactResponsiveCarousel>
       </div>
 
       {addDataModal && <AddUpdateDataModal />}
-    </div>
+    </div >
   );
 }
 

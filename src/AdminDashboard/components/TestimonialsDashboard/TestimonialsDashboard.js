@@ -14,7 +14,7 @@ const TestimonialsDashboard = () => {
   return (
     <DashboardContainer>
       <NavSide />
-      <section>
+      <section style={{width: '100%'}}>
         <DashboardHeader>
           <h3>Testimonials</h3>
         </DashboardHeader>
