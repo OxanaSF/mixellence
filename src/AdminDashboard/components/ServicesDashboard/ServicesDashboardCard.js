@@ -2,8 +2,6 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
-import 'react-toastify/dist/ReactToastify.css';
-
 import classes from './ServicesDashboardDisplay.module.css';
 
 const ServicesDashboardCard = ({ id, title, description, par1, par2 }) => {
