@@ -86,44 +86,76 @@ A UX/UI team [Dillon] and [Sam] created the design implemented for the mixcellen
   <tr>
     <td><b>Mobile</td>
   </tr>
+  
   <tr>
     <td valign="top"><img width="400" alt="Screen Shot 2022-10-04 at 12 54 56 PM" src="https://user-images.githubusercontent.com/100964288/193953087-5cfa12f4-6353-4ca2-8ff4-217a7973d117.png" />
   </td>
+  </tr>  
+    
+  <tr>
     <td valign="top"><img width="800" alt="Screen Shot 2022-10-04 at 12 55 25 PM" src="https://user-images.githubusercontent.com/100964288/193953636-04908524-bb3e-4624-b8f4-2dd859aba00f.png" />
   </td>
+  </tr>
+  
+  <tr>
     <td valign="top"><img width="800" alt="Screen Shot 2022-10-04 at 5 27 09 PM" src="https://user-images.githubusercontent.com/100964288/193954532-af720742-0b7b-40db-b4e9-fbeadca6fa26.png" />
   </td>
+  </tr>
+  
+  <tr>
     <td valign="top"><img width="800" alt="Screen Shot 2022-10-04 at 5 27 21 PM" src="https://user-images.githubusercontent.com/100964288/193954627-bdf41497-3213-43a6-ab15-8cd85e32d52f.png" />
   </td>
+  </tr>
+  
+  <tr>
   <td valign="top"><img width="800" alt="Screen Shot 2022-10-04 at 5 27 35 PM" src="https://user-images.githubusercontent.com/100964288/193954729-bd0e9ad9-7886-4668-aa68-58ad13ab24ed.png" />
   </td>
+  </tr>
+  
+  <tr>
     <td valign="top"><img width="800" alt="Screen Shot 2022-10-04 at 5 27 53 PM" src="https://user-images.githubusercontent.com/100964288/193954821-21b7d73f-969a-4a83-ab8f-77fbe37407fc.png" />
- </td>   
+  </td>
+    
+  <tr>
     <td valign="top"><img width="800" alt="Screen Shot 2022-10-04 at 12 58 32 PM" src="https://user-images.githubusercontent.com/100964288/193955136-2ed846aa-d226-4d1c-8333-4b2a4e11d044.png" />
- </td>
-
+  </td>
   </tr>
 
 
-   <tr>
+  <tr>
     <td><b>Dashboard</td>
   </tr>
+  
   <tr>
      <td valign="top"><img width="1092" alt="Screen Shot 2022-10-04 at 3 05 31 PM" src="https://user-images.githubusercontent.com/100964288/193969827-ab29525c-a4ed-43d8-9869-c04315f57f26.png" />
   </td>
+    
+  </tr>
     <td valign="top"><img width="1600" alt="Screen Shot 2022-10-04 at 1 02 08 PM" src="https://user-images.githubusercontent.com/100964288/193970001-e79ee9f7-5076-4ba3-a20d-d2fb08ab54f6.png" />
   </td>
+  </tr>
+  
+  <tr>
     <td valign="top"><img width="1600" alt="Screen Shot 2022-10-04 at 3 06 28 PM" src="https://user-images.githubusercontent.com/100964288/193970643-cbe82f7c-06f3-4f62-a3fb-520ecc842bcb.png" />
-  </td>   
+  </td>
+  </tr>
+  
+  <tr>
     <td valign="top"><img width="1600" alt="Screen Shot 2022-10-04 at 3 06 56 PM" src="https://user-images.githubusercontent.com/100964288/193970808-03f03c72-0274-42f1-a76b-2ff18a90905d.png" />
-  </td>   
+  </td>
+  </tr>
+  <tr>
     <td valign="top"><img width="1600" alt="Screen Shot 2022-10-04 at 3 07 05 PM" src="https://user-images.githubusercontent.com/100964288/193970895-3e1c25e3-e7e0-4fe1-a164-11de40fc2014.png" />
-  </td>    
+  </td>
+  </tr>
+  
+  <tr>
      <td valign="top"><img width="1600" alt="Screen Shot 2022-10-04 at 3 07 17 PM" src="https://user-images.githubusercontent.com/100964288/193970941-6fbab0c5-e504-411c-98bb-9e2e637899b5.png" />
-  </td>     
+  </td>
+  
+  </tr>
      <td valign="top"><img width="1600" alt="Screen Shot 2022-10-04 at 3 07 28 PM" src="https://user-images.githubusercontent.com/100964288/193971059-b12f402b-2839-47ee-a4e1-165d2aa1f18f.png" />
   </td>
-      
   </tr>
 
  </table>
