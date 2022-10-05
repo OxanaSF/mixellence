@@ -5,6 +5,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 import { Loader } from 'semantic-ui-react';
+import { ToastContainer, toast } from 'react-toastify';
 
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
@@ -44,13 +45,23 @@ export const BartendersDisplayDashboard = () => {
   }, []);
 
   return (
-    <div 
-    className={classes.card_display_wrapper}
-    >
+    <div className={classes.card_display_wrapper}>
       <h1>Meet Our Team</h1>
 
       <Link to="modal" state={{ background: location }}></Link>
       <Outlet />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <ToastContainer />
 
       <div className={classes.card_display_container}>
         {bartenders &&
