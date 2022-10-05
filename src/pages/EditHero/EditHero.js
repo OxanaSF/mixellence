@@ -1,21 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-import { addDataModalActions } from '../../store/add-data-modal-slice';
-import { alertMessageActions } from '../../store/alert-message-slice';
 import { enableEditActions } from '../../store/enable-edit-slice';
 import { storage } from '../../firebase';
 import { db } from '../../firebase';
 import {
   getDoc,
   doc,
-  addDoc,
   updateDoc,
-  collection,
   serverTimestamp,
 } from 'firebase/firestore';
 
@@ -23,7 +16,7 @@ import { notify } from '../../utils/alertMessage';
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import { Form, Loader, Button } from 'semantic-ui-react';
+import { Loader, Button } from 'semantic-ui-react';
 
 import classes from './EditHero.module.css';
 
@@ -35,8 +28,7 @@ const EditDrinks = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
-  let notify = () => toast('');
+ 
 
   const [imagesData, setImagesData] = useState(initialState);
   const { img } = imagesData;
@@ -127,12 +119,13 @@ const EditDrinks = () => {
         ...imagesData,
         timestamp: serverTimestamp(),
       });
+      setIsSubmitted(false);
       notify('🍷 You SUCCESSFULLY Updated the Hero page!');
     } catch (error) {
       alert.log(error);
     }
 
-    setIsSubmitted(false);
+   
     dispatch(enableEditActions.disable());
     navigate('/hero-dashboard');
   };

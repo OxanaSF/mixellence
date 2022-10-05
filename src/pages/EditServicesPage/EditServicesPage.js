@@ -1,25 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
 
-// import 'react-toastify/dist/ReactToastify.css';
-
 import { notify } from '../../utils/alertMessage';
 
-import { addDataModalActions } from '../../store/add-data-modal-slice';
 import { enableEditActions } from '../../store/enable-edit-slice';
-import { storage } from '../../firebase';
 import { db } from '../../firebase';
 import {
   getDoc,
   doc,
   updateDoc,
-  // collection,
   serverTimestamp,
 } from 'firebase/firestore';
 
-// import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 import { Loader, Button } from 'semantic-ui-react';
 
@@ -35,9 +29,6 @@ const initialServicesState = {
 const EditServicesPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
-  // let notify = () => toast('');
 
   const [servicesData, setServicesData] = useState(initialServicesState);
   const { title, description, par1, par2 } = servicesData;
@@ -72,28 +63,10 @@ const EditServicesPage = () => {
     });
   };
 
-  const validate = () => {
-    let errors = {};
 
-    if (!title) {
-      errors.name = "Service's title is Required";
-    }
-    if (!description) {
-      errors.drink = 'Short description description is Required';
-    }
-    if (!par1) {
-      errors.city = 'First paragraph is Required';
-    }
-    if (!par2) {
-      errors.quote = 'Second paragraph is Required';
-    }
-
-    return errors;
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    let errors = validate();
     if (Object.keys(errors).length) return setErrors(errors);
     setIsSubmitted(true);
 
@@ -109,7 +82,6 @@ const EditServicesPage = () => {
     }
 
     dispatch(enableEditActions.disable());
-    // notify()
     navigate('/services-dashboard');
   };
 

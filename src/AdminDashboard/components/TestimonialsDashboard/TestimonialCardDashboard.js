@@ -7,11 +7,11 @@ import { doc, deleteDoc } from 'firebase/firestore';
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { enableDeleteActions } from '../../../store/enable-delete-slice';
 import { alertMessageActions } from '../../../store/alert-message-slice';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import EditData from '../ui/AddEditDelete/EditData';
 import DeleteData from '../ui/AddEditDelete/DeleteData';
 
-import 'react-toastify/dist/ReactToastify.css';
+
 import classes from './TestimonialCardDashboard.module.css';
 
 const TestimonialCardDashboard = ({ 
