@@ -2,6 +2,8 @@
   background: white;
   display: flex;
   /* height: 30%; */
+  right: 0px;
+  position: absolute;
   height: 5rem;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
