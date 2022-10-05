@@ -85,7 +85,6 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
 
   </tr>
 
-
    <tr>
     <td><b>Dashboard</td>
   </tr>
@@ -142,7 +141,6 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
 
 **Fabian Villasenor:**
 This was a great opportunity for me to ... ... ...
-
 
 **Oxana Howard:**
 
