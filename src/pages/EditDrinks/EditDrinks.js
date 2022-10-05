@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 import { addDataModalActions } from '../../store/add-data-modal-slice';
@@ -18,6 +18,8 @@ import {
   collection,
   serverTimestamp,
 } from 'firebase/firestore';
+
+import { notify } from '../../utils/alertMessage';
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
@@ -36,7 +38,7 @@ const EditDrinks = () => {
   const navigate = useNavigate();
 
   const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
-  let notify = () => toast('');
+
 
   const [drinksData, setDrinksData] = useState(initialState);
   const { title, description, img } = drinksData;
@@ -131,6 +133,7 @@ const EditDrinks = () => {
         ...drinksData,
         timestamp: serverTimestamp(),
       });
+      notify('🍷 You SUCCESSFULLY Updated the DRINK!');
     } catch (error) {
       alert.log(error);
     }
