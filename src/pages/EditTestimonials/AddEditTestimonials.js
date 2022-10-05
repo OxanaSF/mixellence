@@ -5,7 +5,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 
 import { addDataModalActions } from '../../store/add-data-modal-slice';
-import { alertMessageActions } from '../../store/alert-message-slice';
 import { enableEditActions } from '../../store/enable-edit-slice';
 import { storage } from '../../firebase';
 import { db } from '../../firebase';
@@ -22,14 +21,14 @@ import { notify } from '../../utils/alertMessage';
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import { Form, Loader, Button } from 'semantic-ui-react';
+import { Loader, Button } from 'semantic-ui-react';
 
 import classes from './AddEditTestimonials.module.css';
 
 const initialState = {
-  name: '', // The name of the person leaving the review
-  rating: '', // the rating out of 5 the person left
-  review: '', // The text of our review the user left
+  name: '', 
+  rating: '', 
+  review: '', 
   img: '',
 };
 
@@ -38,9 +37,6 @@ const initialState = {
 const AddEditTestimonials = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
-
 
   const [testimonialData, setTestimonialData] = useState(initialState);
   const { name, rating, review, img } = testimonialData;

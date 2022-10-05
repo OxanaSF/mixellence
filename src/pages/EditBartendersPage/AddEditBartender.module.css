@@ -31,8 +31,6 @@
   /* background: red; */
 }
 
-
-
 .upload input {
   /* border: 0px dashed black; */
 }
@@ -41,7 +39,6 @@
   color: black;
   font-size: 2rem;
 }
-
 
 .bartender_form textarea {
   width: 90%;
@@ -55,7 +52,6 @@
   height: 5rem;
   display: flex;
   line-height: 1.4;
-
 }
 
 .drop_zone :nth-child(1) :nth-child(1) {
@@ -65,7 +61,7 @@
   object-fit: cover;
   border-radius: 50%;
   margin-top: 4rem;
-    /* background: red; */
+  /* background: red; */
 }
 
 .bartender_container form :first-child {
@@ -104,7 +100,6 @@ input[type='file']::file-selector-button:hover {
   border: 0px dashed black;
   height: 3rem !important;
   /* background: red; */
-
 }
 
 .bartender_container button {
@@ -113,4 +108,16 @@ input[type='file']::file-selector-button:hover {
   transform: translateY(5rem) !important;
   width: 70% !important;
   margin: auto !important;
+}
+
+.loading_box {
+  width: 30rem;
+  height: 10rem;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
 }

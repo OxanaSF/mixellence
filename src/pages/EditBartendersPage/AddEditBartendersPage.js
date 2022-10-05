@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
+
+import { ToastContainer, toast } from 'react-toastify';
 
 import { addDataModalActions } from '../../store/add-data-modal-slice';
 import { enableEditActions } from '../../store/enable-edit-slice';
@@ -19,7 +21,7 @@ import { notify } from '../../utils/alertMessage';
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import { Loader, Button } from 'semantic-ui-react';
+import { Button, Loader } from 'semantic-ui-react';
 
 import classes from './AddEditBartender.module.css';
 
@@ -32,7 +34,6 @@ const initialBartenderState = {
 };
 
 const AddEditBartendersPage = () => {
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -46,6 +47,17 @@ const AddEditBartendersPage = () => {
   const { id } = useParams();
 
   console.log('id', id);
+
+  let promise = () => {
+    const resolveAfter2Sec = new Promise((resolve, reject) => {
+      setTimeout(resolve, 2000);
+    });
+    toast.promise(resolveAfter2Sec, {
+      pending: 'Pending',
+      success: 'Success',
+      error: 'Rejected',
+    });
+  };
 
   useEffect(() => {
     id && getBartenderById();
@@ -61,7 +73,6 @@ const AddEditBartendersPage = () => {
       console.log('snapshot', snapshot);
     }
   };
-
 
   useEffect(() => {
     const uploadImgFile = () => {
@@ -146,11 +157,12 @@ const AddEditBartendersPage = () => {
   };
 
   return (
-    <div className={classes.bartender_container}>
-      {isSubmitted ? (
-        <Loader active inline="centered" size="huge" />
-      ) : (
-        <>
+    <>
+      {/* {isSubmitted && <Loader active size="huge" />} */}
+      {isSubmitted && <div className={classes.loading_box}> <Loader active size="huge" /></div>}
+
+      {!isSubmitted && (
+        <div className={classes.bartender_container}>
           <h3>{id ? 'Update a bartender' : 'Add a bartender'}</h3>
           <button onClick={notify}>On Click</button>
 
@@ -226,9 +238,9 @@ const AddEditBartendersPage = () => {
               Submit
             </Button>
           </form>
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

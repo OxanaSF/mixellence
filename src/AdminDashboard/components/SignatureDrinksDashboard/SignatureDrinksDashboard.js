@@ -7,7 +7,7 @@ import DashboardMain from '../ui/DashboardMain/DashboardMain';
 import SignatureDrinksDisplayDashboard from './SignatureDrinksDisplayDashboard';
 import DashboardFooter from '../ui/DashboardFooter/DashboardFooter';
 
-import classes from './SignatureDrinksDashboard.module.css';
+
 
 const SignatureDrinksDashboard = () => {
   return (
