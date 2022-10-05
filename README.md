@@ -39,7 +39,7 @@ This is a desktop and mobile version website created for bartending catering bus
 
 ### Designs
 
-A UX/UI team [Dillon] and [Sam] created the design implemented for the mixcellence website built.   
+A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://www.linkedin.com/in/sam-assefa-63ba1514/] and [Dillon-C] [https://www.linkedin.com/in/dillon-c-8b0328222] created the design implemented for the mixcellence website built.   
 
 ### Screenshots
 
