@@ -48,6 +48,7 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
     <td><b>Desktop</td>     
   </tr>
 
+
   <tr>
     <td valign="top"><img width="1200" alt="Screen Shot 2022-10-04 at 4 57 21 PM" src="https://user-images.githubusercontent.com/100964288/193951626-4a40e5a8-5073-4092-8ace-aab0daf1c018.png" />
   </td>
@@ -92,6 +93,51 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
     <td valign="top"><img width="400" alt="Screen Shot 2022-10-04 at 12 54 56 PM" src="https://user-images.githubusercontent.com/100964288/193953087-5cfa12f4-6353-4ca2-8ff4-217a7973d117.png" />
   </td>
   <tr>
+ 
+  <tr>
+    <td valign="top"><img width="1200" alt="Screen Shot 2022-10-04 at 4 57 21 PM" src="https://user-images.githubusercontent.com/100964288/193951626-4a40e5a8-5073-4092-8ace-aab0daf1c018.png" />
+  </td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><img width="1200" alt="Screen Shot 2022-10-04 at 12 59 48 PM" src="https://user-images.githubusercontent.com/100964288/193937572-87a42149-8883-47b9-8775-23e1e99db243.png" />
+ </td>
+ </tr>
+    
+  <tr>
+    <td valign="top"><img width="1200" alt="Screen Shot 2022-10-04 at 1 00 21 PM" src="https://user-images.githubusercontent.com/100964288/193946517-13e13a22-10c5-414f-97a4-0353d870d118.png" />
+ </td>
+ </tr>
+  
+  <tr>
+    <td valign="top"><img width="1200" alt="Screen Shot 2022-10-04 at 1 00 37 PM" src="https://user-images.githubusercontent.com/100964288/193946724-a65f0ea4-0a43-4c50-8a2d-a1032ccf28b6.png" />
+ </td>
+ </tr>
+  
+  <tr>
+    <td valign="top"><img width="1200" alt="Screen Shot 2022-10-04 at 1 00 54 PM" src="https://user-images.githubusercontent.com/100964288/193949463-57c559b0-ffb3-413e-9488-6b9edb125b78.png" />
+ </td>
+ </tr>
+  
+  <tr>
+    <td valign="top"><img width="1200" alt="Screen Shot 2022-10-04 at 1 01 14 PM" src="https://user-images.githubusercontent.com/100964288/193951950-5f184963-a678-4c0d-b733-80cdaafb4741.png" />
+ </td>
+ </tr>
+  
+  <tr>
+    <td valign="top"><img width="1200" alt="Screen Shot 2022-10-04 at 1 01 28 PM" src="https://user-images.githubusercontent.com/100964288/193949733-d71363f1-3b80-4dcb-940b-271b8f27173b.png" />
+ </td>
+ </tr>
+ 
+  <tr>
+    <td><b>Mobile</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><img width="400" alt="Screen Shot 2022-10-04 at 12 54 56 PM" src="https://user-images.githubusercontent.com/100964288/193953087-5cfa12f4-6353-4ca2-8ff4-217a7973d117.png" />
+  </td>
+  </tr>  
+    
 
   <tr>
     <td valign="top"><img width="400" alt="Screen Shot 2022-10-04 at 12 55 25 PM" src="https://user-images.githubusercontent.com/100964288/193953636-04908524-bb3e-4624-b8f4-2dd859aba00f.png" />
@@ -123,7 +169,7 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
   </td>
   </tr>
 
-   <tr>
+  <tr>
     <td><b>Dashboard</td>
    </tr>
 
@@ -156,8 +202,8 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
      <td valign="top"><img width="1000" alt="Screen Shot 2022-10-04 at 3 07 17 PM" src="https://user-images.githubusercontent.com/100964288/193970941-6fbab0c5-e504-411c-98bb-9e2e637899b5.png" />
   </td>
   </tr>
-
-  <tr>  
+  
+   </tr>
      <td valign="top"><img width="1000" alt="Screen Shot 2022-10-04 at 3 07 28 PM" src="https://user-images.githubusercontent.com/100964288/193971059-b12f402b-2839-47ee-a4e1-165d2aa1f18f.png" />
   </td>
   </tr>

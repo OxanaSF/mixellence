@@ -1,25 +1,16 @@
-import React, { useState, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-
-import { db } from '../../../firebase';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
-
-import { alertMessageActions } from '../../../store/alert-message-slice';
-import { ToastContainer, toast } from 'react-toastify';
 import EditData from '../ui/AddEditDelete/EditData';
 
-import 'react-toastify/dist/ReactToastify.css';
 import classes from './SignatureDrinkCardDashboard.module.css';
 
 const SignatureDrinkCardDashboard = ({ id, title, img, description }) => {
-  const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
 
   const dispatch = useDispatch();
 
-  const notify = () => toast(alertMessage);
 
-  const ref = useRef();
 
   const updateDataHandler = () => {
     console.log('onClick');
