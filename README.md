@@ -78,9 +78,7 @@ A UX/UI team [Dillon] and [Sam] created the design implemented for the mixcellen
   <td valign="top"><img width="391" alt="Screen Shot 2022-10-04 at 5 27 35 PM" src="https://user-images.githubusercontent.com/100964288/193954729-bd0e9ad9-7886-4668-aa68-58ad13ab24ed.png" />
   </td>
     <td valign="top"><img width="391" alt="Screen Shot 2022-10-04 at 5 27 53 PM" src="https://user-images.githubusercontent.com/100964288/193954821-21b7d73f-969a-4a83-ab8f-77fbe37407fc.png" />
- </td>
-    <td valign="top"><img width="387" alt="Screen Shot 2022-10-04 at 5 28 09 PM" src="https://user-images.githubusercontent.com/100964288/193954989-f3c43a60-f6fa-4417-a3a9-75e5d1b138b3.png" />
- </td>
+ </td>   
     <td valign="top"><img width="388" alt="Screen Shot 2022-10-04 at 12 58 32 PM" src="https://user-images.githubusercontent.com/100964288/193955136-2ed846aa-d226-4d1c-8333-4b2a4e11d044.png" />
  </td>
 
@@ -93,8 +91,7 @@ A UX/UI team [Dillon] and [Sam] created the design implemented for the mixcellen
   <tr>
      <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188970548-b79adf84-65af-4ea7-ab5c-b2ba379a0f66.png" width="300" /></td>
     <td valign="top"><img src="https://user-images.githubusercontent.com/49917973/188969739-b124a6aa-4dcd-41c9-919a-f760b1955e0d.png" width="300" /></td>
-    <td valign="top"><img width="388" alt="Screen Shot 2022-10-04 at 12 58 32 PM" src="https://user-images.githubusercontent.com/100964288/193955290-24b7c4de-67d7-4644-9f2e-8b2152a72c9f.png" />
- </td>
+    
     
     
   </tr>
