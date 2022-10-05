@@ -60,7 +60,6 @@
   justify-content: center;
 }
 
-
 .loading_box {
   width: 30rem;
   height: 10rem;
@@ -70,7 +69,6 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-
 }
 
 @media screen and (max-width: 900px) {
