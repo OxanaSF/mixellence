@@ -19,6 +19,8 @@ import {
   serverTimestamp,
 } from 'firebase/firestore';
 
+import { notify } from '../../utils/alertMessage';
+
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 import { Form, Loader, Button } from 'semantic-ui-react';
@@ -125,13 +127,13 @@ const EditDrinks = () => {
         ...imagesData,
         timestamp: serverTimestamp(),
       });
+      notify('🍷 You SUCCESSFULLY Updated the Hero page!');
     } catch (error) {
       alert.log(error);
     }
 
     setIsSubmitted(false);
     dispatch(enableEditActions.disable());
-    // notify()
     navigate('/hero-dashboard');
   };
 

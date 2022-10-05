@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import { addDataModalActions } from '../../store/add-data-modal-slice';
-import { alertMessageActions } from '../../store/alert-message-slice';
 import { enableEditActions } from '../../store/enable-edit-slice';
 import { storage } from '../../firebase';
 import { db } from '../../firebase';
@@ -23,7 +19,7 @@ import { notify } from '../../utils/alertMessage';
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import { Message, Loader, Button } from 'semantic-ui-react';
+import { Loader, Button } from 'semantic-ui-react';
 
 import classes from './AddEditBartender.module.css';
 
@@ -36,20 +32,9 @@ const initialBartenderState = {
 };
 
 const AddEditBartendersPage = () => {
-  const message = (
-    <Message>
-      <Message.Header>Changes in Service</Message.Header>
-      <p>
-        We updated our privacy policy here to better service our customers. We
-        recommend reviewing the changes.
-      </p>
-    </Message>
-  );
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
 
   const [bartenderData, setBartenderData] = useState(initialBartenderState);
   const { name, drink, city, quote, img } = bartenderData;
@@ -138,7 +123,7 @@ const AddEditBartendersPage = () => {
           timestamp: serverTimestamp(),
         });
         dispatch(addDataModalActions.close());
-        notify('🍷 You SUCCESSFULLY ADDED a bartender!');
+        notify('🍷 You SUCCESSFULLY Added a BARTENDER!');
       } catch (error) {
         alert.log(error);
       }
@@ -149,7 +134,7 @@ const AddEditBartendersPage = () => {
           ...bartenderData,
           timestamp: serverTimestamp(),
         });
-        notify('🍷 You SUCCESSFULLY UPDATED the bartender!');
+        notify('🍷 You SUCCESSFULLY Updated the BARTENDER!');
         setIsSubmitted(false);
       } catch (error) {
         alert.log(error);

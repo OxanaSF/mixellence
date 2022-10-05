@@ -2,26 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+// import 'react-toastify/dist/ReactToastify.css';
+
+import { notify } from '../../utils/alertMessage';
 
 import { addDataModalActions } from '../../store/add-data-modal-slice';
-import { alertMessageActions } from '../../store/alert-message-slice';
 import { enableEditActions } from '../../store/enable-edit-slice';
 import { storage } from '../../firebase';
 import { db } from '../../firebase';
 import {
   getDoc,
   doc,
-  addDoc,
   updateDoc,
-  collection,
+  // collection,
   serverTimestamp,
 } from 'firebase/firestore';
 
-import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+// import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import { Form, Loader, Button } from 'semantic-ui-react';
+import { Loader, Button } from 'semantic-ui-react';
 
 import classes from './EditServicesPage.module.css';
 
@@ -103,12 +103,7 @@ const EditServicesPage = () => {
         ...servicesData,
         timestamp: serverTimestamp(),
       });
-      dispatch(
-        alertMessageActions.alertMessageUpdate(
-          'You SUCCESSFULLY UPDATED the service!'
-        )
-      );
-      // notify = () => toast(alertMessage);
+      notify('🍷 You SUCCESSFULLY Updated the Service page!');
     } catch (error) {
       alert.log(error);
     }

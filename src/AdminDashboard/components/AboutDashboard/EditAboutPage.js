@@ -1,29 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams, useNavigate } from 'react-router-dom';
-
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 import { updateBtnToggleActions } from '../../../store/update-data-btn-toggle-slice';
-import { addDataModalActions } from '../../../store/add-data-modal-slice';
-import { alertMessageActions } from '../../../store/alert-message-slice';
-import { enableEditActions } from '../../../store/enable-edit-slice';
-import { storage } from '../../../firebase';
+
 import { db } from '../../../firebase';
 
 import {
   getDoc,
   doc,
-  addDoc,
   updateDoc,
-  collection,
   serverTimestamp,
 } from 'firebase/firestore';
 
-import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import { notify } from '../../../utils/alertMessage';
 
-import { Form, Loader, Button, Message } from 'semantic-ui-react';
+import { Loader, Button } from 'semantic-ui-react';
 
 import classes from './EditAboutPage.module.css';
 
@@ -38,10 +30,6 @@ const EditAboutPage = ({ id }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
-  let notify = () => toast('');
-
- 
 
   const [aboutData, setAboutData] = useState(initialAboutState);
   const { mainParagraph, phoneParagraph, place, businessOwned } = aboutData;
@@ -49,7 +37,6 @@ const EditAboutPage = ({ id }) => {
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  //   const { id } = useParams();
 
   const getAboutById = async () => {
     const docRef = doc(db, 'about', id);
@@ -86,18 +73,10 @@ const EditAboutPage = ({ id }) => {
         timestamp: serverTimestamp(),
       });
       setIsSubmitted(false);
-      dispatch(
-        alertMessageActions.alertMessageUpdate(
-          'You SUCCESSFULLY UPDATED About page information!'
-        )
-      );
-      // notify = () => toast(alertMessage);
+      notify('🍷 You SUCCESSFULLY Updated the About page!');
     } catch (error) {
       alert.log(error);
     }
-
-    // dispatch(enableEditActions.disable());
-    // notify()
     dispatch(updateBtnToggleActions.updateBtnToggle());
     navigate('/about-dashboard');
   };
