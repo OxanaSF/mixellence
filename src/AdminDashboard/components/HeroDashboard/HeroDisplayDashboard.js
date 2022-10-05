@@ -3,8 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
 import { db } from '../../../firebase';
-import { useNavigate } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
+
+import { ToastContainer } from 'react-toastify';
 
 import HeroCardDashboard from './HeroCardDashboard';
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
@@ -53,6 +54,19 @@ const HeroDisplayDashboard = () => {
     <section className={classes.hero}>
       <Link to="modal" state={{ background: location }}></Link>
       <Outlet />
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <ToastContainer />
 
       <div className={classes.hero_intro_text}>
         <h1>Mobile Pop-Up Bar</h1>

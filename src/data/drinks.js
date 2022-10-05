@@ -5,20 +5,20 @@ import mojitoImg from '../SignatureImage/desktop/image-mojito.jpg';
 
 const drinks = [
   {
-    name: 'Margarita',
     id: Math.random(),
+    name: 'Margarita',
     quote: 'Made with the finest ingridents & our secret sauce',
     image: margaritaImg,
   },
   {
-    name: 'Paloma',
     id: Math.random(),
+    name: 'Paloma',
     quote: 'Made with the finest ingridents & our secret sauce',
     image: palomaImg,
   },
   {
-    name: 'Mojito',
     id: Math.random(),
+    name: 'Mojito',
     quote: 'Made with the finest ingridents & our secret sauce',
     image: mojitoImg,
   },

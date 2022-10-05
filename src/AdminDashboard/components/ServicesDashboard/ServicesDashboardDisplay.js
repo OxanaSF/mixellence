@@ -5,6 +5,8 @@ import { db } from '../../../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
+import { ToastContainer } from 'react-toastify';
+
 import ServicesDashboardCard from './ServicesDashboardCard';
 import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { AddUpdateDataModal } from '../../../AdminDashboard/components/ui/AddUpdateModal/AddUpdateDataModal';
@@ -49,6 +51,19 @@ const ServicesDashboardDisplay = () => {
       <h2>Services</h2>
       <Link to="modal" state={{ background: location }}></Link>
       <Outlet />
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <ToastContainer />
 
       <div className={classes.services__main}>
         {services

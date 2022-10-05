@@ -3,8 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 import { addDataModalActions } from '../../store/add-data-modal-slice';
 import { alertMessageActions } from '../../store/alert-message-slice';
@@ -19,6 +17,8 @@ import {
   collection,
   serverTimestamp,
 } from 'firebase/firestore';
+
+import { notify } from '../../utils/alertMessage';
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
@@ -40,7 +40,7 @@ const AddEditTestimonials = () => {
   const navigate = useNavigate();
 
   const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
-  let notify = () => toast('');
+
 
   const [testimonialData, setTestimonialData] = useState(initialState);
   const { name, rating, review, img } = testimonialData;
@@ -128,13 +128,7 @@ const AddEditTestimonials = () => {
           timestamp: serverTimestamp(),
         });
         dispatch(addDataModalActions.close());
-        // dispatch(
-        //   alertMessageActions.alertMessageUpdate(
-        //     'You SUCCESSFULLY ADDED the testimonial!'
-        //   )
-        // );
-        // notify = () => toast(alertMessage);
-        alert('You SUCCESSFULLY ADDED the testimonial!');
+        notify('🍷 You SUCCESSFULLY Added a TESTIMONIAL!');
       } catch (error) {
         alert.log(error);
       }
@@ -145,13 +139,7 @@ const AddEditTestimonials = () => {
           ...testimonialData,
           timestamp: serverTimestamp(),
         });
-        // dispatch(
-        //   alertMessageActions.alertMessageUpdate(
-        //     'You SUCCESSFULLY UPDATED the bartender!'
-        //   )
-        // );
-        // notify = () => toast(alertMessage);
-        // alert('You SUCCESSFULLY UPDATED the testimonial!');
+        notify('🍷 You SUCCESSFULLY Updated the TESTIMONIAL!');
       } catch (error) {
         alert.log(error);
       }
