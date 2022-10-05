@@ -147,7 +147,7 @@ const EditDrinks = () => {
   return (
     <div className={classes.drinks_container}>
       {isSubmitted ? (
-        <Loader active inline="centered" size="huge" />
+        <div className={classes.loading_box}> <Loader active size="huge" /></div>
       ) : (
         <>
           <h3>{'Update Drink'}</h3>
