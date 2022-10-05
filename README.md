@@ -96,7 +96,23 @@ A UX/UI team [Dillon] and [Sam] created the design implemented for the mixcellen
   </td>
     <td valign="top"><img width="1072" alt="Screen Shot 2022-10-04 at 3 06 28 PM" src="https://user-images.githubusercontent.com/100964288/193970258-ee151cb6-ed7b-4e43-b43b-87de73be5e70.png" />
   </td>
-    
+    <td valign="top"><img width="1072" alt="Screen Shot 2022-10-04 at 3 06 28 PM" src="https://user-images.githubusercontent.com/100964288/193970643-cbe82f7c-06f3-4f62-a3fb-520ecc842bcb.png" />
+  </td>  
+    <td valign="top"><img width="522" alt="Screen Shot 2022-10-04 at 3 06 43 PM" src="https://user-images.githubusercontent.com/100964288/193970735-1e7101f2-3260-481c-81ae-7a241ffdcdde.png" />
+  </td>   
+    <td valign="top"><img width="522" alt="Screen Shot 2022-10-04 at 3 06 43 PM" src="https://user-images.githubusercontent.com/100964288/193970783-4c87bb3d-7c22-4758-a0c2-841c1cdb8fe8.png" />
+  </td>   
+    <td valign="top"><img width="1090" alt="Screen Shot 2022-10-04 at 3 06 56 PM" src="https://user-images.githubusercontent.com/100964288/193970808-03f03c72-0274-42f1-a76b-2ff18a90905d.png" />
+  </td>   
+    <td valign="top"><img width="1092" alt="Screen Shot 2022-10-04 at 3 07 05 PM" src="https://user-images.githubusercontent.com/100964288/193970895-3e1c25e3-e7e0-4fe1-a164-11de40fc2014.png" />
+  </td>    
+     <td valign="top"><img width="1095" alt="Screen Shot 2022-10-04 at 3 07 17 PM" src="https://user-images.githubusercontent.com/100964288/193970941-6fbab0c5-e504-411c-98bb-9e2e637899b5.png" />
+  </td>   
+     <td valign="top"><img width="1392" alt="Screen Shot 2022-10-04 at 4 57 21 PM" src="https://user-images.githubusercontent.com/100964288/193970986-d82f385b-4cf4-4327-bf88-12558753bd06.png" />
+  </td>    
+     <td valign="top"><img width="1090" alt="Screen Shot 2022-10-04 at 3 07 28 PM" src="https://user-images.githubusercontent.com/100964288/193971059-b12f402b-2839-47ee-a4e1-165d2aa1f18f.png" />
+  </td>
+      
   </tr>
 
  </table>
