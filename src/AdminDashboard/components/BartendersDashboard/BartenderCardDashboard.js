@@ -1,31 +1,22 @@
 import React, { useState, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { db } from '../../../firebase';
 import { doc, deleteDoc } from 'firebase/firestore';
 
 import { enableDeleteActions } from '../../../store/enable-delete-slice';
-import { alertMessageActions } from '../../../store/alert-message-slice';
-import { ToastContainer, toast } from 'react-toastify';
+
+import { notify } from '../../../utils/alertMessage';
 
 import EditData from '../ui/AddEditDelete/EditData';
 import DeleteData from '../ui/AddEditDelete/DeleteData';
 
-import 'react-toastify/dist/ReactToastify.css';
 import classes from './BartenderCardDashboard.module.css';
 
 const BartenderCardDashboard = ({ id, img, name, drink, city, quote }) => {
   const [visible, setVisible] = useState(false);
 
-  const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
-
   const dispatch = useDispatch();
-
-  // const notify = () => toast(alertMessage);
-  const notify = () => {
-    toast('You SUCCESSFULLY deleted the bartender!')
-  }
-
 
   const ref = useRef();
 
@@ -51,13 +42,7 @@ const BartenderCardDashboard = ({ id, img, name, drink, city, quote }) => {
   const bartenderDeleteHandler = () => {
     deleteBartender(id);
     dispatch(enableDeleteActions.disable());
-    // dispatch(
-    //   alertMessageActions.alertMessageUpdate(
-    //     'You SUCCESSFULLY deleted the bartender!'
-    //   )
-    // );
-    notify()
-    
+    notify('🍷 You SUCCESSFULLY Deleted a BARTENDER!');
   };
   // * End Delete
 

@@ -88,7 +88,7 @@ const EditServicesPage = () => {
   return (
     <div className={classes.service_container}>
       {isSubmitted ? (
-        <Loader active inline="centered" size="huge" />
+         <div className={classes.loading_box}> <Loader active size="huge" /></div>
       ) : (
         <>
           <h3>Update service</h3>
