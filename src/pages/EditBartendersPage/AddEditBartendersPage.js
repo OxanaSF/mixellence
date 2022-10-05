@@ -19,9 +19,11 @@ import {
   serverTimestamp,
 } from 'firebase/firestore';
 
+import { notify } from '../../utils/alertMessage';
+
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import { Form, Loader, Button } from 'semantic-ui-react';
+import { Message, Loader, Button } from 'semantic-ui-react';
 
 import classes from './AddEditBartender.module.css';
 
@@ -34,11 +36,20 @@ const initialBartenderState = {
 };
 
 const AddEditBartendersPage = () => {
+  const message = (
+    <Message>
+      <Message.Header>Changes in Service</Message.Header>
+      <p>
+        We updated our privacy policy here to better service our customers. We
+        recommend reviewing the changes.
+      </p>
+    </Message>
+  );
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
-  let notify = () => toast('');
 
   const [bartenderData, setBartenderData] = useState(initialBartenderState);
   const { name, drink, city, quote, img } = bartenderData;
@@ -65,6 +76,7 @@ const AddEditBartendersPage = () => {
       console.log('snapshot', snapshot);
     }
   };
+
 
   useEffect(() => {
     const uploadImgFile = () => {
@@ -126,14 +138,7 @@ const AddEditBartendersPage = () => {
           timestamp: serverTimestamp(),
         });
         dispatch(addDataModalActions.close());
-        // dispatch(
-        //   alertMessageActions.alertMessageUpdate(
-        //     'You SUCCESSFULLY ADDED the bartender!'
-        //   )
-        // );
-        // notify = () => toast(alertMessage);
-
-        alert('You SUCCESSFULLY ADDED the bartender!');
+        notify('🍷 You SUCCESSFULLY ADDED a bartender!');
       } catch (error) {
         alert.log(error);
       }
@@ -144,21 +149,14 @@ const AddEditBartendersPage = () => {
           ...bartenderData,
           timestamp: serverTimestamp(),
         });
-        // dispatch(
-        //   alertMessageActions.alertMessageUpdate(
-        //     'You SUCCESSFULLY UPDATED the bartender!'
-        //   )
-        // );
-        // notify = () => toast(alertMessage);
+        notify('🍷 You SUCCESSFULLY UPDATED the bartender!');
         setIsSubmitted(false);
-        // alert('You SUCCESSFULLY UPDATED the bartender!');
       } catch (error) {
         alert.log(error);
       }
     }
     setIsSubmitted(false);
     dispatch(enableEditActions.disable());
-    // notify()
     navigate('/team-dashboard');
   };
 
@@ -169,6 +167,7 @@ const AddEditBartendersPage = () => {
       ) : (
         <>
           <h3>{id ? 'Update a bartender' : 'Add a bartender'}</h3>
+          <button onClick={notify}>On Click</button>
 
           <form onSubmit={handleSubmit} className={classes.bartender_form}>
             <div className={classes.drop_zone}>
@@ -188,7 +187,6 @@ const AddEditBartendersPage = () => {
 
               <div className={classes.bartender_card_info}>
                 <input
-                  // defaultValue={img || ''}
                   accept="image/gif, image/jpeg, image/png"
                   filename={img}
                   error={errors.file && !id ? { content: errors.file } : null}
@@ -231,11 +229,10 @@ const AddEditBartendersPage = () => {
               onChange={handleChange}
               value={quote || ''}
               required={!id ? true : false}
-              minLength='18'
+              minLength="18"
             ></textarea>
 
             <Button
-              // className={classes.bartender_btn}
               secondary
               type="submit"
               // disabled={progress !== null && progress < 101}

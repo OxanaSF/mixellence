@@ -23,7 +23,7 @@ import {
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
-import { Form, Loader, Button } from 'semantic-ui-react';
+import { Form, Loader, Button, Message } from 'semantic-ui-react';
 
 import classes from './EditAboutPage.module.css';
 
@@ -40,6 +40,8 @@ const EditAboutPage = ({ id }) => {
 
   const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
   let notify = () => toast('');
+
+ 
 
   const [aboutData, setAboutData] = useState(initialAboutState);
   const { mainParagraph, phoneParagraph, place, businessOwned } = aboutData;
@@ -118,6 +120,7 @@ const EditAboutPage = ({ id }) => {
         ) : (
           <>
             <h3>Update</h3>
+       
 
             <form onSubmit={handleSubmit}>
               <div className={classes.par1}>
