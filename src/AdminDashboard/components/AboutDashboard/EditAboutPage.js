@@ -1,28 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams, useNavigate } from 'react-router-dom';
-
-import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 import { updateBtnToggleActions } from '../../../store/update-data-btn-toggle-slice';
-import { addDataModalActions } from '../../../store/add-data-modal-slice';
-import { alertMessageActions } from '../../../store/alert-message-slice';
-import { enableEditActions } from '../../../store/enable-edit-slice';
-import { storage } from '../../../firebase';
+
 import { db } from '../../../firebase';
 
 import {
   getDoc,
   doc,
   updateDoc,
-  // collection,
   serverTimestamp,
 } from 'firebase/firestore';
 
 import { notify } from '../../../utils/alertMessage';
-
-// import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 import { Loader, Button } from 'semantic-ui-react';
 
@@ -39,9 +30,6 @@ const EditAboutPage = ({ id }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const alertMessage = useSelector((state) => state.alertMessage.alertMessage);
-
- 
 
   const [aboutData, setAboutData] = useState(initialAboutState);
   const { mainParagraph, phoneParagraph, place, businessOwned } = aboutData;
@@ -49,7 +37,6 @@ const EditAboutPage = ({ id }) => {
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  //   const { id } = useParams();
 
   const getAboutById = async () => {
     const docRef = doc(db, 'about', id);
