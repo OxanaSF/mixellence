@@ -1,8 +1,9 @@
 .card_display_wrapper {
-  width: 80%;
+  /* outline: 2px solid purple; */
+  width: 100%;
 }
 .card_display_wrapper h1 {
-  width: 80%;
+  /* width: 80%; */
 }
 
 .card_display_container {
