@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.4rem 0 2.4rem 2.4rem;
+  /* padding: 2.4rem 0 2.4rem 2.4rem; */
   /* outline:2px solid purple; */
   width: 100%;
 }

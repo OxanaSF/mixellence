@@ -2,12 +2,12 @@
   background: white;
   display: flex;
   /* height: 30%; */
-  right: 0px;
-  position: absolute;
   height: 5rem;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
-  margin-left: 2rem;
+  /* margin-right: 2rem; */
+  right: 2rem;
+  position: absolute;
 }
 
 .add_edit_delete_container:hover {
@@ -32,6 +32,7 @@
 
 @media screen and (max-width: 890px) {
   .add_edit_delete_container {
+    position: relative;
     height: 4rem;
     width: 5rem;
     border-radius: 0;
