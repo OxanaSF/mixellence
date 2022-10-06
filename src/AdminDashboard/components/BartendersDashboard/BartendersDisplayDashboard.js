@@ -67,7 +67,7 @@ export const BartendersDisplayDashboard = () => {
       <ToastContainer />
 
       <div className={classes.card_display_container}>
-        {/* <ReactResponsiveCarousel> */}
+        <ReactResponsiveCarousel>
           {bartenders &&
             bartenders.map((item) => (
               <BartenderCardDashboard
@@ -82,7 +82,7 @@ export const BartendersDisplayDashboard = () => {
                 bartenders={bartenders}
               />
             ))}
-        {/* </ReactResponsiveCarousel> */}
+        </ReactResponsiveCarousel>
       </div>
 
       {addDataModal && <AddUpdateDataModal />}
