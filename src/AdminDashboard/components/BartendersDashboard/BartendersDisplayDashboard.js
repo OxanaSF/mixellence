@@ -12,6 +12,7 @@ import { addDataModalActions } from '../../../store/add-data-modal-slice';
 import { AddUpdateDataModal } from '../ui/AddUpdateModal/AddUpdateDataModal';
 import BartenderCardDashboard from './BartenderCardDashboard';
 import classes from './BartendersDisplayDashboard.module.css';
+import ReactResponsiveCarousel from '../TestimonialsDashboard/ReactResponsiveCarousel';
 
 export const BartendersDisplayDashboard = () => {
   const location = useLocation();
@@ -51,7 +52,7 @@ export const BartendersDisplayDashboard = () => {
 
       <Link to="modal" state={{ background: location }}></Link>
       <Outlet />
-      
+
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -66,20 +67,22 @@ export const BartendersDisplayDashboard = () => {
       <ToastContainer />
 
       <div className={classes.card_display_container}>
-        {bartenders &&
-          bartenders.map((item) => (
-            <BartenderCardDashboard
-              id={item.id}
-              key={item.id}
-              img={item.img}
-              alt={item.name}
-              name={item.name}
-              drink={item.drink}
-              city={item.city}
-              quote={item.quote}
-              bartenders={bartenders}
-            />
-          ))}
+        <ReactResponsiveCarousel>
+          {bartenders &&
+            bartenders.map((item) => (
+              <BartenderCardDashboard
+                id={item.id}
+                key={item.id}
+                img={item.img}
+                alt={item.name}
+                name={item.name}
+                drink={item.drink}
+                city={item.city}
+                quote={item.quote}
+                bartenders={bartenders}
+              />
+            ))}
+        </ReactResponsiveCarousel>
       </div>
 
       {addDataModal && <AddUpdateDataModal />}

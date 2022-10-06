@@ -201,7 +201,7 @@ A UX/UI team [Dillon](https://www.linkedin.com/in/dillon-c-8b0328222/) and [Sam]
 ### What we learned
 
 **Fabian Villasenor:**
-This project was a very valuable because of its complexity. Before this project, I had never created a website that can be updated by an administrator with zero coding knowledge. Early on our team knew that figuring out how to connect the front end to Firebase to allow our administrator to update photos and text would be the biggest challenge. Working with Oxana and Dale was a great experience and we had constant communication which helped us have minimal merge conflicts.
+This project was a very valuable because of its complexity. Before this project, I had never created a website that can be updated by an administrator with zero coding knowledge. Early on our team knew that figuring out how to connect the front end to Firebase to allow our administrator to update photos and text would be the biggest challenge. Working with Oxana and Dale was a great experience and we had constant communication which helped us have minimal merge conflicts. 
 
 **Oxana Howard:**
 
