@@ -249,5 +249,5 @@ This project was a great opportunity ro work in a team and create the balance wh
 
 **Dale Cottrell:**
 
-While working in a team of three developers I was able to learn additonal methodologies in code problem solving and some new version control concepts. For me one of the most valuable experiences was team work building out a large complex app that entialed multi modules which overlaped. Skillful problem solving in pre-build collaboration and real-time build-out is the key to quality and timeliness while producing a unique and professional UX/UI design from Sam and Dillon C. (noted above).
+While working in a team of three developers I was able to learn additonal methodologies in code problem solving and some new version control concepts. For me one of the most valuable experiences was team work building out a large complex app that entialed multi modules which overlaped while employing the programing Languages and code libraries listed above. Skillful problem solving in pre-build collaboration and real-time build-out is the key to quality and timeliness while producing a unique and professional UX/UI design from Sam and Dillon C. (noted above).
 
