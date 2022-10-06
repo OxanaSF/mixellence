@@ -260,5 +260,5 @@ This project was a great opportunity ro work in a team and create the balance wh
 
 **Dale Cottrell:**
 
-While working in a team of three developers I was able to learn additonal methodologies in code problem solving and some new version control concepts. My most valuable experience as one of three developers was the challenge of building out a large complex app that entialed multi modules which overlaped while employing the programing Languages and code libraries listed above. We used Skillful collaboration problem solving in pre-build and real-time build-out and delivered the Mixcellence App fully developed with quality and timeliness and we give thank to unique UX/UI design team Sam and Dillon C.
+While working in a team of three developers I was able to learn additonal methodologies in code problem solving and some new version control concepts. My most valuable experience as one of three developers was the challenge of building out a large complex app that entialed multi modules which overlaped while employing the programing Languages and code libraries listed above. We used Skillful collaboration problem solving in pre-build and real-time build-out and delivered the Mixcellence App fully developed with quality and timeliness and we give thank to the unique UX/UI design from team Sam and Dillon C.
 
