@@ -6,7 +6,7 @@ import classes from './ReactCarousel.module.css'
 
 function ReactResponsiveCarousel(props) {
   // const [widthJS, setWidthJS] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth > 1300 && 33.3);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth > 1300 ? 33.3 : 100);
 
   window.addEventListener("resize", function () {
     if(this.window.innerWidth > 1300) {
