@@ -4,12 +4,12 @@
 
 ## Table of contents
 
-- [Overview](#overview)
+  - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Links](#links)
   - [Design](#designs)
   - [Screenshots](#screenshots)
-- [Our process](#our-process)
+  - [Our process](#our-process)
   - [What We Learned](#what-we-learned) 
 
 ## Authors
@@ -47,7 +47,6 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
   <tr>
     <td><b>Desktop</td>     
   </tr>
-
 
   <tr>
     <td valign="top"><img width="1200" alt="Screen Shot 2022-10-04 at 4 57 21 PM" src="https://user-images.githubusercontent.com/100964288/193951626-4a40e5a8-5073-4092-8ace-aab0daf1c018.png" />
