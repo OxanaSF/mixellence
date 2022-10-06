@@ -17,7 +17,7 @@
 - **Fabian Villasenor - Software Engineer**
 
   - [Website](https://fabianvillasenor.com/)
-  - [LinkedIn](https://www.linkedin.com/in/fabian-villsenor/)
+  - [LinkedIn](https://www.linkedin.com/in/fabianvillasenor/)
 
 - **Oxana Howard - Software Engineer**
   - [Website](https://oxana-howard.com/)
@@ -25,17 +25,28 @@
 
 - **Dale Cottrell - Software Engineer**
 
-  - [Website](https://dale cottrell.github.io/portfolio/)
-  - [LinkedIn](https://www.linkedin.com/in/dale-cottrell/)
+  - [Website](https://dalecottrell.github.io/portfolio/)
+  - [LinkedIn](https://www.linkedin.com/in/dale-cottrell-82b900246/)
+  
+## Designed By
+
+- **Sam Assefa**
+
+  - [LinkedIn](https://www.linkedin.com/in/sam-assefa-63ba1514/)
+
+- **Dillon Chhit**
+
+  - [LinkedIn](https://www.linkedin.com/in/dillon-c-8b0328222/)
+
 
 
 ## Overview
 
-This is a desktop and mobile version website created for bartending catering business. Through the websites cleints can find genral information such as name description and services offered, products, and bartenders, and contact make an order. Addionally, the website has a feature for a admin that lets them directly update inofmation on website. 
+This is a desktop and mobile version website created for a mobile bartending service. Within the website clients can find general information such as name, description, and services offered as well as products, bartenders, and contact info. Additionally, the website has a secret feature for an admin, protected by password, that lets them directly update information on the website by updating text and photos directly on the page.
 
 ### The challenge
 
-- The main challenge was taking a desgn and re-creating it as a frontend website that also allows then admin to update its contents. 
+- The main challenge was taking a design and re-creating it as a frontend website that also allows the admin to update its contents without any code. 
 
 ### Designs
 
@@ -212,7 +223,7 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
 ### Links
 
 - Repository URL: [https://github.com/OxanaSF/mixellence.git](https://github.com/OxanaSF/mixellence.git)
-- Live Site URL: [https://mixcellence.netlify.app/](https://mixcellence.netlify.app/)
+- Live Site URL: [https://mixellence.netlify.app/](https://mixellence.netlify.app/)
 
 ## Our process
 
@@ -224,10 +235,10 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
 - CSS Grid
 - [React](https://reactjs.org/)
 - [React-Context](https://reactjs.org/docs/context.html/)
-- [React-Redux](https://firebase.google.com/)
+- [React-Redux](https://react-redux.js.org/)
 - [React-Slider](https://www.npmjs.com/package/react-slider)
 - [React Slick](https://reactslick.neostack.com/)
-- [react-responsive-carousel](https://www.npmjs.com/package/react-responsive-carousel)
+- [React Responsive Carousel](https://www.npmjs.com/package/react-responsive-carousel)
 - [React-Router-Dom](https://www.npmjs.com/package/react-router-dom)
 - [Netlify](https://www.netlify.com/)
 - [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link)
@@ -241,7 +252,7 @@ A UX/UI team [Sam] [https://webflow.com/design/sams-portfolio-bbfc3c] [https://w
 
 **Fabian Villasenor:**
 
-This was a great opportunity for me to ... ... ...
+This project was a very valuable because of its complexity. Before this project, I had never created a website that can be updated by an administrator with zero coding knowledge. Early on our team knew that figuring out how to connect the front end to Firebase to allow our administrator to update photos and text would be the biggest challenge. Working with Oxana and Dale was a great experience and we had constant communication which helped us have minimal merge conflicts.
 
 **Oxana Howard:**
 
@@ -249,5 +260,5 @@ This project was a great opportunity ro work in a team and create the balance wh
 
 **Dale Cottrell:**
 
-While working in a team of three developers I was able to learn additonal methodologies in code problem solving and some new version control concepts. For me one of the most valuable experiences was team work building out a large complex app that entialed multi modules which overlaped while employing the programing Languages and code libraries listed above. Skillful problem solving in pre-build collaboration and real-time build-out is the key to quality and timeliness while producing a unique and professional UX/UI design from Sam and Dillon C. (noted above).
+While working in a team of three developers I was able to learn additonal methodologies in code problem solving and some new version control concepts. My most valuable experience as one of three developers was the challenge of building out a large complex app that entialed multi modules which overlaped while employing the programing Languages and code libraries listed above. We used Skillful collaboration problem solving in pre-build and real-time build-out and delivered the Mixcellence App fully developed with quality and timeliness and we give thank to unique UX/UI design team Sam and Dillon C.
 
