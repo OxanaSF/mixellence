@@ -42,7 +42,7 @@
 
 ## Overview
 
-This is a desktop and mobile version website created for a mobile bartending service. Within the website clients can find general information such as name, description, and services offered as well as products, bartenders, and contact info. Additionally, the website has a secret feature for an admin, protected by password, that lets them directly update information on the website by updating text or photos directly on the page.
+This is a desktop and mobile version website created for a mobile bartending service. Within the website clients can find general information such as name, description, and services offered as well as products, bartenders, and contact info. Additionally, the website has a secret feature for an admin, protected by password, that lets them directly update information on the website by updating text and photos directly on the page.
 
 ### The challenge
 
@@ -173,7 +173,7 @@ A UX/UI team [Dillon](https://www.linkedin.com/in/dillon-c-8b0328222/) and [Sam]
 ### Links
 
 - Repository URL: [https://github.com/OxanaSF/mixellence.git](https://github.com/OxanaSF/mixellence.git)
-- Live Site URL: [https://mixcellence.netlify.app/](https://mixcellence.netlify.app/)
+- Live Site URL: [https://mixellence.netlify.app/](https://mixellence.netlify.app/)
 
 ## Our process
 
@@ -185,10 +185,10 @@ A UX/UI team [Dillon](https://www.linkedin.com/in/dillon-c-8b0328222/) and [Sam]
 - CSS Grid
 - [React](https://reactjs.org/)
 - [React-Context](https://reactjs.org/docs/context.html/)
-- [React-Redux](https://firebase.google.com/)
+- [React-Redux](https://react-redux.js.org/)
 - [React-Slider](https://www.npmjs.com/package/react-slider)
 - [React Slick](https://reactslick.neostack.com/)
-- [react-responsive-carousel](https://www.npmjs.com/package/react-responsive-carousel)
+- [React Responsive Carousel](https://www.npmjs.com/package/react-responsive-carousel)
 - [React-Router-Dom](https://www.npmjs.com/package/react-router-dom)
 - [Netlify](https://www.netlify.com/)
 - [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link)
@@ -201,8 +201,7 @@ A UX/UI team [Dillon](https://www.linkedin.com/in/dillon-c-8b0328222/) and [Sam]
 ### What we learned
 
 **Fabian Villasenor:**
-This was a great opportunity for me to ... ... ...
-
+This project was a very valuable because of its complexity. Before this project, I had never created a website that can be updated by an administrator with zero coding knowledge. Early on our team knew that figuring out how to connect the front end to Firebase to allow our administrator to update photos and text would be the biggest challenge. Working with Oxana and Dale was a great experience and we had constant communication which helped us have minimal merge conflicts.
 
 **Oxana Howard:**
 
