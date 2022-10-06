@@ -17,7 +17,7 @@
 - **Fabian Villasenor - Software Engineer**
 
   - [Website](https://fabianvillasenor.com/)
-  - [LinkedIn](https://www.linkedin.com/in/fabian-villsenor/)
+  - [LinkedIn](https://www.linkedin.com/in/fabianvillasenor/)
 
 - **Oxana Howard - Software Engineer**
   - [Website](https://oxana-howard.com/)
@@ -25,21 +25,32 @@
 
 - **Dale Cottrell - Software Engineer**
 
-  - [Website](https://dale cottrell.github.io/portfolio/)
-  - [LinkedIn](https://www.linkedin.com/in/dale-cottrell/)
+  - [Website](https://dalecottrell.github.io/portfolio/)
+  - [LinkedIn](https://www.linkedin.com/in/dale-cottrell-82b900246/)
+  
+## Designed By
+
+- **Sam Assefa**
+
+  - [LinkedIn](https://www.linkedin.com/in/sam-assefa-63ba1514/)
+
+- **Dillon Chhit**
+
+  - [LinkedIn](https://www.linkedin.com/in/dillon-c-8b0328222/)
+
 
 
 ## Overview
 
-This is a desktop and mobile version website created for bartending catering business. Through the websites cleints can find genral information such as name description and services offered, products, and bartenders, and contact make an order. Addionally, the website has a feature for a admin that lets them directly update inofmation on website. 
+This is a desktop and mobile version website created for a mobile bartending service. Within the website clients can find general information such as name, description, and services offered as well as products, bartenders, and contact info. Additionally, the website has a secret feature for an admin, protected by password, that lets them directly update information on the website by updating text or photos directly on the page.
 
 ### The challenge
 
-- The main challenge was taking a desgn and re-creating it as a frontend website that also allows then admin to update its contents. 
+- The main challenge was taking a design and re-creating it as a frontend website that also allows the admin to update its contents without any code. 
 
 ### Designs
 
-A UX/UI team [Dillon] and [Sam] created the design implemented for the mixcellence website built.   
+A UX/UI team [Dillon](https://www.linkedin.com/in/dillon-c-8b0328222/) and [Sam](https://www.linkedin.com/in/sam-assefa-63ba1514/) created the design implemented for the mixellence website built.   
 
 ### Screenshots
 
