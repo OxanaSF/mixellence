@@ -2,13 +2,11 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import { Navigate } from 'react-router-dom';
 
-import MainDisplay from './pages/MainDisplay';
-
 import { AddUpdateDataModal } from './AdminDashboard/components/ui/AddUpdateModal/AddUpdateDataModal';
 
 import LogInForm from './ClientDisplay/components/Auth/LogInForm';
 import PasswordChangeForm from './ClientDisplay/components/Auth/PasswordChangeForm';
-
+import MainDisplay from './pages/MainDisplay';
 import HeroDashboard from './AdminDashboard/components/HeroDashboard/HeroDashboard';
 import AboutDashboard from './AdminDashboard/components/AboutDashboard/AboutDashboard';
 import ServicesDashboard from './AdminDashboard/components/ServicesDashboard/ServicesDashboard';

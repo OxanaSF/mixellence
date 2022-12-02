@@ -2,18 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
-
 import { notify } from '../../utils/alertMessage';
 
 import { enableEditActions } from '../../store/enable-edit-slice';
 import { db } from '../../firebase';
-import {
-  getDoc,
-  doc,
-  updateDoc,
-  serverTimestamp,
-} from 'firebase/firestore';
-
+import { getDoc, doc, updateDoc, serverTimestamp } from 'firebase/firestore';
 
 import { Loader, Button } from 'semantic-ui-react';
 
@@ -63,8 +56,6 @@ const EditServicesPage = () => {
     });
   };
 
-
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (Object.keys(errors).length) return setErrors(errors);
@@ -88,7 +79,10 @@ const EditServicesPage = () => {
   return (
     <div className={classes.service_container}>
       {isSubmitted ? (
-         <div className={classes.loading_box}> <Loader active size="huge" /></div>
+        <div className={classes.loading_box}>
+          {' '}
+          <Loader active size="huge" />
+        </div>
       ) : (
         <>
           <h3>Update service</h3>
@@ -106,7 +100,6 @@ const EditServicesPage = () => {
                     name="title"
                     onChange={handleChange}
                     defaultValue={title || ''}
-            
                   ></textarea>
                 </h3>
                 <p>
@@ -121,7 +114,6 @@ const EditServicesPage = () => {
                     name="description"
                     onChange={handleChange}
                     defaultValue={description || ''}
-                   
                   ></textarea>
                 </p>
               </header>
@@ -134,7 +126,6 @@ const EditServicesPage = () => {
                     name="par1"
                     onChange={handleChange}
                     defaultValue={par1 || ''}
-                 
                   ></textarea>
                 </p>
                 <p>
@@ -144,7 +135,6 @@ const EditServicesPage = () => {
                     name="par2"
                     onChange={handleChange}
                     defaultValue={par2 || ''}
-             
                   ></textarea>
                 </p>
               </div>
